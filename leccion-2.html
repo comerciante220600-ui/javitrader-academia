@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · L2 Position sizing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </div>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4>Gestión de riesgo y capital</h4>
+      <div class="msub">MÓDULO 1 · 5 LECCIONES</div>
+      <a class="lesson" href="index.html"><span class="num done">1</span> Por qué el 90% pierde</a>
+      <a class="lesson active" href="leccion-2.html"><span class="num">2</span> Position sizing: la R</a>
+      <a class="lesson" href="leccion-3.html"><span class="num">3</span> Stop loss y take profit</a>
+      <a class="lesson" href="leccion-4.html"><span class="num">4</span> Drawdown y supervivencia</a>
+      <a class="lesson" href="leccion-5.html"><span class="num">5</span> Esperanza matemática</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb">Módulo 1 · Gestión de riesgo &nbsp;›&nbsp; <b>Lección 2</b></div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:40%"></span></div> 2/5</div>
+    </div>
+
+    <div class="wrap">
+      <article>
+        <div class="eyebrow">Lección 2</div>
+        <h1 class="title">Position sizing: cuánto arriesgar por operación (la R)</h1>
+        <div class="meta">
+          <div class="it">⏱ <b>~13 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>principiante</b></div>
+          <div class="it">↳ Requisito: <b>Lección 1</b></div>
+        </div>
+
+        <div class="card obj">
+          <h3>Lo que sabrás hacer al terminar</h3>
+          <ol>
+            <li>Calcular el tamaño exacto de una posición a partir del riesgo que quieres asumir.</li>
+            <li>Usar la "R" como unidad universal para medir tus operaciones.</li>
+            <li>Entender por qué el riesgo porcentual fijo se ajusta solo y te protege.</li>
+            <li>Aplicar la fórmula del position sizing a cualquier activo (acciones, cripto, divisas).</li>
+          </ol>
+        </div>
+
+        <p class="lead">La mayoría de la gente decide cuánto comprar al revés: "tengo 1.000 €, pues meto 1.000 €". Eso no es operar, es apostar el bolsillo entero a cada mano.</p>
+
+        <p>El profesional hace lo contrario: <strong>primero decide cuánto está dispuesto a perder, y de ahí deduce cuánto comprar.</strong> En esta lección aprendes esa cuenta. Es, literalmente, la fórmula más importante del trading práctico.</p>
+
+        <h2 id="s1">Del "¿cuánto pierdo?" al "¿cuánto compro?"</h2>
+        <p>En la Lección 1 dijimos que el profesional define primero su pérdida. Ahora lo convertimos en un número. El tamaño de tu posición (cuántas acciones, monedas o contratos compras) <strong>no es una decisión libre</strong>: es el resultado de una cuenta con tres ingredientes.</p>
+        <ol>
+          <li><strong>Cuánto capital tienes</strong> (tu cuenta).</li>
+          <li><strong>Qué porcentaje estás dispuesto a arriesgar</strong> en esta operación (tu riesgo por operación).</li>
+          <li><strong>A qué distancia está tu stop</strong> (cuánto se moverá el precio en tu contra antes de aceptar que te equivocaste).</li>
+        </ol>
+        <p>Con esos tres números, el tamaño de la posición sale solo. <em class="gold">No lo eliges: lo calculas.</em></p>
+
+        <h2 id="s2">La regla del riesgo porcentual fijo</h2>
+        <p>El pilar es este: <strong>arriesga siempre el mismo porcentaje pequeño de tu cuenta en cada operación.</strong> Lo habitual es <strong>1 % o 2 %</strong>. Un principiante debería empezar en el 1 % o incluso menos.</p>
+        <p>¿Qué significa "arriesgar el 1 %"? Que si la operación sale mal y toca tu stop, pierdes el 1 % de tu cuenta. Ni más, ni menos. En una cuenta de 10.000 €, eso son <strong>100 €</strong> de pérdida máxima por operación.</p>
+        <p>Fíjate en lo potente de esto: el porcentaje es fijo, pero el importe en euros <strong>se adapta solo</strong> al tamaño de tu cuenta:</p>
+        <ul>
+          <li>Si tu cuenta crece a 12.000 €, el 1 % son 120 € → arriesgas más en términos absolutos cuando vas ganando.</li>
+          <li>Si tu cuenta baja a 8.000 €, el 1 % son 80 € → arriesgas menos cuando vas perdiendo.</li>
+        </ul>
+        <p>Esto es exactamente lo que quieres: <strong>aceleras con el viento a favor y frenas con el viento en contra, automáticamente.</strong> Sin pensar, sin emoción. Es la antítesis del revenge trading.</p>
+        <div class="callout idea"><div class="ic">💡</div><div><b>Regla práctica:</b> define tu riesgo por operación UNA vez (1 % o 2 %) y no lo toques según cómo te sientas ese día. La disciplina aquí es lo que te separa del 90 %.</div></div>
+
+        <h2 id="s3">La fórmula del position sizing</h2>
+        <p>Aquí está la fórmula. Apúntala, porque la usarás en cada operación de tu vida:</p>
+        <div class="formula"><b>Tamaño de la posición</b> = (Capital × % de riesgo) ÷ Distancia al stop</div>
+        <ul>
+          <li><strong>Capital × % de riesgo</strong> = cuántos euros estás dispuesto a perder (tu "riesgo en €").</li>
+          <li><strong>Distancia al stop</strong> = cuánto pierdes por cada unidad del activo si toca el stop (en €).</li>
+        </ul>
+        <p>Vamos a verlo con números, paso a paso.</p>
+
+        <div class="eyebrow" style="margin-top:28px">Ejemplo 1 — una acción</div>
+        <ul>
+          <li>Cuenta: <strong>10.000 €</strong></li>
+          <li>Riesgo por operación: <strong>1 %</strong> → arriesgas <strong>100 €</strong></li>
+          <li>Compras una acción a <strong>100 €</strong> y pones el stop en <strong>95 €</strong> → distancia al stop = <strong>5 € por acción</strong></li>
+        </ul>
+        <div class="formula">Tamaño = 100 € ÷ 5 € por acción = <b>20 acciones</b></div>
+        <p>Compras <strong>20 acciones</strong>. Si el precio cae a 95 € y toca tu stop, pierdes 20 × 5 € = <strong>100 €</strong>, exactamente tu 1 %. Ni un euro más. Has controlado el riesgo <em>antes</em> de entrar.</p>
+
+        <div class="eyebrow" style="margin-top:28px">Ejemplo 2 — el mismo activo, stop más lejano</div>
+        <p>Mismo caso, pero ahora tu análisis dice que el stop correcto está en <strong>90 €</strong> (distancia = 10 €):</p>
+        <div class="formula">Tamaño = 100 € ÷ 10 € por acción = <b>10 acciones</b></div>
+        <p>Mira lo que pasó: con un stop <strong>más lejano</strong>, compras <strong>menos</strong> cantidad. Es lógico — si cada acción puede perder más, compras menos para que el riesgo total siga siendo 100 €. <strong>El stop manda sobre el tamaño, no al revés.</strong> (Profundizamos en dónde colocar el stop en la Lección 3.)</p>
+
+        <div class="eyebrow" style="margin-top:28px">Ejemplo 3 — cripto (la fórmula es idéntica)</div>
+        <ul>
+          <li>Cuenta: <strong>10.000 €</strong>, riesgo <strong>2 %</strong> → <strong>200 €</strong></li>
+          <li>Compras una moneda a <strong>2,00 €</strong>, stop en <strong>1,80 €</strong> → distancia = <strong>0,20 € por moneda</strong></li>
+        </ul>
+        <div class="formula">Tamaño = 200 € ÷ 0,20 € = <b>1.000 monedas</b></div>
+        <p>La fórmula no cambia entre activos. Acciones, cripto, divisas, oro: siempre la misma cuenta.</p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fórmula del position sizing: tres ingredientes producen el tamaño de la posición">
+            <g font-family="Inter,system-ui,sans-serif">
+              <!-- title -->
+              <text x="360" y="36" fill="#9b988f" font-size="12.5" text-anchor="middle" letter-spacing="1.5">EL TAMAÑO ES UN RESULTADO, NO UNA ELECCIÓN</text>
+
+              <!-- ingredient cards -->
+              <g>
+                <rect x="40" y="70" width="170" height="78" rx="10" fill="#15151b" stroke="#26262f"/>
+                <text x="125" y="98" fill="#9b988f" font-size="12" text-anchor="middle">Capital</text>
+                <text x="125" y="126" fill="#ece9e1" font-size="20" font-weight="600" text-anchor="middle">10.000 €</text>
+              </g>
+              <g>
+                <rect x="40" y="168" width="170" height="78" rx="10" fill="#15151b" stroke="#26262f"/>
+                <text x="125" y="196" fill="#9b988f" font-size="12" text-anchor="middle">% de riesgo</text>
+                <text x="125" y="224" fill="#ece9e1" font-size="20" font-weight="600" text-anchor="middle">1 %</text>
+              </g>
+              <g>
+                <rect x="40" y="266" width="170" height="78" rx="10" fill="#15151b" stroke="#26262f"/>
+                <text x="125" y="294" fill="#9b988f" font-size="12" text-anchor="middle">Distancia al stop</text>
+                <text x="125" y="322" fill="#ece9e1" font-size="20" font-weight="600" text-anchor="middle">5 € / acción</text>
+              </g>
+
+              <!-- connecting arrows into the engine -->
+              <path d="M210 109 C 260 109, 270 180, 318 198" fill="none" stroke="#3a3a44" stroke-width="2"/>
+              <path d="M210 207 H 318" fill="none" stroke="#3a3a44" stroke-width="2"/>
+              <path d="M210 305 C 260 305, 270 234, 318 216" fill="none" stroke="#3a3a44" stroke-width="2"/>
+
+              <!-- engine (formula node) -->
+              <rect x="318" y="158" width="172" height="100" rx="12" fill="#1c1c23" stroke="#d4af37" stroke-width="1.5"/>
+              <text x="404" y="190" fill="#9b988f" font-size="11.5" text-anchor="middle">FÓRMULA</text>
+              <text x="404" y="214" fill="#e5c45a" font-size="13.5" text-anchor="middle">(Cap × %)</text>
+              <text x="404" y="234" fill="#e5c45a" font-size="13.5" text-anchor="middle">÷ distancia</text>
+
+              <!-- arrow to result -->
+              <path d="M490 208 H 548" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+              <path d="M540 202 L 552 208 L 540 214 Z" fill="#d4af37"/>
+
+              <!-- result -->
+              <rect x="556" y="158" width="134" height="100" rx="12" fill="#15151b" stroke="#d4af37" stroke-width="1.5"/>
+              <text x="623" y="188" fill="#9b988f" font-size="11.5" text-anchor="middle">TAMAÑO</text>
+              <text x="623" y="222" fill="#d4af37" font-size="26" font-weight="600" text-anchor="middle">20</text>
+              <text x="623" y="242" fill="#ddd9d0" font-size="12.5" text-anchor="middle">acciones</text>
+
+              <!-- footnote -->
+              <text x="360" y="384" fill="#76746c" font-size="12" text-anchor="middle">Cambia un ingrediente y el resultado cambia solo. Tú nunca tecleas el tamaño a mano.</text>
+            </g>
+          </svg>
+          <figcaption>V2.1 · El tamaño de la posición es un resultado de tres ingredientes.</figcaption>
+        </figure>
+
+        <h2 id="s4">La "R": tu unidad universal de medida</h2>
+        <p>Ahora un concepto que va a simplificarte la vida entera: la <strong>R</strong>.</p>
+        <p><strong>1R = la cantidad que arriesgas en una operación.</strong> Es tu unidad de riesgo. Si arriesgas 100 €, entonces 1R = 100 € <em>para esa operación</em>.</p>
+        <p>¿Por qué es tan útil? Porque te permite medir cualquier resultado en R en vez de en euros, y así comparar operaciones de distinto tamaño con la misma vara:</p>
+        <ul>
+          <li>Ganas 300 € habiendo arriesgado 100 € → has ganado <strong>+3R</strong>.</li>
+          <li>Pierdes tu stop completo → has perdido <strong>−1R</strong>.</li>
+          <li>Ganas 50 € arriesgando 100 € → <strong>+0,5R</strong>.</li>
+        </ul>
+        <p>Cuando piensas en R, dejas de obsesionarte con el dinero y empiezas a pensar como un gestor de riesgo. Una operación ya no es "gané 300 €", es "gané 3R". Y eso te permite juzgar tu sistema entero por su resultado medio en R (lo veremos en la Lección 5, la esperanza matemática). <strong>La R es el idioma común de todo el módulo.</strong></p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Regla graduada en R con operaciones de ejemplo en más 3R, más 0,5R y menos 1R">
+            <g font-family="Inter,system-ui,sans-serif">
+              <text x="360" y="40" fill="#9b988f" font-size="12.5" text-anchor="middle" letter-spacing="1.5">CADA OPERACIÓN SE MIDE EN R, NO EN EUROS</text>
+
+              <!-- zero divider: loss zone vs gain zone -->
+              <rect x="80" y="232" width="116" height="24" fill="#e24b4a" opacity="0.06"/>
+              <rect x="196" y="232" width="464" height="24" fill="#d4af37" opacity="0.06"/>
+
+              <!-- the ruler -->
+              <line x1="80" y1="244" x2="660" y2="244" stroke="#26262f" stroke-width="2"/>
+
+              <!-- ticks: -1R, 0, +1R, +2R, +3R at x = 138,254,370,486,602 -->
+              <!-- -1R -->
+              <line x1="138" y1="232" x2="138" y2="256" stroke="#e24b4a" stroke-width="2"/>
+              <text x="138" y="278" fill="#f0a0a0" font-size="13" font-weight="500" text-anchor="middle">−1R</text>
+              <!-- 0 -->
+              <line x1="254" y1="226" x2="254" y2="262" stroke="#9b988f" stroke-width="2"/>
+              <text x="254" y="282" fill="#9b988f" font-size="13" font-weight="500" text-anchor="middle">0</text>
+              <!-- +1R -->
+              <line x1="370" y1="232" x2="370" y2="256" stroke="#3a3a44" stroke-width="2"/>
+              <text x="370" y="278" fill="#76746c" font-size="13" text-anchor="middle">+1R</text>
+              <!-- +2R -->
+              <line x1="486" y1="232" x2="486" y2="256" stroke="#3a3a44" stroke-width="2"/>
+              <text x="486" y="278" fill="#76746c" font-size="13" text-anchor="middle">+2R</text>
+              <!-- +3R -->
+              <line x1="602" y1="232" x2="602" y2="256" stroke="#3a3a44" stroke-width="2"/>
+              <text x="602" y="278" fill="#76746c" font-size="13" text-anchor="middle">+3R</text>
+
+              <!-- zone labels -->
+              <text x="138" y="306" fill="#76746c" font-size="11.5" text-anchor="middle">pérdida</text>
+              <text x="500" y="306" fill="#76746c" font-size="11.5" text-anchor="middle">ganancia</text>
+
+              <!-- example trade A: +3R -->
+              <line x1="602" y1="232" x2="602" y2="150" stroke="#d4af37" stroke-width="1" stroke-dasharray="3 3"/>
+              <circle cx="602" cy="150" r="7" fill="#d4af37"/>
+              <rect x="540" y="108" width="124" height="34" rx="8" fill="#15151b" stroke="#26262f"/>
+              <text x="602" y="124" fill="#ece9e1" font-size="12.5" font-weight="500" text-anchor="middle">+300 € · ganas</text>
+              <text x="602" y="138" fill="#e5c45a" font-size="11.5" text-anchor="middle">arriesgaste 100 €</text>
+
+              <!-- example trade B: +0,5R -->
+              <line x1="312" y1="232" x2="312" y2="178" stroke="#c98a2e" stroke-width="1" stroke-dasharray="3 3"/>
+              <circle cx="312" cy="178" r="6" fill="#c98a2e"/>
+              <rect x="252" y="140" width="120" height="32" rx="8" fill="#15151b" stroke="#26262f"/>
+              <text x="312" y="155" fill="#ece9e1" font-size="12.5" font-weight="500" text-anchor="middle">+0,5R</text>
+              <text x="312" y="168" fill="#9b988f" font-size="11" text-anchor="middle">+50 €</text>
+
+              <!-- example trade C: -1R -->
+              <line x1="138" y1="256" x2="138" y2="338" stroke="#e24b4a" stroke-width="1" stroke-dasharray="3 3"/>
+              <circle cx="138" cy="338" r="7" fill="#e24b4a"/>
+              <rect x="76" y="346" width="124" height="34" rx="8" fill="#15151b" stroke="#26262f"/>
+              <text x="138" y="362" fill="#f0a0a0" font-size="12.5" font-weight="500" text-anchor="middle">−1R · stop tocado</text>
+              <text x="138" y="376" fill="#9b988f" font-size="11.5" text-anchor="middle">pierdes 100 €</text>
+            </g>
+          </svg>
+          <figcaption>V2.2 · Mide cada operación en R (múltiplos de lo que arriesgas), no en euros.</figcaption>
+        </figure>
+
+        <div class="block-label">Errores comunes</div>
+        <ul>
+          <li><strong>"Decido el tamaño primero y el stop después."</strong> Al revés. El stop (dónde tu idea se demuestra falsa) define la distancia, y la distancia define el tamaño. Si pones el stop para que "encaje" con el tamaño que querías comprar, estás dejando que el deseo decida el riesgo.</li>
+          <li><strong>"El 1 % es muy poco, así no gano nada."</strong> Con 1 % por operación y una ventaja real, el interés compuesto trabaja para ti durante años. El objetivo de esta lección no es maximizar la ganancia de una operación: es garantizar que sigas vivo para mil operaciones.</li>
+          <li><strong>"Subo el riesgo cuando estoy muy seguro."</strong> La sensación de seguridad no predice el resultado; de hecho, el exceso de confianza precede a las peores pérdidas. Riesgo fijo, siempre.</li>
+          <li><strong>"Apalancamiento = arriesgo más."</strong> No necesariamente. El apalancamiento cambia cuánto capital necesitas para abrir la posición, pero tu riesgo lo sigue definiendo la distancia al stop y el tamaño. Lo que mata no es el apalancamiento, es saltarse el position sizing.</li>
+        </ul>
+
+        <div class="callout warn"><div class="ic">⚠️</div><div>El stop define el tamaño, <b>nunca al revés</b>. En el momento en que mueves el stop para comprar más cantidad, has dejado de gestionar el riesgo y has empezado a apostar.</div></div>
+
+        <div class="block-label">Resumen</div>
+        <ul>
+          <li>El tamaño de la posición <strong>no se elige, se calcula</strong> a partir de capital, % de riesgo y distancia al stop.</li>
+          <li>Fórmula: <strong>Tamaño = (Capital × % riesgo) ÷ Distancia al stop.</strong></li>
+          <li>Arriesga un <strong>% fijo y pequeño</strong> (1-2 %) en cada operación: se ajusta solo a tu cuenta y te protege en las rachas malas.</li>
+          <li>El <strong>stop define el tamaño</strong>, no al contrario.</li>
+          <li>Mide todo en <strong>R</strong> (1R = lo que arriesgas). Es la unidad que usarás el resto del curso.</li>
+        </ul>
+
+        <div class="block-label">Ejercicio práctico</div>
+        <div class="card">
+          <ol>
+            <li>Cuenta de 10.000 €, riesgo del 1 %. Calcula el tamaño de la posición para: entrada 50 €, stop 48 €. <em>(Solución: riesgo 100 € ÷ 2 € = 50 acciones.)</em></li>
+            <li>Misma cuenta y riesgo, pero el activo está a 2,50 € y tu stop en 2,30 €. ¿Cuántas monedas compras? Comprueba que la pérdida máxima son exactamente 100 €.</li>
+            <li>Convierte a R: arriesgaste 100 € y cerraste con +250 €. ¿Cuántas R ganaste? ¿Y si hubieras perdido el stop completo?</li>
+          </ol>
+        </div>
+
+        <div class="block-label">Autoevaluación</div>
+        <details class="qa"><summary>¿Qué tres ingredientes determinan el tamaño de una posición?</summary><div class="ans">El capital de la cuenta, el porcentaje de riesgo por operación y la distancia al stop.</div></details>
+        <details class="qa"><summary>Si tu cuenta baja, ¿qué le pasa al importe en euros que arriesgas con un % fijo?</summary><div class="ans">Baja automáticamente: arriesgas menos euros cuando vas perdiendo, lo que te protege.</div></details>
+        <details class="qa"><summary>Con cuenta de 10.000 €, riesgo 2 %, entrada 100 € y stop 96 €, ¿cuántas acciones compras?</summary><div class="ans">Riesgo = 200 €. Distancia = 4 €. Tamaño = 200 ÷ 4 = 50 acciones.</div></details>
+        <details class="qa"><summary>¿Qué es 1R?</summary><div class="ans">La cantidad que arriesgas en una operación; tu unidad de medida del riesgo.</div></details>
+
+        <div class="block-label">Glosario</div>
+        <div class="card">
+          <ul>
+            <li><strong>Position sizing:</strong> el cálculo de cuánta cantidad de un activo comprar/vender en función del riesgo asumido.</li>
+            <li><strong>Riesgo porcentual fijo (fixed fractional):</strong> arriesgar siempre el mismo % de la cuenta por operación.</li>
+            <li><strong>Distancia al stop:</strong> la diferencia entre tu precio de entrada y tu stop, expresada por unidad del activo.</li>
+            <li><strong>R:</strong> la cantidad arriesgada en una operación; unidad para medir resultados (+2R, −1R...).</li>
+            <li><strong>Apalancamiento:</strong> mecanismo que permite controlar una posición mayor que tu capital; no equivale a más riesgo si el position sizing está bien hecho.</li>
+          </ul>
+        </div>
+
+        <div class="pager">
+          <a class="prev" href="index.html"><div class="k">← Anterior</div><div class="t">L1 · Por qué el 90% pierde</div></a>
+          <a class="next" href="leccion-3.html"><div class="k">Siguiente →</div><div class="t">L3 · Stop loss y take profit</div></a>
+        </div>
+      </article>
+
+      <!-- TOC -->
+      <nav class="toc">
+        <div class="h">En esta lección</div>
+        <a href="#s1">Del "¿cuánto pierdo?" al "¿cuánto compro?"</a>
+        <a href="#s2">El riesgo porcentual fijo</a>
+        <a href="#s3">La fórmula del position sizing</a>
+        <a href="#s4">La "R": tu unidad de medida</a>
+      </nav>
+    </div>
+  </main>
+</div>
+</body>
+</html>

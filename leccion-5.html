@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · L5 Esperanza matemática</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </div>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4>Gestión de riesgo y capital</h4>
+      <div class="msub">MÓDULO 1 · 5 LECCIONES</div>
+      <a class="lesson" href="index.html"><span class="num done">1</span> Por qué el 90% pierde</a>
+      <a class="lesson" href="leccion-2.html"><span class="num done">2</span> Position sizing: la R</a>
+      <a class="lesson" href="leccion-3.html"><span class="num done">3</span> Stop loss y take profit</a>
+      <a class="lesson" href="leccion-4.html"><span class="num done">4</span> Drawdown y supervivencia</a>
+      <a class="lesson active" href="leccion-5.html"><span class="num">5</span> Esperanza matemática</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb">Módulo 1 · Gestión de riesgo &nbsp;›&nbsp; <b>Lección 5</b></div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:100%"></span></div> 5/5</div>
+    </div>
+
+    <div class="wrap">
+      <article>
+        <div class="eyebrow">Lección 5</div>
+        <h1 class="title">Ratio riesgo/beneficio y esperanza matemática</h1>
+        <div class="meta">
+          <div class="it">⏱ <b>~14 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>principiante–intermedio</b></div>
+          <div class="it">↳ Requisito: <b>Lecciones 1–4</b></div>
+        </div>
+
+        <div class="card obj">
+          <h3>Lo que sabrás hacer al terminar</h3>
+          <ol>
+            <li>Entender por qué el porcentaje de aciertos, por sí solo, no dice nada.</li>
+            <li>Calcular la esperanza matemática de un sistema en R.</li>
+            <li>Saber qué tasa de acierto necesitas para ser rentable según tu ratio riesgo/beneficio.</li>
+            <li>Juzgar si una estrategia merece la pena con un solo número.</li>
+          </ol>
+        </div>
+
+        <p class="lead">Te presento dos operadores. Ana acierta el 40 % de las veces. Beto acierta el 70 %. ¿Quién gana dinero? La respuesta intuitiva —Beto— está mal, o al menos es incompleta.</p>
+
+        <p>Ana puede estar forrándose y Beto arruinándose. En esta lección descubres por qué, y aprendes el único número que de verdad te dice si un sistema gana: la <strong>esperanza matemática</strong>. Esta es la lección donde <strong>todo el módulo encaja en una sola fórmula.</strong></p>
+
+        <h2 id="s1">El ratio riesgo/beneficio (R:R)</h2>
+        <p>Ya lo tocamos en la Lección 3, ahora lo formalizamos. El <strong>ratio riesgo/beneficio</strong> compara cuánto buscas ganar frente a cuánto arriesgas, medido en R:</p>
+        <ul>
+          <li>Arriesgas 1R, buscas 2R → ratio <strong>2:1</strong> (o "2R").</li>
+          <li>Arriesgas 1R, buscas 3R → ratio <strong>3:1</strong>.</li>
+          <li>Arriesgas 1R, buscas 0,5R → ratio <strong>0,5:1</strong> (buscas ganar menos de lo que arriesgas — mala señal).</li>
+        </ul>
+        <p>Cuanto mayor es el ratio, <strong>menos veces necesitas acertar</strong> para ganar dinero. Y aquí está la clave que descoloca a los principiantes: <em class="gold">un buen operador puede acertar menos de la mitad de las veces y aun así ganar mucho</em>, si cuando acierta gana bastante más de lo que pierde cuando falla.</p>
+
+        <h2 id="s2">Por qué el win rate, solo, no significa nada</h2>
+        <p>El "porcentaje de aciertos" (win rate) es la métrica favorita de los novatos y de los gurús de Instagram ("¡90 % de aciertos!"). Y es, ella sola, <strong>inútil</strong>. Te lo demuestro con dos sistemas:</p>
+        <p><strong>Sistema A — Beto, el del 70 % de aciertos:</strong> gana el 70 % de las veces, pero cuando gana solo se lleva 0,5R; pierde el 30 % de las veces, y cuando pierde se lleva un −1R completo.</p>
+        <p><strong>Sistema B — Ana, la del 40 % de aciertos:</strong> gana el 40 % de las veces, y cuando gana se lleva 3R; pierde el 60 % de las veces, perdiendo −1R cada vez.</p>
+        <p>Tu intuición dice que Beto (70 %) gana. Vamos a calcularlo de verdad con la esperanza matemática.</p>
+
+        <figure class="done">
+          <div style="text-align:center;font-family:Inter,system-ui,sans-serif;font-size:15px;color:#ece9e1;font-weight:600;margin-bottom:18px">70 % de aciertos puede perder; 40 % puede ganar mucho</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;font-family:Inter,system-ui,sans-serif">
+            <!-- BETO -->
+            <div style="background:#15151b;border:1px solid #26262f;border-radius:12px;padding:18px 18px 16px">
+              <div style="font-size:16px;font-weight:600;color:#ece9e1">Beto</div>
+              <div style="font-size:11.5px;color:#76746c;margin-bottom:14px">El del 70 % de aciertos</div>
+              <div style="display:flex;justify-content:space-between;padding:7px 0;border-top:1px solid #1c1c23;font-size:13px;color:#9b988f"><span>Win rate</span><b style="color:#ece9e1;font-weight:600">70 %</b></div>
+              <div style="display:flex;justify-content:space-between;padding:7px 0;border-top:1px solid #1c1c23;font-size:13px;color:#9b988f"><span>Gana cuando acierta</span><b style="color:#ece9e1;font-weight:600">0,5R</b></div>
+              <div style="display:flex;justify-content:space-between;padding:7px 0;border-top:1px solid #1c1c23;font-size:13px;color:#9b988f"><span>Pierde cuando falla</span><b style="color:#f0a0a0;font-weight:600">−1R</b></div>
+              <div style="margin-top:16px;background:#101014;border:1px solid #26262f;border-radius:10px;padding:14px;text-align:center">
+                <div style="font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:#76746c">Esperanza</div>
+                <div style="font-size:34px;font-weight:600;color:#9b988f;line-height:1.2;margin:2px 0">+0,05R</div>
+                <div style="font-size:11.5px;color:#76746c">apenas roza la rentabilidad</div>
+              </div>
+            </div>
+            <!-- ANA -->
+            <div style="background:#15151b;border:1px solid #d4af37;border-radius:12px;padding:18px 18px 16px">
+              <div style="font-size:16px;font-weight:600;color:#ece9e1">Ana</div>
+              <div style="font-size:11.5px;color:#76746c;margin-bottom:14px">La del 40 % de aciertos</div>
+              <div style="display:flex;justify-content:space-between;padding:7px 0;border-top:1px solid #1c1c23;font-size:13px;color:#9b988f"><span>Win rate</span><b style="color:#ece9e1;font-weight:600">40 %</b></div>
+              <div style="display:flex;justify-content:space-between;padding:7px 0;border-top:1px solid #1c1c23;font-size:13px;color:#9b988f"><span>Gana cuando acierta</span><b style="color:#63a922;font-weight:600">3R</b></div>
+              <div style="display:flex;justify-content:space-between;padding:7px 0;border-top:1px solid #1c1c23;font-size:13px;color:#9b988f"><span>Pierde cuando falla</span><b style="color:#f0a0a0;font-weight:600">−1R</b></div>
+              <div style="margin-top:16px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.35);border-radius:10px;padding:14px;text-align:center">
+                <div style="font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:#9b988f">Esperanza</div>
+                <div style="font-size:34px;font-weight:600;color:#d4af37;line-height:1.2;margin:2px 0">+0,60R</div>
+                <div style="font-size:11.5px;color:#9b988f">12× más que Beto, acertando menos</div>
+              </div>
+            </div>
+          </div>
+          <figcaption>V5.1 · Lo que decide no es el % de aciertos, es la esperanza.</figcaption>
+        </figure>
+
+        <h2 id="s3">La esperanza matemática (el número que lo decide todo)</h2>
+        <p>La <strong>esperanza matemática</strong> te dice cuánto ganas o pierdes, <em>de media</em>, por cada operación a largo plazo. Se mide en R. La fórmula:</p>
+        <div class="formula">Esperanza = (<b>% aciertos</b> × <b>R media ganada</b>) − (<b>% fallos</b> × <b>R media perdida</b>)</div>
+
+        <p>Calculamos a <strong>Beto</strong> (70 % aciertos, gana 0,5R, pierde 1R):</p>
+        <div class="formula">Esperanza = (<b>0,70</b> × <b>0,5</b>) − (<b>0,30</b> × <b>1</b>)
+          = 0,35 − 0,30
+          = <b>+0,05R</b> por operación</div>
+        <p>Beto gana, pero solo <strong>0,05R de media por operación</strong>. Apenas roza la rentabilidad. Y si le sumas comisiones y spreads (costes reales), probablemente Beto esté <strong>perdiendo dinero</strong> pese a su brillante 70 % de aciertos.</p>
+
+        <p>Calculamos a <strong>Ana</strong> (40 % aciertos, gana 3R, pierde 1R):</p>
+        <div class="formula">Esperanza = (<b>0,40</b> × <b>3</b>) − (<b>0,60</b> × <b>1</b>)
+          = 1,20 − 0,60
+          = <b>+0,60R</b> por operación</div>
+        <p>Ana gana <strong>0,60R de media por operación</strong>: doce veces más que Beto, acertando mucho menos. ¿Por qué? Porque cuando acierta, se lleva 3R, y cuando falla, solo pierde 1R. Su <em class="gold">ratio riesgo/beneficio compensa de sobra su bajo win rate</em>.</p>
+
+        <div class="callout idea"><div class="ic">💡</div><div><b>La gran lección:</b> lo que hace rentable a un sistema es la combinación de <b>win rate × ratio R:R</b>, resumida en la esperanza matemática. Ni el win rate solo, ni el ratio solo. El número que importa es la esperanza, y tiene que ser <em>positiva</em>.</div></div>
+
+        <h2 id="s4">¿Qué win rate necesitas? La tasa de equilibrio</h2>
+        <p>Dado un ratio riesgo/beneficio, existe un win rate mínimo por debajo del cual pierdes y por encima del cual ganas. Es tu <strong>tasa de acierto de equilibrio</strong> (break-even). Tabla práctica:</p>
+        <div class="tbl">
+          <table class="data">
+            <thead><tr><th>Ratio R:R</th><th>Win rate de equilibrio</th><th>Por encima de esto, ganas</th></tr></thead>
+            <tbody>
+              <tr><td>1:1</td><td>50 %</td><td>Necesitas acertar más de la mitad</td></tr>
+              <tr><td>2:1</td><td>33 %</td><td>Con acertar 1 de cada 3, ya ganas</td></tr>
+              <tr class="hl"><td>3:1</td><td>25 %</td><td>Con acertar 1 de cada 4, ya ganas</td></tr>
+              <tr><td>0,5:1</td><td>67 %</td><td>Acertar 2 de cada 3 solo para no perder</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Lee la fila del 3:1: si cada acierto te da 3R y cada fallo te quita 1R, <strong>te basta con acertar 1 de cada 4 veces para ser rentable</strong>. Por eso los operadores que buscan ratios altos pueden permitirse fallar mucho. Y lee la del 0,5:1: si buscas ganar menos de lo que arriesgas, necesitas acertar dos de cada tres solo para empatar — un camino durísimo.</p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Frontera de rentabilidad: ratio riesgo beneficio frente a win rate de equilibrio">
+            <g font-family="Inter,system-ui,sans-serif">
+              <!-- zonas -->
+              <path d="M 90 60 L 660 60 L 660 100.6 L 318 153.3 L 204 220 L 90 280 Z" fill="#63a922" opacity="0.10"/>
+              <path d="M 90 280 L 204 220 L 318 153.3 L 660 100.6 L 660 340 L 90 340 Z" fill="#e24b4a" opacity="0.08"/>
+              <!-- rejilla -->
+              <line stroke="#1c1c23" stroke-width="1" x1="90" y1="60" x2="660" y2="60"/>
+              <line stroke="#1c1c23" stroke-width="1" x1="90" y1="130" x2="660" y2="130"/>
+              <line stroke="#1c1c23" stroke-width="1" x1="90" y1="200" x2="660" y2="200"/>
+              <line stroke="#1c1c23" stroke-width="1" x1="90" y1="270" x2="660" y2="270"/>
+              <!-- ejes -->
+              <line stroke="#26262f" stroke-width="1" x1="90" y1="60" x2="90" y2="340"/>
+              <line stroke="#26262f" stroke-width="1" x1="90" y1="340" x2="660" y2="340"/>
+              <!-- ticks Y (win rate) -->
+              <text x="80" y="64" fill="#76746c" font-size="11.5" text-anchor="end">100%</text>
+              <text x="80" y="134" fill="#76746c" font-size="11.5" text-anchor="end">75%</text>
+              <text x="80" y="204" fill="#76746c" font-size="11.5" text-anchor="end">50%</text>
+              <text x="80" y="274" fill="#76746c" font-size="11.5" text-anchor="end">25%</text>
+              <text x="80" y="343" fill="#76746c" font-size="11.5" text-anchor="end">0%</text>
+              <text x="46" y="160" fill="#9b988f" font-size="12" text-anchor="middle" transform="rotate(-90 46 160)">win rate de equilibrio</text>
+              <!-- ticks X (ratio) -->
+              <text x="90" y="360" fill="#76746c" font-size="11.5" text-anchor="middle">0,5:1</text>
+              <text x="204" y="360" fill="#76746c" font-size="11.5" text-anchor="middle">1:1</text>
+              <text x="318" y="360" fill="#76746c" font-size="11.5" text-anchor="middle">2:1</text>
+              <text x="432" y="360" fill="#76746c" font-size="11.5" text-anchor="middle">3:1</text>
+              <text x="546" y="360" fill="#76746c" font-size="11.5" text-anchor="middle">4:1</text>
+              <text x="640" y="360" fill="#76746c" font-size="11.5" text-anchor="middle">5:1</text>
+              <text x="375" y="385" fill="#9b988f" font-size="12" text-anchor="middle">ratio riesgo / beneficio (R:R) →</text>
+              <!-- curva de frontera: WR equilibrio = 1/(1+ratio) -->
+              <polyline fill="none" stroke="#d4af37" stroke-width="2.5" stroke-linejoin="round"
+                points="90,153.3 204,200 318,246.7 432,270 546,283.3 660,291.6"/>
+              <!-- puntos clave -->
+              <circle cx="204" cy="200" r="4" fill="#d4af37"/>
+              <circle cx="318" cy="246.7" r="4" fill="#d4af37"/>
+              <circle cx="432" cy="270" r="4" fill="#d4af37"/>
+              <!-- etiquetas de zona -->
+              <text x="520" y="120" fill="#63a922" font-size="14" font-weight="600" text-anchor="middle">ZONA GANADORA</text>
+              <text x="520" y="138" fill="#9b988f" font-size="11.5" text-anchor="middle">esperanza positiva</text>
+              <text x="200" y="316" fill="#e24b4a" font-size="14" font-weight="600" text-anchor="middle">ZONA PERDEDORA</text>
+              <text x="200" y="334" fill="#9b988f" font-size="11.5" text-anchor="middle">esperanza negativa</text>
+            </g>
+          </svg>
+          <figcaption>V5.2 · Llegas a la zona verde por dos caminos: acertar más, o subir el ratio.</figcaption>
+        </figure>
+
+        <h2 id="s5">Cómo encaja todo el módulo</h2>
+        <p>Esta lección es el cierre, así que veamos cómo las cinco piezas forman un sistema único:</p>
+        <ul>
+          <li><strong>L1 — El riesgo primero:</strong> sobrevivir es la prioridad; las pérdidas grandes son irreparables.</li>
+          <li><strong>L2 — Position sizing (R):</strong> arriesga un % fijo pequeño; mide todo en R.</li>
+          <li><strong>L3 — Stops:</strong> define dónde se rompe tu idea; eso fija tu 1R y tu ratio.</li>
+          <li><strong>L4 — Drawdown:</strong> las rachas son normales; el riesgo bajo te mantiene vivo a través de ellas.</li>
+          <li><strong>L5 — Esperanza:</strong> tu sistema gana si su esperanza en R es positiva, combinación de win rate y ratio.</li>
+        </ul>
+        <p><strong>El flujo completo de una operación profesional:</strong> defines dónde se rompe tu idea (stop, L3) → eso te da tu 1R y la distancia → calculas el tamaño para arriesgar tu 1 % (L2) → fijas un objetivo en múltiplos de R para tener buen ratio (L3/L5) → repites muchas veces sabiendo que tu esperanza es positiva (L5) y que ninguna racha te sacará del juego (L1/L4). <em class="gold">Eso es gestión de riesgo. Eso es lo que hace el 10 % que sobrevive.</em></p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ciclo de las cinco lecciones del módulo encajando: riesgo, position sizing, stops, drawdown y esperanza">
+            <defs>
+              <marker id="arrow" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6 Z" fill="#d4af37"/>
+              </marker>
+            </defs>
+            <g font-family="Inter,system-ui,sans-serif">
+              <!-- nodos -->
+              <g>
+                <rect x="20" y="70" width="116" height="90" rx="12" fill="#15151b" stroke="#26262f"/>
+                <circle cx="78" cy="98" r="15" fill="#1b1b22" stroke="#d4af37"/>
+                <text x="78" y="103" fill="#e5c45a" font-size="14" font-weight="600" text-anchor="middle">1</text>
+                <text x="78" y="130" fill="#ece9e1" font-size="13" font-weight="600" text-anchor="middle">Riesgo</text>
+                <text x="78" y="147" fill="#9b988f" font-size="11" text-anchor="middle">primero</text>
+              </g>
+              <g>
+                <rect x="156" y="70" width="116" height="90" rx="12" fill="#15151b" stroke="#26262f"/>
+                <circle cx="214" cy="98" r="15" fill="#1b1b22" stroke="#d4af37"/>
+                <text x="214" y="103" fill="#e5c45a" font-size="14" font-weight="600" text-anchor="middle">2</text>
+                <text x="214" y="130" fill="#ece9e1" font-size="13" font-weight="600" text-anchor="middle">Position</text>
+                <text x="214" y="147" fill="#9b988f" font-size="11" text-anchor="middle">sizing (R)</text>
+              </g>
+              <g>
+                <rect x="292" y="70" width="116" height="90" rx="12" fill="#15151b" stroke="#26262f"/>
+                <circle cx="350" cy="98" r="15" fill="#1b1b22" stroke="#d4af37"/>
+                <text x="350" y="103" fill="#e5c45a" font-size="14" font-weight="600" text-anchor="middle">3</text>
+                <text x="350" y="130" fill="#ece9e1" font-size="13" font-weight="600" text-anchor="middle">Stops</text>
+                <text x="350" y="147" fill="#9b988f" font-size="11" text-anchor="middle">1R y ratio</text>
+              </g>
+              <g>
+                <rect x="428" y="70" width="116" height="90" rx="12" fill="#15151b" stroke="#26262f"/>
+                <circle cx="486" cy="98" r="15" fill="#1b1b22" stroke="#d4af37"/>
+                <text x="486" y="103" fill="#e5c45a" font-size="14" font-weight="600" text-anchor="middle">4</text>
+                <text x="486" y="130" fill="#ece9e1" font-size="13" font-weight="600" text-anchor="middle">Drawdown</text>
+                <text x="486" y="147" fill="#9b988f" font-size="11" text-anchor="middle">sobrevivir</text>
+              </g>
+              <g>
+                <rect x="564" y="70" width="116" height="90" rx="12" fill="#1b1b22" stroke="#d4af37" stroke-width="1.5"/>
+                <circle cx="622" cy="98" r="15" fill="#d4af37"/>
+                <text x="622" y="103" fill="#1a1407" font-size="14" font-weight="600" text-anchor="middle">5</text>
+                <text x="622" y="130" fill="#ece9e1" font-size="13" font-weight="600" text-anchor="middle">Esperanza</text>
+                <text x="622" y="147" fill="#e5c45a" font-size="11" text-anchor="middle">positiva</text>
+              </g>
+              <!-- flechas -->
+              <line x1="138" y1="115" x2="152" y2="115" stroke="#d4af37" stroke-width="2" marker-end="url(#arrow)"/>
+              <line x1="274" y1="115" x2="288" y2="115" stroke="#d4af37" stroke-width="2" marker-end="url(#arrow)"/>
+              <line x1="410" y1="115" x2="424" y2="115" stroke="#d4af37" stroke-width="2" marker-end="url(#arrow)"/>
+              <line x1="546" y1="115" x2="560" y2="115" stroke="#d4af37" stroke-width="2" marker-end="url(#arrow)"/>
+              <!-- bucle de retorno -->
+              <path d="M 622 160 L 622 195 L 78 195 L 78 162" fill="none" stroke="#33333f" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+              <text x="350" y="212" fill="#76746c" font-size="11.5" text-anchor="middle" font-family="Inter,system-ui,sans-serif">repites el ciclo en cada operación</text>
+              <!-- titulo -->
+              <text x="20" y="40" fill="#ece9e1" font-size="15" font-weight="600" font-family="Inter,system-ui,sans-serif">Un solo sistema, cinco piezas que encajan</text>
+            </g>
+          </svg>
+          <figcaption>V5.3 · Las cinco piezas forman un solo sistema.</figcaption>
+        </figure>
+
+        <div class="block-label">Errores comunes y mitos</div>
+        <ul>
+          <li><strong>"Busco la estrategia con más % de aciertos."</strong> Un win rate alto con ratio malo pierde dinero. Persigue <strong>esperanza positiva</strong>, no aciertos.</li>
+          <li><strong>"Un ratio 1:1 está bien."</strong> Con 1:1 necesitas acertar más del 50 % <em>neto de costes</em>, que es más difícil de lo que parece. Los ratios por debajo de 1:1 exigen aciertos altísimos solo para empatar.</li>
+          <li><strong>"La esperanza positiva garantiza ganar este mes."</strong> No. La esperanza es un promedio a largo plazo; en el corto plazo manda la varianza (las rachas de la L4). Esperanza positiva + riesgo bajo + tiempo = rentabilidad. Las tres cosas, no una.</li>
+          <li><strong>"Ignoro las comisiones, son poca cosa."</strong> Los costes (comisión + spread) restan directamente a tu esperanza. Un sistema con esperanza de +0,05R puede volverse negativo solo con los costes. Siempre calcula la esperanza <strong>neta de costes</strong>.</li>
+        </ul>
+
+        <div class="block-label">Resumen</div>
+        <ul>
+          <li>El <strong>win rate solo no significa nada</strong>: un 70 % de aciertos puede perder y un 40 % puede ganar mucho.</li>
+          <li>Lo que decide es la <strong>esperanza matemática</strong> = (%aciertos × R ganada) − (%fallos × R perdida). Tiene que ser <strong>positiva</strong>.</li>
+          <li>A mayor <strong>ratio R:R</strong>, menor win rate necesitas: con 3:1 te basta acertar 1 de cada 4.</li>
+          <li>Calcula siempre la esperanza <strong>neta de comisiones y spread</strong>.</li>
+          <li>Esperanza positiva + riesgo bajo (L2) + supervivencia a las rachas (L4) = el sistema completo.</li>
+        </ul>
+
+        <div class="block-label">Ejercicio práctico</div>
+        <ol>
+          <li>Calcula la esperanza de un sistema que acierta el 50 % de las veces, gana 2R cuando acierta y pierde 1R cuando falla. ¿Es rentable? <em class="gold">(Solución: 0,5×2 − 0,5×1 = +0,5R. Sí.)</em></li>
+          <li>Otro sistema acierta el 80 % pero gana 0,25R y pierde 1R. Calcula su esperanza. ¿Te sorprende el resultado? <em class="gold">(Solución: 0,8×0,25 − 0,2×1 = 0,20 − 0,20 = 0R: ni gana ni pierde, y con costes pierde.)</em></li>
+          <li>Tu sistema tiene un ratio 2:1. Mira la tabla: ¿cuál es tu win rate de equilibrio? Si tú aciertas el 45 %, ¿estás en zona ganadora o perdedora?</li>
+        </ol>
+
+        <div class="block-label">Autoevaluación</div>
+        <details class="qa"><summary>¿Por qué el win rate por sí solo no sirve para juzgar un sistema?</summary><div class="ans">Porque no dice cuánto ganas cuando aciertas ni cuánto pierdes cuando fallas; un win rate alto con mal ratio puede perder dinero.</div></details>
+        <details class="qa"><summary>Escribe la fórmula de la esperanza matemática.</summary><div class="ans">Esperanza = (% aciertos × R media ganada) − (% fallos × R media perdida).</div></details>
+        <details class="qa"><summary>Con un ratio 3:1, ¿qué win rate mínimo necesitas para ser rentable?</summary><div class="ans">Alrededor del 25 %: con acertar 1 de cada 4 ya tienes esperanza positiva (antes de costes).</div></details>
+        <details class="qa"><summary>¿Garantiza una esperanza positiva que ganes este mes?</summary><div class="ans">No. Es un promedio a largo plazo; en el corto domina la varianza. Hace falta tiempo y riesgo bajo para que se materialice.</div></details>
+
+        <div class="block-label">Glosario</div>
+        <div class="card">
+          <ul>
+            <li><strong>Ratio riesgo/beneficio (R:R):</strong> relación entre lo que buscas ganar y lo que arriesgas, en R (p. ej. 3:1).</li>
+            <li><strong>Win rate (tasa de acierto):</strong> porcentaje de operaciones ganadoras.</li>
+            <li><strong>Esperanza matemática:</strong> ganancia/pérdida media por operación a largo plazo, en R; positiva = sistema rentable.</li>
+            <li><strong>Tasa de equilibrio (break-even):</strong> win rate mínimo, dado un ratio, por encima del cual el sistema gana.</li>
+            <li><strong>Varianza:</strong> dispersión de los resultados a corto plazo alrededor de la media; causa de las rachas.</li>
+            <li><strong>Neto de costes:</strong> resultado después de descontar comisiones y spread.</li>
+          </ul>
+        </div>
+
+        <h2 id="s6">Fin del Módulo 1</h2>
+        <p>Si has interiorizado estas cinco lecciones, ya sabes lo que el 90 % no sabe: que ganar en los mercados no va de adivinar, va de <strong>gestionar el riesgo</strong> para que tu ventaja, por pequeña que sea, tenga tiempo de hacerte ganar. Todo lo que viene después en el curso —análisis técnico, fundamental, on-chain— se construye sobre esta base.</p>
+        <div class="callout idea"><div class="ic">🏁</div><div><b>Has completado el Módulo 1.</b> El riesgo va antes que la estrategia, mides todo en R, defines tus stops, sobrevives a las rachas y persigues una esperanza positiva. Cinco piezas, un solo sistema. Ahora sí, a construir encima.</div></div>
+
+        <div class="pager">
+          <a href="leccion-4.html"><div class="k">← Anterior</div><div class="t">L4 · Drawdown y supervivencia</div></a>
+          <a class="next disabled" href="#"><div class="k">Fin del módulo</div><div class="t">Módulo 1 completado ✓</div></a>
+        </div>
+      </article>
+
+      <!-- TOC -->
+      <nav class="toc">
+        <div class="h">En esta lección</div>
+        <a href="#s1">El ratio riesgo/beneficio</a>
+        <a href="#s2">El win rate no significa nada</a>
+        <a href="#s3">La esperanza matemática</a>
+        <a href="#s4">La tasa de equilibrio</a>
+        <a href="#s5">Cómo encaja el módulo</a>
+        <a href="#s6">Fin del Módulo 1</a>
+      </nav>
+    </div>
+  </main>
+</div>
+</body>
+</html>

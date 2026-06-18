@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · L4 Drawdown y supervivencia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </div>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4>Gestión de riesgo y capital</h4>
+      <div class="msub">MÓDULO 1 · 5 LECCIONES</div>
+      <a class="lesson" href="index.html"><span class="num done">1</span> Por qué el 90% pierde</a>
+      <a class="lesson" href="leccion-2.html"><span class="num done">2</span> Position sizing: la R</a>
+      <a class="lesson" href="leccion-3.html"><span class="num done">3</span> Stop loss y take profit</a>
+      <a class="lesson active" href="leccion-4.html"><span class="num">4</span> Drawdown y supervivencia</a>
+      <a class="lesson" href="leccion-5.html"><span class="num">5</span> Esperanza matemática</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb">Módulo 1 · Gestión de riesgo &nbsp;›&nbsp; <b>Lección 4</b></div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:80%"></span></div> 4/5</div>
+    </div>
+
+    <div class="wrap">
+      <article>
+        <div class="eyebrow">Lección 4</div>
+        <h1 class="title">Drawdown, racha de pérdidas y supervivencia</h1>
+        <div class="meta">
+          <div class="it">⏱ <b>~13 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>principiante–intermedio</b></div>
+          <div class="it">↳ Requisito: <b>Lecciones 1–3</b></div>
+        </div>
+
+        <div class="card obj">
+          <h3>Lo que sabrás hacer al terminar</h3>
+          <ol>
+            <li>Definir qué es el drawdown y por qué es la métrica de riesgo que más importa.</li>
+            <li>Entender que las rachas largas de pérdidas son normales, incluso en sistemas ganadores.</li>
+            <li>Relacionar tu riesgo por operación con el drawdown máximo que vas a sufrir.</li>
+            <li>Reconocer el "riesgo de ruina" y cómo el position sizing lo mantiene a raya.</li>
+          </ol>
+        </div>
+
+        <p class="lead">Todo sistema, por bueno que sea, pasa por valles. Habrá un día en que lleves 7, 8, 10 operaciones perdedoras seguidas y tu cuenta esté en su punto más bajo. Ese momento no lo decide tu estrategia: lo decide si sobrevives a él con la cabeza fría y el capital intacto.</p>
+
+        <p>La mayoría no abandona en el punto malo del mercado: abandona en el punto malo de <strong>su propia curva</strong>. Esta lección es el seguro de vida contra eso.</p>
+
+        <h2 id="s1">Qué es el drawdown</h2>
+        <p>El <strong>drawdown</strong> es la caída de tu cuenta desde su punto más alto hasta un valle posterior, medida en porcentaje. Es, sencillamente, <em class="gold">cuánto has bajado desde tu mejor momento</em>.</p>
+        <p>Ejemplo: tu cuenta sube hasta 12.000 € (tu máximo), luego una mala racha la lleva a 10.200 €. Tu drawdown es:</p>
+        <div class="formula">(12.000 − 10.200) ÷ 12.000 = <b>15 % de drawdown</b></div>
+        <p>El número que de verdad importa es el <strong>drawdown máximo</strong>: la peor caída que has sufrido (o que podrías sufrir). ¿Por qué es <em>la</em> métrica de riesgo? Por tres razones:</p>
+        <ol>
+          <li><strong>Es lo que recuerda la matemática de la Lección 1:</strong> un drawdown del 50 % exige un +100 % para recuperarse. Los drawdown profundos son casi mortales.</li>
+          <li><strong>Es lo que te rompe psicológicamente.</strong> Un drawdown del 30 % se <em>siente</em> como un fracaso total y empuja a abandonar el plan justo en el peor momento.</li>
+          <li><strong>Es lo que define si una estrategia es "operable" para ti.</strong> Un sistema que gana mucho pero con drawdown del 60 % es, en la práctica, inservible: nadie lo aguanta.</li>
+        </ol>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Curva de capital con un pico máximo y un valle posterior, midiendo el drawdown entre ambos">
+            <g font-family="Inter,system-ui,sans-serif">
+              <line stroke="#26262f" stroke-width="1" x1="80" y1="40" x2="80" y2="320"/>
+              <line stroke="#26262f" stroke-width="1" x1="80" y1="320" x2="690" y2="320"/>
+              <text x="36" y="324" fill="#76746c" font-size="12">0</text>
+              <text x="370" y="340" fill="#76746c" font-size="12">tiempo →</text>
+
+              <!-- curva de capital en escalera con valles -->
+              <polyline fill="none" stroke="#d4af37" stroke-width="2.5" stroke-linejoin="round"
+                points="80,250 130,232 175,250 225,210 275,228 330,170 390,140 430,162 470,150 520,200 560,232 610,210 660,178 690,166"/>
+
+              <!-- pico maximo -->
+              <line stroke="#33333f" stroke-width="1" stroke-dasharray="4 4" x1="80" y1="140" x2="520" y2="140"/>
+              <circle cx="390" cy="140" r="4.5" fill="#e5c45a"/>
+              <text x="396" y="130" fill="#ece9e1" font-size="12.5" font-weight="500">Pico máximo</text>
+
+              <!-- valle siguiente -->
+              <line stroke="#33333f" stroke-width="1" stroke-dasharray="4 4" x1="80" y1="232" x2="520" y2="232"/>
+              <circle cx="520" cy="232" r="4.5" fill="#e24b4a"/>
+              <text x="528" y="248" fill="#f0a0a0" font-size="12.5" font-weight="500">Valle posterior</text>
+
+              <!-- llave/corchete midiendo el drawdown -->
+              <path d="M232,140 h-14 v92 h14" fill="none" stroke="#c98a2e" stroke-width="1.5"/>
+              <line x1="218" y1="186" x2="206" y2="186" stroke="#c98a2e" stroke-width="1.5"/>
+              <polygon points="206,180 196,186 206,192" fill="#c98a2e"/>
+              <text x="150" y="183" fill="#e5c45a" font-size="13" font-weight="500" text-anchor="middle">drawdown</text>
+              <text x="150" y="200" fill="#9b988f" font-size="11.5" text-anchor="middle">caída desde el máximo</text>
+
+              <!-- leyenda -->
+              <line x1="300" y1="372" x2="328" y2="372" stroke="#d4af37" stroke-width="3"/>
+              <text x="336" y="377" fill="#ece9e1" font-size="13" font-family="Inter,system-ui,sans-serif">Curva de capital</text>
+            </g>
+          </svg>
+          <figcaption>V4.1 · El drawdown es la caída desde tu máximo.</figcaption>
+        </figure>
+
+        <h2 id="s2">Las rachas de pérdidas son normales (en serio)</h2>
+        <p>Este es el punto que salva carreras. Un sistema con un <strong>60 % de aciertos</strong> —que sería excelente— <strong>igualmente</strong> va a tener rachas perdedoras largas, simplemente por azar. No porque se haya "estropeado". Es estadística pura.</p>
+        <p>Piénsalo con una moneda. Si lanzas una moneda muchas veces, tarde o temprano salen 6 o 7 caras seguidas. No es que la moneda esté rota: es lo que pasa cuando hay muchos lanzamientos. Tus operaciones son igual.</p>
+        <p>Una idea aproximada de cuántas pérdidas seguidas puedes esperar según tu tasa de acierto, a lo largo de muchas operaciones:</p>
+        <div class="tbl">
+          <table class="data">
+            <thead><tr><th>Tasa de acierto</th><th>Racha perdedora larga esperable</th></tr></thead>
+            <tbody>
+              <tr><td>40 %</td><td>9–13 seguidas</td></tr>
+              <tr class="hl"><td>50 %</td><td>7–10 seguidas</td></tr>
+              <tr><td>60 %</td><td>5–7 seguidas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La lección práctica: <em class="gold">si no esperas las rachas, las rachas te van a romper</em>. El operador que cuenta con ellas las atraviesa sin tocar nada. El que cree que "algo va mal" cambia de sistema, sube el riesgo para recuperar, o abandona — los tres errores garantizan la pérdida.</p>
+        <div class="callout idea"><div class="ic">💡</div><div><b>Reencuadre mental:</b> una racha perdedora no es una señal de que tu sistema falla. Es el precio de entrada que pagas por tener un sistema con ventaja. Lo único que tienes que asegurar es que ninguna racha normal te saque del juego.</div></div>
+
+        <h2 id="s3">Cómo tu riesgo por operación controla el drawdown</h2>
+        <p>Aquí se cierra el círculo con la Lección 2. <strong>El porcentaje que arriesgas por operación es la palanca que controla la profundidad de tus drawdowns.</strong> Más riesgo por operación = drawdowns más profundos en las mismas rachas.</p>
+        <p>Mira qué le pasa a tu cuenta ante una racha de <strong>10 pérdidas seguidas</strong> según cuánto arriesgues en cada una (riesgo compuesto):</p>
+        <div class="tbl">
+          <table class="data">
+            <thead><tr><th>Riesgo por operación</th><th>Cuenta tras 10 pérdidas</th><th>Drawdown aprox.</th></tr></thead>
+            <tbody>
+              <tr><td>1 %</td><td>~90 % del capital</td><td>~10 %</td></tr>
+              <tr><td>2 %</td><td>~82 % del capital</td><td>~18 %</td></tr>
+              <tr><td>5 %</td><td>~60 % del capital</td><td>~40 %</td></tr>
+              <tr><td>10 %</td><td>~35 % del capital</td><td>~65 %</td></tr>
+              <tr class="hl"><td>20 %</td><td>~11 % del capital</td><td>~89 % (casi ruina)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Lee la fila del 20 %: la <strong>misma racha</strong> que con un 1 % apenas te araña, con un 20 % te deja en cero. La racha es idéntica; lo único que cambió fue tu position sizing. <strong>Esto es, en una tabla, por qué la Lección 2 es el corazón de tu supervivencia.</strong></p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cinco curvas de capital sufriendo la misma racha de diez pérdidas, una por nivel de riesgo: terminan en 90, 82, 60, 35 y 11 por ciento del capital">
+            <g font-family="Inter,system-ui,sans-serif">
+              <!-- ejes -->
+              <line stroke="#26262f" stroke-width="1" x1="80" y1="40" x2="80" y2="320"/>
+              <line stroke="#26262f" stroke-width="1" x1="80" y1="320" x2="690" y2="320"/>
+              <!-- rejilla tenue -->
+              <line stroke="#1c1c23" stroke-width="1" x1="80" y1="190.8" x2="690" y2="190.8"/>
+              <!-- referencia capital inicial -->
+              <line stroke="#33333f" stroke-width="1" stroke-dasharray="4 4" x1="80" y1="104.6" x2="690" y2="104.6"/>
+              <text x="86" y="100" fill="#76746c" font-size="12">capital inicial (100%)</text>
+              <text x="36" y="324" fill="#76746c" font-size="12">0</text>
+              <text x="300" y="340" fill="#76746c" font-size="12">10 pérdidas seguidas →</text>
+
+              <!-- 1% -> 90% (dorado) -->
+              <polyline fill="none" stroke="#d4af37" stroke-width="2.5" stroke-linejoin="round"
+                points="80,104.6 141,106.7 202,109.0 263,111.1 324,113.3 385,115.5 446,117.6 507,119.8 568,121.9 629,124.0 690,126.1"/>
+              <circle cx="690" cy="126.1" r="4" fill="#d4af37"/>
+              <text x="700" y="130" fill="#e5c45a" font-size="11.5">90%</text>
+
+              <!-- 2% -> 82% (dorado suave) -->
+              <polyline fill="none" stroke="#e5c45a" stroke-width="2.5" stroke-linejoin="round"
+                points="80,104.6 141,108.3 202,112.1 263,115.8 324,119.5 385,123.2 446,127.0 507,130.7 568,134.4 629,138.1 690,143.4"/>
+              <circle cx="690" cy="143.4" r="4" fill="#e5c45a"/>
+              <text x="700" y="147" fill="#e5c45a" font-size="11.5">82%</text>
+
+              <!-- 5% -> 60% (ambar) -->
+              <polyline fill="none" stroke="#c98a2e" stroke-width="2.5" stroke-linejoin="round"
+                points="80,104.6 141,113.5 202,122.0 263,130.1 324,137.8 385,145.1 446,152.0 507,158.6 568,164.8 629,176.0 690,190.8"/>
+              <circle cx="690" cy="190.8" r="4" fill="#c98a2e"/>
+              <text x="700" y="194" fill="#c98a2e" font-size="11.5">60%</text>
+
+              <!-- 10% -> 35% (rojo suave) -->
+              <polyline fill="none" stroke="#f0a0a0" stroke-width="2.5" stroke-linejoin="round"
+                points="80,104.6 141,118.7 202,131.4 263,142.8 324,153.1 385,162.4 446,170.7 507,178.2 568,185.0 629,217.0 690,244.6"/>
+              <circle cx="690" cy="244.6" r="4" fill="#f0a0a0"/>
+              <text x="700" y="248" fill="#f0a0a0" font-size="11.5">35%</text>
+
+              <!-- 20% -> 11% (rojo, se desploma) -->
+              <polyline fill="none" stroke="#e24b4a" stroke-width="2.5" stroke-linejoin="round"
+                points="80,104.6 141,127.6 202,146.0 263,160.7 324,172.5 385,182.0 446,189.5 507,195.6 568,225.0 629,265.0 690,296.3"/>
+              <circle cx="690" cy="296.3" r="4" fill="#e24b4a"/>
+              <text x="700" y="300" fill="#f0a0a0" font-size="11.5">11%</text>
+
+              <!-- leyenda -->
+              <line x1="120" y1="368" x2="148" y2="368" stroke="#d4af37" stroke-width="3"/><text x="155" y="373" fill="#9b988f" font-size="12.5">1%</text>
+              <line x1="205" y1="368" x2="233" y2="368" stroke="#e5c45a" stroke-width="3"/><text x="240" y="373" fill="#9b988f" font-size="12.5">2%</text>
+              <line x1="290" y1="368" x2="318" y2="368" stroke="#c98a2e" stroke-width="3"/><text x="325" y="373" fill="#9b988f" font-size="12.5">5%</text>
+              <line x1="375" y1="368" x2="403" y2="368" stroke="#f0a0a0" stroke-width="3"/><text x="410" y="373" fill="#9b988f" font-size="12.5">10%</text>
+              <line x1="468" y1="368" x2="496" y2="368" stroke="#e24b4a" stroke-width="3"/><text x="503" y="373" fill="#ece9e1" font-size="12.5">20% · se desploma</text>
+            </g>
+          </svg>
+          <figcaption>V4.2 · Misma racha de 10 pérdidas, distinto riesgo por operación, destino opuesto.</figcaption>
+        </figure>
+
+        <h2 id="s4">El riesgo de ruina</h2>
+        <p>El <strong>riesgo de ruina</strong> es la probabilidad de perder tanto capital que ya no puedes seguir operando (o psicológicamente o porque la cuenta es demasiado pequeña para recuperarse). Es el peor escenario, el que toda la gestión de riesgo existe para evitar.</p>
+        <p>No hace falta que calcules su fórmula exacta. Lo que tienes que interiorizar es <strong>qué lo dispara y qué lo reduce</strong>:</p>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>Dispara el riesgo de ruina:</b> arriesgar mucho por operación (la tabla de arriba); no tener ventaja real (esperanza negativa — Lección 5); aumentar el riesgo tras perder para "recuperar" (revenge trading).</div></div>
+        <div class="callout idea"><div class="ic">💡</div><div><b>Reduce el riesgo de ruina casi a cero:</b> arriesgar poco y fijo por operación (1-2 %); tener una ventaja real, por pequeña que sea; mantener la disciplina en los drawdowns sin tocar el plan.</div></div>
+        <p>La conclusión es liberadora: <em class="gold">con un riesgo por operación pequeño y un sistema con la más mínima ventaja, el riesgo de ruina es prácticamente nulo</em>. No necesitas adivinar el mercado. Necesitas no apostar fuerte y dejar que las matemáticas trabajen.</p>
+
+        <div class="block-label">Errores comunes</div>
+        <ul>
+          <li><strong>"Llevo 6 pérdidas seguidas, mi sistema está roto."</strong> Seis seguidas es estadísticamente normal. Sin más datos, no es evidencia de nada. Cambiar de sistema en cada drawdown garantiza que nunca des a ninguno el tiempo de demostrar su ventaja.</li>
+          <li><strong>"Voy a recuperar el drawdown subiendo el riesgo."</strong> Esto multiplica la profundidad del drawdown y dispara el riesgo de ruina. Es exactamente lo contrario de lo que debes hacer. En drawdown, el riesgo se mantiene o se reduce, jamás se sube.</li>
+          <li><strong>"Un drawdown del 40 % no es para tanto, ya remontará."</strong> Recuerda la asimetría: del 40 % necesitas un +67 % para volver. Los drawdown profundos son trampas, no baches.</li>
+          <li><strong>"Si nunca tengo drawdowns, soy muy bueno."</strong> O estás arriesgando tan poco que es perfecto, o llevas pocas operaciones, o estás sin stops acumulando una pérdida latente que aún no has realizado. Todo sistema real tiene drawdowns.</li>
+        </ul>
+
+        <div class="block-label">Resumen</div>
+        <ul>
+          <li>El <strong>drawdown</strong> es la caída desde tu máximo; el <strong>drawdown máximo</strong> es la métrica de riesgo que más importa.</li>
+          <li>Las <strong>rachas perdedoras largas son normales</strong> incluso en sistemas ganadores. Espéralas y no toques nada.</li>
+          <li>Tu <strong>riesgo por operación controla la profundidad</strong> del drawdown: misma racha, distinto destino según arriesgues 1 % o 20 %.</li>
+          <li>El <strong>riesgo de ruina</strong> se reduce casi a cero con riesgo bajo y fijo + una ventaja real + disciplina.</li>
+          <li>En drawdown, el riesgo <strong>nunca se sube</strong> para recuperar.</li>
+        </ul>
+
+        <div class="block-label">Ejercicio práctico</div>
+        <ol>
+          <li>Tu cuenta marcó un máximo de 15.000 € y ahora está en 12.750 €. Calcula tu drawdown en %.</li>
+          <li>Con la tabla de la lección, decide: si quisieras que una racha de 10 pérdidas no te causara más de un ~18 % de drawdown, ¿qué riesgo por operación deberías usar como máximo?</li>
+          <li>Escribe tu "plan de drawdown": una regla concreta de qué harás (y qué NO harás) la próxima vez que encadenes 6 pérdidas seguidas.</li>
+        </ol>
+
+        <div class="block-label">Autoevaluación</div>
+        <details class="qa"><summary>¿Qué es el drawdown?</summary><div class="ans">La caída de la cuenta desde su punto máximo hasta un valle posterior, en porcentaje.</div></details>
+        <details class="qa"><summary>¿Una racha de 8 pérdidas seguidas significa que el sistema está roto?</summary><div class="ans">No necesariamente; es estadísticamente normal incluso en sistemas con ventaja. No es evidencia suficiente por sí sola.</div></details>
+        <details class="qa"><summary>Ante la misma racha de pérdidas, ¿qué provoca un drawdown más profundo: arriesgar 1 % o 10 % por operación?</summary><div class="ans">Arriesgar 10 %: el riesgo por operación es la palanca que controla la profundidad del drawdown.</div></details>
+        <details class="qa"><summary>¿Qué se hace con el riesgo por operación cuando estás en pleno drawdown?</summary><div class="ans">Se mantiene o se reduce. Nunca se sube para intentar recuperar.</div></details>
+
+        <div class="block-label">Glosario</div>
+        <div class="card">
+          <p><strong>Drawdown:</strong> caída porcentual de la cuenta desde su máximo previo.</p>
+          <p><strong>Drawdown máximo:</strong> la mayor de esas caídas; principal medida de riesgo de una estrategia.</p>
+          <p><strong>Racha perdedora:</strong> serie de operaciones perdedoras consecutivas; estadísticamente normal.</p>
+          <p><strong>Riesgo de ruina:</strong> probabilidad de perder tanto capital que ya no puedas continuar operando.</p>
+          <p><strong>Curva de capital (equity curve):</strong> representación de la evolución del valor de tu cuenta a lo largo del tiempo.</p>
+        </div>
+
+        <div class="pager">
+          <a href="leccion-3.html"><div class="k">← Anterior</div><div class="t">L3 · Stop loss y take profit</div></a>
+          <a class="next" href="leccion-5.html"><div class="k">Siguiente →</div><div class="t">L5 · Esperanza matemática</div></a>
+        </div>
+      </article>
+
+      <!-- TOC -->
+      <nav class="toc">
+        <div class="h">En esta lección</div>
+        <a href="#s1">Qué es el drawdown</a>
+        <a href="#s2">Las rachas son normales</a>
+        <a href="#s3">Tu riesgo controla el drawdown</a>
+        <a href="#s4">El riesgo de ruina</a>
+      </nav>
+    </div>
+  </main>
+</div>
+</body>
+</html>
