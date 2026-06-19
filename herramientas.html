@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · Calculadoras del curso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </a>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4><a href="index.html">Gestión de riesgo y capital</a></h4>
+      <div class="msub">MÓDULO 1 · 5 LECCIONES</div>
+      <a class="lesson" href="leccion-1.html"><span class="num">1</span> Por qué el 90% pierde</a>
+      <a class="lesson" href="leccion-2.html"><span class="num">2</span> Position sizing: la R</a>
+      <a class="lesson" href="leccion-3.html"><span class="num">3</span> Stop loss y take profit</a>
+      <a class="lesson" href="leccion-4.html"><span class="num">4</span> Drawdown y supervivencia</a>
+      <a class="lesson" href="leccion-5.html"><span class="num">5</span> Esperanza matemática</a>
+    </div>
+
+    <div class="nav-label">Herramientas</div>
+    <a class="tool-link active" href="herramientas.html">🧮 Calculadoras del curso</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb"><b>Herramientas</b> · Calculadoras del curso</div>
+    </div>
+
+    <div class="wrap" style="grid-template-columns:1fr;max-width:820px">
+      <article>
+        <div class="eyebrow">Herramientas</div>
+        <h1 class="title">Calculadoras del curso</h1>
+        <p class="lead">Las herramientas que usas dentro del curso, reunidas aquí para que las tengas siempre a mano. Mete tus propios números: son tuyas para usarlas en tu operativa real, durante el curso y después.</p>
+
+        <h2 id="t1">Tamaño de posición</h2>
+        <p>La calculadora del Módulo 1. Define tu riesgo y tu stop, y te dice exactamente cuánto comprar para no perder más de lo que decides.</p>
+        <div class="calc" data-tool="position-size"></div>
+
+        <h2 id="t2">Asimetría pérdida / recuperación</h2>
+        <p>Comprueba por qué una pérdida grande es tan difícil de recuperar: no basta con ganar el mismo porcentaje.</p>
+        <div class="calc" data-tool="asymmetry"></div>
+
+        <h2 id="t3">Esperanza matemática</h2>
+        <p>Descubre si un sistema gana de verdad a largo plazo combinando tu porcentaje de aciertos con tu ratio riesgo/beneficio.</p>
+        <div class="calc" data-tool="expectancy"></div>
+
+        <div class="pager">
+          <a href="index.html"><div class="k">← Volver</div><div class="t">Portada del módulo</div></a>
+          <a class="next" href="leccion-1.html"><div class="k">Empezar el curso →</div><div class="t">L1 · Por qué el 90% pierde</div></a>
+        </div>
+      </article>
+    </div>
+  </main>
+</div>
+<script src="assets/tools.js" defer></script>
+</body>
+</html>
