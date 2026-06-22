@@ -176,3 +176,10 @@ details.qa .ans{padding:14px 20px 16px 56px;font-family:var(--serif);font-size:1
 .calc-msg b{color:var(--gold-soft);font-weight:500}
 .calc-msg.pos b{color:#8fd14f}.calc-msg.neg b{color:#f0a0a0}
 .calc .disclaimer{margin-top:14px;font-size:11.5px;color:var(--muted-2)}
+
+/* "En cristiano" — explicación ultra-simple */
+.plain{background:rgba(99,169,34,.07);border:1px solid rgba(99,169,34,.26);border-left:3px solid #63a922;border-radius:10px;padding:14px 18px;margin:22px 0}
+.plain .lab{font-family:var(--sans);font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#8fd14f;font-weight:600;margin-bottom:6px}
+.plain p{font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--text);margin:0}
+.plain p + p{margin-top:8px}
+.plain .ana{color:var(--muted);font-style:italic}

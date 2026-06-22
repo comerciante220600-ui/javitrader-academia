@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · L6 Apalancamiento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </a>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4><a href="index.html">Gestión de riesgo y capital</a></h4>
+      <div class="msub">MÓDULO 1 · 6 LECCIONES</div>
+      <a class="lesson" href="leccion-1.html"><span class="num done">1</span> Por qué el 90% pierde</a>
+      <a class="lesson" href="leccion-2.html"><span class="num done">2</span> Position sizing: la R</a>
+      <a class="lesson" href="leccion-3.html"><span class="num done">3</span> Stop loss y take profit</a>
+      <a class="lesson" href="leccion-4.html"><span class="num done">4</span> Drawdown y supervivencia</a>
+      <a class="lesson" href="leccion-5.html"><span class="num done">5</span> Esperanza matemática</a>
+      <a class="lesson active" href="leccion-6.html"><span class="num">6</span> Apalancamiento</a>
+    </div>
+
+    <div class="nav-label">Herramientas</div>
+    <a class="tool-link" href="herramientas.html">🧮 Calculadoras del curso</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb">Módulo 1 · Gestión de riesgo &nbsp;›&nbsp; <b>Lección 6</b></div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:100%"></span></div> 6/6</div>
+    </div>
+
+    <div class="wrap">
+      <article>
+        <div class="eyebrow">Lección 6</div>
+        <h1 class="title">Apalancamiento: cómo funciona y por qué (bien usado) no cambia tu riesgo</h1>
+        <div class="meta">
+          <div class="it">⏱ <b>~14 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>principiante–intermedio</b></div>
+          <div class="it">↳ Requisito: <b>Lecciones 1–3</b></div>
+        </div>
+
+        <div class="card obj">
+          <h3>Lo que sabrás hacer al terminar</h3>
+          <ol>
+            <li>Explicar qué es de verdad el apalancamiento (y qué NO es).</li>
+            <li>Entender por qué no cambia tu riesgo si dimensionas por el stop.</li>
+            <li>Saber qué es el precio de liquidación y por qué tu stop debe llegar antes.</li>
+            <li>Diferenciar margen cruzado (cross) de aislado (isolated) y entender el funding.</li>
+          </ol>
+        </div>
+
+        <p class="lead">El apalancamiento tiene fama de "lo que revienta cuentas". Y sin embargo lo usan todos los profesionales. ¿Cómo puede ser las dos cosas?</p>
+        <p>Porque el apalancamiento no es el problema: el problema es <strong>usarlo para arriesgar más</strong> en vez de para lo que sirve. Esta lección te enseña a usarlo como un profesional: sin que cambie ni un dólar tu riesgo.</p>
+
+        <h2 id="s1">Qué es el apalancamiento (de verdad)</h2>
+        <p>El apalancamiento te permite <strong>controlar una posición más grande que tu capital</strong>, poniendo solo una parte como garantía (el <em>margen</em>). Un apalancamiento de 10x significa que con 100 $ puedes mover una posición de 1.000 $.</p>
+        <div class="plain"><div class="lab">🟢 En cristiano</div><p>El apalancamiento es como la <strong>hipoteca de una casa</strong>: con 20.000 $ de entrada controlas una casa de 200.000 $. La casa sube o baja lo mismo viva quien viva en ella; lo único que cambia es que tú pusiste una parte.</p></div>
+        <p>Lo importante: el apalancamiento <strong>no te da dinero gratis ni multiplica tu acierto</strong>. Solo cambia cuánto capital necesitas inmovilizar para abrir la posición. Es una herramienta de <strong>eficiencia de capital</strong>, no una palanca para "ganar más".</p>
+
+        <h2 id="s2">El gran malentendido: apalancamiento ≠ más riesgo</h2>
+        <p>Aquí está la idea que separa a quien sobrevive de quien revienta. Mucha gente piensa: "si pongo 10x, arriesgo 10 veces más". <strong>Falso.</strong></p>
+        <p>Recuerda la fórmula de la Lección 2: tu riesgo lo definen el <strong>tamaño de la posición</strong> y la <strong>distancia al stop</strong>. El apalancamiento no aparece en esa fórmula. Si arriesgas el 1% con tu stop bien puesto, arriesgas el 1% <strong>tanto con 1x como con 20x</strong>. Lo único que cambia es el margen que inmovilizas.</p>
+        <div class="formula">Cuenta 1.000 $ · riesgo 1% (10 $) · entrada 100 $ · stop 95 $ (distancia 5 $)
+Tamaño = 10 $ ÷ 5 $ = <b>2 unidades</b> → posición de 200 $
+Con <b>1x</b>: margen 200 $   ·   Con <b>10x</b>: margen 20 $
+Si toca el stop pierdes <b>10 $</b> en los dos casos. Mismo riesgo.</div>
+        <div class="plain"><div class="lab">🟢 En cristiano</div><p>Subir el apalancamiento NO sube tu riesgo. Lo que sube tu riesgo es comprar más cantidad. La gente revienta porque el apalancamiento les <em>tienta</em> a comprar más, no porque el apalancamiento en sí sea peligroso.</p></div>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>El error mortal:</b> "Tengo 20x, así que meto 20 veces más tamaño". Eso no es usar apalancamiento: es saltarse el position sizing. Tu tamaño lo sigue mandando el stop y tu 1%, no el apalancamiento disponible.</div></div>
+
+        <h2 id="s3">El precio de liquidación (y por qué tu stop debe llegar antes)</h2>
+        <p>Cuando operas con apalancamiento aparece un nuevo punto en el gráfico: el <strong>precio de liquidación</strong>. Es el precio al que tu margen se agota y el exchange <strong>cierra tu posición a la fuerza</strong>, con pérdida total del margen de esa operación.</p>
+        <p>La regla de oro: <strong>tu stop loss debe estar siempre antes que tu liquidación.</strong> Si tu stop salta primero, sales con tu pérdida planificada del 1% y la liquidación nunca ocurre. Si dimensionas bien (por el stop), esto pasa solo: la liquidación queda muy lejos. La liquidación solo se acerca cuando <strong>sobredimensionas</strong>.</p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="El stop salta mucho antes que la liquidación">
+            <g font-family="Inter,system-ui,sans-serif">
+              <rect x="180" y="118" width="340" height="24" fill="#63a922" opacity="0.10"/>
+              <line x1="70" y1="130" x2="690" y2="130" stroke="#33333f" stroke-width="1.5"/>
+              <text x="380" y="105" fill="#76746c" font-size="12" text-anchor="middle">precio  ←  cae</text>
+              <line x1="620" y1="112" x2="620" y2="148" stroke="#d4af37" stroke-width="2.5"/>
+              <circle cx="620" cy="130" r="5" fill="#d4af37"/>
+              <text x="620" y="172" fill="#e5c45a" font-size="12.5" font-weight="500" text-anchor="middle">Entrada</text>
+              <text x="620" y="188" fill="#76746c" font-size="11" text-anchor="middle">100 $</text>
+              <line x1="520" y1="114" x2="520" y2="146" stroke="#8fd14f" stroke-width="2.5"/>
+              <circle cx="520" cy="130" r="5" fill="#8fd14f"/>
+              <text x="520" y="172" fill="#8fd14f" font-size="12.5" font-weight="500" text-anchor="middle">Tu stop −1%</text>
+              <text x="520" y="188" fill="#76746c" font-size="11" text-anchor="middle">sales aquí</text>
+              <line x1="180" y1="114" x2="180" y2="146" stroke="#e24b4a" stroke-width="2.5"/>
+              <circle cx="180" cy="130" r="5" fill="#e24b4a"/>
+              <text x="180" y="172" fill="#f0a0a0" font-size="12.5" font-weight="500" text-anchor="middle">Liquidación</text>
+              <text x="180" y="188" fill="#76746c" font-size="11" text-anchor="middle">(con 10x)</text>
+              <text x="350" y="225" fill="#9b988f" font-size="12.5" text-anchor="middle">Bien dimensionado, tu stop salta mucho antes — la liquidación nunca llega</text>
+            </g>
+          </svg>
+          <figcaption>V6.1 · Con buen position sizing, tu stop (pérdida pequeña) está muy por delante de la liquidación.</figcaption>
+        </figure>
+
+        <p>Compruébalo con tu propio caso: verás que tu riesgo en dólares es el mismo subas o bajes el apalancamiento, y a qué distancia te queda la liquidación.</p>
+        <div class="calc" data-tool="leverage"></div>
+
+        <h2 id="s4">Cross vs Isolated: qué margen usar</h2>
+        <p>Los exchanges de perpetuos te dejan elegir cómo se respalda tu posición:</p>
+        <ul>
+          <li><strong>Margen aislado (isolated):</strong> solo el margen que asignas a <em>esa</em> operación está en juego. Si se liquida, pierdes ese margen y nada más. <strong>Es el recomendado</strong> para controlar el riesgo.</li>
+          <li><strong>Margen cruzado (cross):</strong> todo el saldo de tu cuenta respalda la posición. Aguanta más antes de liquidar… pero si llega la liquidación puede llevarse <strong>toda la cuenta</strong>.</li>
+        </ul>
+        <div class="plain"><div class="lab">🟢 En cristiano</div><p>Usa <strong>isolated</strong>: acota el daño de cada operación, igual que tu regla del 1%. El cross aguanta más, pero cuando cae, cae todo.</p></div>
+
+        <h2 id="s5">Funding: el coste de mantener un perpetuo</h2>
+        <p>En los contratos perpetuos (perps) existe el <strong>funding</strong>: un pequeño pago periódico (cada pocas horas) entre largos y cortos para mantener el precio del perpetuo pegado al real. A veces lo cobras, a veces lo pagas. No suele ser grande, pero <strong>en operaciones de varios días suma</strong>, y como las comisiones, <strong>resta a tu esperanza matemática</strong> (Lección 5).</p>
+        <div class="plain"><div class="lab">🟢 En cristiano</div><p>El funding es como un pequeño "alquiler" por mantener abierta una posición apalancada. Pequeño, pero si la dejas abierta mucho tiempo, se nota.</p></div>
+
+        <div class="block-label">Errores comunes</div>
+        <ul>
+          <li><strong>"Más apalancamiento = más ganancias."</strong> No. Más apalancamiento = menos margen inmovilizado. Tus resultados los define el tamaño y el movimiento del precio.</li>
+          <li><strong>"El apalancamiento es para agresivos."</strong> Al contrario: bien usado es eficiencia de capital. Lo agresivo es sobredimensionar, con o sin apalancamiento.</li>
+          <li><strong>"Cruzo el margen para que no me liquide."</strong> El cross retrasa la liquidación, pero cuando llega se puede llevar toda la cuenta.</li>
+          <li><strong>"Con stop no miro la liquidación."</strong> Si dimensionas bien, tu stop llega antes. Pero si vas muy apalancado y sobredimensionado, la liquidación puede adelantarse: compruébalo.</li>
+        </ul>
+
+        <div class="block-label">Resumen</div>
+        <ul>
+          <li>El apalancamiento te deja <strong>controlar más posición con menos margen</strong>. Es eficiencia, no un multiplicador de acierto.</li>
+          <li><strong>No cambia tu riesgo por operación</strong> si dimensionas por el stop: arriesgas tu 1% igual con 1x que con 20x.</li>
+          <li>Tu <strong>stop debe llegar siempre antes</strong> que la liquidación. Con buen sizing, pasa solo.</li>
+          <li>Usa <strong>margen aislado (isolated)</strong> y ten en cuenta el <strong>funding</strong> en operaciones largas.</li>
+        </ul>
+
+        <div class="block-label">Autoevaluación</div>
+        <details class="qa"><summary>¿El apalancamiento cambia tu riesgo por operación?</summary><div class="ans">No, si dimensionas por el stop. Tu riesgo lo definen el tamaño y la distancia al stop; el apalancamiento solo cambia el margen.</div></details>
+        <details class="qa"><summary>¿Qué relación debe tener tu stop con el precio de liquidación?</summary><div class="ans">Tu stop debe estar siempre antes que la liquidación, para salir tú con una pérdida pequeña antes de que el exchange te cierre a la fuerza.</div></details>
+        <details class="qa"><summary>¿Por qué se recomienda el margen aislado (isolated)?</summary><div class="ans">Porque acota la pérdida a esa operación; el cross pone toda la cuenta como respaldo y una liquidación puede llevársela entera.</div></details>
+
+        <div class="pager">
+          <a href="leccion-5.html"><div class="k">← Anterior</div><div class="t">L5 · Esperanza matemática</div></a>
+          <a class="next disabled" href="#"><div class="k">Fin del módulo</div><div class="t">Módulo 1 completado ✓</div></a>
+        </div>
+      </article>
+
+      <nav class="toc">
+        <div class="h">En esta lección</div>
+        <a href="#s1">Qué es el apalancamiento</a>
+        <a href="#s2">Apalancamiento ≠ más riesgo</a>
+        <a href="#s3">El precio de liquidación</a>
+        <a href="#s4">Cross vs Isolated</a>
+        <a href="#s5">Funding</a>
+      </nav>
+    </div>
+  </main>
+</div>
+<script src="assets/tools.js" defer></script>
+</body>
+</html>

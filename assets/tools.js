@@ -162,7 +162,72 @@
     recalc();
   }
 
-  const TOOLS = { "position-size": positionSize, "asymmetry": asymmetry, "expectancy": expectancy };
+  // ---- Apalancamiento y liquidación ----
+  function leverage(root) {
+    const uid = "lv" + Math.floor(performance.now() % 1e6);
+    root.innerHTML =
+      '<div class="ctitle"><span class="ic">⚡</span> Calculadora de apalancamiento y liquidación</div>' +
+      '<p class="csub">Dimensionas igual que siempre (por el stop). Comprueba que tu apalancamiento solo cambia el margen, no tu riesgo — y a qué distancia queda la liquidación.</p>' +
+      '<div class="calc-grid">' +
+        field(uid + "cap", "Capital de la cuenta", "1000", 'data-k="1"') +
+        field(uid + "risk", "Riesgo por operación (%)", "1", 'data-k="1"') +
+        field(uid + "entry", "Precio de entrada", "100", 'data-k="1"') +
+        field(uid + "stop", "Precio del stop", "95", 'data-k="1"') +
+        field(uid + "lev", "Apalancamiento (x)", "10", 'data-k="1"') +
+      "</div>" +
+      '<div class="calc-out">' +
+        '<div class="calc-res main"><div class="l">Tu riesgo real (1R)</div><div class="v" id="' + uid + 'oR">—</div></div>' +
+        '<div class="calc-res"><div class="l">Tamaño de la posición</div><div class="v" id="' + uid + 'oS">—</div></div>' +
+        '<div class="calc-res"><div class="l">Margen necesario</div><div class="v" id="' + uid + 'oM">—</div></div>' +
+        '<div class="calc-res"><div class="l">Liquidación aprox.</div><div class="v" id="' + uid + 'oL">—</div></div>' +
+      "</div>" +
+      '<div class="calc-msg" id="' + uid + 'msg"></div>' +
+      '<div class="disclaimer">Cálculo orientativo (no incluye comisiones ni funding). La liquidación exacta depende del exchange y del margen de mantenimiento.</div>';
+
+    function recalc() {
+      const cap = num(root, uid + "cap"), risk = num(root, uid + "risk"),
+        entry = num(root, uid + "entry"), stop = num(root, uid + "stop"),
+        lev = Math.max(1, num(root, uid + "lev"));
+      const riskMoney = cap * (risk / 100);
+      const dist = Math.abs(entry - stop);
+      const size = dist > 0 ? riskMoney / dist : NaN;
+      const posValue = isFinite(size) ? size * entry : NaN;
+      const margin = posValue / lev;
+      const marginPct = cap > 0 ? (margin / cap) * 100 : NaN;
+      const isLong = stop < entry;
+      const liqPrice = isLong ? entry * (1 - 1 / lev) : entry * (1 + 1 / lev);
+      const liqDist = entry / lev;
+      root.querySelector("#" + uid + "oR").textContent = fmtMoney(riskMoney, "$");
+      root.querySelector("#" + uid + "oS").textContent = isFinite(size) ? fmtNum(size, 6) + " uds." : "—";
+      root.querySelector("#" + uid + "oM").textContent = isFinite(margin) ? fmtMoney(margin, "$") + " (" + fmtNum(marginPct, 1) + "%)" : "—";
+      root.querySelector("#" + uid + "oL").textContent = lev > 1 ? fmtNum(liqPrice, 4) : "sin apalanc.";
+      const msg = root.querySelector("#" + uid + "msg");
+      if (!(dist > 0)) {
+        msg.className = "calc-msg neg";
+        msg.innerHTML = "El stop no puede ser igual a la entrada: necesitas una distancia para definir el riesgo.";
+        return;
+      }
+      const stopPct = (dist / entry) * 100, liqPct = (liqDist / entry) * 100;
+      if (lev <= 1) {
+        msg.className = "calc-msg";
+        msg.innerHTML = "Sin apalancamiento, pierdes <b>" + fmtMoney(riskMoney, "$") + "</b> si toca el stop. El apalancamiento no cambiaría ese riesgo: solo el margen que inmovilizas.";
+      } else if (dist < liqDist) {
+        msg.className = "calc-msg pos";
+        msg.innerHTML =
+          "Bien dimensionado: tu stop está a <b>" + fmtNum(stopPct, 1) + "%</b> y la liquidación a ~" + fmtNum(liqPct, 1) +
+          "%. <b>Tu stop salta mucho antes que la liquidación.</b> Arriesgas " + fmtMoney(riskMoney, "$") + " pase lo que pase, y solo inmovilizas " + fmtNum(marginPct, 1) + "% de tu capital como margen.";
+      } else {
+        msg.className = "calc-msg neg";
+        msg.innerHTML =
+          "⚠️ Peligro: la liquidación (~" + fmtNum(liqPct, 1) + "%) llegaría <b>antes</b> que tu stop (" + fmtNum(stopPct, 1) +
+          "%). Estás sobredimensionado para ese apalancamiento: baja el apalancamiento o aleja menos el stop.";
+      }
+    }
+    root.querySelectorAll("input").forEach((i) => i.addEventListener("input", recalc));
+    recalc();
+  }
+
+  const TOOLS = { "position-size": positionSize, "asymmetry": asymmetry, "expectancy": expectancy, "leverage": leverage };
 
   function init() {
     document.querySelectorAll(".calc[data-tool]").forEach((node) => {
