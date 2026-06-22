@@ -15,7 +15,7 @@
   }
   function fmtMoney(n, sym) {
     if (!isFinite(n)) return "—";
-    return (sym || "€") + " " + n.toLocaleString("es-ES", { maximumFractionDigits: 2 });
+    return (sym || "$") + " " + n.toLocaleString("es-ES", { maximumFractionDigits: 2 });
   }
   function field(id, label, value, attrs) {
     return (
@@ -58,10 +58,10 @@
       const dist = Math.abs(entry - stop);
       const size = dist > 0 ? riskMoney / dist : NaN;
       const value = isFinite(size) ? size * entry : NaN;
-      root.querySelector("#" + uid + "oR").textContent = fmtMoney(riskMoney, "€");
+      root.querySelector("#" + uid + "oR").textContent = fmtMoney(riskMoney, "$");
       root.querySelector("#" + uid + "oD").textContent = dist > 0 ? fmtNum(dist, 4) : "—";
       root.querySelector("#" + uid + "oS").textContent = isFinite(size) ? fmtNum(size, 6) + " uds." : "—";
-      root.querySelector("#" + uid + "oV").textContent = fmtMoney(value, "€");
+      root.querySelector("#" + uid + "oV").textContent = fmtMoney(value, "$");
       const msg = root.querySelector("#" + uid + "msg");
       if (!(dist > 0)) {
         msg.className = "calc-msg neg";
@@ -70,7 +70,7 @@
         msg.className = "calc-msg";
         msg.innerHTML =
           "Compras <b>" + fmtNum(size, 6) + " unidades</b>. Si el precio toca tu stop, pierdes exactamente <b>" +
-          fmtMoney(riskMoney, "€") + "</b> (tu " + fmtNum(risk, 2) + "% = 1R). Ni un euro más.";
+          fmtMoney(riskMoney, "$") + "</b> (tu " + fmtNum(risk, 2) + "% = 1R). Ni un dólar más.";
       }
     }
     root.querySelectorAll("input").forEach((i) => i.addEventListener("input", recalc));
@@ -88,7 +88,7 @@
       "</div>" +
       '<div class="calc-out">' +
         '<div class="calc-res main"><div class="l">Necesitas recuperar</div><div class="v" id="' + uid + 'oRec">—</div></div>' +
-        '<div class="calc-res"><div class="l">De 10.000 € te quedan</div><div class="v" id="' + uid + 'oLeft">—</div></div>' +
+        '<div class="calc-res"><div class="l">De 10.000 $ te quedan</div><div class="v" id="' + uid + 'oLeft">—</div></div>' +
       "</div>" +
       '<div class="calc-msg" id="' + uid + 'msg"></div>' +
       '<div class="disclaimer">Herramienta educativa. No es una recomendación de inversión.</div>';
@@ -98,7 +98,7 @@
       const rec = loss < 100 && loss >= 0 ? (loss / (100 - loss)) * 100 : Infinity;
       const left = 10000 * (1 - loss / 100);
       root.querySelector("#" + uid + "oRec").textContent = isFinite(rec) ? "+" + fmtNum(rec, 1) + " %" : "∞ (imposible)";
-      root.querySelector("#" + uid + "oLeft").textContent = fmtMoney(Math.max(0, left), "€");
+      root.querySelector("#" + uid + "oLeft").textContent = fmtMoney(Math.max(0, left), "$");
       const msg = root.querySelector("#" + uid + "msg");
       msg.className = "calc-msg";
       if (loss >= 100) {
