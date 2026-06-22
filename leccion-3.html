@@ -243,10 +243,22 @@
         </ol>
 
         <div class="block-label">Autoevaluación</div>
-        <details class="qa"><summary>¿Qué decide dónde va el stop?</summary><div class="ans">El nivel de precio que invalida tu análisis (la estructura del mercado o la volatilidad), no cuánto quieres perder.</div></details>
-        <details class="qa"><summary>¿Qué pasa si pones el stop demasiado cerca de la entrada?</summary><div class="ans">El ruido normal del precio lo toca con frecuencia y te saca de operaciones que podrían haber funcionado.</div></details>
-        <details class="qa"><summary>¿En qué dirección se puede mover un stop una vez abierta la operación?</summary><div class="ans">Solo a favor de la operación (para proteger ganancias). Nunca en contra.</div></details>
-        <details class="qa"><summary>Si arriesgas 1R y tu objetivo está a 3R de distancia, ¿qué relación riesgo/beneficio tienes?</summary><div class="ans">3:1 — buscas ganar el triple de lo que arriesgas.</div></details>
+        <div class="quiz" data-quiz>
+        <script type="application/json">
+        [
+        {"q":"¿Cuál es la función real de un stop loss?","opts":["Garantizar que cada operación termine en ganancia","Sacarte de una operación que ya no tiene sentido, sin que la emoción decida","Predecir hacia dónde irá el precio","Aumentar el tamaño de la posición cuando vas ganando"],"correct":1,"why":"El stop es tu paracaídas: cierra la operación cuando tu idea queda invalidada, quitando la emoción de en medio."},
+        {"q":"¿Por qué se dice que el stop loss es innegociable?","opts":["Porque sin stop una operación perdedora puede crecer sin límite y sacarte del juego","Porque el broker lo exige por ley","Porque mejora la comisión que pagas","Porque permite operar sin análisis previo"],"correct":0,"why":"Sin stop te expones a la pérdida grande; recuerda que un −50 % exige un +100 % para recuperarse."},
+        {"q":"Según el principio clave de la lección, ¿dónde va el stop?","opts":["Donde te duele menos perder","A un porcentaje fijo siempre","Donde tu idea deja de tener sentido (el nivel que invalida tu análisis)","Justo en el precio de entrada"],"correct":2,"why":"El stop se coloca en el nivel que rompe tu idea; el mercado no sabe ni le importa cuánto quieres perder."},
+        {"q":"¿Cuál es el orden correcto del flujo entrada-stop-tamaño?","opts":["Primero el tamaño que quiero comprar, luego ajusto el stop a ese tamaño","Primero el stop (donde se rompe la idea), luego ajusto el tamaño para que cueste solo mi 1 %","Primero el take profit, luego todo lo demás","El orden da igual mientras arriesgues poco"],"correct":1,"why":"Stop primero, tamaño después: ajustas la cantidad al stop que el mercado exige, no al revés."},
+        {"q":"¿En qué consiste un stop estructural?","opts":["Un porcentaje fijo desde la entrada","Cerrar la posición manualmente cuando te asustas","Colocarlo al otro lado de un nivel técnico relevante (soporte, resistencia, máximo o mínimo)","Moverlo cada vez que el precio se acerca"],"correct":2,"why":"El stop estructural se apoya en el mercado: si se rompe ese nivel, la razón por la que entraste ya no se sostiene."},
+        {"q":"¿Para qué sirve el stop por volatilidad (ATR)?","opts":["Para ignorar por completo la estructura del mercado","Para dar al precio el espacio que necesita según cuánto se mueve normalmente el activo","Para garantizar un beneficio de 3R","Para no usar ningún indicador"],"correct":1,"why":"El ATR mide la volatilidad media; un activo más volátil necesita un stop más amplio para no saltar por ruido."},
+        {"q":"¿Por qué el stop por porcentaje fijo es el método menos recomendable como principal?","opts":["Porque es demasiado complicado de calcular","Porque solo lo permiten algunos brokers","Porque siempre da stops demasiado amplios","Porque ignora la estructura del mercado"],"correct":3,"why":"Un % fijo es simple pero no mira soportes ni resistencias; sirve solo como límite de seguridad de respaldo."},
+        {"q":"¿Qué problema genera un stop demasiado pegado a la entrada?","opts":["Te obliga a comprar una cantidad ridículamente pequeña","El ruido normal del precio lo toca y te saca de operaciones que podían funcionar","Convierte la pérdida de 1R en una pérdida indefinida","Hace imposible calcular la R"],"correct":1,"why":"Dentro del ruido, esas oscilaciones que no significan nada te echan una y otra vez con pérdidas pequeñas."},
+        {"q":"¿Cuál es el riesgo de un stop demasiado lejano mal gestionado?","opts":["Que el broker lo cancele automáticamente","Que el precio nunca llegue a tocarlo","Que la enorme distancia te empuje a arriesgar de más y abra la puerta a pérdidas grandes","Que reduzca tu beneficio a 1R"],"correct":2,"why":"Una distancia enorme obliga a comprar poquísimo para mantener el 1 %… o a saltarte la regla y arriesgar de más."},
+        {"q":"¿En qué dirección puede moverse un stop una vez abierta la operación?","opts":["En cualquier dirección, según tu intuición","Solo en contra, para darle más margen","Solo a favor de la operación, para proteger ganancias; nunca en contra","No se puede mover nunca bajo ningún concepto"],"correct":2,"why":"Mover el stop en contra para que no salte es la forma educada de quedarte sin stop. Si lo toca, fuera."}
+        ]
+        </script>
+        </div>
 
         <div class="block-label">Glosario</div>
         <div class="card">
@@ -276,5 +288,6 @@
     </div>
   </main>
 </div>
+<script src="assets/quiz.js" defer></script>
 </body>
 </html>

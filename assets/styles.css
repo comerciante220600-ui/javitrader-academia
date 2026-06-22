@@ -183,3 +183,28 @@ details.qa .ans{padding:14px 20px 16px 56px;font-family:var(--serif);font-size:1
 .plain p{font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--text);margin:0}
 .plain p + p{margin-top:8px}
 .plain .ana{color:var(--muted);font-style:italic}
+
+/* ===== Quiz / autoevaluación tipo test ===== */
+.quiz{margin:24px 0}
+.quiz-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.qh-title{font-family:var(--sans);font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);font-weight:600}
+.qscore{font-family:var(--sans);font-size:13px;color:var(--muted);background:var(--surface-2);border:1px solid var(--line);border-radius:99px;padding:4px 13px}
+.qscore.good{color:#8fd14f;border-color:rgba(99,169,34,.45)}
+.qscore.bad{color:#f0a0a0;border-color:rgba(226,75,74,.45)}
+.qcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0}
+.qnum{font-family:var(--sans);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted-2);margin-bottom:6px}
+.qtext{font-family:var(--sans);font-size:15.5px;color:var(--text);font-weight:500;margin-bottom:12px;line-height:1.5}
+.qopts{display:flex;flex-direction:column;gap:8px}
+.qopt{display:flex;align-items:center;gap:11px;width:100%;text-align:left;background:var(--bg-2);border:1px solid var(--line-2);border-radius:9px;padding:11px 13px;color:var(--text);font-family:var(--sans);font-size:14.5px;cursor:pointer;transition:.13s}
+.qopt:hover:not(:disabled){border-color:var(--gold-dim);background:#16161c}
+.qopt:disabled{cursor:default}
+.qletter{flex:none;width:24px;height:24px;border-radius:6px;background:var(--surface-2);border:1px solid var(--line-2);display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600;color:var(--muted)}
+.qopt.correct{border-color:rgba(99,169,34,.55);background:rgba(99,169,34,.12);color:#cfe9b0}
+.qopt.correct .qletter{background:#63a922;border-color:#63a922;color:#0a0a0c}
+.qopt.wrong{border-color:rgba(226,75,74,.55);background:rgba(226,75,74,.10);color:#f0c4c4}
+.qopt.wrong .qletter{background:#e24b4a;border-color:#e24b4a;color:#0a0a0c}
+.qopt.dim{opacity:.45}
+.qwhy{margin-top:11px;font-family:var(--serif);font-size:14.5px;line-height:1.6;color:var(--muted);border-top:1px solid var(--line);padding-top:11px}
+.qwhy b{font-family:var(--sans);font-weight:500}
+.qwhy.ok b{color:#8fd14f}
+.qwhy.no b{color:#f0a0a0}

@@ -301,10 +301,22 @@
         </ol>
 
         <div class="block-label">Autoevaluación</div>
-        <details class="qa"><summary>¿Por qué el win rate por sí solo no sirve para juzgar un sistema?</summary><div class="ans">Porque no dice cuánto ganas cuando aciertas ni cuánto pierdes cuando fallas; un win rate alto con mal ratio puede perder dinero.</div></details>
-        <details class="qa"><summary>Escribe la fórmula de la esperanza matemática.</summary><div class="ans">Esperanza = (% aciertos × R media ganada) − (% fallos × R media perdida).</div></details>
-        <details class="qa"><summary>Con un ratio 3:1, ¿qué win rate mínimo necesitas para ser rentable?</summary><div class="ans">Alrededor del 25 %: con acertar 1 de cada 4 ya tienes esperanza positiva (antes de costes).</div></details>
-        <details class="qa"><summary>¿Garantiza una esperanza positiva que ganes este mes?</summary><div class="ans">No. Es un promedio a largo plazo; en el corto domina la varianza. Hace falta tiempo y riesgo bajo para que se materialice.</div></details>
+        <div class="quiz" data-quiz>
+        <script type="application/json">
+        [
+        {"q":"¿Por qué el win rate (porcentaje de aciertos) por sí solo no sirve para juzgar un sistema?","opts":["Porque no dice cuánto ganas cuando aciertas ni cuánto pierdes cuando fallas","Porque el win rate siempre es falso en redes sociales","Porque solo importa el número de operaciones","Porque el win rate solo vale para inversión, no para trading"],"correct":0,"why":"El win rate ignora el tamaño de ganancias y pérdidas; un 70 % con mal ratio puede perder dinero."},
+        {"q":"¿Cuál es la fórmula de la esperanza matemática?","opts":["(% fallos × R ganada) − (% aciertos × R perdida)","Win rate × ratio, sin restar nada","(% aciertos × R media ganada) − (% fallos × R media perdida)","R ganada menos R perdida, sin porcentajes"],"correct":2,"why":"La esperanza pondera cada resultado por su probabilidad: aciertos × lo que ganas, menos fallos × lo que pierdes."},
+        {"q":"Un sistema acierta el 50 %, gana 2R cuando acierta y pierde 1R cuando falla. ¿Cuál es su esperanza por operación?","opts":["+0,5R","0R","+1,5R","−0,5R"],"correct":0,"why":"0,50 × 2 − 0,50 × 1 = 1,0 − 0,5 = +0,5R. Es un sistema rentable."},
+        {"q":"Beto acierta el 70 %, gana 0,5R cuando acierta y pierde 1R cuando falla. ¿Cuál es su esperanza?","opts":["+0,35R","+0,05R","+0,50R","−0,30R"],"correct":1,"why":"0,70 × 0,5 − 0,30 × 1 = 0,35 − 0,30 = +0,05R. Apenas roza la rentabilidad y los costes pueden hundirla."},
+        {"q":"Ana acierta solo el 40 %, gana 3R cuando acierta y pierde 1R cuando falla. ¿Cuál es su esperanza?","opts":["−0,20R","+0,20R","+0,60R","+1,20R"],"correct":2,"why":"0,40 × 3 − 0,60 × 1 = 1,20 − 0,60 = +0,60R. Su buen ratio compensa de sobra el bajo win rate."},
+        {"q":"Con un ratio riesgo/beneficio de 3:1, ¿qué win rate mínimo necesitas para ser rentable (antes de costes)?","opts":["50 %","33 %","25 %","67 %"],"correct":2,"why":"Con 3:1 basta acertar 1 de cada 4 (25 %) para tener esperanza positiva."},
+        {"q":"¿Por qué se puede ganar dinero acertando menos del 50 % de las veces?","opts":["Porque a largo plazo el mercado siempre sube","Porque si cuando aciertas ganas bastante más de lo que pierdes cuando fallas, el ratio compensa","Porque las comisiones favorecen al operador","Porque el win rate bajo reduce la varianza"],"correct":1,"why":"Un ratio R:R alto hace que pocas operaciones ganadoras cubran muchas perdedoras pequeñas."},
+        {"q":"¿Garantiza una esperanza positiva que ganes este mes concreto?","opts":["Sí, una esperanza positiva asegura beneficio mensual","No: es un promedio a largo plazo, en el corto plazo manda la varianza","Sí, salvo que cambies de estrategia","No, porque la esperanza solo aplica a la inversión a largo"],"correct":1,"why":"La esperanza es una media; en el corto plazo las rachas (varianza) pueden dar pérdidas pese a esperanza positiva."},
+        {"q":"¿Qué relación hay entre la esperanza (la media) y la varianza?","opts":["La varianza determina si el sistema gana a largo plazo","La esperanza marca el resultado medio por operación; la varianza es la dispersión que causa las rachas","Son lo mismo expresado en distintas unidades","La varianza siempre es positiva si la esperanza lo es"],"correct":1,"why":"La esperanza es hacia dónde tiendes de media; la varianza es cuánto oscilas alrededor de ella a corto plazo."},
+        {"q":"¿Cómo afectan las comisiones, el spread y el funding a la esperanza de un sistema?","opts":["No afectan si el win rate es alto","Se suman a la esperanza y la mejoran","Restan directamente a la esperanza y pueden volver negativo un sistema apenas rentable","Solo afectan al ratio, no a la esperanza"],"correct":2,"why":"Los costes restan a cada operación; siempre hay que calcular la esperanza neta de costes."}
+        ]
+        </script>
+        </div>
 
         <div class="block-label">Glosario</div>
         <div class="card">
@@ -342,5 +354,6 @@
   </main>
 </div>
 <script src="assets/tools.js" defer></script>
+<script src="assets/quiz.js" defer></script>
 </body>
 </html>
