@@ -87,10 +87,10 @@
         <h2 id="s2">Qué es la liquidez y por qué importa</h2>
         <p>La <strong>liquidez</strong> es lo fácil que resulta comprar o vender un activo <em>sin mover apenas su precio</em>. Es uno de esos conceptos que parecen aburridos hasta que te toca de cerca el bolsillo.</p>
         <ul>
-          <li>Un mercado <strong>líquido</strong> tiene muchos compradores y vendedores a cada momento (por ejemplo, Bitcoin o las grandes acciones). Entras y sales al instante y casi al precio que ves.</li>
+          <li>Un mercado <strong>líquido</strong> tiene muchos compradores y vendedores a cada momento (por ejemplo, Bitcoin o las grandes acciones). Entras y sales al instante y casi al precio que ves. Ojo: que el precio cambie rápido es <em>volatilidad</em>, no falta de liquidez.</li>
           <li>Un mercado <strong>ilíquido</strong> tiene poca gente operando (una cripto diminuta, una acción rara). Para vender quizá tengas que bajar mucho el precio hasta que aparezca un comprador.</li>
         </ul>
-        <p>La huella más visible de la liquidez es el <strong>spread</strong>: la diferencia entre el mejor precio al que alguien te compra y el mejor precio al que alguien te vende. Cuanta más liquidez, <strong>menor</strong> el spread (más barato operar); cuanta menos liquidez, <strong>mayor</strong> el spread (cada entrada y salida te cuesta más).</p>
+        <p>Una de las huellas más visibles de la (falta de) liquidez es el <strong>spread</strong>: la diferencia entre el mejor precio al que alguien te compra y el mejor precio al que alguien te vende. Cuanta más liquidez, <strong>menor</strong> el spread (más barato operar); cuanta menos liquidez, <strong>mayor</strong> el spread (cada entrada y salida te cuesta más). <em>(en el spread también influyen la volatilidad y las comisiones)</em>.</p>
 
         <div class="tbl">
           <table class="data">
@@ -127,7 +127,7 @@
             <thead><tr><th></th><th>A mercado</th><th>Limitada</th></tr></thead>
             <tbody>
               <tr><td>Qué priorizas</td><td>Rapidez (ejecutar ya)</td><td>Precio (a tu precio o mejor)</td></tr>
-              <tr><td>¿Se ejecuta seguro?</td><td>Sí, casi siempre</td><td>Solo si el precio llega</td></tr>
+              <tr><td>¿Se ejecuta seguro?</td><td>Sí (lo incierto es el precio, no la ejecución)</td><td>Solo si el precio llega</td></tr>
               <tr><td>Riesgo</td><td>Pagar un poco peor de lo visto</td><td>Quedarte fuera de la operación</td></tr>
               <tr class="hl"><td>Cuándo usarla</td><td>Necesitas entrar/salir ya</td><td>No tienes prisa y quieres tu precio</td></tr>
             </tbody>
@@ -138,8 +138,8 @@
         <h2 id="s5">El libro de órdenes, explicado fácil</h2>
         <p>El <strong>libro de órdenes</strong> es la lista, en tiempo real, de todas las órdenes limitadas que esperan ejecutarse. Es el corazón del mercado, y leerlo es más fácil de lo que parece:</p>
         <ul>
-          <li>Arriba (o a un lado) están los <strong>compradores</strong>: cuánto está dispuesta a pagar la gente y por qué cantidad. Es el lado de la <em>demanda</em> (en verde).</li>
-          <li>Abajo (o al otro lado) están los <strong>vendedores</strong>: a cuánto quieren vender y qué cantidad. Es el lado de la <em>oferta</em> (en rojo).</li>
+          <li>Arriba (o a un lado) están los <strong>vendedores</strong>: a cuánto quieren vender y qué cantidad. Es el lado de la <em>oferta</em> (en rojo).</li>
+          <li>Abajo (o al otro lado) están los <strong>compradores</strong>: cuánto está dispuesta a pagar la gente y por qué cantidad. Es el lado de la <em>demanda</em> (en verde).</li>
           <li>En el <strong>medio</strong> hay un hueco: el mejor precio de compra está justo debajo del mejor precio de venta. Esa diferencia es el <strong>spread</strong>.</li>
         </ul>
         <p>¿Cómo se forma un precio aquí? Cuando un comprador acepta pagar lo que pide un vendedor (o al revés), las dos órdenes se <strong>cruzan</strong>, se cierra la operación y <strong>eso</strong> fija el último precio. Así, operación a operación, se va moviendo el mercado.</p>
@@ -231,13 +231,13 @@
         {"q": "¿Qué es, en el fondo, un precio de mercado?", "opts": ["El punto donde un comprador y un vendedor se ponen de acuerdo", "Una predicción de lo que valdrá el activo mañana", "Una cifra que fija el broker cada mañana", "El valor oficial que publica el gobierno"], "correct": 0, "why": "El precio emerge del acuerdo entre oferta y demanda; es el último cruce cerrado, no una predicción ni una cifra impuesta."},
         {"q": "Si de repente hay muchos más compradores que vendedores, lo normal es que el precio…", "opts": ["Baje", "Se quede exactamente igual", "Suba", "Desaparezca del mercado"], "correct": 2, "why": "Cuando aprieta la demanda, los compradores compiten y aceptan pagar más, así que el precio tiende a subir."},
         {"q": "¿Qué significa que un mercado es ‘líquido’?", "opts": ["Que el activo siempre sube", "Que puedes comprar o vender con facilidad sin mover apenas el precio", "Que no tiene ningún riesgo", "Que solo operan instituciones"], "correct": 1, "why": "Liquidez es facilidad para entrar y salir sin mover el precio, gracias a que hay muchos participantes."},
-        {"q": "El ‘spread’ es…", "opts": ["La comisión fija del broker", "El impuesto sobre las ganancias", "El número de operaciones por minuto", "La diferencia entre el mejor precio de compra y el mejor de venta"], "correct": 3, "why": "El spread es el hueco entre la mejor compra y la mejor venta; refleja la liquidez del activo."},
+        {"q": "El ‘spread’ es…", "opts": ["La comisión fija del broker", "El impuesto sobre las ganancias", "El número de operaciones por minuto", "La diferencia entre el mejor precio de compra y el mejor de venta"], "correct": 3, "why": "El spread es el hueco entre la mejor compra y la mejor venta; es una de las huellas más visibles de la (falta de) liquidez del activo."},
         {"q": "Cuanta MENOS liquidez tiene un activo, su spread tiende a ser…", "opts": ["Más amplio, y operar sale más caro", "Más estrecho, y operar sale más barato", "Siempre cero", "Idéntico al de cualquier otro activo"], "correct": 0, "why": "Menos liquidez significa menos participantes y por tanto spread más amplio: cada entrada y salida cuesta más."},
-        {"q": "¿Quién es un ‘creador de mercado’ (market maker)?", "opts": ["Un minorista que opera desde casa", "El organismo que regula la bolsa", "Quien ofrece de forma continua precio de compra y de venta para dar liquidez", "Un robot que predice el precio futuro"], "correct": 2, "why": "El creador de mercado cotiza compra y venta constantemente para que siempre haya con quién operar, y gana con el spread."},
-        {"q": "Necesitas entrar o salir de una operación AHORA mismo, sin importar pagar un poco peor. ¿Qué orden usas?", "opts": ["Una orden limitada", "Una orden a mercado", "Ninguna, esperas días", "Una orden que no existe"], "correct": 1, "why": "La orden a mercado prioriza la rapidez: se ejecuta ya al precio disponible, aunque no sea exactamente el que viste."},
-        {"q": "Quieres comprar SOLO si el precio baja a una cifra concreta, sin prisa. ¿Qué orden encaja?", "opts": ["Una orden a mercado", "Vender en corto", "Cerrar la cuenta", "Una orden limitada a ese precio"], "correct": 3, "why": "La orden limitada te deja fijar el precio (a ese o mejor); a cambio, puede no ejecutarse si el mercado no llega."},
+        {"q": "¿Quién es un ‘creador de mercado’ (market maker)?", "opts": ["Un minorista que opera desde casa", "El organismo que regula la bolsa", "Quien ofrece de forma continua precio de compra y de venta para dar liquidez", "Un inversor que solo compra y mantiene a largo plazo"], "correct": 2, "why": "El creador de mercado cotiza compra y venta constantemente para que siempre haya con quién operar, y gana con el spread."},
+        {"q": "Necesitas entrar o salir de una operación AHORA mismo, sin importar pagar un poco peor. ¿Qué orden usas?", "opts": ["Una orden limitada", "Una orden a mercado", "Ninguna, esperas días", "Una orden limitada muy por encima del precio actual"], "correct": 1, "why": "La orden a mercado prioriza la rapidez: se ejecuta ya al precio disponible, aunque no sea exactamente el que viste."},
+        {"q": "Quieres comprar SOLO si el precio baja a una cifra concreta, sin prisa. ¿Qué orden encaja?", "opts": ["Una orden a mercado", "Cancelar todas tus órdenes abiertas", "Cerrar la cuenta", "Una orden limitada a ese precio"], "correct": 3, "why": "La orden limitada te deja fijar el precio (a ese o mejor); a cambio, puede no ejecutarse si el mercado no llega."},
         {"q": "¿Cuál es el riesgo principal de una orden limitada?", "opts": ["Que el mercado no llegue a tu precio y te quedes fuera de la operación", "Que se ejecute demasiado rápido", "Que pagues una comisión enorme siempre", "Que sea ilegal en cripto"], "correct": 0, "why": "Como exige tu precio o mejor, si el mercado no llega ahí la orden no se ejecuta y te quedas fuera."},
-        {"q": "En un libro de órdenes, ¿cómo se forma una operación (un precio)?", "opts": ["Cuando el broker decide casar dos cuentas al azar", "Cuando pasan exactamente 60 segundos", "Cuando una orden de compra y una de venta se cruzan y coinciden", "Cuando el gobierno aprueba el precio"], "correct": 2, "why": "El precio nace cuando una compra y una venta se cruzan al mismo nivel; ese cruce cierra la operación y fija el último precio."}
+        {"q": "En un libro de órdenes, ¿cómo se forma una operación (un precio)?", "opts": ["Cuando el broker decide casar dos cuentas al azar", "Cuando pasan exactamente 60 segundos", "Cuando una orden de compra y una de venta se cruzan y coinciden", "Cuando todas las órdenes limitadas del libro caducan a la vez"], "correct": 2, "why": "El precio nace cuando una compra y una venta se cruzan al mismo nivel; ese cruce cierra la operación y fija el último precio."}
         ]
         </script>
         </div>
