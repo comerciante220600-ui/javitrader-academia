@@ -116,7 +116,7 @@
               <div style="margin-top:16px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.35);border-radius:10px;padding:14px;text-align:center">
                 <div style="font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:#9b988f">Esperanza</div>
                 <div style="font-size:34px;font-weight:600;color:#d4af37;line-height:1.2;margin:2px 0">+0,60R</div>
-                <div style="font-size:11.5px;color:#9b988f">12× más que Beto, acertando menos</div>
+                <div style="font-size:11.5px;color:#9b988f">más de 10× que Beto, acertando menos</div>
               </div>
             </div>
           </div>
@@ -141,7 +141,7 @@
         <div class="formula">Esperanza = (<b>0,40</b> × <b>3</b>) − (<b>0,60</b> × <b>1</b>)
           = 1,20 − 0,60
           = <b>+0,60R</b> por operación</div>
-        <p>Ana gana <strong>0,60R de media por operación</strong>: doce veces más que Beto, acertando mucho menos. ¿Por qué? Porque cuando acierta, se lleva 3R, y cuando falla, solo pierde 1R. Su <em class="gold">ratio riesgo/beneficio compensa de sobra su bajo win rate</em>.</p>
+        <p>Ana gana <strong>0,60R de media por operación</strong>: más de 10 veces más que Beto (porque Beto apenas supera el cero), acertando mucho menos. ¿Por qué? Porque cuando acierta, se lleva 3R, y cuando falla, solo pierde 1R. Su <em class="gold">ratio riesgo/beneficio compensa de sobra su bajo win rate</em>.</p>
 
         <div class="callout idea"><div class="ic">💡</div><div><b>La gran lección:</b> lo que hace rentable a un sistema es la combinación de <b>win rate × ratio R:R</b>, resumida en la esperanza matemática. Ni el win rate solo, ni el ratio solo. El número que importa es la esperanza, y tiene que ser <em>positiva</em>.</div></div>
 
@@ -281,7 +281,7 @@
         <ul>
           <li><strong>"Busco la estrategia con más % de aciertos."</strong> Un win rate alto con ratio malo pierde dinero. Persigue <strong>esperanza positiva</strong>, no aciertos.</li>
           <li><strong>"Un ratio 1:1 está bien."</strong> Con 1:1 necesitas acertar más del 50 % <em>neto de costes</em>, que es más difícil de lo que parece. Los ratios por debajo de 1:1 exigen aciertos altísimos solo para empatar.</li>
-          <li><strong>"La esperanza positiva garantiza ganar este mes."</strong> No. La esperanza es un promedio a largo plazo; en el corto plazo manda la varianza (las rachas de la L4). Esperanza positiva + riesgo bajo + tiempo = rentabilidad. Las tres cosas, no una.</li>
+          <li><strong>"La esperanza positiva garantiza ganar este mes."</strong> No. La esperanza es un promedio a largo plazo; en el corto plazo manda la varianza (la varianza es lo que hace que, a corto plazo, los resultados se dispersen alrededor de la media: por eso una buena estrategia puede ir mal unas cuantas operaciones seguidas; son las rachas de la L4). Esperanza positiva + riesgo bajo + tiempo = rentabilidad. Las tres cosas, no una.</li>
           <li><strong>"Ignoro las comisiones, son poca cosa."</strong> Los costes (comisión, spread y, en perpetuos, el funding —Lección 6—) restan directamente a tu esperanza. Un sistema con esperanza de +0,05R puede volverse negativo solo con los costes. Siempre calcula la esperanza <strong>neta de costes</strong>.</li>
         </ul>
 
@@ -306,8 +306,8 @@
         <script type="application/json">
         [
         {"q":"¿Por qué el win rate (porcentaje de aciertos) por sí solo no sirve para juzgar un sistema?","opts":["Porque no dice cuánto ganas cuando aciertas ni cuánto pierdes cuando fallas","Porque el win rate cambia cada día","Porque solo importa el número de operaciones","Porque el win rate solo vale para inversión, no para trading"],"correct":0,"why":"El win rate ignora el tamaño de ganancias y pérdidas; un 70 % con mal ratio puede perder dinero."},
-        {"q":"¿Cuál es la fórmula de la esperanza matemática?","opts":["(% fallos × R ganada) − (% aciertos × R perdida)","Win rate × ratio, sin restar nada","(% aciertos × R media ganada) − (% fallos × R media perdida)","R ganada menos R perdida, sin porcentajes"],"correct":2,"why":"La esperanza pondera cada resultado por su probabilidad: aciertos × lo que ganas, menos fallos × lo que pierdes."},
-        {"q":"Un sistema acierta el 50 %, gana 3R cuando acierta y pierde 1R cuando falla. ¿Cuál es su esperanza por operación?","opts":["+0,5R","+1R","+2R","−0,5R"],"correct":1,"why":"0,50 × 3 − 0,50 × 1 = 1,5 − 0,5 = +1R."},
+        {"q":"¿Cuál es la fórmula de la esperanza matemática?","opts":["(% fallos × R ganada) − (% aciertos × R perdida)","Win rate × ratio, sin restar nada","(% aciertos × R media ganada) − (% fallos × R media perdida)","R ganada menos R perdida, sin porcentajes"],"correct":2,"why":"La esperanza pondera cada resultado por su probabilidad: aciertos × lo que ganas, menos fallos × lo que pierdes. No basta multiplicar win rate × ratio; hay que restar lo que pierdes en los fallos."},
+        {"q":"Un sistema acierta el 50 %, gana 3R cuando acierta y pierde 1R cuando falla. ¿Cuál es su esperanza por operación?","opts":["+0,5R","+1R","+1,5R","−0,5R"],"correct":1,"why":"0,50 × 3 − 0,50 × 1 = 1,5 − 0,5 = +1R. El +1,5R es el error típico: olvidar restar lo que pierdes en los fallos."},
         {"q":"Beto acierta el 70 %, gana 0,5R cuando acierta y pierde 1R cuando falla. ¿Cuál es su esperanza?","opts":["+0,35R","+0,05R","+0,50R","−0,30R"],"correct":1,"why":"0,70 × 0,5 − 0,30 × 1 = 0,35 − 0,30 = +0,05R. Apenas roza la rentabilidad y los costes pueden hundirla."},
         {"q":"Ana acierta solo el 40 %, gana 3R cuando acierta y pierde 1R cuando falla. ¿Cuál es su esperanza?","opts":["−0,20R","+0,20R","+0,60R","+1,20R"],"correct":2,"why":"0,40 × 3 − 0,60 × 1 = 1,20 − 0,60 = +0,60R. Su buen ratio compensa de sobra el bajo win rate."},
         {"q":"Con un ratio riesgo/beneficio de 3:1, ¿qué win rate mínimo necesitas para ser rentable (antes de costes)?","opts":["50 %","33 %","25 %","67 %"],"correct":2,"why":"Con 3:1 basta acertar 1 de cada 4 (25 %) para tener esperanza positiva."},
