@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · M2 L4 Marcos temporales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </a>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4><a href="modulo-2.html">Leer un gráfico</a></h4>
+      <div class="msub">MÓDULO 2 · 5 LECCIONES</div>
+      <a class="lesson" href="m2-leccion-1.html"><span class="num done">1</span> Precio y velas japonesas</a>
+      <a class="lesson" href="m2-leccion-2.html"><span class="num done">2</span> Estructura de mercado</a>
+      <a class="lesson" href="m2-leccion-3.html"><span class="num done">3</span> Soportes y resistencias</a>
+      <a class="lesson active" href="m2-leccion-4.html"><span class="num">4</span> Marcos temporales</a>
+      <a class="lesson" href="m2-leccion-5.html"><span class="num">5</span> Volumen</a>
+    </div>
+
+    <div class="nav-label">Otros módulos</div>
+    <a class="tool-link" href="modulo-0.html">📚 Módulo 0 · Fundamentos</a>
+    <a class="tool-link" href="modulo-1.html">📈 Módulo 1 · Gestión de riesgo</a>
+    <a class="tool-link" href="modulo-7.html">🧠 Módulo 7 · Psicología</a>
+    <a class="tool-link" href="herramientas.html">🧮 Calculadoras del curso</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb">Módulo 2 · Leer un gráfico &nbsp;›&nbsp; <b>Lección 4</b></div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:80%"></span></div> 4/5</div>
+    </div>
+
+    <div class="wrap">
+      <article>
+        <div class="eyebrow">Lección 4</div>
+        <h1 class="title">Marcos temporales: la misma historia a distintas distancias</h1>
+        <div class="meta">
+          <div class="it">⏱ <b>~11 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>principiante</b></div>
+          <div class="it">↳ Requisito: <b>ninguno</b></div>
+        </div>
+
+        <div class="card obj">
+          <h3>Lo que sabrás hacer al terminar</h3>
+          <ol>
+            <li>Entender qué representa un marco temporal y elegir el que encaja con tu estilo.</li>
+            <li>Hacer un análisis top-down: mirar primero el marco grande y luego bajar al pequeño.</li>
+            <li>Combinar varios marcos sin contradecirte: el grande manda la dirección, el pequeño el momento.</li>
+            <li>Evitar el "timeframe shopping" y el ruido de los marcos demasiado pequeños.</li>
+          </ol>
+        </div>
+
+        <p class="lead">El mismo gráfico cuenta historias distintas según la distancia desde la que lo mires. De lejos ves la tendencia; de cerca, ves cada zigzag. Aprender a cambiar de "distancia" a voluntad —y a no perderte por el camino— es una de las habilidades que más rápido separa al principiante del que ya lee un gráfico con criterio.</p>
+        <p>No hay un marco "correcto": hay un marco que encaja con lo que tú quieres hacer. Lo importante es saber qué te dice cada uno y no mezclarlos a tu antojo.</p>
+
+        <h2 id="s1">Qué es un marco temporal</h2>
+        <p>Un marco temporal (o temporalidad) es <strong>el periodo que representa cada vela</strong>. En un gráfico de 1 hora, cada vela resume una hora; en uno diario, cada vela resume un día entero.</p>
+        <ul>
+          <li><strong>1m, 5m, 15m:</strong> marcos cortos. Cada vela son minutos. Mucho detalle, mucho movimiento.</li>
+          <li><strong>1h, 4h:</strong> marcos intermedios. Una visión más calmada del día a día.</li>
+          <li><strong>1D (diario), 1S (semanal):</strong> marcos amplios. Cada vela es un día o una semana: la foto grande.</li>
+        </ul>
+        <p>¿Qué marco te toca? Depende de tu <strong>estilo</strong>, es decir, de cuánto tiempo piensas mantener una operación o una inversión:</p>
+        <ul>
+          <li><strong>Intradía:</strong> entras y sales el mismo día. Sueles trabajar con marcos cortos (5m, 15m, 1h).</li>
+          <li><strong>Swing:</strong> mantienes días o semanas. Te mueves bien en 4h y diario.</li>
+          <li><strong>Inversión:</strong> piensas en meses o años. El diario y el semanal son tu casa.</li>
+        </ul>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Cada vela = un periodo. El marco que te toca depende de cuánto vas a aguantar la operación: cuanto más tiempo la mantengas, más grande el marco. No hay marco bueno o malo, hay marco que encaja con tu estilo.</p></div>
+
+        <h2 id="s2">Análisis multi-temporal (top-down)</h2>
+        <p>El error del principiante es abrir un marco pequeño y operar lo que ve ahí, sin más. El profesional hace lo contrario: <strong>empieza por arriba</strong>. A esto se le llama análisis top-down ("de arriba abajo").</p>
+        <p>La idea es sencilla: primero miras el <strong>marco grande</strong> para entender el contexto —¿hacia dónde va el mercado en general?—, y solo después bajas al <strong>marco pequeño</strong> para afinar dónde y cuándo entrar.</p>
+        <ul>
+          <li><strong>Marco grande (ej. diario):</strong> te da la <strong>tendencia y el contexto</strong>. ¿Sube, baja o está plano? ¿Dónde están los niveles importantes?</li>
+          <li><strong>Marco mediano (ej. 4h):</strong> te ayuda a <strong>situarte</strong> dentro de esa tendencia. ¿Estamos cerca de un soporte? ¿En plena subida?</li>
+          <li><strong>Marco pequeño (ej. 15m):</strong> te da el <strong>detalle de la entrada</strong>. El momento fino para actuar.</li>
+        </ul>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="La misma tendencia alcista vista en tres marcos: diario, 4h y 15m">
+            <g font-family="Inter,system-ui,sans-serif">
+              <rect x="0" y="0" width="720" height="360" fill="#15151b" rx="6"/>
+              <text x="360" y="26" fill="#d4af37" font-size="13" font-weight="600" text-anchor="middle">LA MISMA SUBIDA, A TRES DISTANCIAS</text>
+
+              <!-- Panel 1: Diario -->
+              <rect x="24" y="46" width="208" height="232" fill="#15151b" stroke="#26262f" stroke-width="1" rx="4"/>
+              <text x="128" y="68" fill="#e5c45a" font-size="12" font-weight="600" text-anchor="middle">DIARIO · de lejos</text>
+              <line x1="40" y1="92" x2="40" y2="252" stroke="#1c1c23" stroke-width="1"/>
+              <line x1="40" y1="252" x2="216" y2="252" stroke="#1c1c23" stroke-width="1"/>
+              <!-- clean uptrend line -->
+              <polyline points="48,238 88,210 128,178 168,140 208,104" fill="none" stroke="#1d9e75" stroke-width="2.5"/>
+              <text x="128" y="272" fill="#9b988f" font-size="11" text-anchor="middle">tendencia clara: sube</text>
+
+              <!-- Panel 2: 4h -->
+              <rect x="256" y="46" width="208" height="232" fill="#15151b" stroke="#26262f" stroke-width="1" rx="4"/>
+              <text x="360" y="68" fill="#e5c45a" font-size="12" font-weight="600" text-anchor="middle">4H · distancia media</text>
+              <line x1="272" y1="92" x2="272" y2="252" stroke="#1c1c23" stroke-width="1"/>
+              <line x1="272" y1="252" x2="448" y2="252" stroke="#1c1c23" stroke-width="1"/>
+              <!-- uptrend with small pullbacks -->
+              <polyline points="280,238 300,224 320,232 340,204 360,212 380,176 400,184 420,144 440,108" fill="none" stroke="#63a922" stroke-width="2.2"/>
+              <text x="360" y="272" fill="#9b988f" font-size="11" text-anchor="middle">sube, con respiros</text>
+
+              <!-- Panel 3: 15m -->
+              <rect x="488" y="46" width="208" height="232" fill="#15151b" stroke="#26262f" stroke-width="1" rx="4"/>
+              <text x="592" y="68" fill="#e5c45a" font-size="12" font-weight="600" text-anchor="middle">15M · de cerca</text>
+              <line x1="504" y1="92" x2="504" y2="252" stroke="#1c1c23" stroke-width="1"/>
+              <line x1="504" y1="252" x2="680" y2="252" stroke="#1c1c23" stroke-width="1"/>
+              <!-- noisy zigzag, net up but jittery -->
+              <polyline points="512,236 524,214 536,228 548,206 560,226 572,200 584,222 596,188 608,210 620,176 632,196 644,158 656,180 668,120" fill="none" stroke="#c98a2e" stroke-width="2"/>
+              <text x="592" y="272" fill="#f0a0a0" font-size="11" text-anchor="middle">mucho ruido y zigzag</text>
+
+              <text x="360" y="318" fill="#ddd9d0" font-size="12.5" text-anchor="middle">De lejos se ve la tendencia; de cerca, el ruido. Es la MISMA subida en los tres.</text>
+              <text x="360" y="340" fill="#76746c" font-size="11" text-anchor="middle">El marco grande manda la dirección · el pequeño solo afina el momento</text>
+            </g>
+          </svg>
+          <figcaption>La misma subida vista en diario, 4h y 15m: cuanto más bajas de marco, más detalle y más ruido aparecen, aunque la tendencia de fondo no cambia.</figcaption>
+        </figure>
+
+        <h2 id="s3">Cómo combinar marcos sin contradecirte</h2>
+        <p>El truco para que dos marcos no te lleven la contraria es darle a cada uno <strong>su trabajo</strong>. No tienen que estar de acuerdo en todo: cumplen funciones distintas.</p>
+        <ul>
+          <li><strong>El marco grande manda la dirección.</strong> Si el diario sube, tú buscas comprar, no vender. La tendencia de fondo decide el "hacia dónde".</li>
+          <li><strong>El marco pequeño manda el momento.</strong> Una vez tienes clara la dirección, el marco pequeño te dice el "cuándo": el punto fino para entrar con buen riesgo.</li>
+        </ul>
+        <p>Cuando el pequeño parece contradecir al grande (el diario sube pero el 15m está cayendo), no es una contradicción: el 15m suele estar mostrándote un <strong>respiro</strong> dentro de la subida grande, que a menudo es justo una oportunidad de entrada a favor del marco grande.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Reparte el trabajo: el marco grande decide la DIRECCIÓN (compro o vendo), el pequeño decide el MOMENTO (cuándo entro). Si los dos hacen su tarea, no se contradicen: se complementan.</p></div>
+
+        <h2 id="s4">El marco que "manda"</h2>
+        <p>Aunque mires varios marcos, conviene tener uno que sea tu <strong>marco principal de decisión</strong>: el que de verdad usas para decidir si operas o no. Los demás son apoyo (contexto por arriba, afinado por abajo), pero la decisión vive en uno.</p>
+        <p>Esto evita un veneno muy común: el <strong>"timeframe shopping"</strong> (ir de compras de marcos). Consiste en cambiar de marco hasta encontrar uno que te dé la razón. Quieres comprar, el diario dice "no" → bajas al 5m, que sí te da una excusa para entrar. No estás analizando: estás buscando que un gráfico confirme lo que ya habías decidido.</p>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>Cuidado con el "timeframe shopping":</b> saltar de marco en marco hasta que uno te dé la razón no es análisis, es autoengaño. Si decides tu marco principal ANTES de mirar y respetas lo que dice, te ahorras la mitad de las malas operaciones. Cambiar de marco para justificar lo que ya querías ver es de las trampas más caras del principiante.</div></div>
+
+        <h2 id="s5">Evitar el ruido</h2>
+        <p>Cuanto más pequeño es el marco, <strong>más "ruido" tiene</strong>: pequeños movimientos sin importancia que parecen señales pero no lo son. En un gráfico de 1 minuto el precio sube y baja constantemente, y cada zigzag te tienta a actuar. Ese ruido te saca de buenas operaciones y te mete en malas.</p>
+        <p>Para empezar, <strong>menos es más</strong>. Marcos más amplios (4h, diario) filtran el ruido: solo las cosas importantes mueven una vela diaria, así que las señales son más fiables y tienes que tomar menos decisiones bajo presión. Ya habrá tiempo de bajar de marco cuando domines lo básico.</p>
+        <div class="callout idea"><div class="ic">💡</div><div><b>Idea clave:</b> el ruido no es información, es distracción. Si un movimiento desaparece al subir un marco, probablemente no importaba. Empezar en marcos amplios te enseña a distinguir la señal del ruido sin quemarte.</div></div>
+
+        <div class="block-label">Errores comunes</div>
+        <ul>
+          <li><strong>Operar solo el marco pequeño.</strong> Sin mirar el grande, no sabes si vas a favor o en contra de la tendencia. Es operar a ciegas.</li>
+          <li><strong>"Timeframe shopping".</strong> Cambiar de marco hasta que uno te dé la razón. No es análisis: es buscar excusas para hacer lo que ya querías.</li>
+          <li><strong>Vivir en el 1 minuto desde el primer día.</strong> El marco más ruidoso es el más difícil. Empezar ahí garantiza que el ruido te saque una y otra vez.</li>
+          <li><strong>Cambiar de marco principal sobre la marcha.</strong> Si decides en diario, decide en diario. Saltar al 15m a media operación rompe tu plan.</li>
+        </ul>
+
+        <div class="block-label">Resumen</div>
+        <ul>
+          <li>Un marco temporal es el <strong>periodo de cada vela</strong>; el que te toca depende de tu estilo (intradía, swing, inversión).</li>
+          <li>El análisis <strong>top-down</strong> mira primero el marco grande (contexto) y luego baja al pequeño (entrada).</li>
+          <li>El marco grande manda la <strong>dirección</strong>; el pequeño, el <strong>momento</strong>. Así no se contradicen.</li>
+          <li>Ten un <strong>marco principal de decisión</strong> y respétalo: nada de "timeframe shopping".</li>
+          <li>Los marcos muy pequeños tienen <strong>mucho ruido</strong>. Para empezar, menos es más.</li>
+        </ul>
+
+        <div class="block-label">Ejercicio práctico</div>
+        <ol>
+          <li>Elige un activo y ábrelo en diario. Anota en una frase la tendencia: ¿sube, baja o está plano?</li>
+          <li>Baja al 4h y luego al 15m del mismo activo. ¿Reconoces la misma subida o bajada de fondo bajo el zigzag? Fíjate en cuánto ruido aparece al bajar.</li>
+          <li>Decide cuál sería tu marco principal según tu estilo y escríbelo. La próxima vez que mires el gráfico, analiza desde ahí y no te dejes "ir de compras" a otros marcos.</li>
+        </ol>
+
+        <div class="block-label">Autoevaluación</div>
+        <div class="quiz" data-quiz>
+        <script type="application/json">
+        [
+        {"q":"¿Qué representa un marco temporal?","opts":["El beneficio máximo de una operación","El periodo que resume cada vela del gráfico","El número de operaciones por día","La comisión del bróker"],"correct":1,"why":"Un marco temporal es el periodo que representa cada vela: en un gráfico de 1h cada vela resume una hora; en uno diario, un día."},
+        {"q":"Un inversor que piensa en meses o años suele trabajar con…","opts":["Marcos cortos como 1m o 5m","El marco de 1 minuto","No usa gráficos","Marcos amplios como el diario y el semanal"],"correct":3,"why":"Cuanto más tiempo mantengas la posición, más amplio el marco. La inversión a largo plazo vive en el diario y el semanal."},
+        {"q":"¿En qué consiste el análisis top-down?","opts":["Mirar primero el marco grande para el contexto y luego bajar al pequeño para la entrada","Operar solo en el marco de 1 minuto","Comprar siempre que una vela sea verde","Mirar únicamente el volumen"],"correct":0,"why":"Top-down significa de arriba abajo: primero el marco grande te da la tendencia y el contexto, después bajas al pequeño para afinar la entrada."},
+        {"q":"En la combinación de marcos, ¿qué trabajo le corresponde al marco GRANDE?","opts":["El momento exacto de entrada","La dirección y el contexto de la tendencia","Calcular las comisiones","El tamaño de las mechas"],"correct":1,"why":"El marco grande manda la dirección: decide si buscas comprar o vender según hacia dónde va la tendencia de fondo."},
+        {"q":"El diario sube pero el 15m está cayendo. ¿Qué suele significar?","opts":["Que el análisis está roto y no sirve","Que debes vender de inmediato","Que el gráfico está mal cargado","Un respiro dentro de la subida grande, a menudo una oportunidad a favor del marco grande"],"correct":3,"why":"No es contradicción: el pequeño suele mostrar un respiro temporal dentro de la tendencia grande, que muchas veces es buena zona de entrada a su favor."},
+        {"q":"¿Qué es el “timeframe shopping”?","opts":["Comprar gráficos en una tienda","Usar siempre el mismo marco","Cambiar de marco hasta encontrar uno que te dé la razón","Mirar el marco semanal los lunes"],"correct":2,"why":"El timeframe shopping es ir de compras de marcos: saltar de uno a otro hasta que alguno justifique lo que ya querías hacer. Es autoengaño, no análisis."},
+        {"q":"¿Por qué conviene tener un marco principal de decisión?","opts":["Porque el bróker lo exige","Porque el marco pequeño no tiene velas","Para decidir desde un marco fijo y no saltar de uno a otro buscando excusas","Para pagar menos comisiones"],"correct":2,"why":"Un marco principal fijo te ancla la decisión y evita el timeframe shopping: analizas desde ahí y respetas lo que dice."},
+        {"q":"¿Qué es el “ruido” en un gráfico?","opts":["El sonido de la plataforma","Pequeños movimientos sin importancia que parecen señales pero no lo son","El volumen total negociado","Las comisiones ocultas"],"correct":1,"why":"El ruido son micro-movimientos irrelevantes, abundantes en marcos pequeños, que tientan a actuar pero no aportan información fiable."},
+        {"q":"¿Por qué se recomienda al principiante empezar en marcos más amplios?","opts":["Porque filtran el ruido y dan señales más fiables, con menos decisiones bajo presión","Porque son los únicos que existen","Porque el marco diario no tiene mechas","Porque garantizan beneficios"],"correct":0,"why":"Marcos como 4h o diario filtran el ruido: solo lo importante mueve una vela amplia, así que las señales son más fiables y decides con menos presión."},
+        {"q":"En el reparto de funciones entre marcos, el marco PEQUEÑO se encarga de…","opts":["La dirección general de la tendencia","El contexto de fondo","Decidir el estilo de trading","El momento fino de entrada"],"correct":3,"why":"Una vez el marco grande fija la dirección, el pequeño aporta el momento: el punto fino para entrar con buen riesgo."}
+        ]
+        </script>
+        </div>
+
+        <div class="block-label">Glosario</div>
+        <div class="card">
+          <p><strong>Marco temporal / temporalidad:</strong> el periodo que representa cada vela del gráfico (1m, 5m, 1h, 4h, 1D, 1S…).</p>
+          <p><strong>Análisis top-down:</strong> mirar primero el marco grande para el contexto y luego bajar al pequeño para afinar la entrada.</p>
+          <p><strong>Marco principal de decisión:</strong> el marco desde el que de verdad decides si operas; los demás son apoyo.</p>
+          <p><strong>Timeframe shopping:</strong> cambiar de marco hasta encontrar uno que confirme lo que ya querías hacer; autoengaño, no análisis.</p>
+          <p><strong>Ruido:</strong> pequeños movimientos sin importancia, abundantes en marcos cortos, que parecen señales pero no lo son.</p>
+          <p><strong>Intradía / swing / inversión:</strong> estilos según cuánto mantienes la posición (mismo día / días o semanas / meses o años), que determinan tu marco.</p>
+        </div>
+
+        <div class="pager">
+          <a href="m2-leccion-3.html"><div class="k">← Anterior</div><div class="t">L3 · Soportes y resistencias</div></a>
+          <a class="next" href="m2-leccion-5.html"><div class="k">Siguiente →</div><div class="t">L5 · Volumen</div></a>
+        </div>
+      </article>
+
+      <nav class="toc">
+        <div class="h">En esta lección</div>
+        <a href="#s1">Qué es un marco temporal</a>
+        <a href="#s2">Análisis top-down</a>
+        <a href="#s3">Combinar marcos</a>
+        <a href="#s4">El marco que manda</a>
+        <a href="#s5">Evitar el ruido</a>
+      </nav>
+    </div>
+  </main>
+</div>
+<script src="assets/quiz.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · M2 L1 Precio y velas japonesas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </a>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4><a href="modulo-2.html">Leer un gráfico</a></h4>
+      <div class="msub">MÓDULO 2 · 5 LECCIONES</div>
+      <a class="lesson active" href="m2-leccion-1.html"><span class="num">1</span> Precio y velas japonesas</a>
+      <a class="lesson" href="m2-leccion-2.html"><span class="num">2</span> Estructura de mercado</a>
+      <a class="lesson" href="m2-leccion-3.html"><span class="num">3</span> Soportes y resistencias</a>
+      <a class="lesson" href="m2-leccion-4.html"><span class="num">4</span> Marcos temporales</a>
+      <a class="lesson" href="m2-leccion-5.html"><span class="num">5</span> Volumen</a>
+    </div>
+
+    <div class="nav-label">Otros módulos</div>
+    <a class="tool-link" href="modulo-0.html">📚 Módulo 0 · Fundamentos</a>
+    <a class="tool-link" href="modulo-1.html">📈 Módulo 1 · Gestión de riesgo</a>
+    <a class="tool-link" href="modulo-7.html">🧠 Módulo 7 · Psicología</a>
+    <a class="tool-link" href="herramientas.html">🧮 Calculadoras del curso</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb">Módulo 2 · Leer un gráfico &nbsp;›&nbsp; <b>Lección 1</b></div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:20%"></span></div> 1/5</div>
+    </div>
+
+    <div class="wrap">
+      <article>
+        <div class="eyebrow">Lección 1</div>
+        <h1 class="title">Precio y velas japonesas: cómo leer una vela</h1>
+        <div class="meta">
+          <div class="it">⏱ <b>~11 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>principiante</b></div>
+          <div class="it">↳ Requisito: <b>ninguno</b></div>
+        </div>
+
+        <div class="card obj">
+          <h3>Lo que sabrás hacer al terminar</h3>
+          <ol>
+            <li>Leer los cuatro datos de cualquier vela: apertura, cierre, máximo y mínimo.</li>
+            <li>Distinguir una vela alcista de una bajista de un vistazo.</li>
+            <li>Interpretar qué cuentan el cuerpo y las mechas sobre la lucha de fuerzas.</li>
+            <li>Evitar el error de sacar conclusiones de una sola vela.</li>
+          </ol>
+        </div>
+
+        <p class="lead">Un gráfico de velas asusta al principio, pero es de lo más sencillo que hay: cada vela es la foto de un periodo de tiempo (un minuto, una hora, un día…) que resume, en un solo dibujo, quién ganó la batalla entre compradores y vendedores.</p>
+        <p>Si entiendes una vela, entiendes el gráfico entero, porque un gráfico solo son muchas velas una detrás de otra.</p>
+
+        <h2 id="s1">Los cuatro datos de una vela</h2>
+        <p>Cada vela resume un periodo con <strong>cuatro precios</strong>:</p>
+        <ul>
+          <li><strong>Apertura:</strong> el precio al empezar el periodo.</li>
+          <li><strong>Cierre:</strong> el precio al terminar el periodo.</li>
+          <li><strong>Máximo:</strong> el precio más alto que se alcanzó.</li>
+          <li><strong>Mínimo:</strong> el precio más bajo que se alcanzó.</li>
+        </ul>
+        <p>El "cuerpo" (la parte ancha) va entre la apertura y el cierre. Las "mechas" o "sombras" (las líneas finas) llegan hasta el máximo y el mínimo.</p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anatomía de una vela alcista y una bajista">
+            <g font-family="Inter,system-ui,sans-serif">
+              <text x="235" y="32" fill="#9fe1cb" font-size="13" font-weight="500" text-anchor="middle">VELA ALCISTA</text>
+              <text x="520" y="32" fill="#f0a0a0" font-size="13" font-weight="500" text-anchor="middle">VELA BAJISTA</text>
+              <!-- bullish -->
+              <line x1="235" y1="52" x2="235" y2="282" stroke="#1d9e75" stroke-width="2"/>
+              <rect x="217" y="112" width="36" height="120" fill="#1d9e75" opacity="0.9" rx="2"/>
+              <line x1="150" y1="52" x2="217" y2="52" stroke="#33333f" stroke-width="1"/>
+              <line x1="150" y1="112" x2="217" y2="112" stroke="#33333f" stroke-width="1"/>
+              <line x1="150" y1="232" x2="217" y2="232" stroke="#33333f" stroke-width="1"/>
+              <line x1="150" y1="282" x2="217" y2="282" stroke="#33333f" stroke-width="1"/>
+              <text x="146" y="56" fill="#9b988f" font-size="12" text-anchor="end">máximo</text>
+              <text x="146" y="116" fill="#ece9e1" font-size="12" text-anchor="end">cierre</text>
+              <text x="146" y="236" fill="#ece9e1" font-size="12" text-anchor="end">apertura</text>
+              <text x="146" y="286" fill="#9b988f" font-size="12" text-anchor="end">mínimo</text>
+              <text x="262" y="176" fill="#76746c" font-size="11" text-anchor="start">cuerpo</text>
+              <text x="262" y="86" fill="#76746c" font-size="11" text-anchor="start">mecha</text>
+              <!-- bearish -->
+              <line x1="520" y1="52" x2="520" y2="282" stroke="#e24b4a" stroke-width="2"/>
+              <rect x="502" y="112" width="36" height="120" fill="#e24b4a" opacity="0.9" rx="2"/>
+              <line x1="538" y1="52" x2="605" y2="52" stroke="#33333f" stroke-width="1"/>
+              <line x1="538" y1="112" x2="605" y2="112" stroke="#33333f" stroke-width="1"/>
+              <line x1="538" y1="232" x2="605" y2="232" stroke="#33333f" stroke-width="1"/>
+              <line x1="538" y1="282" x2="605" y2="282" stroke="#33333f" stroke-width="1"/>
+              <text x="609" y="56" fill="#9b988f" font-size="12" text-anchor="start">máximo</text>
+              <text x="609" y="116" fill="#ece9e1" font-size="12" text-anchor="start">apertura</text>
+              <text x="609" y="236" fill="#ece9e1" font-size="12" text-anchor="start">cierre</text>
+              <text x="609" y="286" fill="#9b988f" font-size="12" text-anchor="start">mínimo</text>
+              <text x="360" y="315" fill="#9b988f" font-size="12.5" text-anchor="middle">En la alcista el cierre queda por ENCIMA de la apertura; en la bajista, por DEBAJO.</text>
+            </g>
+          </svg>
+          <figcaption>Anatomía de una vela: cuerpo entre apertura y cierre; mechas hasta el máximo y el mínimo.</figcaption>
+        </figure>
+
+        <h2 id="s2">Alcista o bajista: el color y el cuerpo</h2>
+        <p>El color te dice quién ganó el periodo:</p>
+        <ul>
+          <li><strong>Vela alcista (normalmente verde):</strong> el precio <strong>cerró por encima</strong> de donde abrió. Ganaron los compradores.</li>
+          <li><strong>Vela bajista (normalmente roja):</strong> el precio <strong>cerró por debajo</strong> de donde abrió. Ganaron los vendedores.</li>
+        </ul>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Verde = cerró más arriba de donde abrió (mandaron los compradores). Roja = cerró más abajo (mandaron los vendedores). El cuerpo te dice por cuánto: cuanto más largo, más clara fue la victoria.</p></div>
+
+        <h2 id="s3">Qué cuentan el cuerpo y las mechas</h2>
+        <p>Aquí está lo interesante: la <strong>forma</strong> de la vela cuenta una historia sobre la lucha de fuerzas.</p>
+        <ul>
+          <li><strong>Cuerpo grande:</strong> un bando dominó con claridad de principio a fin.</li>
+          <li><strong>Cuerpo pequeño:</strong> hubo dudas, equilibrio entre compradores y vendedores.</li>
+          <li><strong>Mecha larga abajo:</strong> el precio cayó pero los compradores lo empujaron de vuelta arriba — rechazo a los precios bajos.</li>
+          <li><strong>Mecha larga arriba:</strong> el precio subió pero los vendedores lo tiraron abajo — rechazo a los precios altos.</li>
+        </ul>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>El cuerpo = quién ganó y por cuánto. Las mechas = hasta dónde llegó el precio antes de que lo rechazaran. Una mecha larga es el mercado diciendo "por aquí no paso".</p></div>
+
+        <h2 id="s4">Qué te dice una vela… y qué NO</h2>
+        <p>Una vela te dice <strong>qué pasó</strong> en ese periodo: quién ganó, con cuánta fuerza, dónde hubo rechazo. Es información real y útil.</p>
+        <p>Lo que una vela <strong>no</strong> hace es <strong>predecir el futuro</strong>. Que una vela sea verde no garantiza que la siguiente lo sea. Las velas describen lo que ha ocurrido; leerlas bien te da contexto, no una bola de cristal.</p>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>Cuidado con el humo:</b> hay quien vende "patrones de velas infalibles". Ningún patrón acierta siempre. Las velas son una pieza del puzle —junto a la estructura, los niveles y el volumen que verás en este módulo—, no una señal mágica por sí solas.</div></div>
+
+        <h2 id="s5">El error de leer una vela suelta</h2>
+        <p>El fallo más típico del principiante es mirar <strong>una sola vela</strong> y sacar conclusiones ("¡mecha larga, rebota seguro!"). Una vela aislada apenas significa nada: cobra sentido <strong>en su contexto</strong> — dónde está (¿en un soporte?, ¿en tendencia?), qué velas vinieron antes, y qué volumen la acompañó.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Nunca operes por una vela suelta. Una vela es una palabra; el gráfico es la frase. El significado está en el conjunto, no en la palabra aislada.</p></div>
+
+        <div class="block-label">Errores comunes</div>
+        <ul>
+          <li><strong>"Vela verde = va a seguir subiendo."</strong> El color dice qué pasó en ese periodo, no qué pasará en el siguiente. No predice.</li>
+          <li><strong>"Esta mecha larga es señal de compra."</strong> Una sola vela, fuera de contexto (nivel, tendencia, volumen), no es una señal fiable.</li>
+          <li><strong>"Me sé 40 patrones de velas, con eso gano."</strong> Memorizar patrones sin entender la lucha de fuerzas detrás es justo lo que vende el humo. Importa el porqué, no el nombre.</li>
+        </ul>
+
+        <div class="block-label">Resumen</div>
+        <ul>
+          <li>Cada vela resume un periodo con cuatro datos: <strong>apertura, cierre, máximo y mínimo</strong>.</li>
+          <li><strong>Verde</strong> = cerró por encima de la apertura; <strong>roja</strong> = cerró por debajo.</li>
+          <li>El <strong>cuerpo</strong> dice quién ganó y por cuánto; las <strong>mechas</strong>, hasta dónde llegó el precio antes del rechazo.</li>
+          <li>Una vela describe el pasado; <strong>no predice</strong> el futuro.</li>
+          <li>Nunca leas una vela <strong>suelta</strong>: el significado está en el contexto.</li>
+        </ul>
+
+        <div class="block-label">Ejercicio práctico</div>
+        <ol>
+          <li>Abre un gráfico de velas de cualquier activo (en tu bróker o en TradingView) y pon la temporalidad diaria. Identifica en la última vela su apertura, cierre, máximo y mínimo.</li>
+          <li>Busca una vela con una mecha muy larga. ¿Arriba o abajo? ¿Qué bando rechazó el precio ahí?</li>
+          <li>Mira tres velas seguidas y cuenta la "historia": ¿quién está mandando, compradores o vendedores?</li>
+        </ol>
+
+        <div class="block-label">Autoevaluación</div>
+        <div class="quiz" data-quiz>
+        <script type="application/json">
+        [
+        {"q": "¿Qué cuatro datos resume cada vela?", "opts": ["Apertura, cierre, máximo y mínimo", "Compra, venta, beneficio y pérdida", "Soporte, resistencia, tendencia y volumen", "Hora, día, mes y año"], "correct": 0, "why": "Cada vela registra el precio de apertura y de cierre del periodo, más el máximo y el mínimo alcanzados."},
+        {"q": "En una vela, ¿qué representa el “cuerpo”?", "opts": ["La distancia entre el máximo y el mínimo", "El precio medio del periodo", "La parte que va entre la apertura y el cierre", "El volumen negociado"], "correct": 2, "why": "El cuerpo (la parte ancha) va de la apertura al cierre. Las mechas finas llegan hasta el máximo y el mínimo."},
+        {"q": "Una vela alcista (verde) significa que…", "opts": ["El precio cerró por debajo de donde abrió", "El precio cerró por encima de donde abrió", "Hubo mucho volumen", "La siguiente vela también subirá"], "correct": 1, "why": "Verde = el cierre quedó por encima de la apertura: en ese periodo mandaron los compradores."},
+        {"q": "¿Qué sugiere una mecha (sombra) larga por DEBAJO del cuerpo?", "opts": ["Que no se negoció nada", "Que la vela es bajista seguro", "Que el cierre fue el precio más bajo", "Que el precio cayó pero los compradores lo empujaron de vuelta arriba"], "correct": 3, "why": "Una mecha inferior larga indica que el precio bajó pero fue rechazado al alza: los compradores devolvieron el precio arriba."},
+        {"q": "¿Qué sugiere un cuerpo MUY pequeño?", "opts": ["Que hubo dudas y equilibrio entre compradores y vendedores", "Que un bando dominó con claridad", "Que la vela no es válida", "Que el volumen fue enorme"], "correct": 0, "why": "Un cuerpo pequeño significa que apertura y cierre quedaron cerca: ni compradores ni vendedores se impusieron con claridad."},
+        {"q": "¿Una vela puede predecir lo que hará la siguiente?", "opts": ["Sí, una vela verde garantiza otra verde", "Sí, si tiene mecha larga", "No: describe lo que ya pasó, no predice el futuro", "Solo en el marco diario"], "correct": 2, "why": "Las velas describen lo ocurrido en su periodo; dan contexto, pero no garantizan el movimiento siguiente."},
+        {"q": "¿Cuál es el error típico al leer velas?", "opts": ["Mirar varias velas a la vez", "Sacar conclusiones de una sola vela fuera de contexto", "Usar el marco diario", "Fijarse en el color"], "correct": 1, "why": "Una vela aislada apenas significa nada; cobra sentido con su contexto (nivel, tendencia, velas previas y volumen)."},
+        {"q": "Una mecha larga por ARRIBA del cuerpo indica…", "opts": ["Que los compradores dominaron todo el periodo", "Que no hubo máximo", "Que la vela es necesariamente alcista", "Que el precio subió pero los vendedores lo tiraron abajo (rechazo arriba)"], "correct": 3, "why": "Una mecha superior larga muestra que el precio llegó alto pero fue rechazado: los vendedores empujaron el precio de vuelta abajo."},
+        {"q": "¿Qué relación hay entre una vela y un gráfico?", "opts": ["No tienen relación", "El gráfico es una sola vela gigante", "Un gráfico es muchas velas seguidas; la vela es la pieza básica", "La vela es más grande que el gráfico"], "correct": 2, "why": "Un gráfico de velas no es más que muchas velas una tras otra; por eso entender una vela es entender el gráfico."},
+        {"q": "Alguien te vende “patrones de velas infalibles”. ¿Qué piensas?", "opts": ["Desconfío: ningún patrón acierta siempre; las velas son una pieza, no una señal mágica", "Que es de fiar: los patrones aciertan siempre", "Que debo memorizar los 40 patrones", "Que solo funcionan en cripto"], "correct": 0, "why": "Ningún patrón es infalible. Las velas se interpretan junto a la estructura, los niveles y el volumen, no como señales mágicas aisladas."}
+        ]
+        </script>
+        </div>
+
+        <div class="block-label">Glosario</div>
+        <div class="card">
+          <p><strong>Vela (candlestick):</strong> representación del precio de un periodo con su apertura, cierre, máximo y mínimo.</p>
+          <p><strong>Cuerpo:</strong> la parte ancha de la vela, entre la apertura y el cierre.</p>
+          <p><strong>Mecha o sombra:</strong> las líneas finas que llegan hasta el máximo y el mínimo del periodo.</p>
+          <p><strong>Alcista:</strong> vela cuyo cierre quedó por encima de la apertura (suele pintarse verde).</p>
+          <p><strong>Bajista:</strong> vela cuyo cierre quedó por debajo de la apertura (suele pintarse roja).</p>
+          <p><strong>Temporalidad / marco temporal:</strong> el periodo que representa cada vela (1 min, 1 h, 1 día…).</p>
+        </div>
+
+        <div class="pager">
+          <a href="modulo-2.html"><div class="k">← Volver</div><div class="t">Portada del módulo</div></a>
+          <a class="next" href="m2-leccion-2.html"><div class="k">Siguiente →</div><div class="t">L2 · Estructura de mercado</div></a>
+        </div>
+      </article>
+
+      <nav class="toc">
+        <div class="h">En esta lección</div>
+        <a href="#s1">Los cuatro datos</a>
+        <a href="#s2">Alcista o bajista</a>
+        <a href="#s3">Cuerpo y mechas</a>
+        <a href="#s4">Qué dice y qué no</a>
+        <a href="#s5">El error de la vela suelta</a>
+      </nav>
+    </div>
+  </main>
+</div>
+<script src="assets/quiz.js" defer></script>
+</body>
+</html>
