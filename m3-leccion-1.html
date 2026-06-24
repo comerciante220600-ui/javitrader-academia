@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · M3 L1 Tendencias, rangos y transiciones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </a>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4><a href="modulo-3.html">Análisis técnico aplicado</a></h4>
+      <div class="msub">MÓDULO 3 · 5 LECCIONES</div>
+      <a class="lesson active" href="m3-leccion-1.html"><span class="num">1</span> Tendencias, rangos y transiciones</a>
+      <a class="lesson" href="m3-leccion-2.html"><span class="num">2</span> Confluencias</a>
+      <a class="lesson" href="m3-leccion-3.html"><span class="num">3</span> Indicadores sin humo</a>
+      <a class="lesson" href="m3-leccion-4.html"><span class="num">4</span> Patrones útiles vs de manual</a>
+      <a class="lesson" href="m3-leccion-5.html"><span class="num">5</span> Construir un setup propio</a>
+    </div>
+
+    <div class="nav-label">Otros módulos</div>
+    <a class="tool-link" href="modulo-0.html">📚 Módulo 0 · Fundamentos</a>
+    <a class="tool-link" href="modulo-1.html">📈 Módulo 1 · Gestión de riesgo</a>
+    <a class="tool-link" href="modulo-2.html">📊 Módulo 2 · Leer un gráfico</a>
+    <a class="tool-link" href="modulo-7.html">🧠 Módulo 7 · Psicología</a>
+    <a class="tool-link" href="herramientas.html">🧮 Calculadoras del curso</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb">Módulo 3 · Análisis técnico &nbsp;›&nbsp; <b>Lección 1</b></div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:20%"></span></div> 1/5</div>
+    </div>
+
+    <div class="wrap">
+      <article>
+        <div class="eyebrow">Lección 1</div>
+        <h1 class="title">Tendencias, rangos y transiciones</h1>
+        <div class="meta">
+          <div class="it">⏱ <b>~12 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>principiante–intermedio</b></div>
+          <div class="it">↳ Requisito: <b>Módulo 2</b></div>
+        </div>
+
+        <div class="card obj">
+          <h3>Lo que sabrás hacer al terminar</h3>
+          <ol>
+            <li>Decir, mirando un gráfico, si el mercado está en tendencia o en rango.</li>
+            <li>Identificar una tendencia por sus máximos y mínimos.</li>
+            <li>Reconocer un rango y sus límites (soporte y resistencia).</li>
+            <li>Detectar las transiciones: cuando una situación se agota y empieza otra.</li>
+          </ol>
+        </div>
+
+        <p class="lead">Antes de cualquier estrategia, indicador o patrón, hay una pregunta que decide casi todo: <strong>¿el mercado tiene tendencia o está en rango?</strong> Equivocarse aquí es el error que más dinero cuesta: aplicar tácticas de tendencia en un rango (o al revés) es remar en contra.</p>
+        <p>En esta lección aprendes a responder esa pregunta de un vistazo. Es la base de todo lo que viene en el módulo.</p>
+
+        <h2 id="s1">Las dos situaciones del mercado</h2>
+        <p>El precio, en realidad, solo hace dos cosas:</p>
+        <ul>
+          <li><strong>Tendencia:</strong> el precio avanza de forma sostenida en una dirección, arriba (alcista) o abajo (bajista).</li>
+          <li><strong>Rango:</strong> el precio se mueve de lado, rebotando entre un techo y un suelo, sin avanzar a ninguna parte.</li>
+        </ul>
+        <p>Se dice que los mercados pasan la mayor parte del tiempo <strong>en rango</strong> y solo de vez en cuando arrancan tendencias claras. Saber en cuál de las dos estás cambia por completo qué tiene sentido hacer.</p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Una tendencia alcista que transiciona a un rango lateral">
+            <g font-family="Inter,system-ui,sans-serif">
+              <text x="205" y="44" fill="#9fe1cb" font-size="13" font-weight="500" text-anchor="middle">TENDENCIA ALCISTA</text>
+              <text x="520" y="44" fill="#e5c45a" font-size="13" font-weight="500" text-anchor="middle">RANGO (lateral)</text>
+              <line x1="60" y1="270" x2="680" y2="270" stroke="#26262f" stroke-width="1"/>
+              <!-- range bounds -->
+              <line x1="372" y1="120" x2="680" y2="120" stroke="#33333f" stroke-width="1" stroke-dasharray="4 4"/>
+              <line x1="372" y1="178" x2="680" y2="178" stroke="#33333f" stroke-width="1" stroke-dasharray="4 4"/>
+              <text x="688" y="124" fill="#76746c" font-size="10.5" text-anchor="start">resist.</text>
+              <text x="688" y="182" fill="#76746c" font-size="10.5" text-anchor="start">soporte</text>
+              <!-- transition marker -->
+              <line x1="368" y1="60" x2="368" y2="270" stroke="#e24b4a" stroke-width="1" stroke-dasharray="3 4" opacity="0.6"/>
+              <text x="368" y="292" fill="#f0a0a0" font-size="11" text-anchor="middle">transición</text>
+              <!-- uptrend -->
+              <polyline fill="none" stroke="#1d9e75" stroke-width="2.5" stroke-linejoin="round" points="60,250 100,205 122,222 165,168 192,186 236,138 262,152 312,104 342,120 368,112"/>
+              <!-- range -->
+              <polyline fill="none" stroke="#e5c45a" stroke-width="2.5" stroke-linejoin="round" points="368,112 410,172 452,122 496,176 540,120 584,176 626,122 668,170"/>
+              <text x="370" y="308" fill="#9b988f" font-size="12" text-anchor="middle">En tendencia el precio hace máximos y mínimos cada vez más altos; en rango, rebota entre dos niveles sin avanzar.</text>
+            </g>
+          </svg>
+          <figcaption>La misma gráfica: primero una tendencia (sube haciendo escalones) y luego un rango (rebota entre soporte y resistencia).</figcaption>
+        </figure>
+
+        <h2 id="s2">Cómo identificar una tendencia</h2>
+        <p>Recuerda la estructura del Módulo 2: una tendencia se reconoce por la <strong>secuencia de máximos y mínimos</strong>:</p>
+        <ul>
+          <li><strong>Tendencia alcista:</strong> cada máximo es más alto que el anterior y cada mínimo también (máximos y mínimos crecientes).</li>
+          <li><strong>Tendencia bajista:</strong> cada máximo y cada mínimo son más bajos que los anteriores (máximos y mínimos decrecientes).</li>
+        </ul>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Tendencia alcista = escalones que suben (cada vez más alto). Tendencia bajista = escalones que bajan. Mientras la secuencia se mantiene, la tendencia sigue viva.</p></div>
+
+        <h2 id="s3">Cómo identificar un rango</h2>
+        <p>Un <strong>rango</strong> es lo contrario: el precio no hace máximos ni mínimos progresivos, sino que <strong>rebota una y otra vez entre dos niveles</strong> — un <strong>soporte</strong> (suelo) abajo y una <strong>resistencia</strong> (techo) arriba. Visualmente se ve plano, "de lado".</p>
+        <p>En un rango, los movimientos parecen fuertes pero no llevan a ninguna parte: el precio sube hasta el techo, baja hasta el suelo, y vuelta a empezar. Confundir esos rebotes con el inicio de una tendencia es un clásico que cuesta caro.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Rango = el precio atrapado entre un suelo y un techo, yendo y viniendo sin avanzar. Si trazas dos líneas horizontales y el precio rebota entre ellas, estás en rango.</p></div>
+
+        <h2 id="s4">Las transiciones: cuando cambia el juego</h2>
+        <p>Aquí está lo difícil y lo valioso: el mercado <strong>no avisa</strong> cuando pasa de una situación a otra. Las dos transiciones típicas son:</p>
+        <ul>
+          <li><strong>De tendencia a rango:</strong> la tendencia se agota, deja de hacer máximos/mínimos nuevos y el precio empieza a moverse de lado. La fuerza se ha frenado.</li>
+          <li><strong>De rango a tendencia:</strong> el precio <strong>rompe</strong> con decisión uno de los límites del rango (el techo o el suelo) y arranca una dirección. Aquí el volumen (Módulo 2) ayuda a juzgar si la ruptura es de fiar.</li>
+        </ul>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>El error caro:</b> tratar un rango como si fuera tendencia (esperando que "siga subiendo" cuando solo está rebotando) o tratar una tendencia como rango (vendiendo en cada subida de una tendencia alcista fuerte). Primero identifica la situación; luego elige la táctica.</div></div>
+
+        <h2 id="s5">Por qué esto decide tu estrategia</h2>
+        <p>No se trata de que una situación sea "buena" y otra "mala": cada una pide herramientas distintas.</p>
+        <ul>
+          <li>En <strong>tendencia</strong>, las tácticas de <strong>seguimiento</strong> (entrar a favor del movimiento, aguantar mientras dura) tienen sentido.</li>
+          <li>En <strong>rango</strong>, encajan mejor las tácticas de <strong>reversión</strong> (operar los rebotes en los extremos: cerca del suelo o del techo).</li>
+        </ul>
+        <p>Esto no es una regla de "compra aquí, vende allá": es entender que el contexto cambia qué tiene probabilidades a tu favor. Tu estilo (incluido el scalping, donde operas en ambas direcciones) decide el resto. Lo único innegociable es <strong>saber en qué situación estás antes de actuar</strong>.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Identifica primero: ¿tendencia o rango? En tendencia, seguir el movimiento; en rango, jugar los extremos. No es una orden de comprar o vender, es elegir la táctica que encaja con el contexto.</p></div>
+
+        <div class="block-label">Errores comunes</div>
+        <ul>
+          <li><strong>"El precio sube fuerte, esto es tendencia."</strong> Un rebote dentro de un rango también sube fuerte… hasta que choca con el techo. Mira la estructura (máximos/mínimos), no una sola vela.</li>
+          <li><strong>"La tendencia no se va a acabar nunca."</strong> Todas se agotan. Cuando dejan de hacer máximos/mínimos nuevos, presta atención: puede estar empezando una transición.</li>
+          <li><strong>"Opero igual en tendencia que en rango."</strong> Es la receta para que las tácticas se peleen entre sí. El contexto manda sobre la táctica.</li>
+        </ul>
+
+        <div class="block-label">Resumen</div>
+        <ul>
+          <li>El mercado solo hace dos cosas: <strong>tendencia</strong> (avanza) o <strong>rango</strong> (va de lado).</li>
+          <li><strong>Tendencia</strong> = máximos y mínimos progresivos (crecientes si es alcista, decrecientes si es bajista).</li>
+          <li><strong>Rango</strong> = el precio rebota entre un soporte y una resistencia, sin avanzar.</li>
+          <li>Las <strong>transiciones</strong> (de una a otra) no se avisan; la ruptura de un rango y el agotamiento de una tendencia son las señales.</li>
+          <li>Identifica la situación <strong>antes</strong> de elegir la táctica.</li>
+        </ul>
+
+        <div class="block-label">Ejercicio práctico</div>
+        <ol>
+          <li>Abre tres gráficos distintos y clasifica cada uno: ¿tendencia (alcista/bajista) o rango?</li>
+          <li>En uno que esté en tendencia, marca tres máximos y tres mínimos seguidos y comprueba que son progresivos.</li>
+          <li>En uno en rango, traza las dos líneas (soporte y resistencia) y cuenta cuántas veces ha rebotado entre ellas.</li>
+        </ol>
+
+        <div class="block-label">Autoevaluación</div>
+        <div class="quiz" data-quiz>
+        <script type="application/json">
+        [
+        {"q": "Antes de aplicar cualquier estrategia, ¿cuál es la primera pregunta clave?", "opts": ["¿El mercado está en tendencia o en rango?", "¿Qué indicador uso?", "¿Cuánto apalancamiento pongo?", "¿Qué patrón de velas veo?"], "correct": 0, "why": "Saber si hay tendencia o rango decide qué tácticas tienen sentido; equivocarse aquí es el error que más cuesta."},
+        {"q": "¿Cómo se reconoce una tendencia alcista?", "opts": ["El precio rebota entre dos niveles fijos", "El volumen siempre baja", "Cada máximo y cada mínimo es más alto que el anterior", "Las velas son todas del mismo tamaño"], "correct": 2, "why": "Una tendencia alcista hace máximos y mínimos crecientes: escalones que suben. Mientras esa secuencia dure, la tendencia sigue viva."},
+        {"q": "¿Qué es un rango?", "opts": ["Una tendencia muy rápida", "El precio moviéndose de lado, rebotando entre un soporte y una resistencia", "Un tipo de indicador", "El máximo histórico de un activo"], "correct": 1, "why": "En un rango el precio queda atrapado entre un suelo (soporte) y un techo (resistencia), yendo y viniendo sin avanzar."},
+        {"q": "Se dice que los mercados, la mayor parte del tiempo, están…", "opts": ["En tendencia alcista", "Cerrados", "En tendencia bajista", "En rango (moviéndose de lado)"], "correct": 3, "why": "Los mercados pasan la mayoría del tiempo en rango; las tendencias claras aparecen solo de vez en cuando."},
+        {"q": "¿Qué suele indicar el paso de rango a tendencia?", "opts": ["Que el precio rompe con decisión uno de los límites del rango", "Que el volumen desaparece para siempre", "Que las velas se vuelven verdes", "Que el gráfico se cierra"], "correct": 0, "why": "Cuando el precio rompe el techo o el suelo del rango con fuerza, suele arrancar una tendencia; el volumen ayuda a juzgar si la ruptura es fiable."},
+        {"q": "En una tendencia, ¿qué tipo de táctica encaja mejor?", "opts": ["Operar los rebotes en los extremos", "No operar nunca", "Tácticas de seguimiento, a favor del movimiento", "Cerrar la cuenta"], "correct": 2, "why": "En tendencia tiene sentido seguir el movimiento (entrar a su favor y aguantar mientras dura)."},
+        {"q": "En un rango, ¿qué táctica suele encajar mejor?", "opts": ["Seguir el movimiento porque va a romper seguro", "Operar los rebotes en los extremos (cerca del suelo o del techo)", "Comprar siempre en mitad del rango", "Aumentar el apalancamiento al máximo"], "correct": 1, "why": "En rango encajan las tácticas de reversión: operar los rebotes en los extremos, donde el precio tiende a darse la vuelta."},
+        {"q": "‘El precio sube fuerte, así que esto es una tendencia.’ ¿Es fiable esa conclusión?", "opts": ["Sí, siempre", "Sí, si la vela es verde", "Solo en acciones", "No: un rebote dentro de un rango también sube fuerte hasta chocar con el techo"], "correct": 3, "why": "Una subida fuerte puede ser solo un rebote dentro de un rango. Hay que mirar la estructura (máximos y mínimos), no una sola vela."},
+        {"q": "¿Por qué importa distinguir tendencia de rango antes de operar?", "opts": ["Porque en rango el bróker cobra más", "Porque la tendencia no se puede operar", "Porque cada situación pide tácticas distintas y mezclarlas rema en contra", "Porque el rango no existe en cripto"], "correct": 2, "why": "Aplicar tácticas de tendencia en un rango (o al revés) hace que tus herramientas se peleen entre sí. Primero el contexto, luego la táctica."},
+        {"q": "¿Qué señala que una tendencia podría estar agotándose?", "opts": ["Que deja de hacer máximos/mínimos nuevos y empieza a moverse de lado", "Que sigue haciendo máximos y mínimos nuevos", "Que el precio sube más rápido que nunca", "Que aparecen más velas verdes"], "correct": 0, "why": "Cuando la secuencia de máximos y mínimos progresivos se frena y el precio se mueve de lado, puede estar empezando una transición a rango."}
+        ]
+        </script>
+        </div>
+
+        <div class="block-label">Glosario</div>
+        <div class="card">
+          <p><strong>Tendencia:</strong> avance sostenido del precio en una dirección (alcista o bajista).</p>
+          <p><strong>Rango (lateral):</strong> el precio moviéndose de lado entre un soporte y una resistencia, sin avanzar.</p>
+          <p><strong>Soporte:</strong> nivel por debajo del precio donde tiende a frenarse la caída.</p>
+          <p><strong>Resistencia:</strong> nivel por encima del precio donde tiende a frenarse la subida.</p>
+          <p><strong>Transición:</strong> el cambio de una situación a otra (de tendencia a rango o de rango a tendencia).</p>
+          <p><strong>Ruptura:</strong> cuando el precio atraviesa con decisión un límite del rango y suele arrancar una tendencia.</p>
+        </div>
+
+        <div class="pager">
+          <a href="modulo-3.html"><div class="k">← Volver</div><div class="t">Portada del módulo</div></a>
+          <a class="next" href="m3-leccion-2.html"><div class="k">Siguiente →</div><div class="t">L2 · Confluencias</div></a>
+        </div>
+      </article>
+
+      <nav class="toc">
+        <div class="h">En esta lección</div>
+        <a href="#s1">Las dos situaciones</a>
+        <a href="#s2">Identificar una tendencia</a>
+        <a href="#s3">Identificar un rango</a>
+        <a href="#s4">Las transiciones</a>
+        <a href="#s5">Por qué decide tu estrategia</a>
+      </nav>
+    </div>
+  </main>
+</div>
+<script src="assets/quiz.js" defer></script>
+</body>
+</html>

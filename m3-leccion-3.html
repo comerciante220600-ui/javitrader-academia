@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · M3 L3 Indicadores sin humo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </a>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4><a href="modulo-3.html">Análisis técnico aplicado</a></h4>
+      <div class="msub">MÓDULO 3 · 5 LECCIONES</div>
+      <a class="lesson" href="m3-leccion-1.html"><span class="num done">1</span> Tendencias, rangos y transiciones</a>
+      <a class="lesson" href="m3-leccion-2.html"><span class="num done">2</span> Confluencias</a>
+      <a class="lesson active" href="m3-leccion-3.html"><span class="num">3</span> Indicadores sin humo</a>
+      <a class="lesson" href="m3-leccion-4.html"><span class="num">4</span> Patrones útiles vs de manual</a>
+      <a class="lesson" href="m3-leccion-5.html"><span class="num">5</span> Construir un setup propio</a>
+    </div>
+
+    <div class="nav-label">Otros módulos</div>
+    <a class="tool-link" href="modulo-0.html">📚 Módulo 0 · Fundamentos</a>
+    <a class="tool-link" href="modulo-1.html">📈 Módulo 1 · Gestión de riesgo</a>
+    <a class="tool-link" href="modulo-2.html">📊 Módulo 2 · Leer un gráfico</a>
+    <a class="tool-link" href="modulo-7.html">🧠 Módulo 7 · Psicología</a>
+    <a class="tool-link" href="herramientas.html">🧮 Calculadoras del curso</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb">Módulo 3 · Análisis técnico &nbsp;›&nbsp; <b>Lección 3</b></div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:60%"></span></div> 3/5</div>
+    </div>
+
+    <div class="wrap">
+      <article>
+        <div class="eyebrow">Lección 3</div>
+        <h1 class="title">Indicadores sin humo: medias y RSI</h1>
+        <div class="meta">
+          <div class="it">⏱ <b>~12 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>principiante–intermedio</b></div>
+          <div class="it">↳ Requisito: <b>Módulo 2</b></div>
+        </div>
+
+        <div class="card obj">
+          <h3>Lo que sabrás hacer al terminar</h3>
+          <ol>
+            <li>Explicar qué es de verdad un indicador y por qué no predice el precio.</li>
+            <li>Usar una media móvil como referencia de tendencia y soporte/resistencia dinámico.</li>
+            <li>Leer el RSI sin caer en el mito de “&gt;70 vender, &lt;30 comprar”.</li>
+            <li>Evitar la trampa de acumular diez indicadores que dicen lo mismo.</li>
+          </ol>
+        </div>
+
+        <p class="lead">Los indicadores son la parte del análisis técnico que más humo acumula: se venden como bolas de cristal que “avisan” de lo que va a pasar. <strong>No lo son.</strong> Un indicador es un cálculo matemático <em>sobre</em> el precio — va por detrás, no por delante. El santo grial no existe.</p>
+        <p>En esta lección desmontamos esa fantasía y aprendes a usar dos clásicos (medias móviles y RSI) como lo que son: <strong>apoyos</strong> para confirmar lo que ya ves en el gráfico, no señales mágicas que sustituyen leerlo.</p>
+
+        <h2 id="s1">Qué es un indicador (y qué NO es)</h2>
+        <p>Un indicador técnico es simplemente <strong>un cálculo matemático que se hace sobre los datos del precio</strong> (y a veces el volumen). Tomas las velas que ya han ocurrido, les aplicas una fórmula, y dibujas el resultado en el gráfico.</p>
+        <p>De ahí sale la idea más importante de toda la lección: como se calcula <strong>sobre el precio pasado</strong>, el indicador es un dato <strong>derivado</strong> y va <strong>por detrás</strong> del precio. No lo predice. Reacciona a lo que el precio ya hizo.</p>
+        <ul>
+          <li><strong>Lo que SÍ es:</strong> un resumen, una forma de ver con más limpieza algo que ya está en el gráfico (la dirección, la fuerza, la velocidad).</li>
+          <li><strong>Lo que NO es:</strong> una predicción del futuro, una orden de comprar/vender, ni un indicador “mágico” que otros no conocen.</li>
+        </ul>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>Anti-humo:</b> ningún indicador predice el futuro. Todos se calculan sobre velas que <em>ya</em> ocurrieron, así que como mucho describen el presente con retraso. Quien te venda un indicador “que adelanta el mercado” te está vendiendo humo.</div></div>
+
+        <h2 id="s2">Medias móviles: ver la dirección</h2>
+        <p>Una <strong>media móvil</strong> es de los indicadores más útiles justamente porque es de los más simples. Su cálculo: la <strong>media (promedio) de los últimos N cierres</strong>. Una media de 20 toma los 20 últimos cierres, los promedia, y dibuja ese punto; al cerrar la siguiente vela, recalcula. De ahí el “móvil”.</p>
+        <p>¿Para qué sirve? Para <strong>suavizar</strong> el ruido del precio y ver la dirección de fondo con más claridad. Si la media apunta hacia arriba y el precio está por encima, el contexto es alcista; al revés, bajista. Además, muchas veces el precio “rebota” en una media importante, que actúa como <strong>soporte o resistencia dinámico</strong> (un nivel que se mueve con el precio, en vez de una línea horizontal fija).</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Media móvil = el promedio de los últimos N cierres, redibujado vela a vela. Sirve para ver la dirección sin el ruido y como soporte/resistencia que se mueve con el precio. No es una señal de compra: es una referencia.</p></div>
+        <p>Verás mucho los <strong>cruces de medias</strong> (una rápida cruza a una lenta) presentados como “señal de compra/venta”. Cuidado: como las medias se calculan sobre el pasado, el cruce <strong>llega con retraso</strong>, cuando buena parte del movimiento ya ha pasado. Es una referencia del cambio de contexto, no una señal infalible.</p>
+
+        <h2 id="s3">RSI bien entendido</h2>
+        <p>El <strong>RSI</strong> (Índice de Fuerza Relativa) mide la <strong>fuerza o momentum</strong> del movimiento reciente en una escala de <strong>0 a 100</strong>. Compara, a grandes rasgos, el tamaño de las subidas frente al de las bajadas en un periodo: si manda la subida, el RSI sube; si manda la bajada, baja.</p>
+        <p>Tradicionalmente se marcan dos zonas: por encima de <strong>70</strong> se llama “sobrecompra” y por debajo de <strong>30</strong>, “sobreventa”. Y aquí está el mito que hay que matar:</p>
+        <div class="callout idea"><div class="ic">💡</div><div><b>Lo que NADIE te dice bien:</b> “sobrecompra” (&gt;70) <u>no</u> es una orden de vender, ni “sobreventa” (&lt;30) una orden de comprar. En una tendencia fuerte, el RSI puede quedarse <strong>clavado por encima de 70 durante mucho tiempo</strong> mientras el precio sigue subiendo. Vender solo porque “el RSI marca sobrecompra” es uno de los errores más caros del principiante.</div></div>
+        <p>Sobrecompra solo significa “el precio ha subido con fuerza últimamente”. En un rango eso puede anticipar un giro; en una tendencia fuerte, simplemente confirma que la tendencia es fuerte. El contexto (Módulo 1: tendencia o rango) cambia por completo cómo se lee.</p>
+        <p>Donde el RSI sí aporta una pista interesante es en las <strong>divergencias</strong>: cuando el <strong>precio hace un máximo nuevo pero el RSI NO</strong> (hace un máximo más bajo). Eso sugiere que el empuje detrás del movimiento se está agotando — pierde fuerza. No es una garantía de giro, es un aviso de que la energía baja.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>RSI = un medidor de fuerza de 0 a 100. &gt;70 no es “vende” ni &lt;30 es “compra”: en tendencia fuerte el RSI se queda arriba sin que el precio gire. Lo más útil es la divergencia: precio sube pero RSI no = la fuerza se agota.</p></div>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico de precio con una media móvil suavizándolo y, debajo, un panel de RSI con bandas 70 y 30 donde el RSI se queda por encima de 70 durante la tendencia">
+            <g font-family="Inter,system-ui,sans-serif">
+              <!-- ===== PANEL PRECIO ===== -->
+              <rect x="56" y="24" width="624" height="186" fill="#15151b" stroke="#26262f" stroke-width="1" rx="4"/>
+              <text x="68" y="44" fill="#9b988f" font-size="12" font-weight="500">PRECIO + media móvil</text>
+              <!-- rejilla -->
+              <line x1="56" y1="80" x2="680" y2="80" stroke="#1c1c23" stroke-width="1"/>
+              <line x1="56" y1="130" x2="680" y2="130" stroke="#1c1c23" stroke-width="1"/>
+              <line x1="56" y1="180" x2="680" y2="180" stroke="#1c1c23" stroke-width="1"/>
+              <!-- precio (sube haciendo escalones, ruidoso) -->
+              <polyline fill="none" stroke="#378add" stroke-width="2.4" stroke-linejoin="round" points="68,178 104,168 132,186 168,150 196,166 232,128 264,144 300,104 336,118 372,86 408,98 444,72 480,86 516,60 552,74 588,56 624,68 668,52"/>
+              <!-- media móvil suavizada (sigue por detrás, sin ruido) -->
+              <polyline fill="none" stroke="#d4af37" stroke-width="2.6" stroke-linejoin="round" points="68,182 104,178 132,176 168,170 196,164 232,154 264,148 300,138 336,130 372,120 408,112 444,102 480,94 516,84 552,76 588,68 624,62 668,56"/>
+              <text x="668" y="44" fill="#e5c45a" font-size="11" text-anchor="end">media móvil</text>
+              <text x="528" y="200" fill="#76746c" font-size="10.5" text-anchor="middle">la media suaviza el ruido y va por detrás del precio</text>
+              <!-- ===== PANEL RSI ===== -->
+              <rect x="56" y="234" width="624" height="116" fill="#15151b" stroke="#26262f" stroke-width="1" rx="4"/>
+              <text x="68" y="254" fill="#9b988f" font-size="12" font-weight="500">RSI (0–100)</text>
+              <!-- banda 70 -->
+              <line x1="56" y1="270" x2="680" y2="270" stroke="#e24b4a" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/>
+              <text x="688" y="274" fill="#76746c" font-size="10.5" text-anchor="start">70</text>
+              <!-- linea media 50 -->
+              <line x1="56" y1="300" x2="680" y2="300" stroke="#1c1c23" stroke-width="1"/>
+              <text x="688" y="304" fill="#76746c" font-size="10.5" text-anchor="start">50</text>
+              <!-- banda 30 -->
+              <line x1="56" y1="330" x2="680" y2="330" stroke="#1d9e75" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/>
+              <text x="688" y="334" fill="#76746c" font-size="10.5" text-anchor="start">30</text>
+              <!-- linea RSI: sube y se queda CLAVADA por encima de 70 -->
+              <polyline fill="none" stroke="#e5c45a" stroke-width="2.4" stroke-linejoin="round" points="68,322 104,312 132,316 168,298 196,302 232,284 264,288 300,272 336,268 372,262 408,264 444,260 480,262 516,258 552,262 588,259 624,261 668,258"/>
+              <!-- zona resaltada: RSI atrapado arriba -->
+              <rect x="336" y="244" width="332" height="26" fill="#e24b4a" opacity="0.08"/>
+              <text x="502" y="343" fill="#9b988f" font-size="10.5" text-anchor="middle">en tendencia fuerte el RSI se queda &gt;70 sin que el precio gire</text>
+            </g>
+          </svg>
+          <figcaption>Arriba, el precio (azul) y su media móvil (dorada), que lo suaviza y va por detrás. Abajo, el RSI: en plena tendencia alcista se queda pegado por encima de 70 y no por eso el precio se da la vuelta.</figcaption>
+        </figure>
+
+        <h2 id="s4">El error de acumular indicadores</h2>
+        <p>El instinto del principiante, cuando un indicador “falla”, es añadir otro. Y otro. Hasta tener el gráfico lleno de RSI, MACD, estocástico, medias, bandas… pensando que cuantos más, más seguridad. Es justo al revés.</p>
+        <p>Recuerda la idea del principio: <strong>todos los indicadores derivan del precio</strong>. Por eso muchos miden básicamente lo mismo con fórmulas distintas. Juntar diez es <strong>redundante</strong>: te dan la misma información disfrazada. Y cuando no coinciden (uno dice “arriba” y otro “abajo”), te quedas en <strong>parálisis</strong>, incapaz de decidir, ahogado en <strong>señales contradictorias</strong>.</p>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>Más no es mejor:</b> tres indicadores que dicen lo mismo no confirman nada, solo repiten. Y cinco que se contradicen no te dan equilibrio, te dan parálisis. La sobrecarga de indicadores es una forma de huir de la decisión, no de mejorarla.</div></div>
+
+        <h2 id="s5">El indicador como APOYO, no como señal</h2>
+        <p>Entonces, ¿para qué sirven? Para lo que has visto en todo el módulo: <strong>confirmar lo que ya ves en el precio y en la estructura</strong> (la tendencia, los rangos, los niveles del Módulo 2). El indicador es la segunda opinión, no el médico.</p>
+        <p>El orden correcto es: <strong>primero lees el gráfico</strong> (¿tendencia o rango?, ¿dónde están los niveles?), y <strong>después</strong> miras si un indicador apoya esa lectura. Si la media confirma la dirección que ya viste, bien. Si el RSI marca una divergencia justo donde sospechabas agotamiento, mejor. Pero el indicador <strong>no sustituye</strong> a leer el precio: lo acompaña.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Primero el precio y la estructura; luego el indicador como apoyo. Uno o dos bien entendidos &gt; diez mal usados. El indicador confirma tu lectura del gráfico, nunca la reemplaza.</p></div>
+
+        <div class="block-label">Errores comunes</div>
+        <ul>
+          <li><strong>“El RSI marca 75, hay que vender.”</strong> No. En una tendencia fuerte el RSI puede pasar mucho tiempo por encima de 70 mientras el precio sigue subiendo. Sobrecompra describe fuerza, no ordena vender.</li>
+          <li><strong>“Cuantos más indicadores, más seguro.”</strong> Como todos derivan del precio, acumularlos solo repite información y genera señales contradictorias. Más ruido, no más certeza.</li>
+          <li><strong>“El cruce de medias es señal segura.”</strong> Va con retraso, porque la media se calcula sobre el pasado. Es una referencia del cambio de contexto, no una garantía.</li>
+          <li><strong>“El indicador me dirá cuándo entrar.”</strong> El indicador apoya lo que ya leíste en el gráfico; no es un piloto automático que decide por ti.</li>
+        </ul>
+
+        <div class="block-label">Resumen</div>
+        <ul>
+          <li>Un indicador es un <strong>cálculo sobre el precio pasado</strong>: es derivado y va por detrás. No predice nada. No hay indicador mágico.</li>
+          <li>La <strong>media móvil</strong> (promedio de los últimos N cierres) suaviza el precio, muestra la dirección y actúa como soporte/resistencia dinámico. Los cruces llegan con retraso.</li>
+          <li>El <strong>RSI</strong> mide fuerza de 0 a 100. <strong>&gt;70 no es “vender” ni &lt;30 es “comprar”</strong>: en tendencia fuerte se queda arriba. Lo más útil son las divergencias.</li>
+          <li><strong>Acumular indicadores</strong> es redundante (todos vienen del precio) y lleva a parálisis y señales contradictorias.</li>
+          <li>El indicador es un <strong>apoyo</strong> que confirma tu lectura del gráfico; nunca la sustituye.</li>
+        </ul>
+
+        <div class="block-label">Ejercicio práctico</div>
+        <ol>
+          <li>Pon una sola media móvil sobre un gráfico en tendencia y observa cómo el precio se apoya en ella en los retrocesos. Quítala y vuelve a ponerla: ¿te ayuda a ver la dirección?</li>
+          <li>Busca un tramo de tendencia alcista fuerte y mira el RSI: comprueba con tus propios ojos cuánto tiempo pasa por encima de 70 sin que el precio gire.</li>
+          <li>Encuentra una divergencia: un punto donde el precio hizo un máximo más alto pero el RSI hizo un máximo más bajo. Marca qué pasó después.</li>
+        </ol>
+
+        <div class="block-label">Autoevaluación</div>
+        <div class="quiz" data-quiz>
+        <script type="application/json">
+        [
+        {"q": "¿Qué es, en esencia, un indicador técnico?", "opts": ["Un cálculo matemático que se hace sobre el precio ya ocurrido", "Una predicción del precio futuro", "Una orden de compra automática", "Un secreto que solo conocen los profesionales"], "correct": 0, "why": "Un indicador se calcula sobre datos de precio pasados, así que es un dato derivado: describe lo que ya pasó, no adivina el futuro."},
+        {"q": "El RSI marca 76 (“sobrecompra”) en plena tendencia alcista fuerte. ¿Qué conclusión es correcta?", "opts": ["Hay que vender de inmediato, es una orden clara", "En una tendencia fuerte el RSI puede quedarse &gt;70 mucho tiempo mientras el precio sigue subiendo", "El precio va a caer seguro en la próxima vela", "El indicador está roto"], "correct": 1, "why": "Sobrecompra describe que el precio ha subido con fuerza; en tendencias fuertes el RSI se queda clavado arriba sin que el precio gire. No es una orden de vender."},
+        {"q": "¿Por qué se dice que un indicador va “por detrás” del precio?", "opts": ["Porque se dibuja a la izquierda del gráfico", "Porque siempre se equivoca", "Porque se calcula sobre velas que ya han ocurrido", "Porque tarda en cargarse en la plataforma"], "correct": 2, "why": "Al calcularse sobre el precio pasado, el indicador reacciona a lo que ya pasó; es derivado y por eso llega con retraso."},
+        {"q": "¿Qué es una media móvil?", "opts": ["El precio máximo del día", "Un indicador que predice el techo del mercado", "La diferencia entre dos velas", "El promedio de los últimos N cierres, recalculado vela a vela"], "correct": 3, "why": "La media móvil promedia los últimos N cierres y se redibuja con cada vela nueva; suaviza el ruido para ver la dirección."},
+        {"q": "Sobre los cruces de medias, ¿qué es cierto?", "opts": ["Son señales infalibles de compra y venta", "Llegan con retraso porque la media se calcula sobre el pasado", "Predicen el movimiento antes de que ocurra", "Solo funcionan en cripto"], "correct": 1, "why": "Como la media usa precios pasados, el cruce aparece cuando buena parte del movimiento ya ha ocurrido. Es una referencia, no una garantía."},
+        {"q": "¿Qué problema tiene llenar el gráfico de diez indicadores distintos?", "opts": ["Que como todos derivan del precio, son redundantes y generan señales contradictorias y parálisis", "Que ninguno funciona en gráficos diarios", "Que consumen mucha batería", "Que hacen el gráfico más fiable cuantos más pongas"], "correct": 0, "why": "Todos los indicadores vienen del precio, así que muchos miden lo mismo. Acumularlos repite información y, cuando no coinciden, te deja paralizado."},
+        {"q": "¿Para qué sirve mejor el RSI?", "opts": ["Para dar órdenes automáticas de compra y venta", "Para predecir el precio exacto de mañana", "Como pista de fuerza, por ejemplo con divergencias (precio sube pero el RSI no)", "Para sustituir por completo la lectura del gráfico"], "correct": 2, "why": "El RSI mide fuerza/momentum; una divergencia (nuevo máximo en precio sin nuevo máximo en RSI) avisa de que el empuje se agota. No es un piloto automático."},
+        {"q": "¿Cuál es el papel correcto de un indicador en tu análisis?", "opts": ["Sustituir la lectura del precio y la estructura", "Predecir el futuro del mercado", "Decidir las entradas por ti sin mirar nada más", "Ser un apoyo que confirma lo que ya ves en el gráfico"], "correct": 3, "why": "El indicador acompaña: primero lees precio y estructura, y luego el indicador confirma esa lectura. No la reemplaza."},
+        {"q": "¿Existe un indicador “mágico” que prediga el mercado?", "opts": ["No: todos se calculan sobre el pasado, ninguno predice el futuro", "Sí, el RSI si lo configuras bien", "Sí, pero solo lo tienen los bancos", "Sí, combinando suficientes indicadores"], "correct": 0, "why": "El santo grial no existe. Todo indicador se calcula sobre velas pasadas, así que ninguno puede predecir el futuro."},
+        {"q": "El RSI cae por debajo de 30 (“sobreventa”) durante una tendencia bajista fuerte. ¿Qué es correcto?", "opts": ["Es una orden segura de comprar ya", "No es una orden de comprar: en tendencia bajista fuerte puede quedarse abajo mientras el precio sigue cayendo", "Garantiza un rebote en la siguiente vela", "Significa que el activo no se puede operar"], "correct": 1, "why": "Igual que &gt;70 no obliga a vender, &lt;30 no obliga a comprar. En tendencias fuertes el RSI puede quedarse en el extremo mientras el precio sigue en su dirección."}
+        ]
+        </script>
+        </div>
+
+        <div class="block-label">Glosario</div>
+        <div class="card">
+          <p><strong>Indicador:</strong> cálculo matemático hecho sobre el precio (y a veces el volumen); es un dato derivado que va por detrás del precio.</p>
+          <p><strong>Media móvil:</strong> promedio de los últimos N cierres, recalculado vela a vela; suaviza el precio y muestra la dirección.</p>
+          <p><strong>Soporte/resistencia dinámico:</strong> nivel que se mueve con el precio (como una media) en vez de ser una línea horizontal fija.</p>
+          <p><strong>RSI:</strong> índice de fuerza relativa; mide el momentum del movimiento en una escala de 0 a 100.</p>
+          <p><strong>Sobrecompra / sobreventa:</strong> RSI por encima de 70 / por debajo de 30; describen fuerza reciente, no son órdenes de vender o comprar.</p>
+          <p><strong>Divergencia:</strong> cuando el precio hace un máximo (o mínimo) nuevo pero el RSI no lo acompaña; pista de que la fuerza se agota.</p>
+        </div>
+
+        <div class="pager">
+          <a href="m3-leccion-2.html"><div class="k">← Anterior</div><div class="t">L2 · Confluencias</div></a>
+          <a class="next" href="m3-leccion-4.html"><div class="k">Siguiente →</div><div class="t">L4 · Patrones útiles vs de manual</div></a>
+        </div>
+      </article>
+
+      <nav class="toc">
+        <div class="h">En esta lección</div>
+        <a href="#s1">Qué es un indicador</a>
+        <a href="#s2">Medias móviles</a>
+        <a href="#s3">RSI bien entendido</a>
+        <a href="#s4">El error de acumular</a>
+        <a href="#s5">El indicador como apoyo</a>
+      </nav>
+    </div>
+  </main>
+</div>
+<script src="assets/quiz.js" defer></script>
+</body>
+</html>
