@@ -80,7 +80,7 @@
         <h2 id="s1">Métricas de actividad: ¿la red se usa de verdad?</h2>
         <p>Las primeras métricas que conviene entender miden si una red <strong>tiene uso real</strong> o solo precio. Una cripto con muchos usuarios reales no garantiza nada, pero una con cero actividad y precio inflado es una bandera roja evidente.</p>
         <ul>
-          <li><strong>Direcciones activas:</strong> cuántas carteras distintas enviaron o recibieron monedas en un periodo (por ejemplo, en un día). Es el equivalente cripto a "cuánta gente entró hoy a la tienda". Mucha gente moviéndose = red viva; nadie moviéndose = red dormida.</li>
+          <li><strong>Direcciones activas:</strong> cuántas carteras distintas enviaron o recibieron monedas en un periodo (por ejemplo, en un día). Es el equivalente cripto a "cuánta gente entró hoy a la tienda". Mucha gente moviéndose = red viva; nadie moviéndose = red dormida. Ojo: una dirección <strong>no es una persona</strong> —alguien puede tener varias carteras, y un exchange agrupa a miles de usuarios bajo unas pocas—, así que es una <em>aproximación</em> al uso, no un censo exacto.</li>
           <li><strong>Número de transacciones:</strong> cuántos movimientos se registraron en la cadena en ese periodo. Mide el <em>volumen de actividad</em>, no de personas (una sola persona puede hacer muchas transacciones).</li>
         </ul>
         <p>Ojo al matiz: estas dos métricas se parecen pero no son lo mismo. Muchas transacciones con pocas direcciones puede ser un puñado de bots o un exchange moviendo fondos internamente, no una red en auge. Por eso se miran <strong>juntas</strong>, nunca una sola.</p>
@@ -109,9 +109,9 @@
           <li><strong>MVRV por encima de 1:</strong> de media, el mercado está <strong>en ganancia</strong> (el precio de hoy es mayor que el coste medio). Cuanto más alto, más beneficio acumulado… y más tentación de vender.</li>
           <li><strong>MVRV por debajo de 1:</strong> de media, el mercado está <strong>en pérdida</strong> (el precio de hoy es menor que el coste medio). Históricamente, valores muy bajos han coincidido con zonas de capitulación.</li>
         </ul>
-        <p>Existe una prima hermana, el <strong>NUPL</strong>, que mide lo mismo desde otro ángulo: qué porcentaje del valor total del mercado es ganancia "no realizada" (sobre el papel, sin vender todavía). Sirve para lo mismo: ver si, <em>de media</em>, el mercado va ganando o perdiendo.</p>
+        <p>Existe una prima hermana, el <strong>NUPL</strong>, que mide lo mismo desde otro ángulo: el beneficio "no realizado" <strong>neto</strong> (las ganancias sobre el papel <em>menos</em> las pérdidas) como porcentaje del valor del mercado. La palabra clave es <em>neto</em>: por eso puede ser <strong>negativo</strong> cuando, de media, el mercado está en pérdida (justo las zonas de capitulación).</p>
         <p><strong>Importante:</strong> estas métricas son <em>orientativas</em>. Te dicen si, históricamente, el mercado está en una zona "cara" o "barata" respecto a sí mismo. <strong>No</strong> son señales de compra o venta: el MVRV puede quedarse "caro" durante meses mientras el precio sigue subiendo, y "barato" mientras sigue cayendo.</p>
-        <div class="plain"><div class="lab">🟢 Al grano</div><p>MVRV compara el precio de hoy con el precio medio al que se compraron las monedas. Por encima de 1 = el mercado va, de media, en ganancia; por debajo de 1 = en pérdida. Es un termómetro de "caro o barato por dentro", orientativo, NO un botón de comprar o vender.</p></div>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>MVRV compara el precio de hoy con el coste medio de toda la oferta (cada moneda valorada a cuando se movió por última vez). Por encima de 1 = el mercado va, de media, en ganancia; por debajo de 1 = en pérdida. Es un termómetro de "caro o barato por dentro", orientativo, NO un botón de comprar o vender.</p></div>
 
         <figure class="done">
           <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Señal frente a ruido: métricas que responden una pregunta frente a métricas vacías">
@@ -252,8 +252,8 @@
           <p><strong>Número de transacciones:</strong> cuántos movimientos se registraron en la cadena en un periodo; mide volumen de actividad, no de personas.</p>
           <p><strong>HODLer:</strong> inversor de largo plazo que mantiene sus monedas pase lo que pase; sus monedas llevan mucho tiempo quietas.</p>
           <p><strong>Distribución de la oferta:</strong> cómo de repartidas o concentradas están las monedas entre las carteras.</p>
-          <p><strong>MVRV:</strong> métrica de valoración que compara el precio actual con el precio medio al que se movieron las monedas; orientativa de si el mercado está, de media, en ganancia o pérdida.</p>
-          <p><strong>NUPL:</strong> prima del MVRV; mide qué porcentaje del valor del mercado es ganancia "no realizada" (sobre el papel, sin vender).</p>
+          <p><strong>MVRV:</strong> métrica de valoración que compara el precio actual con el coste medio de toda la oferta (cada moneda valorada al precio de su último movimiento); orientativa de si el mercado está, de media, en ganancia o pérdida.</p>
+          <p><strong>NUPL:</strong> prima del MVRV; mide el beneficio "no realizado" neto (ganancias menos pérdidas sobre el papel) como % del mercado; puede ser negativo si dominan las pérdidas.</p>
           <p><strong>Vanity metric (métrica de vanidad):</strong> número que parece importante pero no responde a nada útil o se manipula (seguidores, likes, total de carteras).</p>
         </div>
 
