@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · M5 L3 Flujos, ballenas y manos fuertes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </a>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4><a href="modulo-5.html">Lectura on-chain ⭐</a></h4>
+      <div class="msub">MÓDULO 5 · 5 LECCIONES</div>
+      <a class="lesson" href="m5-leccion-1.html"><span class="num done">1</span> Qué es on-chain y por qué da ventaja</a>
+      <a class="lesson" href="m5-leccion-2.html"><span class="num done">2</span> Métricas que importan</a>
+      <a class="lesson active" href="m5-leccion-3.html"><span class="num">3</span> Flujos, ballenas y manos fuertes</a>
+      <a class="lesson" href="m5-leccion-4.html"><span class="num">4</span> Leer el sentimiento</a>
+      <a class="lesson" href="m5-leccion-5.html"><span class="num">5</span> Construir una tesis con datos</a>
+    </div>
+
+    <div class="nav-label">Otros módulos</div>
+    <a class="tool-link" href="modulo-0.html">📚 Módulo 0 · Fundamentos</a>
+    <a class="tool-link" href="modulo-1.html">📈 Módulo 1 · Gestión de riesgo</a>
+    <a class="tool-link" href="modulo-4.html">💼 Módulo 4 · Análisis fundamental</a>
+    <a class="tool-link" href="modulo-7.html">🧠 Módulo 7 · Psicología</a>
+    <a class="tool-link" href="herramientas.html">🧮 Calculadoras del curso</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb">Módulo 5 · Lectura on-chain &nbsp;›&nbsp; <b>Lección 3</b></div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:60%"></span></div> 3/5</div>
+    </div>
+
+    <div class="wrap">
+      <article>
+        <div class="eyebrow">Lección 3</div>
+        <h1 class="title">Flujos de exchanges, ballenas y manos fuertes</h1>
+        <div class="meta">
+          <div class="it">⏱ <b>~12 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>intermedio</b></div>
+          <div class="it">↳ Requisito: <b>Lección 1</b></div>
+        </div>
+
+        <div class="card obj">
+          <h3>Lo que sabrás hacer al terminar</h3>
+          <ol>
+            <li>Leer los flujos de entrada y salida de los exchanges como pista de contexto.</li>
+            <li>Seguir movimientos de ballenas sin inventarte su intención.</li>
+            <li>Distinguir manos fuertes de manos débiles y para qué sirve esa lectura.</li>
+            <li>Combinar flujos con otras señales sin convertir un dato suelto en una orden.</li>
+          </ol>
+        </div>
+
+        <p class="lead">En la Lección 1 vimos que la cadena te deja <strong>seguir el dinero</strong>: ver qué se mueve, cuánto y entre qué carteras. En esta lección aprendes a leer tres de esos rastros —los flujos de los exchanges, los movimientos de las ballenas y el reparto entre manos fuertes y débiles— sin caer en la trampa de creer que ver un movimiento es conocer su intención.</p>
+        <p>Es la parte del on-chain donde más humo se vende: cuentas que narran cada movimiento de una ballena como si supieran lo que va a pasar. Vamos a hacerlo al revés: con recibos y con honestidad sobre lo que estos datos sí dicen y lo que no.</p>
+
+        <h2 id="s1">Seguir el dinero</h2>
+        <p>La gran ventaja del on-chain es que el dinero deja huella. Cada moneda que se mueve queda anotada: de qué cartera sale, a cuál entra y cuándo. <strong>Seguir el dinero</strong> ("follow the money") es justo eso: rastrear hacia dónde fluyen las monedas para entender qué está haciendo el capital, no lo que dice que hace.</p>
+        <p>De ese rastreo salen tres lecturas muy usadas: a dónde van las monedas respecto a los <strong>exchanges</strong>, qué hacen las <strong>ballenas</strong> (las carteras enormes) y en qué <strong>manos</strong> está la oferta. Las tres son útiles. Las tres se malinterpretan con facilidad. Empecemos por la más popular.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>"Seguir el dinero" es rastrear hacia dónde fluyen las monedas en la cadena. Da contexto sobre qué hace el capital de verdad. Pero ver el flujo no es conocer el motivo: el rastro es la pista, no la respuesta.</p></div>
+
+        <h2 id="s2">Flujos de exchanges: entradas y salidas</h2>
+        <p>Un <strong>exchange</strong> (la web donde se compra y vende cripto) es el sitio donde, normalmente, se ejecutan las ventas. Por eso el flujo de monedas hacia y desde los exchanges es una de las pistas más seguidas:</p>
+        <ul>
+          <li><strong>Monedas ENTRANDO a un exchange (inflow):</strong> alguien está moviendo cripto hacia el sitio donde se vende. Eso <em>puede</em> indicar intención de vender, porque aumenta la oferta disponible para hacerlo.</li>
+          <li><strong>Monedas SALIENDO de un exchange (outflow):</strong> alguien retira cripto del exchange hacia su propia cartera. Eso <em>puede</em> indicar acumulación o intención de guardar a largo plazo (<strong>HODL</strong>), porque saca esa oferta del mercado inmediato.</li>
+        </ul>
+        <p>Hasta aquí la lectura clásica: entradas = posible presión de venta, salidas = posible acumulación. Y aquí viene lo importante.</p>
+        <div class="callout warn"><strong>Es una pista, no una orden.</strong> Que entren monedas a un exchange <em>no</em> significa "se va a vender ya", ni que salgan significa "va a subir seguro". La gente también saca monedas a una <strong>cold wallet</strong> por seguridad, para <strong>staking</strong>, para moverlas entre sus propias cuentas o para usarlas en otra plataforma. El flujo te da contexto sobre la oferta disponible; no te lee la mente de quien la mueve.</div>
+        <p>Por eso un flujo de exchange es una <strong>pista de contexto</strong>, no una señal de compra o venta. Convertirlo en una orden ("salió de exchange → compro") es justo el error que separa al que usa el dato del que se inventa la película.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Entradas a exchange = más oferta lista para vender (posible presión vendedora). Salidas a carteras propias = oferta que se retira (posible acumulación / HODL). Las dos son <strong>pistas</strong>: también se saca a cold wallet, staking o entre cuentas propias. Nunca un flujo aislado decide nada.</p></div>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flujos de un exchange: monedas entrando como posible presión de venta frente a monedas saliendo como posible acumulación">
+            <g font-family="Inter,system-ui,sans-serif">
+              <!-- exchange central -->
+              <rect x="290" y="120" width="140" height="120" rx="12" fill="#15151b" stroke="#26262f"/>
+              <text x="360" y="170" fill="#ece9e1" font-size="15" font-weight="600" text-anchor="middle">EXCHANGE</text>
+              <text x="360" y="192" fill="#9b988f" font-size="11.5" text-anchor="middle">donde se vende</text>
+
+              <!-- carteras izquierda (origen entradas) -->
+              <rect x="40" y="138" width="150" height="84" rx="10" fill="#15151b" stroke="#26262f"/>
+              <text x="115" y="172" fill="#ddd9d0" font-size="12.5" text-anchor="middle">Carteras</text>
+              <text x="115" y="192" fill="#9b988f" font-size="11" text-anchor="middle">de quien envía</text>
+
+              <!-- carteras derecha (destino salidas) -->
+              <rect x="530" y="138" width="150" height="84" rx="10" fill="#15151b" stroke="#26262f"/>
+              <text x="605" y="166" fill="#ddd9d0" font-size="12.5" text-anchor="middle">Cartera propia</text>
+              <text x="605" y="184" fill="#9b988f" font-size="11" text-anchor="middle">/ cold wallet</text>
+              <text x="605" y="202" fill="#9b988f" font-size="11" text-anchor="middle">/ staking</text>
+
+              <!-- flecha ENTRANDO (izq -> exchange) ámbar/rojo -->
+              <defs>
+                <marker id="ar" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#c98a2e"/></marker>
+                <marker id="tl" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1d9e75"/></marker>
+              </defs>
+              <line x1="192" y1="180" x2="286" y2="180" stroke="#c98a2e" stroke-width="3" marker-end="url(#ar)"/>
+              <text x="240" y="110" fill="#c98a2e" font-size="13.5" font-weight="600" text-anchor="middle">ENTRANDO</text>
+              <text x="240" y="130" fill="#f0a0a0" font-size="11.5" text-anchor="middle">(inflow)</text>
+
+              <!-- flecha SALIENDO (exchange -> der) teal -->
+              <line x1="434" y1="180" x2="528" y2="180" stroke="#1d9e75" stroke-width="3" marker-end="url(#tl)"/>
+              <text x="481" y="110" fill="#1d9e75" font-size="13.5" font-weight="600" text-anchor="middle">SALIENDO</text>
+              <text x="481" y="130" fill="#1d9e75" font-size="11.5" text-anchor="middle">(outflow)</text>
+
+              <!-- lecturas debajo -->
+              <text x="240" y="262" fill="#e24b4a" font-size="13" font-weight="600" text-anchor="middle">Posible presión de venta</text>
+              <text x="240" y="282" fill="#9b988f" font-size="11.5" text-anchor="middle">más oferta lista para vender</text>
+
+              <text x="481" y="262" fill="#1d9e75" font-size="13" font-weight="600" text-anchor="middle">Posible acumulación</text>
+              <text x="481" y="282" fill="#9b988f" font-size="11.5" text-anchor="middle">oferta retirada del mercado (HODL)</text>
+
+              <!-- advertencia -->
+              <text x="360" y="328" fill="#e5c45a" font-size="12.5" text-anchor="middle">⚠ Son PISTAS de contexto, no certezas: también se mueve por seguridad, staking o entre cuentas propias.</text>
+            </g>
+          </svg>
+          <figcaption>Entradas al exchange sugieren más oferta dispuesta a vender; salidas sugieren que esa oferta se retira. Ambas son pistas de contexto, no una orden de compra o venta.</figcaption>
+        </figure>
+
+        <h2 id="s3">Ballenas: grandes carteras, intención desconocida</h2>
+        <p>Una <strong>ballena</strong> (whale) es una cartera que guarda una cantidad muy grande de una cripto: tanto, que cuando mueve o vende, su operación por sí sola puede empujar el precio. Por puro tamaño, lo que hace una ballena importa más que lo que hacen mil carteras pequeñas.</p>
+        <p>Como la cadena es pública, esos movimientos se pueden <strong>seguir</strong>: ves cuándo una ballena envía monedas a un exchange, cuándo las saca o cuándo recibe más. Eso es útil como contexto. El problema empieza cuando, de ese movimiento, alguien deduce la <em>intención</em>.</p>
+        <div class="callout idea">No conoces el motivo de una ballena. Un envío grande a un exchange puede ser una venta… o un traspaso entre sus propias carteras, una operación <strong>OTC</strong> (acordada fuera del mercado), un depósito en custodia, dar liquidez o mil cosas más. <strong>Ves el movimiento; no ves el porqué.</strong> Cuidado con las cuentas que narran cada transacción de ballena como si tuvieran acceso a su cabeza.</div>
+        <p>La lectura honesta de una ballena es: "esta cartera grande movió X monedas a tal sitio". Punto. Eso es contexto. Todo lo que venga después —"va a dumpear", "está acumulando para el próximo ciclo"— es una <strong>historia</strong> que alguien añade, no un dato de la cadena.</p>
+
+        <h2 id="s4">Manos fuertes vs manos débiles</h2>
+        <p>No todos los que tienen una cripto se comportan igual. El on-chain permite distinguir, por el comportamiento de las carteras, dos grupos clásicos:</p>
+        <ul>
+          <li><strong>Manos fuertes</strong> (holders de largo plazo): carteras que compran y <em>aguantan</em> durante meses o años, incluso en las caídas. Tienen convicción y no venden con cada susto. Cuando acumulan, retiran oferta del mercado.</li>
+          <li><strong>Manos débiles</strong> (corto plazo y recién llegados): carteras que entraron hace poco y venden en cuanto el precio cae o entra el miedo. Su oferta es la que más rápido se mueve y la que alimenta el pánico.</li>
+        </ul>
+        <p>¿Para qué sirve esta lectura? Como <strong>termómetro de en qué manos está la oferta</strong>. Si las monedas se van concentrando en manos fuertes (que tienden a no vender), hay menos oferta nerviosa suelta. Si se acumulan en manos débiles recién llegadas, el mercado es más frágil ante un susto. Eso es <strong>contexto</strong> sobre la solidez de quién sostiene el activo, no una predicción del precio.</p>
+        <p>Aquí aparecen dos palabras que oirás mucho: <strong>acumulación</strong> (las carteras están sumando monedas, comprando y guardando) y <strong>distribución</strong> (las carteras están soltando monedas, repartiéndolas hacia otros, normalmente vendiendo). Ver quién acumula y quién distribuye ayuda a entender la fase en la que está la oferta… sin decirte cuándo ni cuánto se moverá el precio.</p>
+
+        <h2 id="s5">Seguir flujos sin sobre-interpretar</h2>
+        <p>Llegamos al hábito que define a quien usa esto con cabeza: un flujo, un movimiento de ballena o un dato de manos fuertes <strong>nunca decide nada por sí solo</strong>. Es una pieza de contexto que cobra sentido al combinarla con el resto.</p>
+        <ul>
+          <li><strong>Un flujo aislado no es una señal.</strong> Que hoy salgan monedas de un exchange no es razón para comprar. Mira la tendencia (¿es algo sostenido o un día suelto?) y combínala con otras señales (Lección 5).</li>
+          <li><strong>Combina, no aísles.</strong> Salidas sostenidas de exchanges + concentración en manos fuertes + actividad de red al alza es un <em>contexto</em> más sólido que cualquiera de esos datos por separado. Aun así, sigue siendo contexto, no certeza.</li>
+          <li><strong>Desconfía de quien narra la intención.</strong> Las cuentas que cada día te cuentan qué "va a hacer" una ballena están inventando: la cadena no publica intenciones.</li>
+        </ul>
+        <div class="block-label">Dos casos prácticos</div>
+        <ul>
+          <li><strong>Caso "salió de exchange → subirá":</strong> ves una salida grande de un exchange y alguien grita que el precio va a despegar. Compruebas la cartera de destino: es una conocida dirección de <strong>staking</strong>. Esas monedas no se han retirado para HODL alcista; se han bloqueado para generar rendimiento. La "señal" era ruido.</li>
+          <li><strong>Caso "ballena va a dumpear":</strong> una cuenta avisa de que una ballena ha enviado un montón de monedas a un exchange y "va a tirar el precio". Miras con calma: la dirección de origen y la de destino están ambas <em>etiquetadas como del mismo exchange</em>. Es un movimiento interno de tesorería, no una venta. La historia no aguanta el primer recibo.</li>
+        </ul>
+
+        <div class="block-label">Errores comunes</div>
+        <ul>
+          <li><strong>"Salió de un exchange, va a subir seguro."</strong> No. Una salida es una pista de menor oferta inmediata; puede ser cold wallet, staking o un simple traspaso. Nada de eso garantiza el precio.</li>
+          <li><strong>"La ballena se mueve, sé lo que va a hacer."</strong> Ves el movimiento, no la intención. Puede ser OTC, custodia o entre sus propias carteras. Narrar el motivo es inventar.</li>
+          <li><strong>"Con este flujo entro."</strong> Un flujo aislado no es una señal. Sin tendencia ni otras señales que lo acompañen, es un dato suelto.</li>
+          <li><strong>"Manos fuertes acumulando = pump inmediato."</strong> Es termómetro de solidez de la oferta, no un cronómetro del precio.</li>
+        </ul>
+
+        <div class="block-label">Resumen</div>
+        <ul>
+          <li><strong>Seguir el dinero</strong> es rastrear hacia dónde fluyen las monedas; da contexto sobre qué hace el capital.</li>
+          <li><strong>Flujos de exchange:</strong> entradas = posible presión de venta (más oferta lista); salidas = posible acumulación/HODL. Son <strong>pistas</strong>, no órdenes.</li>
+          <li><strong>Ballenas:</strong> sus movimientos importan por tamaño y se pueden seguir, pero <strong>no conoces su intención</strong> (OTC, custodia, traspasos…).</li>
+          <li><strong>Manos fuertes vs débiles:</strong> termómetro de en qué manos está la oferta; quién acumula (compra y guarda) y quién distribuye (suelta).</li>
+          <li>Un flujo <strong>aislado no decide nada</strong>: combínalo con tendencia y otras señales, y desconfía de quien narra la intención.</li>
+        </ul>
+
+        <div class="block-label">Ejercicio práctico</div>
+        <ol>
+          <li>Busca una herramienta gratuita de flujos de exchange (exchange in/outflow) de Bitcoin. Anota un día de fuerte entrada y otro de fuerte salida, y escribe la lectura honesta de cada uno como "pista", no como orden.</li>
+          <li>Encuentra una publicación que narre el movimiento de una ballena. Subraya qué parte es un <strong>hecho</strong> de la cadena y qué parte es <strong>intención inventada</strong>.</li>
+          <li>Toma una salida de exchange y plantea tres motivos posibles distintos a "va a subir" (cold wallet, staking, traspaso). Eso es razonar con recibos.</li>
+        </ol>
+
+        <div class="block-label">Autoevaluación</div>
+        <div class="quiz" data-quiz>
+        <script type="application/json">
+        [
+        {"q":"¿Qué sugiere, como pista, que entren muchas monedas a un exchange (inflow)?","opts":["Que el precio va a subir seguro","Que la red está caída","Posible presión de venta: más oferta lista para venderse","Que una ballena ha comprado fuera del mercado"],"correct":2,"why":"Las entradas a un exchange aumentan la oferta disponible para vender, así que son una pista de posible presión vendedora. Pista, no certeza."},
+        {"q":"Ves una salida grande de un exchange. Alguien grita ‘¡va a subir seguro!’. ¿Qué piensas?","opts":["Tiene razón, salida = subida garantizada","Desconfío: una salida también puede ser cold wallet, staking o un traspaso; es pista, no orden","Vendo de inmediato","Es imposible que haya salidas reales"],"correct":1,"why":"Una salida sugiere menor oferta inmediata, pero puede deberse a seguridad, staking o mover entre cuentas propias. No garantiza ninguna subida."},
+        {"q":"¿Qué es una ‘ballena’ en on-chain?","opts":["Un exchange muy grande","Un bot de trading","Una moneda con mucho volumen","Una cartera con una cantidad enorme de cripto, capaz de mover el precio al operar"],"correct":3,"why":"Una ballena es una cartera con un saldo tan grande que su operación, por tamaño, puede empujar el precio."},
+        {"q":"Una cuenta narra que una ballena ‘va a tirar el precio’ porque envió monedas a un exchange. ¿Cuál es la lectura honesta?","opts":["Es cierto, va a vender fijo","Ves el movimiento pero no su intención: puede ser OTC, custodia o un traspaso interno","Las ballenas nunca usan exchanges","El precio ya ha caído seguro"],"correct":1,"why":"La cadena muestra el movimiento, no el motivo. Atribuir intención a una ballena es inventar una historia, no leer un dato."},
+        {"q":"¿Qué caracteriza a las ‘manos fuertes’?","opts":["Holders de largo plazo con convicción que aguantan las caídas","Venden en cuanto el precio cae","Carteras de exchanges","Cuentas que acaban de comprar por primera vez"],"correct":0,"why":"Las manos fuertes son holders de largo plazo: aguantan la volatilidad y no venden con cada susto, retirando oferta nerviosa del mercado."},
+        {"q":"¿Para qué sirve mirar el reparto entre manos fuertes y débiles?","opts":["Para saber el precio exacto de mañana","Para identificar al dueño real de cada cartera","Como termómetro de en qué manos está la oferta y cómo de frágil es el mercado","Para predecir el próximo halving"],"correct":2,"why":"Es un termómetro de la solidez de la oferta: más en manos fuertes = menos oferta nerviosa; más en manos débiles = mercado más frágil ante sustos."},
+        {"q":"En on-chain, ‘distribución’ significa que…","opts":["Las carteras están soltando monedas hacia otros, normalmente vendiendo","El exchange reparte recompensas","Las carteras están sumando y guardando monedas","Se ha hecho un airdrop"],"correct":0,"why":"Distribución es lo contrario de acumulación: las carteras reparten/sueltan sus monedas, lo que suele asociarse a venta."},
+        {"q":"¿Por qué un flujo de exchange aislado NO es una señal de compra o venta?","opts":["Porque los flujos siempre son falsos","Porque es una pista de contexto que cobra sentido al combinarla con tendencia y otras señales","Porque solo cuenta el precio","Porque los exchanges los ocultan"],"correct":1,"why":"Un dato suelto no decide nada. El on-chain serio combina el flujo con su tendencia y con otras señales antes de concluir."},
+        {"q":"Compruebas una salida de exchange y la cartera de destino es una dirección conocida de staking. ¿Qué concluyes?","opts":["Confirma que el precio subirá","La ballena va a vender","El dato está corrupto","Esas monedas se han bloqueado para rendimiento, no es una señal alcista de HODL"],"correct":3,"why":"El destino explica el motivo: monedas enviadas a staking se bloquean para generar rendimiento. La supuesta ‘señal alcista’ era ruido."},
+        {"q":"¿Cuál es la actitud correcta ante cuentas que narran cada movimiento de ballena con su intención?","opts":["Creerles, tienen acceso a datos privados","Copiar siempre sus operaciones","Desconfiar: la cadena publica movimientos, no intenciones; el resto es historia inventada","Pagar su suscripción para acertar"],"correct":2,"why":"Nadie ve la intención de una ballena en la cadena. Quien la narra como un hecho está añadiendo una historia, justo el humo que evita este curso."}
+        ]
+        </script>
+        </div>
+
+        <div class="block-label">Glosario</div>
+        <div class="card">
+          <p><strong>Flujo de exchange (in/outflow):</strong> monedas que entran o salen de un exchange. Entradas = posible presión de venta; salidas = posible acumulación. Son pistas de contexto, no señales.</p>
+          <p><strong>Ballena (whale):</strong> cartera con un saldo tan grande que su operación puede mover el precio. Se sigue, pero no se conoce su intención.</p>
+          <p><strong>Manos fuertes / manos débiles:</strong> holders de largo plazo con convicción frente a corto plazo y recién llegados que venden en pánico.</p>
+          <p><strong>Cold wallet:</strong> cartera fuera de internet (offline) para guardar cripto con seguridad a largo plazo; un destino habitual de las salidas de exchange.</p>
+          <p><strong>Acumulación / distribución:</strong> acumulación = las carteras suman y guardan monedas; distribución = las carteras sueltan monedas hacia otros, normalmente vendiendo.</p>
+        </div>
+
+        <div class="pager">
+          <a href="m5-leccion-2.html"><div class="k">← Anterior</div><div class="t">L2 · Métricas que importan</div></a>
+          <a class="next" href="m5-leccion-4.html"><div class="k">Siguiente →</div><div class="t">L4 · Leer el sentimiento</div></a>
+        </div>
+      </article>
+
+      <nav class="toc">
+        <div class="h">En esta lección</div>
+        <a href="#s1">Seguir el dinero</a>
+        <a href="#s2">Flujos de exchanges</a>
+        <a href="#s3">Ballenas</a>
+        <a href="#s4">Manos fuertes vs débiles</a>
+        <a href="#s5">Sin sobre-interpretar</a>
+      </nav>
+    </div>
+  </main>
+</div>
+<script src="assets/quiz.js" defer></script>
+</body>
+</html>

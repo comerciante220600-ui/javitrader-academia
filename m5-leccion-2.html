@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · M5 L2 Métricas que importan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </a>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4><a href="modulo-5.html">Lectura on-chain ⭐</a></h4>
+      <div class="msub">MÓDULO 5 · 5 LECCIONES</div>
+      <a class="lesson" href="m5-leccion-1.html"><span class="num done">1</span> Qué es on-chain y por qué da ventaja</a>
+      <a class="lesson active" href="m5-leccion-2.html"><span class="num">2</span> Métricas que importan</a>
+      <a class="lesson" href="m5-leccion-3.html"><span class="num">3</span> Flujos, ballenas y manos fuertes</a>
+      <a class="lesson" href="m5-leccion-4.html"><span class="num">4</span> Leer el sentimiento</a>
+      <a class="lesson" href="m5-leccion-5.html"><span class="num">5</span> Construir una tesis con datos</a>
+    </div>
+
+    <div class="nav-label">Otros módulos</div>
+    <a class="tool-link" href="modulo-0.html">📚 Módulo 0 · Fundamentos</a>
+    <a class="tool-link" href="modulo-1.html">📈 Módulo 1 · Gestión de riesgo</a>
+    <a class="tool-link" href="modulo-4.html">💼 Módulo 4 · Análisis fundamental</a>
+    <a class="tool-link" href="modulo-7.html">🧠 Módulo 7 · Psicología</a>
+    <a class="tool-link" href="herramientas.html">🧮 Calculadoras del curso</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb">Módulo 5 · Lectura on-chain &nbsp;›&nbsp; <b>Lección 2</b></div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:40%"></span></div> 2/5</div>
+    </div>
+
+    <div class="wrap">
+      <article>
+        <div class="eyebrow">Lección 2</div>
+        <h1 class="title">Métricas que importan (y las que son ruido)</h1>
+        <div class="meta">
+          <div class="it">⏱ <b>~12 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>intermedio</b></div>
+          <div class="it">↳ Requisito: <b>Lección 1</b></div>
+        </div>
+
+        <div class="card obj">
+          <h3>Lo que sabrás hacer al terminar</h3>
+          <ol>
+            <li>Distinguir las métricas de actividad, de holders y de valoración, y qué pregunta responde cada una.</li>
+            <li>Leer una métrica de valoración como MVRV en cristiano, sin convertirla en señal de compra.</li>
+            <li>Detectar las "vanity metrics" (métricas-ruido) que parecen importantes pero no dicen nada útil.</li>
+            <li>Priorizar pocas métricas bien entendidas en lugar de un panel lleno de números.</li>
+          </ol>
+        </div>
+
+        <p class="lead">En la Lección 1 viste que la cadena guarda los <strong>hechos</strong>: transacciones, saldos, flujos. El problema no es la falta de datos, es el exceso. Hay cientos de métricas on-chain, y la mayoría de la gente se ahoga en ellas o, peor, usa las equivocadas para "parecer que sabe".</p>
+        <p>Esta lección separa el trigo de la paja: qué métricas responden a preguntas reales, cuáles son <strong>humo</strong>, y cómo elegir las pocas que de verdad te dan contexto.</p>
+
+        <h2 id="s1">Métricas de actividad: ¿la red se usa de verdad?</h2>
+        <p>Las primeras métricas que conviene entender miden si una red <strong>tiene uso real</strong> o solo precio. Una cripto con muchos usuarios reales no garantiza nada, pero una con cero actividad y precio inflado es una bandera roja evidente.</p>
+        <ul>
+          <li><strong>Direcciones activas:</strong> cuántas carteras distintas enviaron o recibieron monedas en un periodo (por ejemplo, en un día). Es el equivalente cripto a "cuánta gente entró hoy a la tienda". Mucha gente moviéndose = red viva; nadie moviéndose = red dormida.</li>
+          <li><strong>Número de transacciones:</strong> cuántos movimientos se registraron en la cadena en ese periodo. Mide el <em>volumen de actividad</em>, no de personas (una sola persona puede hacer muchas transacciones).</li>
+        </ul>
+        <p>Ojo al matiz: estas dos métricas se parecen pero no son lo mismo. Muchas transacciones con pocas direcciones puede ser un puñado de bots o un exchange moviendo fondos internamente, no una red en auge. Por eso se miran <strong>juntas</strong>, nunca una sola.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Las métricas de actividad responden a una pregunta sencilla: ¿se usa esta red o solo sube de precio? Direcciones activas = cuánta gente se mueve. Transacciones = cuánto movimiento hay. Si suben de la mano, la red está viva; si el precio sube pero la actividad no, desconfía.</p></div>
+
+        <h2 id="s2">Métricas de holders: ¿quién tiene las monedas?</h2>
+        <p>El segundo grupo mira <strong>quién posee la oferta</strong> y cómo se comporta. No te dicen qué va a pasar, pero sí en qué estado está el mercado por dentro.</p>
+        <ul>
+          <li><strong>Distribución de la oferta:</strong> qué porcentaje de las monedas está en pocas carteras (concentrado) o en muchas (repartido). Una oferta muy concentrada significa que unos pocos pueden mover el precio a su antojo.</li>
+          <li><strong>Largo plazo vs corto plazo:</strong> se separan las monedas que llevan mucho tiempo quietas (las de los <strong>HODLers</strong>, inversores que aguantan pase lo que pase) de las que se mueven a menudo (manos de corto plazo, más nerviosas). Que las monedas "viejas" se queden quietas sugiere convicción; que de pronto empiecen a moverse sugiere que alguien con paciencia decidió actuar.</li>
+          <li><strong>En ganancia o en pérdida:</strong> qué proporción de las monedas, según el precio al que se movieron por última vez, valdría hoy más (ganancia) o menos (pérdida) de lo que costó. Mucha oferta en ganancia = más tentación de vender; mucha en pérdida = más gente atrapada esperando recuperar.</li>
+        </ul>
+        <p>Cuidado: todo esto <strong>sugiere</strong>, no decide. Que haya mucha oferta en ganancia no significa "va a caer"; significa que existe la <em>posibilidad</em> de presión vendedora. Es contexto, no una orden.</p>
+
+        <div class="callout warn">
+          <div class="ic">⚠</div>
+          <div>
+            <strong>Anti-humo:</strong> ninguna de estas métricas predice el precio. Te dicen en qué <em>estado</em> está el mercado por dentro —cuánta gente se mueve, quién tiene las monedas, quién va ganando— pero no qué hará después. Son <strong>contexto, no señal</strong>. Cualquiera que te venda "métrica X = compra ya" te está vendiendo humo.
+          </div>
+        </div>
+
+        <h2 id="s3">Métricas de valoración: ¿caro o barato por dentro?</h2>
+        <p>El tercer grupo intenta responder a la pregunta más golosa: ¿está el activo <strong>caro o barato</strong> respecto a su propio historial? La idea es comparar el precio de hoy con el precio medio al que se movieron las monedas en el pasado.</p>
+        <p>La métrica más conocida es el <strong>MVRV</strong>. Sin tecnicismos: compara <em>cuánto vale ahora</em> todo el conjunto de monedas con <em>cuánto valía la última vez que cada moneda se movió</em> (su "precio de coste" colectivo). Es una división sencilla:</p>
+        <ul>
+          <li><strong>MVRV por encima de 1:</strong> de media, el mercado está <strong>en ganancia</strong> (el precio de hoy es mayor que el coste medio). Cuanto más alto, más beneficio acumulado… y más tentación de vender.</li>
+          <li><strong>MVRV por debajo de 1:</strong> de media, el mercado está <strong>en pérdida</strong> (el precio de hoy es menor que el coste medio). Históricamente, valores muy bajos han coincidido con zonas de capitulación.</li>
+        </ul>
+        <p>Existe una prima hermana, el <strong>NUPL</strong>, que mide lo mismo desde otro ángulo: qué porcentaje del valor total del mercado es ganancia "no realizada" (sobre el papel, sin vender todavía). Sirve para lo mismo: ver si, <em>de media</em>, el mercado va ganando o perdiendo.</p>
+        <p><strong>Importante:</strong> estas métricas son <em>orientativas</em>. Te dicen si, históricamente, el mercado está en una zona "cara" o "barata" respecto a sí mismo. <strong>No</strong> son señales de compra o venta: el MVRV puede quedarse "caro" durante meses mientras el precio sigue subiendo, y "barato" mientras sigue cayendo.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>MVRV compara el precio de hoy con el precio medio al que se compraron las monedas. Por encima de 1 = el mercado va, de media, en ganancia; por debajo de 1 = en pérdida. Es un termómetro de "caro o barato por dentro", orientativo, NO un botón de comprar o vender.</p></div>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Señal frente a ruido: métricas que responden una pregunta frente a métricas vacías">
+            <g font-family="Inter,system-ui,sans-serif">
+              <rect x="40" y="28" width="320" height="296" rx="12" fill="#15151b" stroke="#26262f"/>
+              <rect x="360" y="28" width="320" height="296" rx="12" fill="#15151b" stroke="#26262f"/>
+              <line x1="360" y1="28" x2="360" y2="324" stroke="#1c1c23" stroke-width="1"/>
+
+              <circle cx="64" cy="56" r="6" fill="#1d9e75"/>
+              <text x="80" y="61" fill="#1d9e75" font-size="15" font-weight="600">SEÑAL · responde algo</text>
+              <circle cx="384" cy="56" r="6" fill="#e24b4a"/>
+              <text x="400" y="61" fill="#e24b4a" font-size="15" font-weight="600">RUIDO · suena bien, dice poco</text>
+
+              <g fill="#ddd9d0" font-size="13.5">
+                <text x="64" y="104">· Direcciones activas</text>
+                <text x="64" y="142">· Oferta en manos de largo plazo</text>
+                <text x="64" y="180">· % de la oferta en ganancia</text>
+                <text x="64" y="218">· MVRV (caro o barato por dentro)</text>
+                <text x="64" y="256">· Flujos hacia/desde exchanges</text>
+              </g>
+              <g fill="#9b988f" font-size="11.5">
+                <text x="64" y="120">¿la red se usa de verdad?</text>
+                <text x="64" y="158">¿hay convicción o manos débiles?</text>
+                <text x="64" y="196">¿cuánta tentación de vender?</text>
+                <text x="64" y="234">¿zona cara o barata vs su historial?</text>
+                <text x="64" y="272">¿entra o sale dinero del mercado?</text>
+              </g>
+
+              <g fill="#c9bfb4" font-size="13.5">
+                <text x="384" y="104">· Seguidores en redes</text>
+                <text x="384" y="142">· "Trending" en una app</text>
+                <text x="384" y="180">· Nº total de carteras creadas</text>
+                <text x="384" y="218">· Precio en máximos históricos</text>
+                <text x="384" y="256">· Likes / menciones del proyecto</text>
+              </g>
+              <g fill="#76746c" font-size="11.5">
+                <text x="384" y="120">se compran y se inflan</text>
+                <text x="384" y="158">popularidad, no uso</text>
+                <text x="384" y="196">incluye carteras muertas</text>
+                <text x="384" y="234">no dice nada por sí solo</text>
+                <text x="384" y="272">se manipulan con bots</text>
+              </g>
+
+              <text x="360" y="312" fill="#9b988f" font-size="12" text-anchor="middle">A la izquierda, cada métrica responde a UNA pregunta. A la derecha, suenan importantes pero no informan.</text>
+            </g>
+          </svg>
+          <figcaption>La diferencia no es que una métrica sea "buena" o "mala", sino si responde a una pregunta concreta o solo adorna. Lo de la derecha se manipula o no dice nada por sí solo.</figcaption>
+        </figure>
+
+        <h2 id="s4">Las métricas-ruido: "vanity metrics"</h2>
+        <p>Aquí está la trampa más común. Hay métricas que <strong>parecen</strong> importantes, llenan un panel y suenan técnicas, pero no responden a ninguna pregunta útil o se manipulan con facilidad. En marketing se llaman <strong>"vanity metrics"</strong> (métricas de vanidad): números que halagan el ego pero no informan.</p>
+        <ul>
+          <li><strong>Seguidores y likes del proyecto:</strong> se compran. Un millón de seguidores comprados no es un millón de usuarios.</li>
+          <li><strong>Número total de carteras creadas:</strong> incluye carteras vacías, abandonadas o creadas por bots. Crear una cartera es gratis y no significa uso.</li>
+          <li><strong>"Está trending" / menciones:</strong> mide ruido social, no comportamiento real del dinero. Se infla con bots y campañas.</li>
+          <li><strong>Precio en máximos históricos:</strong> es un dato, no una métrica de análisis. Por sí solo no te dice si es sostenible o una burbuja.</li>
+        </ul>
+        <p>¿Por qué tanta gente las usa? Porque son fáciles de citar y suenan impresionantes en un tuit: "¡Ya somos 5 millones de carteras!" parece análisis, pero es <strong>postureo</strong>. Quien sabe poco se esconde detrás de números grandes; quien sabe leer la cadena pregunta "¿y eso qué responde?". Casi siempre, la respuesta es "nada".</p>
+
+        <h2 id="s5">Cómo priorizar: menos es más</h2>
+        <p>El error del principiante es abrir un panel con cuarenta métricas y sentirse muy profesional. El resultado es <strong>parálisis</strong>: tantos números que ninguno significa nada. La habilidad real es la contraria.</p>
+        <ul>
+          <li><strong>Pocas métricas bien entendidas</strong> valen más que un panel lleno. Es mejor dominar cinco que ojear cuarenta sin entender ninguna.</li>
+          <li><strong>Cada métrica responde a UNA pregunta.</strong> Antes de mirar un número, ten clara la pregunta: ¿se usa la red? ¿quién tiene las monedas? ¿está cara por dentro? Si una métrica no responde a una pregunta tuya, sobra.</li>
+          <li><strong>Nunca una métrica suelta decide nada.</strong> El on-chain serio cruza varias señales que apuntan en la misma dirección (lo verás en la Lección 5). Una métrica aislada es una anécdota, no una conclusión.</li>
+        </ul>
+        <p>Esta es la tabla que resume cómo pensar cada familia de métricas: qué pregunta responde y, sobre todo, qué <strong>no</strong> te dice (para que no la sobre-interpretes):</p>
+
+        <div class="tbl">
+          <table class="data">
+            <thead>
+              <tr><th>Métrica</th><th>Qué pregunta responde</th><th>Qué NO te dice</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Direcciones activas</strong></td><td>¿Se usa la red de verdad? ¿Cuánta gente se mueve?</td><td>Si el precio subirá. Mucha actividad ≠ buena inversión.</td></tr>
+              <tr><td><strong>Nº de transacciones</strong></td><td>¿Cuánto movimiento hay en la cadena?</td><td>Cuántas personas hay detrás (un bot infla la cifra).</td></tr>
+              <tr><td><strong>Oferta a largo plazo</strong></td><td>¿Hay convicción o predominan las manos nerviosas?</td><td>Cuándo decidirán vender los HODLers.</td></tr>
+              <tr><td><strong>% oferta en ganancia</strong></td><td>¿Cuánta tentación de vender existe en el mercado?</td><td>Si esa gente venderá de verdad, ni cuándo.</td></tr>
+              <tr class="hl"><td><strong>MVRV</strong></td><td>¿Está caro o barato respecto a su propio historial?</td><td>El timing. Puede quedarse "caro" o "barato" meses.</td></tr>
+              <tr><td><strong>Flujos a exchanges</strong></td><td>¿Entra o sale dinero de las plataformas de venta?</td><td>La intención real ni el resultado del precio.</td></tr>
+              <tr><td><em>Seguidores / likes</em></td><td><em>Nada útil — es una vanity metric.</em></td><td><em>Se compran. No miden uso ni dinero real.</em></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout idea">
+          <div class="ic">◆</div>
+          <div>
+            Antes de mirar cualquier métrica, escribe la pregunta que quieres responder. Si no tienes una pregunta clara, el número no te servirá: solo lo usarás para confirmar lo que ya querías creer. <strong>La pregunta va primero, el dato después.</strong>
+          </div>
+        </div>
+
+        <div class="block-label">Errores comunes</div>
+        <ul>
+          <li><strong>"MVRV está alto, vendo ya."</strong> El MVRV es orientativo, no una señal. Puede quedarse "caro" durante meses mientras el precio sigue subiendo. Una métrica suelta no decide.</li>
+          <li><strong>"Tiene 5 millones de carteras, va a explotar."</strong> El total de carteras es una vanity metric: incluye vacías, muertas y bots. Crear una cartera es gratis y no mide uso.</li>
+          <li><strong>"Cuantas más métricas mire, mejor analizo."</strong> Al revés: cuarenta métricas mal entendidas dan parálisis. Cinco bien entendidas dan contexto.</li>
+          <li><strong>"Mucha actividad = buena inversión."</strong> La actividad mide uso, no precio futuro. Es una pregunta respondida, no una conclusión de compra.</li>
+        </ul>
+
+        <div class="block-label">Resumen</div>
+        <ul>
+          <li><strong>Actividad</strong> (direcciones activas, transacciones): ¿se usa la red de verdad? Se miran juntas, nunca una sola.</li>
+          <li><strong>Holders</strong> (distribución, largo vs corto plazo, en ganancia/pérdida): ¿quién tiene las monedas y en qué estado está? Sugieren, no deciden.</li>
+          <li><strong>Valoración</strong> (MVRV, NUPL): ¿caro o barato respecto a su propio historial? Orientativas, no señales de compra/venta.</li>
+          <li>Las <strong>vanity metrics</strong> (seguidores, carteras totales, trending) suenan importantes pero no responden a nada o se manipulan.</li>
+          <li><strong>Prioriza:</strong> pocas métricas bien entendidas, cada una respondiendo a UNA pregunta, y nunca una suelta como decisión.</li>
+        </ul>
+
+        <div class="block-label">Ejercicio práctico</div>
+        <ol>
+          <li>Elige tres métricas de esta lección y escribe, para cada una, la pregunta exacta que responde. Si no encuentras la pregunta, deséchala.</li>
+          <li>Busca un proyecto cripto y localiza una "vanity metric" que su comunidad presuma (seguidores, nº de carteras, trending). Explica por qué no informa.</li>
+          <li>Mira el MVRV de Bitcoin en una web gratuita. ¿Está por encima o por debajo de 1? Escribe qué <em>sugiere</em>… y por qué eso NO es una orden de comprar o vender.</li>
+        </ol>
+
+        <div class="block-label">Autoevaluación</div>
+        <div class="quiz" data-quiz>
+        <script type="application/json">
+        [
+        {"q":"¿Qué miden las ‘direcciones activas’?","opts":["El precio futuro de la moneda","Cuántas carteras distintas movieron monedas en un periodo, es decir, cuánta gente usa la red","El número de seguidores del proyecto","Cuántas monedas hay en total"],"correct":1,"why":"Las direcciones activas cuentan cuántas carteras se movieron en un periodo: el equivalente a ‘cuánta gente entró hoy a la tienda’. Miden uso, no precio."},
+        {"q":"¿Por qué se miran juntas las direcciones activas y el número de transacciones?","opts":["Porque siempre dan el mismo valor","Porque así predicen el precio","Porque una sin la otra es ilegal","Porque muchas transacciones con pocas direcciones puede ser un puñado de bots, no una red en auge"],"correct":3,"why":"Una sola persona o un bot puede generar muchas transacciones. Mirar ambas evita confundir actividad real de personas con movimiento artificial."},
+        {"q":"Una métrica de holders muestra que la mayoría de la oferta está en manos de largo plazo (HODLers). ¿Qué sugiere, con honestidad?","opts":["Que hay convicción y menos manos nerviosas, pero no dice cuándo ni si venderán","Que el precio va a subir seguro","Que hay que vender ya","Que la red no se usa"],"correct":0,"why":"Es contexto, no señal: sugiere convicción, pero no predice el precio ni cuándo esos HODLers decidirán mover sus monedas."},
+        {"q":"¿Qué compara, en cristiano, la métrica MVRV?","opts":["El número de seguidores con el de likes","La cantidad de exchanges que listan la moneda","El precio actual con el precio medio al que se movieron las monedas, para ver si el mercado está de media en ganancia o pérdida","El consumo eléctrico de la red"],"correct":2,"why":"El MVRV compara cuánto vale hoy el conjunto de monedas con su coste medio. Por encima de 1, el mercado va de media en ganancia; por debajo, en pérdida."},
+        {"q":"Un compañero dice: ‘El MVRV está alto, eso es señal de venta, vende ya.’ ¿Qué respondes?","opts":["Tiene razón, MVRV alto = vender","El MVRV es orientativo, no una señal: puede quedarse ‘caro’ durante meses mientras el precio sigue subiendo","Solo aplica a altcoins","Hay que comprar el doble"],"correct":1,"why":"Convertir el MVRV en una orden de venta es el error clásico. Es un termómetro orientativo de ‘caro o barato por dentro’, no un botón de comprar/vender."},
+        {"q":"¿Qué es una ‘vanity metric’ (métrica de vanidad)?","opts":["Una métrica que predice el precio con exactitud","La métrica más fiable que existe","Un número que suena importante y halaga el ego pero no responde a nada útil o se manipula","Una métrica que solo ven los profesionales"],"correct":2,"why":"Las vanity metrics (seguidores, likes, total de carteras) parecen impresionantes y llenan paneles, pero no informan del comportamiento real del dinero."},
+        {"q":"¿Por qué el ‘número total de carteras creadas’ es una métrica-ruido?","opts":["Porque es demasiado precisa","Porque la calcula mal la blockchain","Porque solo cuenta carteras de exchanges","Porque incluye carteras vacías, abandonadas y creadas por bots; crear una es gratis y no significa uso"],"correct":3,"why":"Crear una cartera es gratis y no implica uso. El total incluye carteras muertas y de bots, así que no mide actividad real."},
+        {"q":"¿Por qué tanta gente usa las vanity metrics?","opts":["Porque son fáciles de citar, suenan impresionantes y sirven para ‘parecer que sabe’ sin analizar de verdad","Porque son las más rigurosas","Porque las exige la ley","Porque predicen mejor que el resto"],"correct":0,"why":"Son fáciles de soltar en un tuit y suenan a análisis. Quien sabe poco se esconde tras números grandes; quien lee la cadena pregunta ‘¿y eso qué responde?’."},
+        {"q":"¿Cuál es la forma correcta de priorizar métricas on-chain?","opts":["Mirar el máximo de métricas posible para no perder detalle","Pocas métricas bien entendidas, cada una respondiendo a UNA pregunta concreta","Usar solo la métrica que esté de moda","Fiarse siempre de la métrica que dé el número más alto"],"correct":1,"why":"Un panel con cuarenta métricas da parálisis. Dominar pocas, cada una atada a una pregunta clara, da contexto real."},
+        {"q":"En el análisis on-chain serio, ¿qué papel juega una métrica aislada?","opts":["Decide la operación por sí sola","Sustituye al análisis técnico y fundamental","Ninguno como decisión: es contexto que debe cruzarse con otras señales que apunten igual","Garantiza el resultado si es una métrica de valoración"],"correct":2,"why":"Una métrica suelta es una anécdota, no una conclusión. El on-chain serio cruza varias señales coincidentes antes de sacar contexto (Lección 5)."}
+        ]
+        </script>
+        </div>
+
+        <div class="block-label">Glosario</div>
+        <div class="card">
+          <p><strong>Direcciones activas:</strong> número de carteras distintas que enviaron o recibieron monedas en un periodo; mide cuánta gente usa la red.</p>
+          <p><strong>Número de transacciones:</strong> cuántos movimientos se registraron en la cadena en un periodo; mide volumen de actividad, no de personas.</p>
+          <p><strong>HODLer:</strong> inversor de largo plazo que mantiene sus monedas pase lo que pase; sus monedas llevan mucho tiempo quietas.</p>
+          <p><strong>Distribución de la oferta:</strong> cómo de repartidas o concentradas están las monedas entre las carteras.</p>
+          <p><strong>MVRV:</strong> métrica de valoración que compara el precio actual con el precio medio al que se movieron las monedas; orientativa de si el mercado está, de media, en ganancia o pérdida.</p>
+          <p><strong>NUPL:</strong> prima del MVRV; mide qué porcentaje del valor del mercado es ganancia "no realizada" (sobre el papel, sin vender).</p>
+          <p><strong>Vanity metric (métrica de vanidad):</strong> número que parece importante pero no responde a nada útil o se manipula (seguidores, likes, total de carteras).</p>
+        </div>
+
+        <div class="pager">
+          <a href="m5-leccion-1.html"><div class="k">← Anterior</div><div class="t">L1 · Qué es on-chain y por qué da ventaja</div></a>
+          <a class="next" href="m5-leccion-3.html"><div class="k">Siguiente →</div><div class="t">L3 · Flujos, ballenas y manos fuertes</div></a>
+        </div>
+      </article>
+
+      <nav class="toc">
+        <div class="h">En esta lección</div>
+        <a href="#s1">Métricas de actividad</a>
+        <a href="#s2">Métricas de holders</a>
+        <a href="#s3">Métricas de valoración</a>
+        <a href="#s4">Las métricas-ruido</a>
+        <a href="#s5">Cómo priorizar</a>
+      </nav>
+    </div>
+  </main>
+</div>
+<script src="assets/quiz.js" defer></script>
+</body>
+</html>
