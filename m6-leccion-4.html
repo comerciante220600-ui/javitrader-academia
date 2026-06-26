@@ -83,7 +83,7 @@
         <div class="plain"><div class="lab">🟢 Al grano</div><p>Tu memoria infla los aciertos y entierra los fallos. Las métricas, sacadas del journal y el backtest, son la versión objetiva de cómo va tu trading. Sin números, "me va bien" puede significar tanto un edge real como una racha de suerte: no tienes forma de distinguirlo.</p></div>
 
         <h2 id="s2">Win rate y R media</h2>
-        <p>Empecemos por las dos métricas más básicas. El <strong>win rate</strong> es el porcentaje de operaciones ganadoras: si de 100 operaciones ganas 55, tu win rate es del 55%. La <strong>R media</strong> mide el tamaño de tus resultados en unidades de R (tu riesgo por operación, del Módulo 1): si tu ganadora típica gana 2R y tu perdedora típica pierde 1R, ya estás hablando el idioma del sistema, no de dólares sueltos.</p>
+        <p>Empecemos por las dos métricas más básicas. El <strong>win rate</strong> es el porcentaje de operaciones ganadoras: si de 100 operaciones ganas 55, tu win rate es del 55%. La <strong>R media</strong> mide el tamaño de tus resultados en unidades de R (tu riesgo por operación, del Módulo 1): si tu ganadora típica gana 2R y tu perdedora típica pierde 1R, ya estás hablando el idioma del sistema, no de dólares sueltos. Para la esperanza no usaremos una única “R media”, sino dos piezas por separado —la ganancia media en R y la pérdida media en R—; de hecho, si promediaras <em>todas</em> tus operaciones juntas, ese número sería directamente tu esperanza.</p>
         <p>Aquí llega el aviso más importante de toda la lección, porque desmonta el mito más vendido del trading: <strong>un win rate alto, por sí solo, no significa absolutamente nada</strong>. Puedes ganar el 90% de tus operaciones y aun así arruinarte, si ese 10% de pérdidas es enorme.</p>
         <div class="callout warn"><div class="ic">⚠️</div><div>El mito del "win rate del 90%". Imagina que ganas 9 de cada 10 operaciones, +0,3R cada una (+2,7R en total), pero la que pierdes te cuesta −5R. Resultado neto: 2,7 − 5 = <strong>−2,3R</strong>. Has acertado el 90% de las veces y <strong>pierdes dinero</strong>. El win rate sin el tamaño de las ganancias y pérdidas es un número vacío.</div></div>
         <p>La lección es clara: hay que mirar el win rate <strong>y</strong> el tamaño relativo de ganancias frente a pérdidas <strong>juntos</strong>, nunca por separado. Un sistema con win rate del 40% puede ser excelente si sus ganadoras son grandes y sus perdedoras pequeñas; uno del 90% puede ser ruinoso si una sola pérdida se come muchas ganancias. Por eso necesitamos una métrica que combine las dos cosas.</p>
@@ -147,7 +147,7 @@
         <p>¿Por qué importa tanto un número que mide "lo malo"? Por dos razones, y ambas conectan con el resto del curso:</p>
         <ul>
           <li><strong>El factor psicológico (Módulo 7).</strong> Un sistema con buena esperanza pero un drawdown brutal —pongamos, ver tu cuenta caer un 45% antes de recuperarse— puede ser <strong>inoperable en la práctica</strong>. La mayoría de la gente abandona o rompe sus reglas en mitad de esa caída, y entonces la esperanza positiva nunca llega a materializarse.</li>
-          <li><strong>El riesgo de ruina (Módulo 1).</strong> Si el drawdown es lo bastante profundo, no solo duele: puede <strong>reventar la cuenta</strong>. Una caída del 50% exige luego un +100% solo para volver al punto de partida. Un drawdown demasiado grande te saca del juego antes de que el largo plazo te dé la razón.</li>
+          <li><strong>El riesgo de ruina (Módulo 1).</strong> Si el drawdown es lo bastante profundo, no solo duele: puede <strong>reventar la cuenta</strong>. Una caída del 50% exige luego un +100% solo para volver al punto de partida (de $100 bajas a $50; recuperar los $100 significa duplicar lo que queda). Un drawdown demasiado grande te saca del juego antes de que el largo plazo te dé la razón.</li>
         </ul>
         <div class="callout warn"><div class="ic">⚠️</div><div>Nunca mires la rentabilidad sin mirar el drawdown al lado. "Este sistema hizo +200%" no dice nada hasta que sabes que para conseguirlo tuviste que aguantar una caída del 60%. Rentabilidad y drawdown se leen <strong>juntos</strong>, igual que el win rate y el tamaño de las operaciones.</div></div>
 
@@ -213,6 +213,7 @@
           <p><strong>Drawdown:</strong> la mayor caída de tu cuenta desde un máximo hasta el valle siguiente; mide el peor tramo que tendrías que aguantar.</p>
           <p><strong>Riesgo de ruina:</strong> la probabilidad de que una racha de pérdidas reviente la cuenta; un drawdown demasiado profundo te saca del juego (Módulo 1).</p>
           <p><strong>Muestra:</strong> el número de operaciones sobre el que calculas las métricas; cuanto más grande, menos manda la suerte y más fiables son los números.</p>
+          <p><strong>Deslizamiento (slippage):</strong> la diferencia entre el precio al que esperabas operar y el real al que se ejecuta; un coste más que resta a tu esperanza.</p>
         </div>
 
         <div class="pager">
