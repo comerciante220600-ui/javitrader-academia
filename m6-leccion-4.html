@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · M6 L4 Las métricas de tu sistema</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </a>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4><a href="modulo-6.html">Tu plan de trading</a></h4>
+      <div class="msub">MÓDULO 6 · 5 LECCIONES</div>
+      <a class="lesson" href="m6-leccion-1.html"><span class="num">1</span> De señales sueltas a un sistema</a>
+      <a class="lesson" href="m6-leccion-2.html"><span class="num">2</span> Tu journal (diario de operaciones)</a>
+      <a class="lesson" href="m6-leccion-3.html"><span class="num">3</span> Backtesting básico</a>
+      <a class="lesson active" href="m6-leccion-4.html"><span class="num">4</span> Las métricas de tu sistema</a>
+      <a class="lesson" href="m6-leccion-5.html"><span class="num">5</span> La rutina del operador</a>
+    </div>
+
+    <div class="nav-label">Otros módulos</div>
+    <a class="tool-link" href="modulo-1.html">📈 Módulo 1 · Gestión de riesgo</a>
+    <a class="tool-link" href="modulo-2.html">📊 Módulo 2 · Leer un gráfico</a>
+    <a class="tool-link" href="modulo-3.html">📐 Módulo 3 · Análisis técnico</a>
+    <a class="tool-link" href="modulo-7.html">🧠 Módulo 7 · Psicología</a>
+    <a class="tool-link" href="herramientas.html">🧮 Calculadoras del curso</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb">Módulo 6 · Tu plan de trading &nbsp;›&nbsp; <b>Lección 4</b></div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:80%"></span></div> 4/5</div>
+    </div>
+
+    <div class="wrap">
+      <article>
+        <div class="eyebrow">Lección 4</div>
+        <h1 class="title">Las métricas de tu sistema</h1>
+        <div class="meta">
+          <div class="it">⏱ <b>~12 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>intermedio</b></div>
+          <div class="it">↳ Requisito: <b>Módulos 1, 2 y 3</b></div>
+        </div>
+
+        <div class="card obj">
+          <h3>Lo que sabrás hacer al terminar</h3>
+          <ol>
+            <li>Calcular e interpretar el <strong>win rate</strong> y la <strong>R media</strong> de tu sistema.</li>
+            <li>Entender por qué un win rate alto, por sí solo, no significa nada.</li>
+            <li>Calcular la <strong>esperanza matemática</strong> y saber por qué es la métrica que manda.</li>
+            <li>Leer el <strong>drawdown</strong> y juzgar si un sistema vale la pena de verdad.</li>
+          </ol>
+        </div>
+
+        <p class="lead">Ya tienes un sistema con reglas (Lección 1), un journal donde anotas cada operación (Lección 2) y un backtest que lo pone a prueba contra el pasado (Lección 3). La pregunta inevitable es: <strong>¿funciona o tengo suerte?</strong> Tu cabeza no puede responder a eso. Los números sí.</p>
+        <p>Esta lección no inventa nada nuevo: coge la R, el ratio riesgo/beneficio y la esperanza que viste en el Módulo 1 y los aplica a <strong>tu sistema entero</strong>, usando los datos de tu journal y tu backtest. El objetivo no es predecir el futuro —nadie puede—, sino tener una <strong>confianza fundada</strong>, con recibos, en lugar de una sensación.</p>
+
+        <h2 id="s1">Por qué necesitas números, no sensaciones</h2>
+        <p>Pregúntale a cualquier trader cómo le va y te dirá algo como "bien" o "regular". Esas palabras no valen nada, porque <strong>tu cabeza miente sobre cómo va tu trading</strong>. Recuerdas las dos operaciones espectaculares y olvidas las seis pequeñas pérdidas. Recuerdas el día rojo entero y borras la semana verde anterior. Eso no es mala fe: es cómo funciona el cerebro (lo verás en detalle en el Módulo 7, con los sesgos).</p>
+        <p>Las <strong>métricas</strong> son el antídoto. Salen de tu journal y de tu backtest —datos objetivos, no recuerdos— y te dicen la verdad: cuántas veces ganas, cuánto ganas frente a cuánto pierdes, y si el conjunto suma o resta. Sin esos números no sabes si tu sistema realmente funciona o si simplemente <strong>has tenido suerte</strong> en una racha corta.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Tu memoria infla los aciertos y entierra los fallos. Las métricas, sacadas del journal y el backtest, son la versión objetiva de cómo va tu trading. Sin números, "me va bien" puede significar tanto un edge real como una racha de suerte: no tienes forma de distinguirlo.</p></div>
+
+        <h2 id="s2">Win rate y R media</h2>
+        <p>Empecemos por las dos métricas más básicas. El <strong>win rate</strong> es el porcentaje de operaciones ganadoras: si de 100 operaciones ganas 55, tu win rate es del 55%. La <strong>R media</strong> mide el tamaño de tus resultados en unidades de R (tu riesgo por operación, del Módulo 1): si tu ganadora típica gana 2R y tu perdedora típica pierde 1R, ya estás hablando el idioma del sistema, no de dólares sueltos.</p>
+        <p>Aquí llega el aviso más importante de toda la lección, porque desmonta el mito más vendido del trading: <strong>un win rate alto, por sí solo, no significa absolutamente nada</strong>. Puedes ganar el 90% de tus operaciones y aun así arruinarte, si ese 10% de pérdidas es enorme.</p>
+        <div class="callout warn"><div class="ic">⚠️</div><div>El mito del "win rate del 90%". Imagina que ganas 9 de cada 10 operaciones, +0,3R cada una (+2,7R en total), pero la que pierdes te cuesta −5R. Resultado neto: 2,7 − 5 = <strong>−2,3R</strong>. Has acertado el 90% de las veces y <strong>pierdes dinero</strong>. El win rate sin el tamaño de las ganancias y pérdidas es un número vacío.</div></div>
+        <p>La lección es clara: hay que mirar el win rate <strong>y</strong> el tamaño relativo de ganancias frente a pérdidas <strong>juntos</strong>, nunca por separado. Un sistema con win rate del 40% puede ser excelente si sus ganadoras son grandes y sus perdedoras pequeñas; uno del 90% puede ser ruinoso si una sola pérdida se come muchas ganancias. Por eso necesitamos una métrica que combine las dos cosas.</p>
+
+        <h2 id="s3">La esperanza matemática: la métrica que manda</h2>
+        <p>La <strong>esperanza matemática</strong> (o esperanza, o expectativa) responde a la única pregunta que de verdad importa: <em>de media, ¿cuánto espero ganar o perder por cada operación?</em> Es la métrica reina porque junta el win rate y el tamaño de los resultados en un solo número.</p>
+        <p>La fórmula, en cristiano y expresada en R, es:</p>
+        <div class="callout idea"><strong>Esperanza</strong> = (win rate × ganancia media) − (lose rate × pérdida media). Si das los resultados en R, la esperanza sale en R por operación.</div>
+        <p>Volvamos al ejemplo sano para verlo con números que cuadran. Supón un sistema con <strong>win rate del 40%</strong> (lose rate del 60%), ganadora media de <strong>2R</strong> y perdedora media de <strong>1R</strong>:</p>
+        <ul>
+          <li>Parte ganadora: 0,40 × 2R = <strong>+0,8R</strong></li>
+          <li>Parte perdedora: 0,60 × 1R = <strong>0,6R</strong></li>
+          <li>Esperanza: 0,8 − 0,6 = <strong>+0,2R por operación</strong></li>
+        </ul>
+        <p>Aciertas menos de la mitad de las veces y aun así <strong>ganas</strong>: cada operación te aporta, de media, +0,2R. Compáralo con el "90%" de antes, cuya esperanza era negativa. Esa es la clave: <strong>si la esperanza es positiva, el sistema gana a largo plazo; si es negativa, pierde</strong>, por mucho que algunas operaciones individuales ganen. Un casino tiene esperanza negativa para ti aunque ganes manos sueltas; tu sistema debe ser el casino, no el jugador.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>La esperanza es lo que ganas o pierdes <em>de media</em> por operación: (win rate × ganancia media) − (lose rate × pérdida media), en R. Positiva = el sistema suma a largo plazo. Negativa = pierde, aunque acierte mucho. Es la métrica que manda; tienes la <strong>calculadora de esperanza</strong> en <a href="herramientas.html">herramientas</a> del curso.</p></div>
+
+        <h2 id="s4">Drawdown: el dolor que tienes que aguantar</h2>
+        <p>Una esperanza positiva te dice que el sistema gana a largo plazo. Pero el largo plazo no es una línea recta hacia arriba: por el camino hay rachas malas. El <strong>drawdown</strong> mide eso: la <strong>mayor caída desde un máximo</strong> de tu cuenta hasta el valle siguiente. Es el peor momento por el que pasarías operando ese sistema.</p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Curva de capital ascendente con un tramo de caída marcado como drawdown">
+            <g font-family="Inter,system-ui,sans-serif">
+              <!-- ejes -->
+              <line x1="60" y1="40" x2="60" y2="270" stroke="#26262f" stroke-width="1.5"/>
+              <line x1="60" y1="270" x2="690" y2="270" stroke="#26262f" stroke-width="1.5"/>
+              <text x="60" y="298" fill="#9b988f" font-size="12" text-anchor="middle">tiempo →</text>
+              <text x="34" y="50" fill="#9b988f" font-size="12">capital</text>
+
+              <!-- curva de capital: sube, cae (drawdown), recupera y sigue -->
+              <path d="M60,250 L150,205 L210,168 L255,150 L300,110 L330,98
+                       L360,150 L390,188 L420,210 L450,196 L490,150 L540,118 L600,82 L660,58"
+                    fill="none" stroke="#1d9e75" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+              <!-- pico -->
+              <circle cx="330" cy="98" r="5" fill="#e5c45a"/>
+              <text x="330" y="84" fill="#e5c45a" font-size="12" text-anchor="middle" font-weight="600">máximo (pico)</text>
+
+              <!-- valle -->
+              <circle cx="420" cy="210" r="5" fill="#e24b4a"/>
+              <text x="430" y="232" fill="#e24b4a" font-size="12" font-weight="600">valle</text>
+
+              <!-- linea de referencia del pico -->
+              <line x1="330" y1="98" x2="420" y2="98" stroke="#9b988f" stroke-width="1" stroke-dasharray="4 4"/>
+
+              <!-- flecha de drawdown desde pico hasta valle -->
+              <line x1="420" y1="98" x2="420" y2="204" stroke="#e24b4a" stroke-width="2"/>
+              <polygon points="420,210 415,198 425,198" fill="#e24b4a"/>
+              <rect x="438" y="132" width="116" height="44" rx="8" fill="#15151b" stroke="#26262f"/>
+              <text x="496" y="152" fill="#e24b4a" font-size="13" text-anchor="middle" font-weight="600">DRAWDOWN</text>
+              <text x="496" y="169" fill="#9b988f" font-size="11" text-anchor="middle">la mayor caída</text>
+
+              <!-- final, nuevo maximo -->
+              <circle cx="660" cy="58" r="4" fill="#1d9e75"/>
+              <text x="660" y="46" fill="#1d9e75" font-size="11" text-anchor="middle">nuevo máximo</text>
+            </g>
+          </svg>
+          <figcaption>La cuenta sube a largo plazo, pero no en línea recta. El <em>drawdown</em> es la mayor caída desde un pico hasta el valle siguiente: el peor tramo que tendrías que aguantar antes de recuperarte.</figcaption>
+        </figure>
+
+        <p>¿Por qué importa tanto un número que mide "lo malo"? Por dos razones, y ambas conectan con el resto del curso:</p>
+        <ul>
+          <li><strong>El factor psicológico (Módulo 7).</strong> Un sistema con buena esperanza pero un drawdown brutal —pongamos, ver tu cuenta caer un 45% antes de recuperarse— puede ser <strong>inoperable en la práctica</strong>. La mayoría de la gente abandona o rompe sus reglas en mitad de esa caída, y entonces la esperanza positiva nunca llega a materializarse.</li>
+          <li><strong>El riesgo de ruina (Módulo 1).</strong> Si el drawdown es lo bastante profundo, no solo duele: puede <strong>reventar la cuenta</strong>. Una caída del 50% exige luego un +100% solo para volver al punto de partida. Un drawdown demasiado grande te saca del juego antes de que el largo plazo te dé la razón.</li>
+        </ul>
+        <div class="callout warn"><div class="ic">⚠️</div><div>Nunca mires la rentabilidad sin mirar el drawdown al lado. "Este sistema hizo +200%" no dice nada hasta que sabes que para conseguirlo tuviste que aguantar una caída del 60%. Rentabilidad y drawdown se leen <strong>juntos</strong>, igual que el win rate y el tamaño de las operaciones.</div></div>
+
+        <h2 id="s5">¿Cuándo vale la pena un sistema?</h2>
+        <p>Ahora juntamos todo. Un sistema merece la pena cuando reúne, a la vez, estas condiciones —y no basta con una sola:</p>
+        <ul>
+          <li><strong>Esperanza positiva.</strong> El requisito de partida. Si la esperanza es negativa o cero, no hay nada que salvar: el sistema pierde a largo plazo por definición.</li>
+          <li><strong>Drawdown asumible.</strong> Que la peor caída sea una que <em>tú</em> puedas aguantar sin abandonar ni reventar la cuenta. Un sistema solo es bueno si <strong>puedes operarlo de verdad</strong>.</li>
+          <li><strong>Muestra suficiente.</strong> No se juzga un sistema con 5 operaciones, ni con 10. Con tan pocas, la suerte manda sobre la habilidad. Necesitas una muestra grande para que los números signifiquen algo (lo viste en el backtest, Lección 3).</li>
+          <li><strong>Costes ya incluidos.</strong> Comisiones, spread y deslizamiento se restan <em>antes</em> de calcular la esperanza. Un sistema rentable en bruto puede ser perdedor neto una vez pagas por operar.</li>
+        </ul>
+        <p>Y una dosis de honestidad para cerrar, porque va con la marca: <strong>ningún número garantiza el futuro</strong>. La esperanza y el drawdown se calculan sobre el pasado; el mercado cambia. Lo que te dan las métricas no es certeza, es <strong>confianza fundada</strong>: una razón objetiva para creer que tu sistema tiene un edge, en lugar de una corazonada. Eso es lo máximo que cualquier trader honesto puede tener.</p>
+        <p>En la próxima lección verás la <strong>rutina de revisión</strong>: cuándo y cómo mirar estas métricas sin obsesionarte, para refinar el sistema con datos. Y con esto cerramos el aro que abrió el Módulo 1: la R, el ratio riesgo/beneficio y la esperanza ya no son conceptos sueltos, sino las herramientas con las que juzgas tu sistema entero.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Un sistema vale la pena si tiene esperanza positiva, un drawdown que puedes soportar, una muestra suficiente para fiarte de los números y los costes ya restados. Aun así, las métricas dan confianza fundada, no certeza: describen el pasado, no garantizan el futuro.</p></div>
+
+        <div class="block-label">Errores comunes</div>
+        <ul>
+          <li><strong>Enamorarse del win rate.</strong> "Acierto el 80%" suena genial y no dice nada por sí solo. Si tus pérdidas son enormes, ese 80% pierde dinero. Mira siempre win rate y tamaño juntos.</li>
+          <li><strong>Ignorar el drawdown.</strong> Fijarse solo en la rentabilidad y descubrir el dolor cuando ya estás dentro de la caída. El drawdown se mira <em>antes</em>, no se sufre por sorpresa.</li>
+          <li><strong>Juzgar con muestras minúsculas.</strong> Declarar un sistema "ganador" o "roto" tras 5 o 10 operaciones. Con tan pocas, lo que ves es ruido y suerte, no el sistema.</li>
+          <li><strong>Calcular la esperanza sin costes.</strong> Olvidar comisiones, spread y deslizamiento infla la esperanza y te hace creer en un edge que no existe una vez pagas por operar.</li>
+        </ul>
+
+        <div class="block-label">Resumen</div>
+        <ul>
+          <li>Tu memoria miente sobre cómo va tu trading; las <strong>métricas</strong> del journal y el backtest son la verdad objetiva.</li>
+          <li><strong>Win rate</strong> (% de ganadoras) y <strong>R media</strong> se leen siempre juntos: un win rate alto sin más no significa nada.</li>
+          <li>La <strong>esperanza</strong> = (win rate × ganancia media) − (lose rate × pérdida media), en R, es la métrica reina: positiva gana a largo plazo, negativa pierde.</li>
+          <li>El <strong>drawdown</strong> (mayor caída desde un máximo) mide el dolor que aguantas; importa por la psicología (M7) y el riesgo de ruina (M1).</li>
+          <li>Un sistema vale la pena con esperanza positiva + drawdown asumible + muestra suficiente + costes incluidos; aun así, da <strong>confianza fundada, no certeza</strong>.</li>
+        </ul>
+
+        <div class="block-label">Ejercicio práctico</div>
+        <ol>
+          <li>Coge tu journal (o tu backtest) y calcula tres números: win rate, ganancia media en R y pérdida media en R. Si tienes menos de 20-30 operaciones, anota que la muestra aún es pequeña.</li>
+          <li>Calcula la esperanza con la fórmula —o con la <a href="herramientas.html">calculadora de esperanza</a> del curso— y escríbela en R por operación. ¿Positiva o negativa?</li>
+          <li>Localiza tu mayor drawdown hasta la fecha: ¿desde qué máximo cayó tu cuenta y hasta dónde? Pregúntate con honestidad si podrías aguantar el doble de esa caída sin saltarte tus reglas.</li>
+        </ol>
+
+        <div class="block-label">Autoevaluación</div>
+        <div class="quiz" data-quiz>
+        <script type="application/json">
+        [
+        {"q": "¿Por qué no basta con la sensación de “me va bien” para juzgar tu trading?", "opts": ["Porque está prohibido fiarse de uno mismo", "Porque las métricas son más divertidas", "Porque solo cuenta la opinión de otros traders", "Porque tu memoria infla los aciertos y entierra los fallos; solo los números del journal dicen la verdad"], "correct": 3, "why": "El cerebro recuerda las ganancias grandes y olvida las pérdidas pequeñas (sesgos, Módulo 7). Las métricas, sacadas de datos objetivos, corrigen esa distorsión."},
+        {"q": "¿Qué mide exactamente el win rate?", "opts": ["El porcentaje de operaciones ganadoras sobre el total", "Cuánto dinero ganas en total", "El tamaño medio de tus ganancias", "La mayor caída de tu cuenta"], "correct": 1, "why": "El win rate es solo el porcentaje de operaciones que terminan en ganancia. No dice nada sobre el tamaño de esas ganancias ni de las pérdidas."},
+        {"q": "Ganas el 90% de tus operaciones (+0,3R cada una) pero la que pierdes te cuesta −5R. ¿Qué demuestra esto?", "opts": ["Que tienes un sistema excelente por el win rate alto", "Que deberías arriesgar más", "Que un win rate alto, por sí solo, no significa nada: aquí la esperanza es negativa y pierdes dinero", "Que el win rate es la métrica más fiable que existe"], "correct": 2, "why": "9 × 0,3 = +2,7R frente a −5R = −2,3R neto. Aciertas el 90% y pierdes: el win rate sin el tamaño de ganancias y pérdidas es un número vacío."},
+        {"q": "¿Cuál es la fórmula de la esperanza matemática, en R?", "opts": ["(win rate × ganancia media) − (lose rate × pérdida media)", "win rate − lose rate", "ganancia media ÷ pérdida media", "número de ganadoras × R total"], "correct": 0, "why": "La esperanza pondera lo que ganas por lo que ganas de media y lo que pierdes por lo que pierdes de media. Junta win rate y tamaño en un solo número, en R por operación."},
+        {"q": "Sistema con win rate del 40%, ganadora media de 2R y perdedora media de 1R. ¿Cuál es su esperanza por operación?", "opts": ["−0,2R (pierde)", "0R (neutral)", "+1R", "+0,2R (gana a largo plazo)"], "correct": 3, "why": "0,40 × 2R = 0,8R; 0,60 × 1R = 0,6R; 0,8 − 0,6 = +0,2R. Aciertas menos de la mitad de las veces y aun así ganas, porque las ganadoras son mayores que las perdedoras."},
+        {"q": "¿Qué significa que un sistema tenga esperanza NEGATIVA?", "opts": ["Que gana mucho a corto plazo", "Que solo sirve para cripto", "Que pierde dinero a largo plazo, por mucho que algunas operaciones individuales ganen", "Que tiene un drawdown bajo"], "correct": 2, "why": "Con esperanza negativa, de media cada operación resta. Puedes ganar manos sueltas, pero el conjunto pierde: eres el jugador, no el casino."},
+        {"q": "¿Qué es el drawdown?", "opts": ["El porcentaje de operaciones ganadoras", "La mayor caída de tu cuenta desde un máximo hasta el valle siguiente", "El beneficio total del sistema", "El número de operaciones del backtest"], "correct": 1, "why": "El drawdown mide la peor caída desde un pico de tu cuenta. Es el dolor máximo que tendrías que aguantar antes de recuperarte."},
+        {"q": "¿Por qué un sistema con buena esperanza pero drawdown brutal puede ser un problema?", "opts": ["Porque puede ser inoperable psicológicamente (M7) o reventar la cuenta por riesgo de ruina (M1)", "Porque la esperanza positiva siempre falla", "Porque el drawdown no afecta a nada", "Porque significa que hay pocas comisiones"], "correct": 0, "why": "Una caída enorme hace que la gente abandone o rompa sus reglas, y si es bastante profunda puede arruinar la cuenta antes de que el largo plazo dé la razón."},
+        {"q": "¿Por qué NO debes juzgar un sistema con solo 5 operaciones?", "opts": ["Porque 5 operaciones tardan mucho", "Porque hace falta permiso del bróker", "Porque con una muestra tan pequeña manda la suerte, no la habilidad; los números no significan nada todavía", "Porque 5 siempre da esperanza negativa"], "correct": 2, "why": "Con muestras minúsculas, el azar domina el resultado. Necesitas una muestra suficiente para distinguir un edge real de una racha de suerte."},
+        {"q": "Según la lección, ¿qué te dan las métricas de tu sistema?", "opts": ["La garantía de que ganarás en el futuro", "Confianza fundada, no certeza: describen el pasado y dan una razón objetiva para creer en tu edge", "Una señal de cuándo comprar o vender", "La promesa de evitar todas las pérdidas"], "correct": 1, "why": "Las métricas se calculan sobre el pasado y el mercado cambia. Dan una base objetiva para confiar en el sistema, pero ningún número garantiza el futuro."}
+        ]
+        </script>
+        </div>
+
+        <div class="block-label">Glosario</div>
+        <div class="card">
+          <p><strong>Win rate:</strong> porcentaje de operaciones que terminan en ganancia sobre el total. Por sí solo no dice si el sistema gana.</p>
+          <p><strong>R media:</strong> el tamaño medio de tus resultados expresado en unidades de R (tu riesgo por operación del Módulo 1), en vez de en dólares sueltos.</p>
+          <p><strong>Esperanza (expectativa matemática):</strong> lo que ganas o pierdes de media por operación: (win rate × ganancia media) − (lose rate × pérdida media), en R. Positiva = gana a largo plazo.</p>
+          <p><strong>Drawdown:</strong> la mayor caída de tu cuenta desde un máximo hasta el valle siguiente; mide el peor tramo que tendrías que aguantar.</p>
+          <p><strong>Riesgo de ruina:</strong> la probabilidad de que una racha de pérdidas reviente la cuenta; un drawdown demasiado profundo te saca del juego (Módulo 1).</p>
+          <p><strong>Muestra:</strong> el número de operaciones sobre el que calculas las métricas; cuanto más grande, menos manda la suerte y más fiables son los números.</p>
+        </div>
+
+        <div class="pager">
+          <a href="m6-leccion-3.html"><div class="k">← Anterior</div><div class="t">L3 · Backtesting básico</div></a>
+          <a class="next" href="m6-leccion-5.html"><div class="k">Siguiente →</div><div class="t">L5 · La rutina del operador</div></a>
+        </div>
+      </article>
+
+      <nav class="toc">
+        <div class="h">En esta lección</div>
+        <a href="#s1">Números, no sensaciones</a>
+        <a href="#s2">Win rate y R media</a>
+        <a href="#s3">La esperanza matemática</a>
+        <a href="#s4">Drawdown</a>
+        <a href="#s5">¿Cuándo vale la pena?</a>
+      </nav>
+    </div>
+  </main>
+</div>
+<script src="assets/quiz.js" defer></script>
+</body>
+</html>

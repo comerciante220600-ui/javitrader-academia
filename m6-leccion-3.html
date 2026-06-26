@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · M6 L3 Backtesting básico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </a>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4><a href="modulo-6.html">Tu plan de trading</a></h4>
+      <div class="msub">MÓDULO 6 · 5 LECCIONES</div>
+      <a class="lesson" href="m6-leccion-1.html"><span class="num">1</span> De señales sueltas a un sistema</a>
+      <a class="lesson" href="m6-leccion-2.html"><span class="num">2</span> Tu journal (diario de operaciones)</a>
+      <a class="lesson active" href="m6-leccion-3.html"><span class="num">3</span> Backtesting básico</a>
+      <a class="lesson" href="m6-leccion-4.html"><span class="num">4</span> Las métricas de tu sistema</a>
+      <a class="lesson" href="m6-leccion-5.html"><span class="num">5</span> La rutina del operador</a>
+    </div>
+
+    <div class="nav-label">Otros módulos</div>
+    <a class="tool-link" href="modulo-1.html">📈 Módulo 1 · Gestión de riesgo</a>
+    <a class="tool-link" href="modulo-2.html">📊 Módulo 2 · Leer un gráfico</a>
+    <a class="tool-link" href="modulo-3.html">📐 Módulo 3 · Análisis técnico</a>
+    <a class="tool-link" href="modulo-7.html">🧠 Módulo 7 · Psicología</a>
+    <a class="tool-link" href="herramientas.html">🧮 Calculadoras del curso</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb">Módulo 6 · Tu plan de trading &nbsp;›&nbsp; <b>Lección 3</b></div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:60%"></span></div> 3/5</div>
+    </div>
+
+    <div class="wrap">
+      <article>
+        <div class="eyebrow">Lección 3</div>
+        <h1 class="title">Backtesting básico</h1>
+        <div class="meta">
+          <div class="it">⏱ <b>~12 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>intermedio</b></div>
+          <div class="it">↳ Requisito: <b>Módulos 1, 2 y 3</b></div>
+        </div>
+
+        <div class="card obj">
+          <h3>Lo que sabrás hacer al terminar</h3>
+          <ol>
+            <li>Explicar qué te puede y qué no te puede decir un backtest sobre tu sistema.</li>
+            <li>Probar tus reglas en datos históricos <strong>a mano</strong>, sin programar.</li>
+            <li>Reconocer los sesgos que convierten un backtest en un autoengaño.</li>
+            <li>Incluir los costes reales y dar el salto del backtest al <strong>forward-test</strong>.</li>
+          </ol>
+        </div>
+
+        <p class="lead">Ya tienes un sistema con reglas (Lección 1) y un journal para registrarlo (Lección 2). Antes de arriesgar dinero real, hay una pregunta razonable: ¿este sistema tiene <strong>algún</strong> sentido, o me lo estoy inventando? El <strong>backtesting</strong> intenta responderla aplicando tus reglas al pasado.</p>
+        <p>Aviso desde la primera línea, "con recibos": el backtesting <strong>no promete ganar</strong>, y desconfía de todo el que te lo venda así. Sirve para <strong>descartar</strong> lo que claramente no funciona y para <strong>entender</strong> tu propio sistema. Es un filtro honesto, no una bola de cristal.</p>
+
+        <h2 id="s1">Qué es el backtesting (y qué no)</h2>
+        <p>Hacer un <strong>backtest</strong> es coger tus reglas y aplicarlas a <strong>datos históricos</strong> para ver cómo se habrían comportado: dónde habrías entrado, dónde habrías salido, cuánto habrías arriesgado y qué resultado habría dado la suma. Es una simulación sobre el pasado.</p>
+        <p>¿Para qué sirve? Para hacerte una <strong>idea aproximada</strong> de si el sistema tiene pies y cabeza <em>antes</em> de poner dinero. Si tus reglas, aplicadas a cien situaciones pasadas, habrían sido un desastre, mejor saberlo en el papel que en tu cuenta.</p>
+        <p>La parte honesta —y la que más gente ignora— es esta: que algo funcionara en el pasado <strong>no garantiza</strong> que funcione en el futuro. El mercado cambia, las condiciones cambian, y un backtest brillante puede no repetirse jamás. Por eso el backtest <strong>descarta sistemas malos</strong>, pero no <strong>certifica</strong> buenos. Pasar el backtest es condición necesaria, no suficiente.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>El backtesting aplica tus reglas a datos históricos para ver cómo habrían ido. Sirve para descartar lo que claramente no funciona y entender tu sistema, no para certificar que ganarás. Que funcionara en el pasado no garantiza el futuro: desconfía de cualquier backtest "milagroso".</p></div>
+
+        <h2 id="s2">Cómo hacerlo a mano (sin programar)</h2>
+        <p>No necesitas saber código para empezar. El método manual es lento pero, para un principiante, probablemente el más educativo que existe. Va así:</p>
+        <ul>
+          <li>Abre un gráfico histórico de tu activo y <strong>oculta el futuro</strong> (en muchas plataformas puedes "rebobinar" la fecha o tapar la parte derecha de la pantalla).</li>
+          <li>Avanza <strong>vela a vela</strong>, como si el mercado se estuviera formando en directo y no supieras qué viene después.</li>
+          <li>Cada vez que se cumpla tu setup (Módulo 3), aplica tus reglas <strong>tal cual</strong>: entrada, invalidación, salida, riesgo. Sin mirar adelante.</li>
+          <li>Anota cada operación en el <strong>journal</strong> (Lección 2), exactamente igual que harías en real.</li>
+        </ul>
+        <p>¿Por qué molestarse con algo tan tedioso? Porque te <strong>entrena el ojo</strong> y, sobre todo, te obliga a tener reglas <strong>objetivas</strong>: si no puedes decidir vela a vela sin "ya sabía yo lo que iba a pasar", tu regla es demasiado vaga. El proceso destapa la ambigüedad de tu plan.</p>
+        <p>Un detalle del Módulo 1 que aquí vale oro: necesitas una <strong>muestra suficiente</strong>. Tres operaciones no te dicen nada —pueden ser pura suerte—. Hablamos de <strong>decenas</strong> de operaciones para empezar a ver un patrón, no un puñado.</p>
+        <div class="callout idea">Truco práctico: dedica sesiones cortas y regulares en vez de una maratón. Veinte velas bien operadas y bien anotadas valen más que doscientas hechas a la carrera, donde acabas mirando el futuro sin darte cuenta. La calidad de la muestra importa tanto como el tamaño.</div>
+
+        <h2 id="s3">Los sesgos que arruinan un backtest</h2>
+        <p>Aquí está lo difícil. Un backtest es tan honesto como tú, y el cerebro tiene una habilidad asombrosa para hacer trampas sin querer. Estos son los cuatro enemigos:</p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Curva sobreoptimizada que encaja en el pasado pero falla en el futuro">
+            <g font-family="Inter,system-ui,sans-serif">
+              <!-- ejes -->
+              <line x1="60" y1="40" x2="60" y2="250" stroke="#26262f" stroke-width="1.5"/>
+              <line x1="60" y1="250" x2="690" y2="250" stroke="#26262f" stroke-width="1.5"/>
+
+              <!-- separador pasado / futuro -->
+              <line x1="375" y1="40" x2="375" y2="250" stroke="#26262f" stroke-width="1.5" stroke-dasharray="5 5"/>
+              <text x="200" y="60" fill="#9b988f" font-size="12" text-anchor="middle">PASADO (lo que ajustas)</text>
+              <text x="535" y="60" fill="#9b988f" font-size="12" text-anchor="middle">FUTURO (lo que pasa)</text>
+
+              <!-- nube de puntos: datos reales -->
+              <circle cx="90"  cy="190" r="4" fill="#9b988f"/>
+              <circle cx="130" cy="160" r="4" fill="#9b988f"/>
+              <circle cx="170" cy="200" r="4" fill="#9b988f"/>
+              <circle cx="210" cy="140" r="4" fill="#9b988f"/>
+              <circle cx="250" cy="180" r="4" fill="#9b988f"/>
+              <circle cx="290" cy="120" r="4" fill="#9b988f"/>
+              <circle cx="330" cy="165" r="4" fill="#9b988f"/>
+              <!-- puntos futuros -->
+              <circle cx="420" cy="150" r="4" fill="#9b988f"/>
+              <circle cx="470" cy="175" r="4" fill="#9b988f"/>
+              <circle cx="520" cy="135" r="4" fill="#9b988f"/>
+              <circle cx="575" cy="170" r="4" fill="#9b988f"/>
+              <circle cx="630" cy="150" r="4" fill="#9b988f"/>
+
+              <!-- curva sobreoptimizada: pasa por todos los puntos del pasado y se descontrola en el futuro -->
+              <path d="M90,190 Q110,140 130,160 Q150,210 170,200 Q190,120 210,140 Q230,200 250,180 Q270,110 290,120 Q310,180 330,165 L375,150"
+                    fill="none" stroke="#e24b4a" stroke-width="2.5"/>
+              <path d="M375,150 Q420,60 470,260 Q520,40 575,270 Q620,30 660,250"
+                    fill="none" stroke="#e24b4a" stroke-width="2.5" stroke-dasharray="4 4" opacity="0.85"/>
+
+              <!-- curva sensata: tendencia simple -->
+              <path d="M90,185 L330,150 L375,148 L660,150"
+                    fill="none" stroke="#1d9e75" stroke-width="2.5"/>
+
+              <!-- leyenda -->
+              <rect x="60" y="278" width="16" height="3" fill="#e24b4a"/>
+              <text x="84" y="284" fill="#ddd9d0" font-size="12">Curva sobreoptimizada: encaja perfecto en el pasado, se rompe en el futuro</text>
+              <rect x="60" y="298" width="16" height="3" fill="#1d9e75"/>
+              <text x="84" y="304" fill="#ddd9d0" font-size="12">Regla sencilla y robusta: peor en el pasado, pero aguanta el futuro</text>
+            </g>
+          </svg>
+          <figcaption>La trampa de la sobreoptimización. Una regla con muchos parámetros puede dibujarse para pasar por <em>cada</em> punto del pasado (rojo) y aun así descontrolarse en cuanto aparecen datos nuevos. Una regla simple (verde) acierta menos en el histórico, pero es la que tiene posibilidades de sobrevivir.</figcaption>
+        </figure>
+
+        <ul>
+          <li><strong>Sesgo de anticipación (look-ahead):</strong> usar información que <em>no</em> tendrías en ese momento. Decidir la entrada de hoy sabiendo dónde cerró la vela de mañana. Es el más insidioso del método manual: cuesta no "espiar" lo que ya sabes que pasó.</li>
+          <li><strong>Sobreoptimización (curve fitting):</strong> ajustar tanto las reglas al pasado que solo funcionan en <em>ese</em> pasado concreto. Si necesitas siete condiciones muy finas para que cuadre, no has encontrado un sistema: has dibujado el histórico.</li>
+          <li><strong>Sesgo de supervivencia:</strong> probar solo en el activo que <em>ya sabes</em> que subió. Claro que tu sistema "funciona" en algo que se multiplicó por diez; la pregunta es cómo se habría comportado en lo que no salió bien.</li>
+          <li><strong>Cherry-picking:</strong> quedarte solo con el tramo de fechas que te da la razón y descartar el resto "porque era un mercado raro". Si eliges tú el trozo, el resultado lo eliges tú, no el sistema.</li>
+        </ul>
+        <p>Todos tienen la misma raíz: el deseo de que tu sistema funcione. Sé honesto en el backtest o te engañarás a ti mismo —y a tu cuenta— más tarde, cuando ya hay dinero de por medio.</p>
+        <div class="callout warn"><div class="ic">⚠️</div><div>Si un backtest te sale espectacular a la primera, sospecha de ti mismo antes que del mercado. Lo más probable no es que hayas encontrado el santo grial, sino que se te haya colado uno de estos sesgos. Los backtests "perfectos" que venden cursos de humo casi siempre esconden curve fitting o cherry-picking.</div></div>
+
+        <h2 id="s4">Incluir los costes reales</h2>
+        <p>Un backtest sin costes <strong>miente</strong>, y miente justo a tu favor, que es la peor dirección. Operar no es gratis. Hay tres costes que tienes que restar a cada operación simulada:</p>
+        <ul>
+          <li><strong>Comisiones:</strong> lo que cobra el exchange o el bróker por abrir y cerrar.</li>
+          <li><strong>Spread:</strong> la diferencia entre el precio de compra y el de venta; pagas un poco solo por entrar y salir.</li>
+          <li><strong>Slippage (deslizamiento):</strong> la diferencia entre el precio al que <em>querías</em> ejecutar y al que <em>realmente</em> se ejecutó, sobre todo en momentos rápidos.</li>
+        </ul>
+        <p>Esto enlaza con una idea que recorre todo el curso: <strong>el coste importa</strong>. Muchos sistemas que parecen ganadores en bruto <strong>mueren</strong> al restar costes. Y los que más sufren son los de <strong>muchas operaciones</strong> —el intradía de alta frecuencia—, donde cada pequeña fricción se multiplica por cientos de entradas. Un sistema que gana $5 de media por operación pero paga $4 de costes no es un sistema: es una forma cara de no ganar nada.</p>
+        <p>En cripto y perpetuos hay un coste extra que no puedes olvidar: el <strong>funding</strong> (la tasa de financiación que se paga o se cobra por mantener una posición apalancada abierta). Si tu sistema aguanta posiciones largas en el tiempo, el funding puede comerse buena parte del resultado. Un backtest serio de perps lo incluye.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Resta siempre comisiones, spread y slippage a cada operación del backtest; en cripto/perps, también el funding. Un backtest sin costes infla los resultados. Cuantas más operaciones haga tu sistema, más le pesan los costes: el intradía es donde más sistemas "ganadores" se vienen abajo.</p></div>
+
+        <h2 id="s5">Del backtest al forward-test</h2>
+        <p>El backtest es <strong>teoría sobre el pasado</strong>: ya sabes cómo acabó la película. Por bueno que parezca, le falta la prueba decisiva. Ahí entra el <strong>forward-test</strong> (también llamado <em>paper trading</em> o cuenta <em>demo</em>): probar el sistema <strong>hacia delante</strong>, en tiempo real, sin saber qué va a pasar, sin dinero o con muy poco.</p>
+        <p>La diferencia es enorme. En el forward-test no puedes hacer trampa con look-ahead, porque el futuro <em>de verdad</em> no existe todavía. Operas tu sistema en directo, lo registras en el journal, y ves si se comporta como prometía el backtest o se desmorona en cuanto el mercado deja de ser el del histórico.</p>
+        <p>Es el <strong>puente honesto</strong> antes de pasar a tamaño real. Un sistema serio debe sobrevivir a <strong>los dos</strong>: tener sentido en el pasado <em>y</em> aguantar hacia delante. Si pasa el backtest pero se cae en el forward-test, era curve fitting disfrazado.</p>
+        <p>En la <strong>Lección 4</strong> verás qué <strong>métricas</strong> mirar para juzgar cualquiera de las dos pruebas (no solo "cuánto gané"), y en la <strong>Lección 5</strong>, cómo encaja todo esto en una <strong>rutina</strong> sostenible. El orden honesto, sin saltarse pasos: idea con reglas → backtest → forward-test → tamaño real pequeño que crece con datos, no con prisa.</p>
+        <div class="callout idea">Regla de oro del curso: el dinero real grande es el <em>último</em> paso, no el primero. Idea → backtest → forward-test → real pequeño. Cada filtro elimina sistemas malos antes de que te cuesten caro. Quien se salta los pasos no va más rápido: paga la formación con la cuenta.</div>
+
+        <div class="block-label">Errores comunes</div>
+        <ul>
+          <li><strong>Creer que un buen backtest "certifica" el sistema.</strong> Solo descarta los malos. Que funcionara en el pasado no garantiza el futuro: hace falta el forward-test.</li>
+          <li><strong>Probar con tres operaciones.</strong> Sin una muestra suficiente (decenas), el resultado es ruido. No puedes juzgar un sistema con un puñado de datos (Módulo 1).</li>
+          <li><strong>Ignorar los costes.</strong> Comisiones, spread, slippage y funding cambian el resultado por completo, sobre todo en sistemas de muchas operaciones.</li>
+          <li><strong>Sobreoptimizar.</strong> Si añades condiciones hasta que el histórico sale perfecto, no has hallado un sistema: has dibujado el pasado. Se romperá en cuanto lleguen datos nuevos.</li>
+          <li><strong>Saltar directo a dinero real.</strong> Sin pasar por el forward-test te ahorras un paso… y te lo cobra el mercado.</li>
+        </ul>
+
+        <div class="block-label">Resumen</div>
+        <ul>
+          <li>El <strong>backtesting</strong> aplica tus reglas a datos históricos para hacerte una idea aproximada del sistema antes de arriesgar.</li>
+          <li>Descarta sistemas malos, pero <strong>no certifica</strong> buenos: el pasado no garantiza el futuro.</li>
+          <li>Se puede hacer <strong>a mano</strong>, vela a vela ocultando el futuro y anotando en el journal; lento pero muy educativo.</li>
+          <li>Cuidado con los <strong>sesgos</strong>: look-ahead, sobreoptimización, supervivencia y cherry-picking. Sé honesto o te engañas a ti mismo.</li>
+          <li>Incluye siempre los <strong>costes</strong> (comisiones, spread, slippage; funding en perps) y termina con un <strong>forward-test</strong> antes del tamaño real.</li>
+        </ul>
+
+        <div class="block-label">Ejercicio práctico</div>
+        <ol>
+          <li>Coge el setup de tu plan mínimo viable (Lección 1) y haz un backtest manual de <strong>al menos 20-30 operaciones</strong> en un gráfico histórico, ocultando el futuro y anotando cada una en el journal.</li>
+          <li>Revisa tu propio backtest a la caza de sesgos: ¿hubo alguna entrada donde "espiaste" el futuro? ¿Elegiste un tramo cómodo? Sé brutalmente honesto.</li>
+          <li>Resta a cada operación una estimación de costes (comisión + spread + slippage; funding si son perps) y compara el resultado con y sin costes. ¿Sigue teniendo sentido el sistema?</li>
+        </ol>
+
+        <div class="block-label">Autoevaluación</div>
+        <div class="quiz" data-quiz>
+        <script type="application/json">
+        [
+        {"q": "¿Qué es, en esencia, hacer un backtest?", "opts": ["Predecir el precio de mañana con un indicador", "Operar en real con poco dinero para probar", "Aplicar tus reglas a datos históricos para ver cómo se habrían comportado", "Copiar el sistema de otro trader que gana"], "correct": 2, "why": "Un backtest aplica tus reglas al pasado para hacerte una idea aproximada de si el sistema tiene sentido antes de arriesgar dinero real."},
+        {"q": "¿Qué te puede decir de forma realista un buen backtest?", "opts": ["Que el sistema es malo y conviene descartarlo, pero no garantiza que uno bueno vaya a ganar en el futuro", "Que vas a ganar seguro si lo sigues", "Que el mercado nunca cambiará", "Que ya no necesitas gestionar el riesgo"], "correct": 0, "why": "El backtest descarta sistemas malos, no certifica buenos. Que algo funcionara en el pasado no garantiza el futuro: es condición necesaria, no suficiente."},
+        {"q": "En el backtesting manual, ¿por qué es tan importante ocultar el futuro del gráfico?", "opts": ["Para que el gráfico ocupe menos pantalla", "Porque es obligatorio en la plataforma", "Para que se vea más bonito", "Para no caer en el sesgo de anticipación, decidiendo con información que no tendrías en ese momento"], "correct": 3, "why": "Si ves lo que pasó después, decides 'sabiendo el final'. Ocultar el futuro y avanzar vela a vela es lo que mantiene honesto el backtest manual."},
+        {"q": "Ajustas tu sistema con tantas condiciones finas que encaja perfecto en el histórico. ¿Qué sesgo es ese?", "opts": ["Sesgo de supervivencia", "Sobreoptimización (curve fitting): el sistema solo funciona en ESE pasado concreto", "Slippage", "Sesgo de confirmación del bróker"], "correct": 1, "why": "Eso es curve fitting: has dibujado el histórico en lugar de hallar un sistema. Se rompe en cuanto aparecen datos nuevos, como muestra la curva sobreoptimizada."},
+        {"q": "¿Qué describe el sesgo de supervivencia en un backtest?", "opts": ["Operar solo cuando estás descansado", "Probar muchísimas operaciones seguidas", "Probar el sistema solo en el activo que ya sabes que subió, ignorando los que no salieron bien", "Usar siempre el mismo bróker"], "correct": 2, "why": "Probar solo en el ganador conocido infla los resultados. La pregunta honesta es cómo se habría comportado el sistema también en lo que no salió bien."},
+        {"q": "¿Por qué un backtest SIN costes es engañoso?", "opts": ["Porque infla los resultados a tu favor; comisiones, spread y slippage pueden hundir un sistema que parecía ganador", "Porque tarda más en calcularse", "Porque los costes no existen en el trading real", "Porque solo afecta a la inversión a largo plazo"], "correct": 0, "why": "Operar no es gratis. Sin restar comisiones, spread y slippage el resultado sale inflado, y muchos sistemas 'ganadores' mueren al incluir los costes reales."},
+        {"q": "¿Qué tipo de sistema sufre MÁS el peso de los costes?", "opts": ["Los de inversión a muy largo plazo", "Los que no usan stop", "Da igual, los costes pesan lo mismo en todos", "Los de muchas operaciones, como el intradía de alta frecuencia"], "correct": 3, "why": "Cuantas más operaciones, más veces pagas comisión, spread y slippage. En el intradía de alta frecuencia esa fricción se multiplica y se come el resultado."},
+        {"q": "En cripto y perpetuos, ¿qué coste extra debe incluir un backtest serio?", "opts": ["El IVA de cada operación", "El funding (tasa de financiación por mantener una posición apalancada abierta)", "Una comisión fija de $100 al mes", "El precio de la electricidad"], "correct": 1, "why": "En perps se paga o se cobra funding por mantener la posición. Si el sistema aguanta posiciones en el tiempo, el funding puede comerse buena parte del resultado."},
+        {"q": "¿Qué es el forward-test (paper trading / demo)?", "opts": ["Probar el sistema hacia delante, en tiempo real, sin dinero o con muy poco, sin saber qué va a pasar", "Otro nombre para el backtest sobre el pasado", "Una métrica de rentabilidad", "Una orden automática del exchange"], "correct": 0, "why": "El forward-test prueba el sistema en directo, hacia delante. Como el futuro aún no existe, no puedes hacer trampa con look-ahead: es el puente honesto antes del tamaño real."},
+        {"q": "Según la lección, ¿cuál es el orden honesto antes de operar con dinero real grande?", "opts": ["Real grande primero, para 'aprender rápido'", "Solo backtest y directo a real grande", "Copiar a otro y ya está", "Idea con reglas → backtest → forward-test → real pequeño que crece con datos"], "correct": 3, "why": "Cada filtro elimina sistemas malos antes de que cuesten caro. Saltarse pasos no va más rápido: la formación se acaba pagando con la cuenta."}
+        ]
+        </script>
+        </div>
+
+        <div class="block-label">Glosario</div>
+        <div class="card">
+          <p><strong>Backtesting:</strong> aplicar tus reglas a datos históricos para estimar cómo se habrían comportado, antes de arriesgar dinero real.</p>
+          <p><strong>Forward-test / paper trading:</strong> probar el sistema hacia delante, en tiempo real y sin dinero (o muy poco); el puente honesto antes del tamaño real.</p>
+          <p><strong>Sobreoptimización / curve fitting:</strong> ajustar tanto las reglas al pasado que solo funcionan en ese pasado concreto y se rompen con datos nuevos.</p>
+          <p><strong>Sesgo de anticipación / look-ahead:</strong> usar en la decisión información que no tendrías disponible en ese momento; el gran enemigo del backtest manual.</p>
+          <p><strong>Slippage / deslizamiento:</strong> diferencia entre el precio al que querías ejecutar y al que realmente se ejecutó; uno de los costes a restar.</p>
+          <p><strong>Muestra:</strong> el número de operaciones del que dispones para juzgar; con pocas (3) es ruido, hacen falta decenas para empezar a ver un patrón.</p>
+        </div>
+
+        <div class="pager">
+          <a href="m6-leccion-2.html"><div class="k">← Volver</div><div class="t">L2 · Tu journal: el diario de operaciones</div></a>
+          <a class="next" href="m6-leccion-4.html"><div class="k">Siguiente →</div><div class="t">L4 · Las métricas de tu sistema</div></a>
+        </div>
+      </article>
+
+      <nav class="toc">
+        <div class="h">En esta lección</div>
+        <a href="#s1">Qué es (y qué no)</a>
+        <a href="#s2">Hacerlo a mano</a>
+        <a href="#s3">Los sesgos que arruinan</a>
+        <a href="#s4">Incluir los costes</a>
+        <a href="#s5">Del backtest al forward-test</a>
+      </nav>
+    </div>
+  </main>
+</div>
+<script src="assets/quiz.js" defer></script>
+</body>
+</html>
