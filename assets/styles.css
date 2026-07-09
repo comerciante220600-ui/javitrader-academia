@@ -246,3 +246,26 @@ html.gate-locked .app{display:none !important}
 .gate-err{color:#e0736e;font-size:13px;min-height:18px;margin-top:12px}
 .gate-foot{color:#5f5d57;font-size:11px;margin-top:18px}
 .wm-overlay{position:fixed;inset:0;z-index:9998;pointer-events:none;background-repeat:repeat;background-position:0 0}
+
+/* ===== Formulario de feedback (beta) ===== */
+.fbq{margin:0 0 24px}
+.fbq .q{display:block;font-family:var(--sans);font-weight:600;color:var(--text);font-size:15.5px;line-height:1.4;margin-bottom:10px}
+.fbq .q .req{color:var(--gold)}
+.fbq .hint{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:3px}
+.fbq input[type=text],.fbq textarea,.fbq select{width:100%;box-sizing:border-box;background:var(--bg-2);border:1px solid var(--line-2);color:var(--text);border-radius:10px;padding:11px 13px;font-size:14.5px;font-family:var(--sans);outline:none}
+.fbq textarea{min-height:92px;resize:vertical;line-height:1.55}
+.fbq input[type=text]:focus,.fbq textarea:focus,.fbq select:focus{border-color:var(--gold)}
+.fbq .opts{display:flex;flex-direction:column;gap:9px}
+.fbq .opts label{display:flex;gap:10px;align-items:flex-start;color:var(--body);font-size:14.5px;cursor:pointer}
+.fbq .opts input{margin-top:3px;accent-color:#d4af37}
+.scale{display:flex;gap:6px;flex-wrap:wrap}
+.scale label{flex:1;min-width:34px;text-align:center;border:1px solid var(--line-2);border-radius:8px;padding:10px 0;color:var(--body);cursor:pointer;font-size:14px;position:relative}
+.scale label:has(input:checked){background:linear-gradient(180deg,#e5c45a,#d4af37);border-color:#d4af37;color:#1a1407;font-weight:700}
+.scale input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.scale .ends{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-top:6px}
+.fb-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.fb-btn{background:linear-gradient(180deg,#e5c45a,#d4af37);color:#1a1407;border:0;border-radius:10px;padding:13px 22px;font-weight:700;font-size:15px;cursor:pointer;font-family:var(--sans)}
+.fb-btn:hover{filter:brightness(1.06)}
+.fb-btn.sec{background:transparent;border:1px solid var(--line-2);color:var(--text)}
+.fb-ok{color:#8fd14f;font-weight:600;margin-top:14px;min-height:22px;font-size:14px}
+.fb-err{color:#e0736e;font-weight:600;margin-top:14px;min-height:22px;font-size:14px}
