@@ -230,3 +230,19 @@ details.qa .ans{padding:14px 20px 16px 56px;font-family:var(--serif);font-size:1
 .qwhy b{font-family:var(--sans);font-weight:500}
 .qwhy.ok b{color:#8fd14f}
 .qwhy.no b{color:#f0a0a0}
+
+/* ===== Acceso beta: candado + marca de agua ===== */
+html.gate-locked{background:#0a0a0c}
+html.gate-locked .app{display:none !important}
+.gate-overlay{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:24px;background:radial-gradient(1100px 560px at 50% -12%,#17131f,#0a0a0c 72%)}
+.gate-card{width:100%;max-width:420px;box-sizing:border-box;background:#15151b;border:1px solid #2a2a33;border-radius:16px;padding:34px 30px;text-align:center;box-shadow:0 22px 60px rgba(0,0,0,.55);font-family:var(--sans,Inter,system-ui,sans-serif)}
+.gate-brand{color:#d4af37;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+.gate-card h1{color:#ece9e1;font-family:var(--serif,'Fraunces',Georgia,serif);font-size:26px;margin:0 0 10px}
+.gate-card p{color:#9b988f;font-size:14px;line-height:1.55;margin:0 0 20px}
+.gate-card input{width:100%;box-sizing:border-box;background:#0e0e12;border:1px solid #33333f;color:#ece9e1;border-radius:10px;padding:13px 14px;font-size:15px;text-align:center;outline:none}
+.gate-card input:focus{border-color:#d4af37}
+.gate-card button{width:100%;margin-top:12px;background:linear-gradient(180deg,#e5c45a,#d4af37);color:#1a1407;border:0;border-radius:10px;padding:13px;font-size:15px;font-weight:700;cursor:pointer}
+.gate-card button:hover{filter:brightness(1.06)}
+.gate-err{color:#e0736e;font-size:13px;min-height:18px;margin-top:12px}
+.gate-foot{color:#5f5d57;font-size:11px;margin-top:18px}
+.wm-overlay{position:fixed;inset:0;z-index:9998;pointer-events:none;background-repeat:repeat;background-position:0 0}
