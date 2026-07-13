@@ -247,6 +247,88 @@ html.gate-locked .app{display:none !important}
 .gate-foot{color:#5f5d57;font-size:11px;margin-top:18px}
 .wm-overlay{position:fixed;inset:0;z-index:9998;pointer-events:none;background-repeat:repeat;background-position:0 0}
 
+/* ============================================================
+   TEMA CLARO (interruptor claro/oscuro) — html.light
+   ============================================================ */
+html.light{
+  --bg:#faf9f6; --bg-2:#f1efe9; --surface:#ffffff; --surface-2:#f4f2ec;
+  --line:#e6e3da; --line-2:#d8d4ca;
+  --gold:#9a7b2c; --gold-soft:#87692a; --gold-dim:#b89a48;
+  --text:#20201c; --muted:#6a685f; --muted-2:#8a887e;
+  color-scheme:light;
+}
+/* textos de cuerpo que estaban hardcodeados en claro → oscuro */
+html.light article p,html.light article li,html.light .formula,
+html.light .hero p.intro{color:#34322b}
+html.light .lcard .desc{color:#4c4a41}
+/* chrome */
+html.light .topbar{background:rgba(250,249,246,.86)}
+html.light .qopt:hover:not(:disabled){background:#f0eee7}
+html.light .exch:hover{background:#f0eee7}
+html.light .calc-field input:focus,html.light .calc-field select:focus{background:#fff}
+/* verdes/rojos claros → versiones legibles sobre blanco */
+html.light .plain .lab,html.light .badge-ok,html.light .qwhy.ok b,html.light .qscore.good,
+html.light .calc-res .v.pos,html.light .calc-msg.pos b{color:#3f8a1e}
+html.light .callout.warn b,html.light .qwhy.no b,html.light .calc-res .v.neg,
+html.light .calc-msg.neg b{color:#c0413d}
+html.light .qopt.correct{color:#2f6b12}
+html.light .qopt.wrong{color:#a5322e}
+html.light .badge-ok{background:rgba(99,169,34,.13)}
+
+/* ---- Mapa de color de los SVG en claro (fill) ---- */
+html.light figure.done svg [fill="#15151b"]{fill:#f4f2ec}
+html.light figure.done svg [fill="#1c1c23"],html.light figure.done svg [fill="#1b1b22"]{fill:#eeece5}
+html.light figure.done svg [fill="#3a3a44"]{fill:#b7b3aa}
+html.light figure.done svg [fill="#ece9e1"]{fill:#26251f}
+html.light figure.done svg [fill="#ddd9d0"]{fill:#3a382f}
+html.light figure.done svg [fill="#c9bfb4"]{fill:#55524a}
+html.light figure.done svg [fill="#9b988f"]{fill:#6e6c63}
+html.light figure.done svg [fill="#76746c"]{fill:#74726a}
+html.light figure.done svg [fill="#e5c45a"]{fill:#b0892b}
+html.light figure.done svg [fill="#d4af37"]{fill:#9c7d2e}
+html.light figure.done svg [fill="#c98a2e"]{fill:#a9761f}
+html.light figure.done svg [fill="#ecd98f"]{fill:#bf9f45}
+html.light figure.done svg [fill="#caa84a"]{fill:#a98a30}
+html.light figure.done svg [fill="#1d9e75"]{fill:#17835f}
+html.light figure.done svg [fill="#2a9e6e"]{fill:#1f8a5e}
+html.light figure.done svg [fill="#63a922"]{fill:#4e8c1c}
+html.light figure.done svg [fill="#9fe1cb"]{fill:#2f9d75}
+html.light figure.done svg [fill="#9bd1a6"]{fill:#3f9a54}
+html.light figure.done svg [fill="#bfe0a0"]{fill:#6b9a37}
+html.light figure.done svg [fill="#8fc24a"]{fill:#567f20}
+html.light figure.done svg [fill="#8fd14f"]{fill:#4f9a1f}
+html.light figure.done svg [fill="#04342c"]{fill:#dcf0e8}
+html.light figure.done svg [fill="#e24b4a"]{fill:#d83e3d}
+html.light figure.done svg [fill="#f0a0a0"],html.light figure.done svg [fill="#e8a3a0"]{fill:#cf5a55}
+html.light figure.done svg [fill="#4a1b0c"]{fill:#f3e0d8}
+html.light figure.done svg [fill="#378add"]{fill:#2f72b2}
+html.light figure.done svg [fill="#a9cdf0"],html.light figure.done svg [fill="#9bc6ee"]{fill:#3f7fb8}
+/* ---- Mapa de color de los SVG en claro (stroke) ---- */
+html.light figure.done svg [stroke="#26262f"]{stroke:#e2ded4}
+html.light figure.done svg [stroke="#1c1c23"]{stroke:#e0ddd4}
+html.light figure.done svg [stroke="#33333f"]{stroke:#d6d2c8}
+html.light figure.done svg [stroke="#15151b"]{stroke:#d8d5cc}
+html.light figure.done svg [stroke="#3a3a44"]{stroke:#b7b3aa}
+html.light figure.done svg [stroke="#d4af37"]{stroke:#9c7d2e}
+html.light figure.done svg [stroke="#e5c45a"]{stroke:#b0892b}
+html.light figure.done svg [stroke="#c98a2e"]{stroke:#a9761f}
+html.light figure.done svg [stroke="#1d9e75"]{stroke:#17835f}
+html.light figure.done svg [stroke="#63a922"]{stroke:#4e8c1c}
+html.light figure.done svg [stroke="#8fd14f"]{stroke:#4f9a1f}
+html.light figure.done svg [stroke="#378add"]{stroke:#2f72b2}
+html.light figure.done svg [stroke="#e24b4a"]{stroke:#d83e3d}
+html.light figure.done svg [stroke="#f0a0a0"]{stroke:#cf5a55}
+html.light figure.done svg [stroke="#9b988f"]{stroke:#6e6c63}
+html.light figure.done svg [stroke="#76746c"]{stroke:#74726a}
+html.light figure.done svg [stroke="#ece9e1"]{stroke:#26251f}
+
+/* ---- Interruptor de tema (botón flotante) ---- */
+.theme-toggle{position:fixed;bottom:20px;right:20px;z-index:9999;width:42px;height:42px;border-radius:50%;
+  border:1px solid var(--line-2);background:var(--surface);color:var(--text);font-size:18px;line-height:1;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.22);transition:.15s}
+.theme-toggle:hover{border-color:var(--gold);transform:scale(1.06)}
+html.gate-locked .theme-toggle{display:none}
+
 /* ===== Formulario de feedback (beta) ===== */
 .fbq{margin:0 0 24px}
 .fbq .q{display:block;font-family:var(--sans);font-weight:600;color:var(--text);font-size:15.5px;line-height:1.4;margin-bottom:10px}
