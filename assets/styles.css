@@ -2,7 +2,7 @@
   --bg:#0a0a0c; --bg-2:#101014; --surface:#15151b; --surface-2:#1b1b22;
   --line:#26262f; --line-2:#33333f;
   --gold:#d4af37; --gold-soft:#e5c45a; --gold-dim:#8a7327;
-  --text:#ece9e1; --muted:#9b988f; --muted-2:#76746c;
+  --text:#ece9e1; --muted:#9b988f; --muted-2:#76746c; --body:#ddd9d0;
   --sans:'Inter',system-ui,sans-serif; --serif:'Lora',Georgia,serif; --display:'Fraunces',Georgia,serif;
 }
 *{box-sizing:border-box}
@@ -254,7 +254,7 @@ html.light{
   --bg:#faf9f6; --bg-2:#f1efe9; --surface:#ffffff; --surface-2:#f4f2ec;
   --line:#e6e3da; --line-2:#d8d4ca;
   --gold:#9a7b2c; --gold-soft:#87692a; --gold-dim:#b89a48;
-  --text:#20201c; --muted:#6a685f; --muted-2:#8a887e;
+  --text:#20201c; --muted:#6a685f; --muted-2:#8a887e; --body:#34322b;
   color-scheme:light;
 }
 /* textos de cuerpo que estaban hardcodeados en claro → oscuro */
