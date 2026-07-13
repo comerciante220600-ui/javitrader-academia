@@ -20,6 +20,7 @@
 
   /* ▼▼▼  EDITA AQUÍ TUS 5 TESTERS  ▼▼▼ */
   var TESTERS = [
+    { code: "javi-2026",       name: "Javi (dueño)" },
     { code: "beta-ana-7412",   name: "Ana" },
     { code: "beta-luis-3908",  name: "Luis" },
     { code: "beta-marta-5521", name: "Marta" },
