@@ -44,6 +44,7 @@
     <div class="nav-label">Otros módulos</div>
     <a class="tool-link" href="modulo-1.html">📈 Módulo 1 · Gestión de riesgo</a>
     <a class="tool-link" href="herramientas.html">🧮 Calculadoras del curso</a>
+    <a class="tool-link" href="glosario.html">📖 Glosario</a>
   </aside>
 
   <!-- MAIN -->
@@ -84,7 +85,11 @@
         </ul>
         <p>El matiz importa: un broker puede ejecutar tus órdenes <strong>contra ti</strong> (haciendo de creador de mercado) o <strong>enrutarlas al mercado</strong> por ti. Por eso, más que la etiqueta "broker" o "exchange", lo que de verdad decide es <strong>cómo custodia tu dinero y cómo ejecuta tus órdenes</strong>.</p>
         <p>En la práctica, muchas plataformas mezclan los dos roles, y como principiante no necesitas obsesionarte con la etiqueta. Lo que sí importa es lo mismo en ambos casos: que sea <strong>fiable, regulado y barato</strong>, y que tus fondos estén seguros.</p>
-        <div class="plain"><div class="lab">🟢 Al grano</div><p>Broker = intermediario que opera por ti (acciones, divisas). Exchange = mercado donde se cruzan órdenes (típico en cripto). En los dos, lo que decide es la fiabilidad, no el nombre.</p></div>
+        <div class="plain"><div class="lab">🟢 Al grano</div>
+          <p style="margin-bottom:6px"><strong>Broker</strong> = intermediario que opera por ti (acciones, divisas).</p>
+          <p style="margin-bottom:6px"><strong>Exchange</strong> = mercado donde se cruzan las órdenes de compradores y vendedores (típico en cripto).</p>
+          <p>En los dos, lo que decide es la fiabilidad, no el nombre.</p>
+        </div>
 
         <h2 id="s2">Cómo elegir uno fiable: la regulación es lo primero</h2>
         <p>Antes que las comisiones, antes que la app bonita, antes que cualquier promoción: <strong>¿está regulado?</strong> Una plataforma regulada está vigilada por un organismo que protege al usuario y obliga a separar tu dinero del de la empresa. Sin regulación, no tienes a quién reclamar.</p>
@@ -154,7 +159,8 @@
           <li><strong>Spread</strong>: la diferencia entre el precio de compra y el de venta. Aunque no lo veas como "comisión", lo pagas en cada entrada.</li>
           <li><strong>Retiradas</strong>: sacar tu dinero puede tener coste, sobre todo en cripto (comisión de red) o transferencias.</li>
           <li><strong>Conversión de divisa</strong>: si operas en dólares con una cuenta en euros, cada cambio te cuesta un pequeño porcentaje.</li>
-          <li><strong>Financiación / overnight</strong>: en posiciones apalancadas que dejas abiertas de un día para otro, te cobran un coste por mantenerlas.</li>
+          <li><strong>Financiación / overnight</strong>: en posiciones apalancadas que dejas abiertas de un día para otro, el broker te cobra un coste por mantenerlas (también lo verás llamado <em>swap</em>).</li>
+          <li><strong>Funding rate</strong> (en los perpetuos de cripto): el primo del overnight, con una diferencia clave — <strong>no siempre pagas: a veces cobras</strong>. Es un pago periódico (normalmente cada 8 horas) <strong>entre los propios traders</strong>, no al exchange: cuando la mayoría del mercado está en largo, los largos pagan a los cortos; cuando domina el corto, los cortos pagan a los largos. Su función es mantener el precio del perpetuo pegado al precio real del activo. En operaciones de horas apenas se nota; manteniendo posición varios días, suma.</li>
         </ul>
         <div class="plain"><div class="lab">🟢 Al grano</div><p>"Sin comisiones" casi nunca es gratis: el coste se esconde en el spread, la conversión de divisa o las retiradas. Suma TODOS los costes antes de decidir, no solo la comisión visible.</p></div>
 
@@ -196,9 +202,9 @@
 
         <div class="block-label">Ejercicio práctico</div>
         <ol>
-          <li>Coge una plataforma que te suene y comprueba si aparece registrada en la CNMV (o el organismo de tu país). Anota qué encuentras.</li>
-          <li>Busca su página de comisiones y apunta tres costes distintos (operación, retirada, conversión…). Si no los encuentras claros, eso ya dice algo.</li>
-          <li>Escribe los tres pasos que darías al registrarte para dejar la cuenta segura desde el minuto uno.</li>
+          <li><strong>Comprueba una regulación</strong> (guiado): busca en Google <em>"CNMV buscador de entidades"</em>, entra en el buscador oficial y escribe el nombre de un broker que te suene (el que anuncian por la tele vale). Si aparece, está autorizado en España; si no aparece, acabas de detectar tú solo la bandera roja de esta lección. <em>Nota: los exchanges de cripto van por otro registro distinto — que uno de cripto no salga ahí no significa que sea un fraude.</em></li>
+          <li><strong>Encuentra los costes sin perderte</strong>: en la web de tu exchange busca la sección <em>"Fees"</em> o <em>"Comisiones"</em> (suele estar en el pie de la página; el atajo infalible es buscar en Google <em>"nombre-del-exchange fees"</em>). Apunta solo dos números: la comisión por operación y la de retirada. Si ni con esas los encuentras claros… eso también es una respuesta.</li>
+          <li>Escribe los tres pasos que darías al registrarte para dejar la cuenta segura desde el minuto uno <em>(pista: los tienes todos en la sección de custodia y seguridad de arriba)</em>.</li>
         </ol>
 
         <div class="block-label">Exchanges recomendados por la comunidad</div>
@@ -266,5 +272,6 @@
   </main>
 </div>
 <script src="assets/quiz.js" defer></script>
+<script src="assets/glosario.js" defer></script>
 </body>
 </html>
