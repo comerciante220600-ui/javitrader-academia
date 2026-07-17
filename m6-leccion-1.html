@@ -123,7 +123,7 @@
 
               <text x="84"  y="206" fill="#ddd9d0" font-size="14" font-weight="600">¿Dónde me</text>
               <text x="84"  y="224" fill="#ddd9d0" font-size="14" font-weight="600">equivoco?</text>
-              <text x="84"  y="246" fill="#9b988f" font-size="12">Invalidación / stop</text>
+              <text x="84"  y="246" fill="#9b988f" font-size="12">Invalidación / stop loss</text>
 
               <text x="312" y="206" fill="#ddd9d0" font-size="14" font-weight="600">¿Cómo salgo?</text>
               <text x="312" y="228" fill="#9b988f" font-size="12">Objetivo y</text>
@@ -143,7 +143,7 @@
         <p>"Sistema" no significa robot. Puedes tener un sistema <strong>discrecional</strong> (tú aprietas el gatillo, con criterio) y aun así tener reglas. La diferencia no es robot contra humano: es <strong>regla contra capricho</strong>.</p>
         <ul>
           <li><strong>Discrecionalidad útil:</strong> tus reglas dejan un margen de criterio dentro de límites claros. "Entro si se cumplen estas condiciones <em>y</em> el contexto general acompaña." Sigue siendo medible, porque las condiciones están definidas.</li>
-          <li><strong>Discrecionalidad dañina:</strong> saltarte tus propias reglas porque "esta vez es distinto". Mover el stop para no perder, entrar sin setup por aburrimiento, doblar el riesgo por una corazonada. Eso no es criterio: es el plan rompiéndose.</li>
+          <li><strong>Discrecionalidad dañina:</strong> saltarte tus propias reglas porque "esta vez es distinto". Mover el stop loss para no perder, entrar sin setup por aburrimiento, doblar el riesgo por una corazonada. Eso no es criterio: es el plan rompiéndose.</li>
         </ul>
         <p>La prueba del algodón: si después de una operación no sabrías explicar <strong>qué regla</strong> la justificó, probablemente fue capricho. Un sistema no te quita la cabeza; te quita la improvisación.</p>
         <div class="plain"><div class="lab">🟢 Al grano</div><p>Tener reglas no te convierte en un robot. Puedes usar tu criterio, pero <em>dentro</em> de límites escritos. La línea roja es saltarte tus propias reglas "porque esta vez es distinto": esa frase es la que arruina cuentas.</p></div>
@@ -186,7 +186,7 @@
         {"q": "¿Cuál es el problema de fondo de operar por señales sueltas y corazonadas?", "opts": ["Que requiere demasiado capital para empezar", "Que tarda demasiado", "Que cada operación es un experimento distinto, así que es imposible medir qué funciona", "Que solo vale para cripto"], "correct": 2, "why": "Si entras por motivos distintos cada vez, no tienes datos de un sistema: tienes muchas operaciones inconexas que no se pueden analizar ni mejorar."},
         {"q": "Una de las funciones clave de tener un sistema es…", "opts": ["Eliminar por completo el riesgo", "Adivinar el precio futuro", "Garantizarte una racha de operaciones ganadoras", "Tomar las decisiones difíciles antes, en frío, en vez de en caliente con el dinero en juego"], "correct": 3, "why": "El sistema decide en frío lo que tu cerebro bajo presión (miedo y codicia) decidiría mal. Atar las manos de antemano es parte de su función."},
         {"q": "¿Cuántas preguntas mínimas debe responder todo plan, según la lección?", "opts": ["Seis", "Diez", "Tres", "Una sola: cuándo comprar"], "correct": 0, "why": "Seis: qué operas, en qué marco, cuándo entras, dónde te equivocas (invalidación), cómo sales y cuánto arriesgas."},
-        {"q": "De las seis preguntas del plan, ¿qué parte proviene directamente del Módulo 1?", "opts": ["Solo la de qué activo operar", "La invalidación, la salida y el riesgo por operación (la gestión)", "Ninguna, son todas nuevas", "Solo el marco temporal"], "correct": 1, "why": "La mitad del plan es gestión: dónde te equivocas (stop), cómo sales y cuánto arriesgas (la R). Eso es el Módulo 1 aplicado."},
+        {"q": "De las seis preguntas del plan, ¿qué parte proviene directamente del Módulo 1?", "opts": ["Solo la de qué activo operar", "La invalidación, la salida y el riesgo por operación (la gestión)", "Ninguna, son todas nuevas", "Solo el marco temporal"], "correct": 1, "why": "La mitad del plan es gestión: dónde te equivocas (stop loss), cómo sales y cuánto arriesgas (la R). Eso es el Módulo 1 aplicado."},
         {"q": "¿Cuál es la diferencia real entre discrecionalidad útil y dañina?", "opts": ["Robot contra humano", "Operar de día contra operar de noche", "Usar criterio dentro de límites escritos, frente a saltarse tus reglas 'porque esta vez es distinto'", "Usar gráficos contra no usarlos"], "correct": 2, "why": "Un sistema discrecional sigue teniendo reglas. La línea no es humano vs robot, sino regla vs capricho: el problema es romper tus propios límites."},
         {"q": "Acabas de cerrar una operación y no sabrías explicar qué regla la justificó. ¿Qué indica eso, probablemente?", "opts": ["Que fue una gran operación", "Que deberías arriesgar más la próxima vez", "Que tu sistema es demasiado simple", "Que fue improvisación (capricho), no parte de tu sistema"], "correct": 3, "why": "Si no puedes señalar la regla que la justificó, no fue tu sistema operando: fue improvisación. La prueba del algodón de la disciplina."},
         {"q": "¿Cómo debería ser tu PRIMER plan de trading?", "opts": ["Mínimo viable: una página y un solo setup, que luego refinas con datos", "Un PDF de cincuenta páginas con diez indicadores", "Imposible de cambiar nunca", "Una copia exacta del de otro trader"], "correct": 0, "why": "Vale más un plan simple que sí sigues que uno perfecto que abandonas. Empiezas por un plan mínimo viable y lo refinas con datos, no con corazonadas."},
@@ -199,7 +199,7 @@
         <div class="card">
           <p><strong>Sistema / plan de trading:</strong> conjunto de reglas escritas que define qué operas, cuándo entras, cuándo sales y cuánto arriesgas.</p>
           <p><strong>Setup:</strong> el conjunto de condiciones que tienen que darse para que consideres una entrada (lo viste en el Módulo 3).</p>
-          <p><strong>Invalidación:</strong> el nivel o condición, definido de antemano, que demuestra que tu idea era incorrecta (de ahí sale el stop).</p>
+          <p><strong>Invalidación:</strong> el nivel o condición, definido de antemano, que demuestra que tu idea era incorrecta (de ahí sale el stop loss).</p>
           <p><strong>Discrecional:</strong> sistema en el que tú decides la entrada con criterio, aunque dentro de reglas; lo contrario de automático.</p>
           <p><strong>Plan mínimo viable:</strong> la versión más simple de tu plan —una página, un setup— que ya puedes seguir y medir.</p>
           <p><strong>R (riesgo por operación):</strong> cuánto arriesgas en cada operación, tu unidad de medida del Módulo 1.</p>

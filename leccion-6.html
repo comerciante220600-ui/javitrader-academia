@@ -67,8 +67,8 @@
           <h3>Lo que sabrás hacer al terminar</h3>
           <ol>
             <li>Explicar qué es de verdad el apalancamiento (y qué NO es).</li>
-            <li>Entender por qué no cambia tu riesgo si dimensionas por el stop.</li>
-            <li>Saber qué es el precio de liquidación y por qué tu stop debe llegar antes.</li>
+            <li>Entender por qué no cambia tu riesgo si dimensionas por el stop loss.</li>
+            <li>Saber qué es el precio de liquidación y por qué tu stop loss debe llegar antes.</li>
             <li>Diferenciar margen cruzado (cross) de aislado (isolated) y entender el funding.</li>
           </ol>
         </div>
@@ -83,21 +83,21 @@
 
         <h2 id="s2">El gran malentendido: apalancamiento ≠ más riesgo</h2>
         <p>Aquí está la idea que separa a quien sobrevive de quien revienta. Mucha gente piensa: "si pongo 10x, arriesgo 10 veces más". <strong>Falso.</strong></p>
-        <p>Recuerda la fórmula de la Lección 2: tu riesgo lo definen el <strong>tamaño de la posición</strong> y la <strong>distancia al stop</strong>. El apalancamiento no aparece en esa fórmula. Si arriesgas el 1% con tu stop bien puesto, arriesgas el 1% <strong>tanto con 1x como con 20x</strong>. Lo único que cambia es el margen que inmovilizas.</p>
-        <div class="formula">Cuenta 1.000 $ · riesgo 1% (10 $) · entrada 100 $ · stop 95 $ (distancia 5 $)
+        <p>Recuerda la fórmula de la Lección 2: tu riesgo lo definen el <strong>tamaño de la posición</strong> y la <strong>distancia al stop loss</strong>. El apalancamiento no aparece en esa fórmula. Si arriesgas el 1% con tu stop loss bien puesto, arriesgas el 1% <strong>tanto con 1x como con 20x</strong>. Lo único que cambia es el margen que inmovilizas.</p>
+        <div class="formula">Cuenta 1.000 $ · riesgo 1% (10 $) · entrada 100 $ · stop loss 95 $ (distancia 5 $)
 Tamaño = 10 $ ÷ 5 $ = <b>2 unidades</b> → posición de 200 $
 Con <b>1x</b>: margen 200 $   ·   Con <b>10x</b>: margen 20 $
-Si toca el stop pierdes <b>10 $</b> en los dos casos. Mismo riesgo.</div>
+Si toca el stop loss pierdes <b>10 $</b> en los dos casos. Mismo riesgo.</div>
         <div class="plain"><div class="lab">🟢 Al grano</div><p>Subir el apalancamiento NO sube tu riesgo. Lo que sube tu riesgo es comprar más cantidad. La gente revienta porque el apalancamiento les <em>tienta</em> a comprar más, no porque el apalancamiento en sí sea peligroso.</p></div>
-        <div class="callout warn"><div class="ic">⚠️</div><div><b>El error mortal:</b> "Tengo 20x, así que meto 20 veces más tamaño". Eso no es usar apalancamiento: es saltarse el position sizing. Tu tamaño lo sigue mandando el stop y tu 1%, no el apalancamiento disponible.</div></div>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>El error mortal:</b> "Tengo 20x, así que meto 20 veces más tamaño". Eso no es usar apalancamiento: es saltarse el position sizing. Tu tamaño lo sigue mandando el stop loss y tu 1%, no el apalancamiento disponible.</div></div>
 
-        <h2 id="s3">El precio de liquidación (y por qué tu stop debe llegar antes)</h2>
+        <h2 id="s3">El precio de liquidación (y por qué tu stop loss debe llegar antes)</h2>
         <p>Cuando operas con apalancamiento aparece un nuevo punto en el gráfico: el <strong>precio de liquidación</strong>. Es el precio al que tu margen se agota y el exchange <strong>cierra tu posición a la fuerza</strong>: el margen de esa operación se da por perdido.</p>
-        <p>La regla de oro: <strong>tu stop loss debe estar siempre antes que tu liquidación.</strong> Si tu stop salta primero, sales con tu pérdida planificada del 1% y la liquidación nunca ocurre. Si dimensionas bien (por el stop), esto pasa solo: la liquidación queda muy lejos. La liquidación solo se acerca cuando <strong>sobredimensionas</strong>.</p>
-        <div class="callout warn"><div class="ic">⚠️</div><div><b>Un matiz honesto:</b> con un hueco de precio (gap) o poca liquidez, tu stop puede ejecutarse algo peor que 95 $ y perder un poco más del 1%. Eso no lo causa el apalancamiento — pero si vas muy apalancado tu liquidación está más cerca, y un hueco fuerte podría saltártela <em>antes</em> que el stop. Una razón más para no sobredimensionar.</div></div>
+        <p>La regla de oro: <strong>tu stop loss debe estar siempre antes que tu liquidación.</strong> Si tu stop loss salta primero, sales con tu pérdida planificada del 1% y la liquidación nunca ocurre. Si dimensionas bien (por el stop loss), esto pasa solo: la liquidación queda muy lejos. La liquidación solo se acerca cuando <strong>sobredimensionas</strong>.</p>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>Un matiz honesto:</b> con un hueco de precio (gap) o poca liquidez, tu stop loss puede ejecutarse algo peor que 95 $ y perder un poco más del 1%. Eso no lo causa el apalancamiento — pero si vas muy apalancado tu liquidación está más cerca, y un hueco fuerte podría saltártela <em>antes</em> que el stop loss. Una razón más para no sobredimensionar.</div></div>
 
         <figure class="done">
-          <svg viewBox="0 0 720 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="El stop salta mucho antes que la liquidación">
+          <svg viewBox="0 0 720 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="El stop loss salta mucho antes que la liquidación">
             <g font-family="Inter,system-ui,sans-serif">
               <rect x="180" y="118" width="340" height="24" fill="#63a922" opacity="0.10"/>
               <line x1="70" y1="130" x2="690" y2="130" stroke="#33333f" stroke-width="1.5"/>
@@ -108,16 +108,16 @@ Si toca el stop pierdes <b>10 $</b> en los dos casos. Mismo riesgo.</div>
               <text x="620" y="188" fill="#76746c" font-size="11" text-anchor="middle">100 $</text>
               <line x1="520" y1="114" x2="520" y2="146" stroke="#8fd14f" stroke-width="2.5"/>
               <circle cx="520" cy="130" r="5" fill="#8fd14f"/>
-              <text x="520" y="172" fill="#8fd14f" font-size="12.5" font-weight="500" text-anchor="middle">Tu stop (−1% cta)</text>
+              <text x="520" y="172" fill="#8fd14f" font-size="12.5" font-weight="500" text-anchor="middle">Tu stop loss (−1% cta)</text>
               <text x="520" y="188" fill="#76746c" font-size="11" text-anchor="middle">sales aquí</text>
               <line x1="180" y1="114" x2="180" y2="146" stroke="#e24b4a" stroke-width="2.5"/>
               <circle cx="180" cy="130" r="5" fill="#e24b4a"/>
               <text x="180" y="172" fill="#f0a0a0" font-size="12.5" font-weight="500" text-anchor="middle">Liquidación</text>
               <text x="180" y="188" fill="#76746c" font-size="11" text-anchor="middle">(con 10x)</text>
-              <text x="350" y="225" fill="#9b988f" font-size="12.5" text-anchor="middle">Bien dimensionado, tu stop salta mucho antes — la liquidación nunca llega</text>
+              <text x="350" y="225" fill="#9b988f" font-size="12.5" text-anchor="middle">Bien dimensionado, tu stop loss salta mucho antes — la liquidación nunca llega</text>
             </g>
           </svg>
-          <figcaption>Con buen position sizing, tu stop (pérdida pequeña) está muy por delante de la liquidación.</figcaption>
+          <figcaption>Con buen position sizing, tu stop loss (pérdida pequeña) está muy por delante de la liquidación.</figcaption>
         </figure>
 
         <p>Compruébalo con tu propio caso: verás que tu riesgo en dólares es el mismo subas o bajes el apalancamiento, y a qué distancia te queda la liquidación.</p>
@@ -140,14 +140,14 @@ Si toca el stop pierdes <b>10 $</b> en los dos casos. Mismo riesgo.</div>
           <li><strong>"Más apalancamiento = más ganancias."</strong> No. Más apalancamiento = menos margen inmovilizado. Tus resultados los define el tamaño y el movimiento del precio.</li>
           <li><strong>"El apalancamiento es para agresivos."</strong> Al contrario: bien usado es eficiencia de capital. Lo agresivo es sobredimensionar, con o sin apalancamiento.</li>
           <li><strong>"Cruzo el margen para que no me liquide."</strong> El cross retrasa la liquidación, pero cuando llega se puede llevar toda la cuenta.</li>
-          <li><strong>"Con stop no miro la liquidación."</strong> Si dimensionas bien, tu stop llega antes. Pero si vas muy apalancado y sobredimensionado, la liquidación puede adelantarse: compruébalo.</li>
+          <li><strong>"Con stop loss no miro la liquidación."</strong> Si dimensionas bien, tu stop loss llega antes. Pero si vas muy apalancado y sobredimensionado, la liquidación puede adelantarse: compruébalo.</li>
         </ul>
 
         <div class="block-label">Resumen</div>
         <ul>
           <li>El apalancamiento te deja <strong>controlar más posición con menos margen</strong>. Es eficiencia, no un multiplicador de acierto.</li>
-          <li><strong>No cambia tu riesgo por operación</strong> si dimensionas por el stop: arriesgas tu 1% igual con 1x que con 20x.</li>
-          <li>Tu <strong>stop debe llegar siempre antes</strong> que la liquidación. Con buen sizing, pasa solo.</li>
+          <li><strong>No cambia tu riesgo por operación</strong> si dimensionas por el stop loss: arriesgas tu 1% igual con 1x que con 20x.</li>
+          <li>Tu <strong>stop loss debe llegar siempre antes</strong> que la liquidación. Con buen sizing, pasa solo.</li>
           <li>Usa <strong>margen aislado (isolated)</strong> y ten en cuenta el <strong>funding</strong> en operaciones largas.</li>
         </ul>
 
@@ -157,11 +157,11 @@ Si toca el stop pierdes <b>10 $</b> en los dos casos. Mismo riesgo.</div>
         [
         {"q": "¿Qué es realmente el apalancamiento?", "opts": ["Una herramienta de eficiencia de capital: controlar más posición inmovilizando menos margen", "Dinero gratis que te presta el exchange para ganar más", "Un multiplicador que aumenta tu porcentaje de acierto", "Una garantía contra las pérdidas"], "correct": 0, "why": "El apalancamiento solo cambia cuánto capital inmovilizas como margen; no da dinero gratis ni mejora tu acierto."},
         {"q": "En la analogía de la hipoteca, ¿qué representa el apalancamiento?", "opts": ["El interés que pagas cada mes", "El precio al que vendes la casa", "Poner 20.000 $ de entrada para controlar una casa de 200.000 $", "El seguro del hogar"], "correct": 2, "why": "Como en una hipoteca, pones solo una parte (la entrada/margen) y controlas un activo mucho mayor; la casa sube o baja igual."},
-        {"q": "Cuenta de 1.000 $, riesgo del 1 %, stop bien colocado. ¿Cuánto pierdes si salta el stop con 1x frente a 10x?", "opts": ["10 $ con 1x y 100 $ con 10x", "10 $ en ambos casos", "1 $ con 1x y 10 $ con 10x", "100 $ en ambos casos"], "correct": 1, "why": "El riesgo lo definen el tamaño y la distancia al stop, no el apalancamiento: pierdes 10 $ (el 1 %) en los dos casos."},
-        {"q": "Cuenta 1.000 $, riesgo 1 % (10 $), entrada 100 $, stop 95 $. ¿Qué tamaño de posición te corresponde?", "opts": ["10 unidades (1.000 $)", "5 unidades (500 $)", "20 unidades (2.000 $)", "2 unidades (200 $)"], "correct": 3, "why": "Tamaño = riesgo ÷ distancia al stop = 10 $ ÷ 5 $ = 2 unidades, es decir una posición de 200 $."},
-        {"q": "¿Qué variables determinan tu riesgo por operación?", "opts": ["El tamaño de la posición y la distancia al stop", "El apalancamiento y el funding", "El exchange y el tipo de margen", "El apalancamiento y el margen"], "correct": 0, "why": "El apalancamiento no aparece en la fórmula del riesgo: solo mandan el tamaño de la posición y la distancia al stop."},
+        {"q": "Cuenta de 1.000 $, riesgo del 1 %, stop loss bien colocado. ¿Cuánto pierdes si salta el stop loss con 1x frente a 10x?", "opts": ["10 $ con 1x y 100 $ con 10x", "10 $ en ambos casos", "1 $ con 1x y 10 $ con 10x", "100 $ en ambos casos"], "correct": 1, "why": "El riesgo lo definen el tamaño y la distancia al stop loss, no el apalancamiento: pierdes 10 $ (el 1 %) en los dos casos."},
+        {"q": "Cuenta 1.000 $, riesgo 1 % (10 $), entrada 100 $, stop loss 95 $. ¿Qué tamaño de posición te corresponde?", "opts": ["10 unidades (1.000 $)", "5 unidades (500 $)", "20 unidades (2.000 $)", "2 unidades (200 $)"], "correct": 3, "why": "Tamaño = riesgo ÷ distancia al stop loss = 10 $ ÷ 5 $ = 2 unidades, es decir una posición de 200 $."},
+        {"q": "¿Qué variables determinan tu riesgo por operación?", "opts": ["El tamaño de la posición y la distancia al stop loss", "El apalancamiento y el funding", "El exchange y el tipo de margen", "El apalancamiento y el margen"], "correct": 0, "why": "El apalancamiento no aparece en la fórmula del riesgo: solo mandan el tamaño de la posición y la distancia al stop loss."},
         {"q": "¿Cuál es el verdadero peligro que lleva a la gente a reventar la cuenta?", "opts": ["Usar apalancamiento alto", "Usar margen aislado", "Sobredimensionar: meter más tamaño porque el apalancamiento lo permite", "Operar sin apalancamiento"], "correct": 2, "why": "El apalancamiento en sí no es peligroso; el problema es que tienta a comprar más cantidad y saltarse el position sizing."},
-        {"q": "¿Qué relación deben tener tu stop loss y el precio de liquidación?", "opts": ["La liquidación debe llegar antes que el stop", "Tu stop debe llegar siempre antes que la liquidación", "Deben coincidir en el mismo precio", "El stop es irrelevante si usas apalancamiento"], "correct": 1, "why": "Si tu stop salta primero sales con tu pérdida planificada del 1 % y la liquidación nunca ocurre."},
+        {"q": "¿Qué relación deben tener tu stop loss y el precio de liquidación?", "opts": ["La liquidación debe llegar antes que el stop loss", "Tu stop loss debe llegar siempre antes que la liquidación", "Deben coincidir en el mismo precio", "El stop loss es irrelevante si usas apalancamiento"], "correct": 1, "why": "Si tu stop loss salta primero sales con tu pérdida planificada del 1 % y la liquidación nunca ocurre."},
         {"q": "¿Qué es el precio de liquidación?", "opts": ["El precio al que colocas tu take profit", "El precio medio de tus entradas", "El precio mínimo para abrir con apalancamiento", "El precio al que tu margen se agota y el exchange cierra tu posición a la fuerza"], "correct": 3, "why": "Al llegar la liquidación pierdes todo el margen de esa operación porque el exchange la cierra forzosamente."},
         {"q": "¿Por qué se recomienda el margen aislado (isolated) frente al cruzado (cross)?", "opts": ["Porque aguanta más antes de liquidar", "Porque elimina por completo el riesgo de liquidación", "Porque acota la pérdida a esa operación, mientras el cross arriesga toda la cuenta", "Porque reduce las comisiones de funding"], "correct": 2, "why": "El isolated solo pone en juego el margen de esa operación; el cross respalda la posición con todo el saldo y una liquidación puede llevárselo entero."},
         {"q": "¿Qué es el funding en los contratos perpetuos?", "opts": ["Un pago periódico entre largos y cortos para mantener el perpetuo pegado al precio real", "Una comisión fija que cobra el exchange al abrir", "El interés del apalancamiento que se paga al cerrar", "Un interés diario fijo que cobra el exchange por el dinero prestado"], "correct": 0, "why": "El funding es un pequeño pago periódico entre largos y cortos; a veces lo cobras y a veces lo pagas, y en operaciones largas resta a tu esperanza matemática."}

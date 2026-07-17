@@ -67,8 +67,8 @@
           <h3>Lo que sabrás hacer al terminar</h3>
           <ol>
             <li>Colocar un stop loss según la estructura del mercado, no según tu miedo.</li>
-            <li>Entender por qué el stop define el tamaño de la posición (y no al revés).</li>
-            <li>Evitar los dos errores opuestos: el stop demasiado pegado y el demasiado lejano.</li>
+            <li>Entender por qué el stop loss define el tamaño de la posición (y no al revés).</li>
+            <li>Evitar los dos errores opuestos: el stop loss demasiado pegado y el demasiado lejano.</li>
             <li>Planificar tus objetivos (take profit) en múltiplos de R.</li>
           </ol>
         </div>
@@ -79,27 +79,27 @@
 
         <h2 id="s1">Qué es un stop loss (y por qué es innegociable)</h2>
         <p>Un <strong>stop loss</strong> es una orden que cierra tu operación automáticamente si el precio llega a un nivel que demuestra que tu idea era incorrecta. Es tu paracaídas. Su función no es "limitar lo que pierdes porque sí", es <strong>sacarte de una operación que ya no tiene sentido</strong>, sin que tu emoción tenga voz ni voto en ese momento.</p>
-        <p>¿Por qué innegociable? Porque sin stop, una operación perdedora puede crecer sin límite. Y ya viste en la Lección 1 la matemática de las pérdidas grandes: una pérdida del 50 % necesita un +100 % para recuperarse. Operar sin stop es exponerte, antes o después, a la pérdida que te saca del juego. <strong>No existe la gestión de riesgo sin stop.</strong></p>
+        <p>¿Por qué innegociable? Porque sin stop loss, una operación perdedora puede crecer sin límite. Y ya viste en la Lección 1 la matemática de las pérdidas grandes: una pérdida del 50 % necesita un +100 % para recuperarse. Operar sin stop loss es exponerte, antes o después, a la pérdida que te saca del juego. <strong>No existe la gestión de riesgo sin stop loss.</strong></p>
 
-        <h2 id="s2">El principio clave: el stop va donde tu idea se rompe</h2>
-        <p>Aquí está el error mental que comete casi todo el mundo, y que ya adelantamos en la Lección 2. La gente piensa: <em class="gold">"Quiero arriesgar poco, así que pongo el stop muy cerca."</em></p>
-        <div class="plain"><div class="lab">🟢 Al grano</div><p>El stop va donde tu idea deja de tener sentido, no donde te duele menos perder. Primero decides ese punto; luego ajustas cuánto compras para que ahí solo pierdas tu 1%.</p></div>
-        <p>Eso es poner el stop según tu deseo de perder poco. El mercado no sabe ni le importa cuánto quieres perder tú. El stop correcto se decide al revés: <strong>¿en qué nivel de precio mi análisis queda invalidado? Ahí va el stop. Y <em>luego</em> calculo el tamaño para que ese stop solo me cueste el 1 %.</strong></p>
+        <h2 id="s2">El principio clave: el stop loss va donde tu idea se rompe</h2>
+        <p>Aquí está el error mental que comete casi todo el mundo, y que ya adelantamos en la Lección 2. La gente piensa: <em class="gold">"Quiero arriesgar poco, así que pongo el stop loss muy cerca."</em></p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>El stop loss va donde tu idea deja de tener sentido, no donde te duele menos perder. Primero decides ese punto; luego ajustas cuánto compras para que ahí solo pierdas tu 1%.</p></div>
+        <p>Eso es poner el stop loss según tu deseo de perder poco. El mercado no sabe ni le importa cuánto quieres perder tú. El stop loss correcto se decide al revés: <strong>¿en qué nivel de precio mi análisis queda invalidado? Ahí va el stop loss. Y <em>luego</em> calculo el tamaño para que ese stop loss solo me cueste el 1 %.</strong></p>
         <p>Esto conecta las tres lecciones en un solo flujo:</p>
-        <div class="formula">1. Análisis      → ¿dónde se demuestra que me equivoqué? = nivel del stop
-2. Distancia     → entrada − stop
+        <div class="formula">1. Análisis      → ¿dónde se demuestra que me equivoqué? = nivel del stop loss
+2. Distancia     → entrada − stop loss
 3. Position sizing → ajusto la cantidad para que esa distancia valga solo mi 1 %</div>
-        <p>El stop primero, el tamaño después. Siempre en ese orden.</p>
-        <div class="callout idea"><div class="ic">💡</div><div><b>La frase que lo resume:</b> "No ajustes el stop al tamaño que quieres comprar; ajusta el tamaño al stop que el mercado exige."</div></div>
+        <p>El stop loss primero, el tamaño después. Siempre en ese orden.</p>
+        <div class="callout idea"><div class="ic">💡</div><div><b>La frase que lo resume:</b> "No ajustes el stop loss al tamaño que quieres comprar; ajusta el tamaño al stop loss que el mercado exige."</div></div>
 
-        <h2 id="s3">Dónde colocar el stop: métodos con criterio</h2>
+        <h2 id="s3">Dónde colocar el stop loss: métodos con criterio</h2>
         <p>Hay varias formas válidas de definir "dónde se rompe mi idea". Las verás en detalle en los módulos de análisis (Módulos 2 y 3), pero aquí van las tres más usadas:</p>
-        <p><strong>1. Stop estructural (el más común).</strong> Colocas el stop al otro lado de un nivel que, si se rompe, cambia la historia: por debajo de un soporte si estás comprado, por encima de una resistencia si estás vendido, o más allá del último mínimo/máximo relevante. La lógica: si el precio rompe ese nivel, la razón por la que entraste ya no se sostiene.</p>
-        <p><strong>2. Stop por volatilidad (ATR).</strong> Colocas el stop a una distancia proporcional a cuánto se mueve normalmente ese activo (se mide con un indicador llamado ATR). La idea: dar al precio el "espacio para respirar" que necesita, para que el ruido normal no te eche. Un activo muy volátil necesita un stop más amplio que uno tranquilo. Por ejemplo, si un activo se mueve de media unos 2 $ por vela (su ATR en ese marco temporal), un stop a 1 $ saltará casi seguro por puro ruido; uno a 2-3 $ le da margen.</p>
-        <p><strong>3. Stop por porcentaje (el más básico).</strong> Un % fijo desde la entrada (p. ej. 5 %). Es simple pero <strong>ignora la estructura del mercado</strong>, así que es el menos recomendable como método principal. Útil solo como límite de seguridad de respaldo.</p>
+        <p><strong>1. Stop loss estructural (el más común).</strong> Colocas el stop loss al otro lado de un nivel que, si se rompe, cambia la historia: por debajo de un soporte si estás comprado, por encima de una resistencia si estás vendido, o más allá del último mínimo/máximo relevante. La lógica: si el precio rompe ese nivel, la razón por la que entraste ya no se sostiene.</p>
+        <p><strong>2. Stop loss por volatilidad (ATR).</strong> Colocas el stop loss a una distancia proporcional a cuánto se mueve normalmente ese activo (se mide con un indicador llamado ATR). La idea: dar al precio el "espacio para respirar" que necesita, para que el ruido normal no te eche. Un activo muy volátil necesita un stop loss más amplio que uno tranquilo. Por ejemplo, si un activo se mueve de media unos 2 $ por vela (su ATR en ese marco temporal), un stop loss a 1 $ saltará casi seguro por puro ruido; uno a 2-3 $ le da margen.</p>
+        <p><strong>3. Stop loss por porcentaje (el más básico).</strong> Un % fijo desde la entrada (p. ej. 5 %). Es simple pero <strong>ignora la estructura del mercado</strong>, así que es el menos recomendable como método principal. Útil solo como límite de seguridad de respaldo.</p>
 
         <figure class="done">
-          <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Un gráfico de precio con soporte y los tres tipos de stop: estructural, por ATR y por porcentaje">
+          <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Un gráfico de precio con soporte y los tres tipos de stop loss: estructural, por ATR y por porcentaje">
             <g font-family="Inter,system-ui,sans-serif">
               <!-- ejes -->
               <line stroke="#26262f" stroke-width="1" x1="70" y1="40" x2="70" y2="318"/>
@@ -114,10 +114,10 @@
               <line stroke="#9b988f" stroke-width="1.5" x1="70" y1="232" x2="620" y2="232"/>
               <text x="78" y="226" fill="#9b988f" font-size="11.5">soporte</text>
 
-              <!-- stop estructural: justo bajo el soporte -->
+              <!-- stop loss estructural: justo bajo el soporte -->
               <line stroke="#d4af37" stroke-width="2" x1="70" y1="246" x2="620" y2="246"/>
 
-              <!-- stop por % : plano, ignora estructura -->
+              <!-- stop loss por % : plano, ignora estructura -->
               <line stroke="#e24b4a" stroke-width="2" stroke-dasharray="6 4" x1="70" y1="200" x2="620" y2="200"/>
 
               <!-- línea de precio: cae al soporte, lo respeta y rebota -->
@@ -131,10 +131,10 @@
               <circle cx="180" cy="100" r="4" fill="#ece9e1"/>
               <text x="180" y="92" fill="#ece9e1" font-size="11.5" text-anchor="middle">entrada</text>
 
-              <!-- etiquetas de stops a la derecha -->
-              <text x="624" y="204" fill="#f0a0a0" font-size="11.5">stop % (fijo)</text>
-              <text x="624" y="250" fill="#e5c45a" font-size="11.5">stop estructural</text>
-              <text x="624" y="276" fill="#c98a2e" font-size="11.5">stop ATR</text>
+              <!-- etiquetas de stop loss a la derecha -->
+              <text x="624" y="204" fill="#f0a0a0" font-size="11.5">stop loss % (fijo)</text>
+              <text x="624" y="250" fill="#e5c45a" font-size="11.5">stop loss estructural</text>
+              <text x="624" y="276" fill="#c98a2e" font-size="11.5">stop loss ATR</text>
 
               <!-- leyenda -->
               <line x1="120" y1="372" x2="148" y2="372" stroke="#d4af37" stroke-width="2.5"/>
@@ -145,25 +145,25 @@
               <text x="486" y="377" fill="#9b988f" font-size="12">% fijo · ignora el mercado</text>
             </g>
           </svg>
-          <figcaption>El stop estructural se apoya en el mercado; el de % lo ignora.</figcaption>
+          <figcaption>El stop loss estructural se apoya en el mercado; el de % lo ignora.</figcaption>
         </figure>
 
         <h2 id="s4">Los dos errores opuestos (y cómo evitarlos)</h2>
-        <p>Colocar stops es un equilibrio. Te puedes pasar por los dos lados.</p>
-        <p><strong>Stop demasiado pegado.</strong> Si lo pones muy cerca de la entrada, el ruido normal del precio —esas oscilaciones pequeñas que no significan nada— te echa de la operación una y otra vez. Acabas con muchas pérdidas pequeñas "sin razón" y la sensación de que <em class="gold">"el mercado va a por mi stop"</em>. No va a por ti: tu stop estaba dentro del ruido.</p>
-        <p><strong>Stop demasiado lejano.</strong> Si lo pones muy lejos "para que no me salte", tu distancia al stop es enorme. Por la fórmula de la Lección 2, eso te obliga a comprar una cantidad ridículamente pequeña para mantener el 1 %… o, peor, a saltarte la regla y arriesgar de más. El stop lejano mal gestionado es la puerta de entrada a las pérdidas grandes.</p>
-        <p><strong>El punto medio:</strong> el stop va justo al otro lado del nivel que invalida tu idea, con un pequeño margen para el ruido. Ni dentro del ruido, ni a kilómetros.</p>
+        <p>Colocar stop loss es un equilibrio. Te puedes pasar por los dos lados.</p>
+        <p><strong>Stop loss demasiado pegado.</strong> Si lo pones muy cerca de la entrada, el ruido normal del precio —esas oscilaciones pequeñas que no significan nada— te echa de la operación una y otra vez. Acabas con muchas pérdidas pequeñas "sin razón" y la sensación de que <em class="gold">"el mercado va a por mi stop loss"</em>. No va a por ti: tu stop loss estaba dentro del ruido.</p>
+        <p><strong>Stop loss demasiado lejano.</strong> Si lo pones muy lejos "para que no me salte", tu distancia al stop loss es enorme. Por la fórmula de la Lección 2, eso te obliga a comprar una cantidad ridículamente pequeña para mantener el 1 %… o, peor, a saltarte la regla y arriesgar de más. El stop loss lejano mal gestionado es la puerta de entrada a las pérdidas grandes.</p>
+        <p><strong>El punto medio:</strong> el stop loss va justo al otro lado del nivel que invalida tu idea, con un pequeño margen para el ruido. Ni dentro del ruido, ni a kilómetros.</p>
 
         <figure class="done">
-          <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tres mini paneles: stop demasiado pegado, demasiado lejano y correcto">
+          <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tres mini paneles: stop loss demasiado pegado, demasiado lejano y correcto">
             <g font-family="Inter,system-ui,sans-serif">
               <!-- ===== PANEL 1: demasiado pegado ===== -->
               <rect x="30" y="50" width="200" height="230" fill="#15151b" stroke="#26262f" stroke-width="1" rx="6"/>
               <text x="130" y="40" fill="#e24b4a" font-size="13" font-weight="500" text-anchor="middle">Demasiado pegado</text>
-              <!-- stop muy cerca de la entrada -->
+              <!-- stop loss muy cerca de la entrada -->
               <line stroke="#e24b4a" stroke-width="1.8" stroke-dasharray="5 4" x1="45" y1="135" x2="215" y2="135"/>
-              <text x="50" y="128" fill="#f0a0a0" font-size="10.5">stop</text>
-              <!-- precio: dientecillo que toca el stop y luego sube -->
+              <text x="50" y="128" fill="#f0a0a0" font-size="10.5">stop loss</text>
+              <!-- precio: dientecillo que toca el stop loss y luego sube -->
               <polyline fill="none" stroke="#ece9e1" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
                 points="50,118 80,128 105,140 120,90 150,75 185,60 210,72"/>
               <!-- punto donde salta -->
@@ -173,10 +173,10 @@
               <!-- ===== PANEL 2: demasiado lejano ===== -->
               <rect x="260" y="50" width="200" height="230" fill="#15151b" stroke="#26262f" stroke-width="1" rx="6"/>
               <text x="360" y="40" fill="#c98a2e" font-size="13" font-weight="500" text-anchor="middle">Demasiado lejano</text>
-              <!-- entrada arriba, stop muy abajo -->
+              <!-- entrada arriba, stop loss muy abajo -->
               <line stroke="#e24b4a" stroke-width="1.8" stroke-dasharray="5 4" x1="275" y1="250" x2="445" y2="250"/>
-              <text x="280" y="243" fill="#f0a0a0" font-size="10.5">stop</text>
-              <!-- precio que se desploma hasta el stop -->
+              <text x="280" y="243" fill="#f0a0a0" font-size="10.5">stop loss</text>
+              <!-- precio que se desploma hasta el stop loss -->
               <polyline fill="none" stroke="#ece9e1" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
                 points="280,90 310,110 340,105 375,160 405,210 435,250"/>
               <circle cx="435" cy="250" r="3.5" fill="#e24b4a"/>
@@ -190,9 +190,9 @@
               <!-- soporte -->
               <line stroke="#9b988f" stroke-width="1.4" x1="505" y1="205" x2="675" y2="205"/>
               <text x="510" y="199" fill="#9b988f" font-size="10.5">soporte</text>
-              <!-- stop justo debajo, con margen -->
+              <!-- stop loss justo debajo, con margen -->
               <line stroke="#d4af37" stroke-width="1.8" x1="505" y1="220" x2="675" y2="220"/>
-              <text x="510" y="234" fill="#e5c45a" font-size="10.5">stop</text>
+              <text x="510" y="234" fill="#e5c45a" font-size="10.5">stop loss</text>
               <!-- precio que toca el soporte, aguanta el ruido y sube -->
               <polyline fill="none" stroke="#ece9e1" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
                 points="505,110 535,150 560,200 585,180 610,205 640,150 670,95"/>
@@ -205,59 +205,59 @@
         </figure>
 
         <h2 id="s5">Take profit: planificar la salida ganadora</h2>
-        <p>El stop define tu pérdida; el <strong>take profit</strong> define dónde piensas recoger ganancias. Y aquí volvemos a la <strong>R</strong> de la Lección 2, porque la mejor forma de pensar los objetivos es en múltiplos de lo que arriesgas:</p>
+        <p>El stop loss define tu pérdida; el <strong>take profit</strong> define dónde piensas recoger ganancias. Y aquí volvemos a la <strong>R</strong> de la Lección 2, porque la mejor forma de pensar los objetivos es en múltiplos de lo que arriesgas:</p>
         <div class="tbl">
           <table class="data">
             <thead><tr><th>Relación</th><th>Significado</th></tr></thead>
             <tbody>
-              <tr><td>1R</td><td>Lo que arriesgas en la operación (tu pérdida si salta el stop).</td></tr>
+              <tr><td>1R</td><td>Lo que arriesgas en la operación (tu pérdida si salta el stop loss).</td></tr>
               <tr class="hl"><td>2:1 (2R)</td><td>Se lee beneficio:riesgo — ganas 2 por cada 1 que arriesgas. Tu objetivo está al doble de distancia: ganas el doble de lo que arriesgas (no el doble de tu capital) si sale bien.</td></tr>
               <tr><td>3:1 (3R)</td><td>Ganas el triple de lo que arriesgas. La base de la Lección 5.</td></tr>
             </tbody>
           </table>
         </div>
         <p>Tres formas habituales de gestionar la salida:</p>
-        <p><strong>1. Objetivo fijo:</strong> defines un nivel de precio (p. ej. la siguiente resistencia) y sales ahí. Simple y disciplinado. <strong>2. Salidas parciales:</strong> cierras una parte en 2R y dejas correr el resto; aseguras algo y das opción a una operación grande. <strong>3. Trailing stop:</strong> vas subiendo el stop a favor de la operación a medida que el precio avanza, para proteger ganancias y dejar correr la tendencia (por ejemplo: compras a 100 con stop en 96; si el precio sube a 108, mueves el stop a 104 y ya aseguras ganancia).</p>
-        <div class="callout warn"><div class="ic">⚠️</div><div><b>Regla de oro de los stops:</b> el stop se mueve a favor de la operación (para proteger), <strong>nunca</strong> en contra. Mover el stop "para darle un poco más de margen" cuando va perdiendo es la forma educada de quedarte sin stop. Si lo tocaste, fuera. Sin negociar contigo mismo.</div></div>
+        <p><strong>1. Objetivo fijo:</strong> defines un nivel de precio (p. ej. la siguiente resistencia) y sales ahí. Simple y disciplinado. <strong>2. Salidas parciales:</strong> cierras una parte en 2R y dejas correr el resto; aseguras algo y das opción a una operación grande. <strong>3. Trailing stop loss:</strong> vas subiendo el stop loss a favor de la operación a medida que el precio avanza, para proteger ganancias y dejar correr la tendencia (por ejemplo: compras a 100 con stop loss en 96; si el precio sube a 108, mueves el stop loss a 104 y ya aseguras ganancia).</p>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>Regla de oro de los stop loss:</b> el stop loss se mueve a favor de la operación (para proteger), <strong>nunca</strong> en contra. Mover el stop loss "para darle un poco más de margen" cuando va perdiendo es la forma educada de quedarte sin stop loss. Si lo tocaste, fuera. Sin negociar contigo mismo.</div></div>
 
         <div class="block-label">Errores comunes</div>
         <ul>
-          <li><strong>"El broker me caza el stop a propósito."</strong> Casi siempre el problema es un stop colocado dentro del ruido normal del activo, no una conspiración. Solución: stops estructurales con margen, no pegados.</li>
-          <li><strong>"Stop mental, lo cierro yo a mano cuando llegue."</strong> En el momento de la verdad, la emoción te hará buscar excusas para no cerrar. El stop como orden real en el mercado te quita esa decisión de las manos, que es justo lo que necesitas.</li>
-          <li><strong>"Muevo el stop para no perder, total ya remontará."</strong> Esto convierte una pérdida planificada de 1R en una pérdida indefinida. Es el error que más cuentas destruye. El stop no se toca en contra. Nunca.</li>
-          <li><strong>"Sin stop gano más, porque a veces el precio vuelve."</strong> A veces sí. Y un día no vuelve, y esa única vez te borra meses de ganancias. La asimetría de la Lección 1 explica por qué este "a veces" es una trampa mortal.</li>
+          <li><strong>"El broker me caza el stop loss a propósito."</strong> Casi siempre el problema es un stop loss colocado dentro del ruido normal del activo, no una conspiración. Solución: stop loss estructurales con margen, no pegados.</li>
+          <li><strong>"Stop loss mental, lo cierro yo a mano cuando llegue."</strong> En el momento de la verdad, la emoción te hará buscar excusas para no cerrar. El stop loss como orden real en el mercado te quita esa decisión de las manos, que es justo lo que necesitas.</li>
+          <li><strong>"Muevo el stop loss para no perder, total ya remontará."</strong> Esto convierte una pérdida planificada de 1R en una pérdida indefinida. Es el error que más cuentas destruye. El stop loss no se toca en contra. Nunca.</li>
+          <li><strong>"Sin stop loss gano más, porque a veces el precio vuelve."</strong> A veces sí. Y un día no vuelve, y esa única vez te borra meses de ganancias. La asimetría de la Lección 1 explica por qué este "a veces" es una trampa mortal.</li>
         </ul>
 
         <div class="block-label">Resumen</div>
         <ul>
           <li>El stop loss es <strong>innegociable</strong>: define, antes de entrar, en qué punto admites que te equivocaste.</li>
-          <li>El stop va <strong>donde tu idea se rompe</strong> (estructura/volatilidad), no donde te duele menos. Stop primero, tamaño después.</li>
+          <li>El stop loss va <strong>donde tu idea se rompe</strong> (estructura/volatilidad), no donde te duele menos. Stop loss primero, tamaño después.</li>
           <li>Evita los dos extremos: <strong>demasiado pegado</strong> (te echa el ruido) y <strong>demasiado lejano</strong> (pérdidas grandes o tamaño absurdo).</li>
           <li>Planifica el <strong>take profit en múltiplos de R</strong> (2R, 3R…).</li>
-          <li>El stop se mueve <strong>solo a favor</strong> de la operación, nunca en contra. Si lo toca, sales.</li>
+          <li>El stop loss se mueve <strong>solo a favor</strong> de la operación, nunca en contra. Si lo toca, sales.</li>
         </ul>
 
         <div class="block-label">Ejercicio práctico</div>
         <ol>
-          <li>Compras a 100 $. Hay un soporte claro en 96 $ y otro en 92 $. Define dónde pondrías el stop estructural y por qué. Calcula la distancia al stop en cada caso.</li>
-          <li>Con cuenta de 10.000 $ y riesgo 1 %, calcula el tamaño de la posición para cada uno de los dos stops del punto anterior. Observa cómo el stop más lejano te obliga a comprar menos.</li>
-          <li>Para la entrada con stop en 96 $ (distancia 4 $), ¿a qué precio estaría tu objetivo si buscas una operación 2:1 (ganas 2 por cada 1 que arriesgas)? <em>(Pista: 2R = 2 × 4 $ = 8 $ por encima de la entrada → objetivo en 108 $.)</em></li>
+          <li>Compras a 100 $. Hay un soporte claro en 96 $ y otro en 92 $. Define dónde pondrías el stop loss estructural y por qué. Calcula la distancia al stop loss en cada caso.</li>
+          <li>Con cuenta de 10.000 $ y riesgo 1 %, calcula el tamaño de la posición para cada uno de los dos stop loss del punto anterior. Observa cómo el stop loss más lejano te obliga a comprar menos.</li>
+          <li>Para la entrada con stop loss en 96 $ (distancia 4 $), ¿a qué precio estaría tu objetivo si buscas una operación 2:1 (ganas 2 por cada 1 que arriesgas)? <em>(Pista: 2R = 2 × 4 $ = 8 $ por encima de la entrada → objetivo en 108 $.)</em></li>
         </ol>
 
         <div class="block-label">Autoevaluación</div>
         <div class="quiz" data-quiz>
         <script type="application/json">
         [
-        {"q": "¿Cuál es la función real de un stop loss?", "opts": ["Garantizar que cada operación termine en ganancia", "Sacarte de una operación que ya no tiene sentido, sin que la emoción decida", "Predecir hacia dónde irá el precio", "Aumentar el tamaño de la posición cuando vas ganando"], "correct": 1, "why": "El stop es tu paracaídas: cierra la operación cuando tu idea queda invalidada, quitando la emoción de en medio."},
-        {"q": "¿Por qué se dice que el stop loss es innegociable?", "opts": ["Porque mejora la comisión que pagas", "Porque el broker lo exige por ley", "Porque sin stop una operación perdedora puede crecer sin límite y sacarte del juego", "Porque permite operar sin análisis previo"], "correct": 2, "why": "Sin stop te expones a la pérdida grande; recuerda que un −50 % exige un +100 % para recuperarse."},
-        {"q": "Según el principio clave de la lección, ¿dónde va el stop?", "opts": ["Donde te duele menos perder", "A un porcentaje fijo siempre", "Justo en el precio de entrada", "Donde tu idea deja de tener sentido (el nivel que invalida tu análisis)"], "correct": 3, "why": "El stop se coloca en el nivel que rompe tu idea; el mercado no sabe ni le importa cuánto quieres perder."},
-        {"q": "¿Cuál es el orden correcto del flujo entrada-stop-tamaño?", "opts": ["Primero el stop (donde se rompe la idea), luego ajusto el tamaño para que cueste solo mi 1 %", "Primero el tamaño que quiero comprar, luego ajusto el stop a ese tamaño", "Primero el take profit, luego todo lo demás", "El orden da igual mientras arriesgues poco"], "correct": 0, "why": "Stop primero, tamaño después: ajustas la cantidad al stop que el mercado exige, no al revés."},
-        {"q": "¿En qué consiste un stop estructural?", "opts": ["Un porcentaje fijo desde la entrada", "Colocarlo al otro lado de un nivel técnico relevante (soporte, resistencia, máximo o mínimo)", "Cerrar la posición manualmente cuando te asustas", "Moverlo cada vez que el precio se acerca"], "correct": 1, "why": "El stop estructural se apoya en el mercado: si se rompe ese nivel, la razón por la que entraste ya no se sostiene."},
-        {"q": "¿Para qué sirve el stop por volatilidad (ATR)?", "opts": ["Para predecir la dirección del próximo movimiento", "Para garantizar un beneficio de 3R", "Para dar al precio el espacio que necesita según cuánto se mueve normalmente el activo", "Para no usar ningún indicador"], "correct": 2, "why": "El ATR mide la volatilidad media; un activo más volátil necesita un stop más amplio para no saltar por ruido."},
-        {"q": "¿Por qué el stop por porcentaje fijo es el método menos recomendable como principal?", "opts": ["Porque es demasiado complicado de calcular", "Porque solo lo permiten algunos brokers", "Porque siempre da stops demasiado amplios", "Porque ignora la estructura del mercado"], "correct": 3, "why": "Un % fijo es simple pero no mira soportes ni resistencias; sirve solo como límite de seguridad de respaldo."},
-        {"q": "¿Qué problema genera un stop demasiado pegado a la entrada?", "opts": ["El ruido normal del precio lo toca y te saca de operaciones que podían funcionar", "Te obliga a comprar una cantidad ridículamente pequeña", "Convierte la pérdida de 1R en una pérdida indefinida", "Hace imposible calcular la R"], "correct": 0, "why": "Dentro del ruido, esas oscilaciones que no significan nada te echan una y otra vez con pérdidas pequeñas."},
-        {"q": "¿Cuál es el riesgo de un stop demasiado lejano mal gestionado?", "opts": ["Que el broker lo cancele automáticamente", "Que el precio nunca llegue a tocarlo", "Que la enorme distancia te empuje a arriesgar de más y abra la puerta a pérdidas grandes", "Que reduzca tu beneficio a 1R"], "correct": 2, "why": "Una distancia enorme obliga a comprar poquísimo para mantener el 1 %… o a saltarte la regla y arriesgar de más."},
-        {"q": "¿En qué dirección puede moverse un stop una vez abierta la operación?", "opts": ["En cualquier dirección, según tu intuición", "Solo a favor de la operación, para proteger ganancias; nunca en contra", "Solo en contra, para darle más margen", "No se puede mover nunca bajo ningún concepto"], "correct": 1, "why": "Mover el stop en contra para que no salte es la forma educada de quedarte sin stop. Si lo toca, fuera."}
+        {"q": "¿Cuál es la función real de un stop loss?", "opts": ["Garantizar que cada operación termine en ganancia", "Sacarte de una operación que ya no tiene sentido, sin que la emoción decida", "Predecir hacia dónde irá el precio", "Aumentar el tamaño de la posición cuando vas ganando"], "correct": 1, "why": "El stop loss es tu paracaídas: cierra la operación cuando tu idea queda invalidada, quitando la emoción de en medio."},
+        {"q": "¿Por qué se dice que el stop loss es innegociable?", "opts": ["Porque mejora la comisión que pagas", "Porque el broker lo exige por ley", "Porque sin stop loss una operación perdedora puede crecer sin límite y sacarte del juego", "Porque permite operar sin análisis previo"], "correct": 2, "why": "Sin stop loss te expones a la pérdida grande; recuerda que un −50 % exige un +100 % para recuperarse."},
+        {"q": "Según el principio clave de la lección, ¿dónde va el stop loss?", "opts": ["Donde te duele menos perder", "A un porcentaje fijo siempre", "Justo en el precio de entrada", "Donde tu idea deja de tener sentido (el nivel que invalida tu análisis)"], "correct": 3, "why": "El stop loss se coloca en el nivel que rompe tu idea; el mercado no sabe ni le importa cuánto quieres perder."},
+        {"q": "¿Cuál es el orden correcto del flujo entrada-stop loss-tamaño?", "opts": ["Primero el stop loss (donde se rompe la idea), luego ajusto el tamaño para que cueste solo mi 1 %", "Primero el tamaño que quiero comprar, luego ajusto el stop loss a ese tamaño", "Primero el take profit, luego todo lo demás", "El orden da igual mientras arriesgues poco"], "correct": 0, "why": "Stop loss primero, tamaño después: ajustas la cantidad al stop loss que el mercado exige, no al revés."},
+        {"q": "¿En qué consiste un stop loss estructural?", "opts": ["Un porcentaje fijo desde la entrada", "Colocarlo al otro lado de un nivel técnico relevante (soporte, resistencia, máximo o mínimo)", "Cerrar la posición manualmente cuando te asustas", "Moverlo cada vez que el precio se acerca"], "correct": 1, "why": "El stop loss estructural se apoya en el mercado: si se rompe ese nivel, la razón por la que entraste ya no se sostiene."},
+        {"q": "¿Para qué sirve el stop loss por volatilidad (ATR)?", "opts": ["Para predecir la dirección del próximo movimiento", "Para garantizar un beneficio de 3R", "Para dar al precio el espacio que necesita según cuánto se mueve normalmente el activo", "Para no usar ningún indicador"], "correct": 2, "why": "El ATR mide la volatilidad media; un activo más volátil necesita un stop loss más amplio para no saltar por ruido."},
+        {"q": "¿Por qué el stop loss por porcentaje fijo es el método menos recomendable como principal?", "opts": ["Porque es demasiado complicado de calcular", "Porque solo lo permiten algunos brokers", "Porque siempre da stop loss demasiado amplios", "Porque ignora la estructura del mercado"], "correct": 3, "why": "Un % fijo es simple pero no mira soportes ni resistencias; sirve solo como límite de seguridad de respaldo."},
+        {"q": "¿Qué problema genera un stop loss demasiado pegado a la entrada?", "opts": ["El ruido normal del precio lo toca y te saca de operaciones que podían funcionar", "Te obliga a comprar una cantidad ridículamente pequeña", "Convierte la pérdida de 1R en una pérdida indefinida", "Hace imposible calcular la R"], "correct": 0, "why": "Dentro del ruido, esas oscilaciones que no significan nada te echan una y otra vez con pérdidas pequeñas."},
+        {"q": "¿Cuál es el riesgo de un stop loss demasiado lejano mal gestionado?", "opts": ["Que el broker lo cancele automáticamente", "Que el precio nunca llegue a tocarlo", "Que la enorme distancia te empuje a arriesgar de más y abra la puerta a pérdidas grandes", "Que reduzca tu beneficio a 1R"], "correct": 2, "why": "Una distancia enorme obliga a comprar poquísimo para mantener el 1 %… o a saltarte la regla y arriesgar de más."},
+        {"q": "¿En qué dirección puede moverse un stop loss una vez abierta la operación?", "opts": ["En cualquier dirección, según tu intuición", "Solo a favor de la operación, para proteger ganancias; nunca en contra", "Solo en contra, para darle más margen", "No se puede mover nunca bajo ningún concepto"], "correct": 1, "why": "Mover el stop loss en contra para que no salte es la forma educada de quedarte sin stop loss. Si lo toca, fuera."}
         ]
         </script>
         </div>
@@ -266,9 +266,9 @@
         <div class="card">
           <p><strong>Stop loss</strong> · orden que cierra la operación al alcanzar un precio que invalida tu idea; limita la pérdida.</p>
           <p><strong>Take profit</strong> · orden o plan para cerrar la operación en ganancias en un nivel objetivo.</p>
-          <p><strong>Stop estructural</strong> · stop colocado al otro lado de un nivel técnico relevante (soporte/resistencia, máximo/mínimo).</p>
-          <p><strong>ATR (Average True Range)</strong> · indicador que mide la volatilidad media de un activo; se usa para dimensionar stops según cuánto se mueve.</p>
-          <p><strong>Trailing stop</strong> · stop que se va desplazando a favor de la operación para proteger ganancias acumuladas.</p>
+          <p><strong>Stop loss estructural</strong> · stop loss colocado al otro lado de un nivel técnico relevante (soporte/resistencia, máximo/mínimo).</p>
+          <p><strong>ATR (Average True Range)</strong> · indicador que mide la volatilidad media de un activo; se usa para dimensionar stop loss según cuánto se mueve.</p>
+          <p><strong>Trailing stop loss</strong> · stop loss que se va desplazando a favor de la operación para proteger ganancias acumuladas.</p>
           <p><strong>Salida parcial</strong> · cerrar una parte de la posición en un objetivo y dejar correr el resto.</p>
         </div>
 
@@ -282,8 +282,8 @@
       <nav class="toc">
         <div class="h">En esta lección</div>
         <a href="#s1">Qué es un stop loss</a>
-        <a href="#s2">El stop va donde tu idea se rompe</a>
-        <a href="#s3">Dónde colocar el stop</a>
+        <a href="#s2">El stop loss va donde tu idea se rompe</a>
+        <a href="#s3">Dónde colocar el stop loss</a>
         <a href="#s4">Los dos errores opuestos</a>
         <a href="#s5">Take profit: planificar la salida ganadora</a>
       </nav>
