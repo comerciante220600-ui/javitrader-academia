@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · Glosario del curso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/theme.js"></script>
+<script src="assets/gate.js"></script>
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </a>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Herramientas</div>
+    <a class="tool-link" href="herramientas.html">🧮 Calculadoras del curso</a>
+    <a class="tool-link active" href="glosario.html">📖 Glosario</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb"><b>Herramientas</b> · Glosario del curso</div>
+    </div>
+
+    <div class="wrap" style="grid-template-columns:1fr;max-width:820px">
+      <article>
+        <div class="eyebrow">Glosario</div>
+        <h1 class="title">Los términos del curso, en cristiano</h1>
+        <p class="lead">Todas las palabras raras del trading, explicadas en dos líneas y con un ejemplo. Dentro de las lecciones, la primera vez que aparece un término lo verás <a class="gl" href="#spread">enlazado así</a>: al pulsarlo vienes aquí. Vuelve atrás con el navegador y sigues leyendo donde estabas.</p>
+
+        <div class="gl-index">
+          <a href="#activo">Activo</a>
+          <a href="#apalancamiento">Apalancamiento</a>
+          <a href="#backtesting">Backtesting</a>
+          <a href="#broker">Broker</a>
+          <a href="#cuenta-demo">Cuenta demo</a>
+          <a href="#drawdown">Drawdown</a>
+          <a href="#esperanza-matematica">Esperanza matemática</a>
+          <a href="#exchange">Exchange</a>
+          <a href="#fomo">FOMO</a>
+          <a href="#funding-rate">Funding rate</a>
+          <a href="#futuros">Futuros</a>
+          <a href="#journal">Journal</a>
+          <a href="#libro-de-ordenes">Libro de órdenes</a>
+          <a href="#liquidacion">Liquidación</a>
+          <a href="#liquidez">Liquidez</a>
+          <a href="#marco-temporal">Marco temporal</a>
+          <a href="#media-movil">Media móvil</a>
+          <a href="#on-chain">On-chain</a>
+          <a href="#perpetuos">Perpetuos</a>
+          <a href="#posicion-corta">Posición corta</a>
+          <a href="#posicion-larga">Posición larga</a>
+          <a href="#la-r">R (la R)</a>
+          <a href="#rango">Rango</a>
+          <a href="#rsi">RSI</a>
+          <a href="#soporte-y-resistencia">Soporte y resistencia</a>
+          <a href="#spot">Spot</a>
+          <a href="#spread">Spread</a>
+          <a href="#stop-loss">Stop loss</a>
+          <a href="#take-profit">Take profit</a>
+          <a href="#tamano-de-posicion">Tamaño de posición</a>
+          <a href="#tendencia">Tendencia</a>
+          <a href="#vela-japonesa">Vela japonesa</a>
+          <a href="#volumen">Volumen</a>
+          <a href="#win-rate">Win rate</a>
+        </div>
+
+        <div class="gl-entry" id="activo">
+          <h3>Activo</h3>
+          <p>Cualquier cosa con valor que se compra y se vende en un mercado: acciones, criptomonedas, divisas, materias primas. Es "lo que operas".</p>
+          <p class="gl-ej"><b>Ejemplo:</b> Bitcoin, las acciones de Apple y el oro son activos. Cada uno cotiza en su mercado y tiene su propio comportamiento.</p>
+        </div>
+
+        <div class="gl-entry" id="apalancamiento">
+          <h3>Apalancamiento</h3>
+          <p>Operar con más tamaño del que cubrirías con tu dinero: la plataforma te presta el resto y tú dejas una garantía (el margen). No multiplica tu riesgo si mantienes el mismo tamaño de posición y el mismo stop loss: lo que cambia es el capital que inmovilizas.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> con 100 $ de margen y apalancamiento 10x controlas una posición de 1.000 $. Tu riesgo sigue siendo el que marque tu stop loss.</p>
+        </div>
+
+        <div class="gl-entry" id="backtesting">
+          <h3>Backtesting</h3>
+          <p>Probar las reglas de tu sistema sobre datos del pasado para ver cómo se habría comportado. No garantiza el futuro, pero descarta sistemas rotos antes de arriesgar dinero real.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> repasar las últimas 100 veces que apareció tu setup y anotar qué habría pasado en cada una siguiendo tus reglas al pie de la letra.</p>
+        </div>
+
+        <div class="gl-entry" id="broker">
+          <h3>Broker</h3>
+          <p>La empresa intermediaria que ejecuta tus órdenes en los mercados tradicionales (acciones, índices, divisas). Tú no puedes comprar directamente en la bolsa: necesitas un broker, y cobra por el servicio con comisiones o spread.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> para comprar acciones de Apple abres cuenta en un broker, mandas la orden y él la ejecuta en el mercado por ti.</p>
+        </div>
+
+        <div class="gl-entry" id="cuenta-demo">
+          <h3>Cuenta demo</h3>
+          <p>Una cuenta de práctica con dinero ficticio y precios reales. Sirve para aprender la mecánica de las órdenes y probar sistemas sin arriesgar un dólar. Todo lo que practiques aquí se traduce igual al dinero real — menos las emociones, que llegan después.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> tu primera operación del curso (Módulo 0) se abre en demo: si te equivocas de botón, no pasa nada.</p>
+        </div>
+
+        <div class="gl-entry" id="drawdown">
+          <h3>Drawdown</h3>
+          <p>La caída de tu cuenta desde su punto más alto hasta el más bajo posterior, en porcentaje. Mide el peor tramo que has tenido que soportar, y es la métrica que más cuentas rompe: recuperar una pérdida grande exige ganar mucho más de lo que se perdió.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> tu cuenta sube a 1.000 $ y luego cae a 800 $ antes de recuperarse: drawdown del 20 %. Para volver al punto de partida necesitas ganar un 25 %.</p>
+        </div>
+
+        <div class="gl-entry" id="esperanza-matematica">
+          <h3>Esperanza matemática</h3>
+          <p>Lo que ganas o pierdes <em>de media</em> por operación: (win rate × ganancia media) − (% de fallos × pérdida media). Si es positiva, el sistema suma a largo plazo; si es negativa, pierde aunque acierte mucho. Es la métrica que manda sobre todas las demás.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> aciertas el 40 % ganando 2R y fallas el 60 % perdiendo 1R → (0,4 × 2) − (0,6 × 1) = +0,2R de media por operación. Sistema rentable.</p>
+        </div>
+
+        <div class="gl-entry" id="exchange">
+          <h3>Exchange</h3>
+          <p>La plataforma donde se compran y venden criptomonedas. Hace de mercado y de intermediario a la vez: pone en contacto compradores y vendedores y custodia los fondos que tengas dentro.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> BingX y Bitunix son exchanges: en ellos cambias dólares por Bitcoin, operas futuros perpetuos y practicas en demo.</p>
+        </div>
+
+        <div class="gl-entry" id="fomo">
+          <h3>FOMO</h3>
+          <p>"Fear of missing out": el miedo a quedarte fuera de una subida. Es el impulso que hace comprar tarde, caro y sin plan, justo cuando la operación ya no tiene sentido. Uno de los enemigos número uno del principiante.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> un activo lleva +30 % en el día, "se escapa", y compras arriba sin stop loss ni objetivo. Eso no es una operación: es FOMO.</p>
+        </div>
+
+        <div class="gl-entry" id="funding-rate">
+          <h3>Funding rate</h3>
+          <p>El pago periódico <em>entre traders</em> (no al exchange) que mantiene el precio del contrato perpetuo pegado al del spot. Se liquida cada pocas horas (típicamente cada 8) y cambia de signo según hacia dónde se desequilibra el mercado.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> funding positivo → los que están largos pagan a los que están cortos. Si mantienes una posición abierta días, esos pagos suman.</p>
+        </div>
+
+        <div class="gl-entry" id="futuros">
+          <h3>Futuros</h3>
+          <p>Contratos para comprar o vender un activo a un precio pactado en una fecha futura. No compras el activo: compras el contrato. Permiten operar al alza y a la baja, y son la base del trading con apalancamiento.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> puedes vender un futuro de Bitcoin sin tener Bitcoin: te comprometes a "entregarlo" a un precio, y si baja, recompras más barato y ganas la diferencia.</p>
+        </div>
+
+        <div class="gl-entry" id="journal">
+          <h3>Journal</h3>
+          <p>El diario de operaciones: un registro de cada trade con el porqué de la entrada, dónde estaban el stop loss y el objetivo, el resultado y cómo lo gestionaste. Es la materia prima de tus métricas y el espejo donde se ven los errores que tu memoria entierra.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> tras 30 operaciones anotadas descubres que casi todas tus pérdidas grandes vienen de mover el stop loss. Sin journal, jamás lo habrías visto.</p>
+        </div>
+
+        <div class="gl-entry" id="libro-de-ordenes">
+          <h3>Libro de órdenes</h3>
+          <p>La lista en tiempo real de todas las órdenes de compra y de venta pendientes a cada precio. El precio de mercado es el punto donde se cruzan las más cercanas. Mirarlo es ver la oferta y la demanda en directo.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> si la mejor compra es 99,95 $ y la mejor venta 100,05 $, el spread es 0,10 $ y el "precio" que ves es el del último cruce entre ambas colas.</p>
+        </div>
+
+        <div class="gl-entry" id="liquidacion">
+          <h3>Liquidación</h3>
+          <p>El cierre forzoso de una posición apalancada cuando la pérdida se come tu margen: el exchange cierra por ti para no perder el dinero prestado. Es la razón por la que el stop loss va siempre <em>antes</em> del precio de liquidación.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> entras largo con 10x y el precio cae ~10 % sin stop loss: tu margen se agota y el exchange liquida la posición. Pierdes todo el margen de esa operación.</p>
+        </div>
+
+        <div class="gl-entry" id="liquidez">
+          <h3>Liquidez</h3>
+          <p>La facilidad para entrar y salir de un activo sin mover el precio. Mucha liquidez = muchos compradores y vendedores a precios pegados; poca liquidez = spreads anchos y saltos de precio. De principiante, opera siempre activos líquidos.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> Bitcoin mueve miles de millones al día: entras y sales al instante. Una cripto minúscula puede no tener comprador cuando quieras vender.</p>
+        </div>
+
+        <div class="gl-entry" id="marco-temporal">
+          <h3>Marco temporal</h3>
+          <p>Cuánto tiempo representa cada vela del gráfico: 1 minuto, 1 hora, 4 horas, 1 día… El mismo activo cuenta historias distintas según el marco: el de arriba da el contexto, el de abajo afina la entrada.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> en el gráfico diario hay tendencia alcista, pero en el de 5 minutos ves una caída. No se contradicen: son la marea y la ola.</p>
+        </div>
+
+        <div class="gl-entry" id="media-movil">
+          <h3>Media móvil</h3>
+          <p>El promedio de los últimos N cierres, redibujado vela a vela. Suaviza el ruido para ver la dirección de fondo y actúa como referencia dinámica de soporte o resistencia. No es una señal de compra: es contexto.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> una media móvil de 50 velas apuntando hacia arriba con el precio por encima describe una tendencia alcista sana.</p>
+        </div>
+
+        <div class="gl-entry" id="on-chain">
+          <h3>On-chain</h3>
+          <p>Los datos públicos anotados en la blockchain: transacciones, saldos de carteras y flujos de dinero, a la vista de cualquiera. Son hechos verificables, no opiniones — la tercera lente de análisis junto al técnico y al fundamental, y el diferenciador de este curso.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> ver que salen monedas de los exchanges hacia carteras propias es un dato on-chain: oferta que se retira del mercado.</p>
+        </div>
+
+        <div class="gl-entry" id="perpetuos">
+          <h3>Perpetuos</h3>
+          <p>Futuros sin fecha de vencimiento: puedes mantener la posición el tiempo que quieras. Son el producto estrella del trading cripto. Al no vencer nunca, el funding rate es el mecanismo que mantiene su precio pegado al del spot.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> el "BTCUSDT perpetual" de tu exchange no es Bitcoin: es un contrato que sigue su precio y te deja operar al alza o a la baja con apalancamiento.</p>
+        </div>
+
+        <div class="gl-entry" id="posicion-corta">
+          <h3>Posición corta (short)</h3>
+          <p>Operar para ganar si el precio <em>baja</em>: vendes primero algo prestado (o un contrato) y lo recompras más barato después. En spot no se puede; necesitas derivados (futuros, perpetuos).</p>
+          <p class="gl-ej"><b>Ejemplo:</b> abres un corto a 100 $ y recompras a 90 $: ganas 10 $ por unidad. Si sube a 110 $, pierdes 10 $ por unidad.</p>
+        </div>
+
+        <div class="gl-entry" id="posicion-larga">
+          <h3>Posición larga (long)</h3>
+          <p>La operación clásica: compras esperando que el precio suba para vender más caro. "Estar largo" es simplemente estar comprado.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> compras a 100 $ con objetivo en 120 $ y stop loss en 95 $: estás largo con una asimetría de 4 a 1.</p>
+        </div>
+
+        <div class="gl-entry" id="la-r">
+          <h3>R (la R)</h3>
+          <p>Tu unidad de riesgo: la cantidad que pierdes si salta el stop loss de una operación. Definirla ANTES de entrar (por ejemplo, el 1 % de la cuenta) y medir cada resultado en R —"+2R", "−1R"— es la base de toda la gestión de riesgo del curso.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> con una cuenta de 5.000 $ y riesgo del 1 %, tu R son 50 $. Una operación que gana 150 $ es +3R; una pérdida con el stop loss ejecutado es −1R, nunca más.</p>
+        </div>
+
+        <div class="gl-entry" id="rango">
+          <h3>Rango</h3>
+          <p>El precio atrapado entre un suelo y un techo, yendo y viniendo sin dirección clara. Máximos y mínimos planos. La táctica cambia: en rango se juegan los extremos, no la dirección.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> un activo que lleva semanas rebotando entre 95 $ y 105 $ está en rango: comprar en 104 $ "porque va a romper" es apostar, no operar el contexto.</p>
+        </div>
+
+        <div class="gl-entry" id="rsi">
+          <h3>RSI</h3>
+          <p>"Relative Strength Index": un medidor de fuerza del movimiento, de 0 a 100. Por encima de 70 no significa "vende" ni por debajo de 30 "compra": en tendencias fuertes se queda arriba mucho tiempo. Su uso más útil es la divergencia (el precio sube pero el RSI no: la fuerza se agota).</p>
+          <p class="gl-ej"><b>Ejemplo:</b> el precio marca un máximo nuevo pero el RSI marca uno más bajo que el anterior: divergencia. No es una orden de vender; es un aviso de que el empuje pierde fuelle.</p>
+        </div>
+
+        <div class="gl-entry" id="soporte-y-resistencia">
+          <h3>Soporte y resistencia</h3>
+          <p><strong>Soporte</strong> = suelo donde las caídas se han frenado (entran compradores). <strong>Resistencia</strong> = techo donde las subidas se han frenado (entran vendedores). Existen porque el mercado tiene memoria: la gente reacciona donde ya reaccionó antes. Cuando un nivel se rompe, suele intercambiar su papel.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> un precio que rebota tres veces en 90 $ tiene ahí un soporte. Si lo pierde con claridad, esos 90 $ pasan a actuar como resistencia.</p>
+        </div>
+
+        <div class="gl-entry" id="spot">
+          <h3>Spot</h3>
+          <p>El mercado "al contado": compras el activo, lo pagas y es tuyo, sin apalancamiento ni vencimientos. Es la forma más simple de operar e invertir. En spot solo ganas si el precio sube: no permite ponerse corto.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> compras 0,01 BTC en spot: ese Bitcoin es tuyo y puedes retirarlo a tu propia cartera. Con un perpetuo, no: solo tienes un contrato.</p>
+        </div>
+
+        <div class="gl-entry" id="spread">
+          <h3>Spread</h3>
+          <p>La diferencia entre el mejor precio de compra y el mejor de venta en el libro de órdenes. Es el peaje invisible que pagas al entrar y salir, y el termómetro de la liquidez: cuanto más estrecho, más barato operar.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> compra a 100,05 $ y venta a 99,95 $: si entras y sales al instante, pierdes ese 0,10 $ por unidad aunque el precio no se haya movido.</p>
+        </div>
+
+        <div class="gl-entry" id="stop-loss">
+          <h3>Stop loss</h3>
+          <p>La orden automática que cierra tu posición si el precio llega al nivel donde tu idea queda invalidada. Convierte una pérdida potencialmente ilimitada en una pérdida definida de antemano (tu R). Se coloca ANTES de entrar y no se mueve en contra.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> entras largo a 100 $ con stop loss en 95 $: si el precio toca 95 $, la posición se cierra sola y pierdes exactamente lo planeado.</p>
+        </div>
+
+        <div class="gl-entry" id="take-profit">
+          <h3>Take profit</h3>
+          <p>La orden automática que cierra tu posición al alcanzar tu objetivo de ganancia. Junto con el stop loss define la asimetría de la operación antes de entrar: cuánto arriesgas frente a cuánto buscas.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> entrada a 100 $, stop loss en 95 $ y take profit en 115 $: arriesgas 5 $ por unidad para buscar 15 $. Asimetría 3 a 1.</p>
+        </div>
+
+        <div class="gl-entry" id="tamano-de-posicion">
+          <h3>Tamaño de posición</h3>
+          <p>Cuántas unidades compras o vendes, calculado para que, si salta el stop loss, pierdas exactamente tu R — ni más ni menos. Fórmula: riesgo en $ ÷ distancia al stop loss. Es la decisión que de verdad controla tu riesgo (en inglés, "position sizing").</p>
+          <p class="gl-ej"><b>Ejemplo:</b> riesgo de 50 $ y stop loss a 5 $ de la entrada → 50 ÷ 5 = 10 unidades. Tienes la calculadora en las <a href="herramientas.html">herramientas del curso</a>.</p>
+        </div>
+
+        <div class="gl-entry" id="tendencia">
+          <h3>Tendencia</h3>
+          <p>La dirección sostenida del precio. Alcista = máximos y mínimos cada vez más altos (escalones que suben). Bajista = cada vez más bajos. Mientras la secuencia se mantiene, la tendencia sigue viva — y operar a su favor es nadar a favor de la corriente.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> un activo que corrige pero hace suelos cada vez más altos sigue en tendencia alcista, aunque haya velas rojas por el camino.</p>
+        </div>
+
+        <div class="gl-entry" id="vela-japonesa">
+          <h3>Vela japonesa</h3>
+          <p>La representación estándar del precio en un periodo: el cuerpo muestra apertura y cierre; las mechas, los extremos que se tocaron. Verde = cerró por encima de la apertura; roja = por debajo. Una vela es una palabra: el significado está en la frase (el gráfico).</p>
+          <p class="gl-ej"><b>Ejemplo:</b> una vela con cuerpo pequeño y mecha inferior larga cuenta que los vendedores empujaron y los compradores recuperaron el terreno antes del cierre.</p>
+        </div>
+
+        <div class="gl-entry" id="volumen">
+          <h3>Volumen</h3>
+          <p>Cuántas unidades cambiaron de manos en cada periodo. No mide el precio: mide la <em>participación</em> — cuánta gente había detrás del movimiento. Un movimiento con volumen tiene respaldo; sin volumen, es sospechoso.</p>
+          <p class="gl-ej"><b>Ejemplo:</b> el precio rompe una resistencia con una barra de volumen muy alta: la ruptura tiene gente detrás. La misma ruptura con volumen flojo huele a trampa.</p>
+        </div>
+
+        <div class="gl-entry" id="win-rate">
+          <h3>Win rate</h3>
+          <p>El porcentaje de operaciones ganadoras de tu sistema. Por sí solo no dice nada: se puede perder dinero acertando el 70 % y ganarlo acertando el 35 %. Lo que decide es la combinación con el tamaño de ganancias y pérdidas (la esperanza matemática).</p>
+          <p class="gl-ej"><b>Ejemplo:</b> un sistema que acierta el 35 % pero gana 3R cuando acierta y pierde 1R cuando falla es rentable: (0,35 × 3) − (0,65 × 1) = +0,4R por operación.</p>
+        </div>
+
+        <div class="pager">
+          <a href="index.html"><div class="k">← Volver</div><div class="t">Portada del curso</div></a>
+          <a class="next" href="herramientas.html"><div class="k">Herramientas →</div><div class="t">Calculadoras del curso</div></a>
+        </div>
+      </article>
+    </div>
+  </main>
+</div>
+</body>
+</html>

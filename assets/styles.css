@@ -351,3 +351,20 @@ html.gate-locked .theme-toggle{display:none}
 .fb-btn.sec{background:transparent;border:1px solid var(--line-2);color:var(--text)}
 .fb-ok{color:#8fd14f;font-weight:600;margin-top:14px;min-height:22px;font-size:14px}
 .fb-err{color:#e0736e;font-weight:600;margin-top:14px;min-height:22px;font-size:14px}
+
+/* ============================================================
+   GLOSARIO — enlaces automáticos (a.gl) y página glosario.html
+   ============================================================ */
+a.gl{color:var(--gold-soft);border-bottom:1px dotted var(--gold-dim);transition:border-color .15s,color .15s}
+a.gl:hover{color:var(--gold);border-bottom-style:solid;border-bottom-color:var(--gold)}
+.gl-index{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 30px}
+.gl-index a{font-size:13px;padding:5px 12px;border:1px solid var(--line-2);border-radius:999px;background:var(--surface);color:var(--body);transition:border-color .15s,color .15s}
+.gl-index a:hover{border-color:var(--gold-dim);color:var(--gold-soft)}
+.gl-entry{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:14px 0;scroll-margin-top:90px}
+.gl-entry h3{font-family:var(--display);font-size:19px;font-weight:500;color:var(--gold-soft);margin:0 0 8px}
+.gl-entry p{margin:0 0 8px;color:var(--body);font-size:15px}
+.gl-entry p:last-child{margin-bottom:0}
+.gl-entry .gl-ej{font-size:14px;color:var(--muted);border-top:1px dashed var(--line-2);padding-top:8px;margin-top:10px}
+.gl-entry .gl-ej b{color:var(--gold-dim);font-weight:600}
+html.light .gl-entry p{color:#34322b}
+html.light .gl-entry .gl-ej{color:#6b6960}

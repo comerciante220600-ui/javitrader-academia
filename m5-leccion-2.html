@@ -47,6 +47,7 @@
     <a class="tool-link" href="modulo-4.html">💼 Módulo 4 · Análisis fundamental</a>
     <a class="tool-link" href="modulo-7.html">🧠 Módulo 7 · Psicología</a>
     <a class="tool-link" href="herramientas.html">🧮 Calculadoras del curso</a>
+    <a class="tool-link" href="glosario.html">📖 Glosario</a>
   </aside>
 
   <!-- MAIN -->
@@ -86,7 +87,12 @@
           <li><strong>Número de transacciones:</strong> cuántos movimientos se registraron en la cadena en ese periodo. Mide el <em>volumen de actividad</em>, no de personas (una sola persona puede hacer muchas transacciones).</li>
         </ul>
         <p>Ojo al matiz: estas dos métricas se parecen pero no son lo mismo. Muchas transacciones con pocas direcciones puede ser un puñado de bots o un exchange moviendo fondos internamente, no una red en auge. Por eso se miran <strong>juntas</strong>, nunca una sola.</p>
-        <div class="plain"><div class="lab">🟢 Al grano</div><p>Las métricas de actividad responden a una pregunta sencilla: ¿se usa esta red o solo sube de precio? Direcciones activas = cuánta gente se mueve. Transacciones = cuánto movimiento hay. Si suben de la mano, la red está viva; si el precio sube pero la actividad no, desconfía.</p></div>
+        <div class="plain"><div class="lab">🟢 Al grano</div>
+          <p style="margin-bottom:6px">Las métricas de actividad responden a una pregunta sencilla: ¿se usa esta red o solo sube de precio?</p>
+          <p style="margin-bottom:6px"><strong>Direcciones activas</strong> = cuánta gente se mueve.</p>
+          <p style="margin-bottom:6px"><strong>Transacciones</strong> = cuánto movimiento hay.</p>
+          <p>Si suben de la mano, la red está viva; si el precio sube pero la actividad no, desconfía.</p>
+        </div>
 
         <h2 id="s2">Métricas de holders: ¿quién tiene las monedas?</h2>
         <p>El segundo grupo mira <strong>quién posee la oferta</strong> y cómo se comporta. No te dicen qué va a pasar, pero sí en qué estado está el mercado por dentro.</p>
@@ -113,7 +119,11 @@
         </ul>
         <p>Existe una prima hermana, el <strong>NUPL</strong>, que mide lo mismo desde otro ángulo: el beneficio "no realizado" <strong>neto</strong> (las ganancias sobre el papel <em>menos</em> las pérdidas) como porcentaje del valor del mercado. La palabra clave es <em>neto</em>: por eso puede ser <strong>negativo</strong> cuando, de media, el mercado está en pérdida (justo las zonas de capitulación).</p>
         <p><strong>Importante:</strong> estas métricas son <em>orientativas</em>. Te dicen si, históricamente, el mercado está en una zona "cara" o "barata" respecto a sí mismo. <strong>No</strong> son señales de compra o venta: el MVRV puede quedarse "caro" durante meses mientras el precio sigue subiendo, y "barato" mientras sigue cayendo.</p>
-        <div class="plain"><div class="lab">🟢 Al grano</div><p>MVRV compara el precio de hoy con el coste medio de toda la oferta (cada moneda valorada a cuando se movió por última vez). Por encima de 1 = el mercado va, de media, en ganancia; por debajo de 1 = en pérdida. Es un termómetro de "caro o barato por dentro", orientativo, NO un botón de comprar o vender.</p></div>
+        <div class="plain"><div class="lab">🟢 Al grano</div>
+          <p style="margin-bottom:6px"><strong>MVRV</strong> = compara el precio de hoy con el coste medio de toda la oferta (cada moneda valorada a cuando se movió por última vez).</p>
+          <p style="margin-bottom:6px"><strong>Por encima de 1</strong> = el mercado va, de media, en ganancia. <strong>Por debajo de 1</strong> = en pérdida.</p>
+          <p>Es un termómetro de "caro o barato por dentro", orientativo, NO un botón de comprar o vender.</p>
+        </div>
 
         <figure class="done">
           <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Señal frente a ruido: métricas que responden una pregunta frente a métricas vacías">
@@ -277,5 +287,6 @@
   </main>
 </div>
 <script src="assets/quiz.js" defer></script>
+<script src="assets/glosario.js" defer></script>
 </body>
 </html>
