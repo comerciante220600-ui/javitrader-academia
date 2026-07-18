@@ -1,7 +1,13 @@
 // Progreso del curso — Academia JaviTrader
 // Marca lecciones completadas y pinta el check en el sidebar, en las portadas
 // de módulo y en la portada del curso. El estado vive en localStorage
-// (jt_progreso = ["m0-leccion-1.html", ...]); es por navegador, sin backend.
+// (jt_progreso = ["m0-leccion-1.html", ...]) como caché rápida.
+//
+// En la PLATAFORMA (las lecciones se sirven bajo /curso/…) además se sincroniza
+// con la cuenta vía /api/curso/progreso, para que el progreso se vea igual en
+// móvil y PC. En la academia estática (páginas en la raíz) es solo localStorage.
+// La sincronización es a prueba de fallos: si el endpoint no responde, se sigue
+// usando localStorage sin romper nada.
 //
 // Una lección se marca como completada cuando:
 //   - se termina su autoevaluación (evento 'jt:leccion-completa' que emite quiz.js), o
@@ -12,6 +18,10 @@
   var KEY = "jt_progreso";
   // Nº de lecciones por módulo (para saber cuándo un módulo está completo).
   var LECCIONES = { m0: 5, m1: 6, m2: 5, m3: 5, m4: 5, m5: 5, m6: 5, m7: 5, m8: 3 };
+
+  // Sincronización con la cuenta: solo en la plataforma (lecciones bajo /curso/).
+  var API = "/api/curso/progreso";
+  var EN_PLATAFORMA = location.pathname.indexOf("/curso/") === 0;
 
   function basename(href) {
     if (!href) return "";
@@ -37,14 +47,53 @@
     }
   }
 
+  function guardar(s) {
+    try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {}
+  }
+
   function marcar(file) {
     if (!file || !moduloDe(file)) return;
     var s = leer();
     if (s.indexOf(file) === -1) {
       s.push(file);
-      try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {}
+      guardar(s);
       pintar();
     }
+    subir(file); // además, a la cuenta (no-op fuera de la plataforma)
+  }
+
+  // Sube una lección completada a la cuenta (fire-and-forget; si falla, da igual:
+  // localStorage ya la tiene).
+  function subir(file) {
+    if (!EN_PLATAFORMA || !window.fetch) return;
+    try {
+      fetch(API, {
+        method: "POST",
+        credentials: "same-origin",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ leccion: file }),
+        keepalive: true,
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
+  // Al cargar en la plataforma: trae el progreso de la cuenta, lo fusiona con
+  // el local (unión) y sube al servidor lo que se hubiera completado sin conexión.
+  function sincronizar() {
+    if (!EN_PLATAFORMA || !window.fetch) return;
+    fetch(API, { credentials: "same-origin" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || !Array.isArray(d.lecciones)) return;
+        var local = leer();
+        var union = local.slice();
+        d.lecciones.forEach(function (f) { if (union.indexOf(f) === -1) union.push(f); });
+        guardar(union);
+        pintar();
+        // lo que estaba en local pero no en la cuenta, subirlo
+        local.forEach(function (f) { if (d.lecciones.indexOf(f) === -1) subir(f); });
+      })
+      .catch(function () {});
   }
 
   function moduloCompleto(mid, hechas) {
@@ -77,6 +126,7 @@
 
   function init() {
     pintar();
+    sincronizar(); // en la plataforma, fusiona con el progreso de la cuenta
 
     // Trigger A: avanzar con el pager ("Siguiente"/"Empezar"/"Completar").
     document.querySelectorAll(".pager a").forEach(function (a) {
