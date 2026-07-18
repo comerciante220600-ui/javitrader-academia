@@ -60,6 +60,8 @@
           if (answered === total) {
             scoreEl.textContent = "Resultado: " + correct + " / " + total;
             scoreEl.className = "qscore " + (correct >= Math.ceil(total * 0.7) ? "good" : "bad");
+            // Avisa al motor de progreso: lección completada al terminar el test.
+            try { document.dispatchEvent(new CustomEvent("jt:leccion-completa", { detail: { via: "test" } })); } catch (e) {}
           } else {
             scoreEl.textContent = "Aciertos: " + correct + " / " + total;
           }
