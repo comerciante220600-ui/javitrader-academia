@@ -68,7 +68,7 @@
         <div class="eyebrow">Lección 1</div>
         <h1 class="title">Precio y velas japonesas: cómo leer una vela</h1>
         <div class="meta">
-          <div class="it">⏱ <b>~11 min</b> de lectura</div>
+          <div class="it">⏱ <b>~13 min</b> de lectura</div>
           <div class="it">◆ Nivel <b>principiante</b></div>
           <div class="it">↳ Requisito: <b>ninguno</b></div>
         </div>
@@ -76,6 +76,7 @@
         <div class="card obj">
           <h3>Lo que sabrás hacer al terminar</h3>
           <ol>
+            <li>Entender qué es un gráfico: el precio de un activo a lo largo del tiempo, con el activo, el precio y el tiempo bien situados.</li>
             <li>Leer los cuatro datos de cualquier vela: apertura, cierre, máximo y mínimo.</li>
             <li>Distinguir una vela alcista de una bajista de un vistazo.</li>
             <li>Interpretar qué cuentan el cuerpo y las mechas sobre la lucha de fuerzas.</li>
@@ -83,8 +84,71 @@
           </ol>
         </div>
 
-        <p class="lead">Un gráfico de velas asusta al principio, pero es de lo más sencillo que hay: cada vela es la foto de un periodo de tiempo (un minuto, una hora, un día…) que resume, en un solo dibujo, quién ganó la batalla entre compradores y vendedores.</p>
-        <p>Si entiendes una vela, entiendes el gráfico entero, porque un gráfico solo son muchas velas una detrás de otra.</p>
+        <p class="lead">Un gráfico asusta al principio, pero es de lo más sencillo que hay: es solo el <strong>precio de un activo dibujado a lo largo del tiempo</strong>. Y ese dibujo está hecho de piezas que se repiten —las <strong>velas japonesas</strong>—, cada una la foto de un periodo que resume quién ganó la batalla entre compradores y vendedores.</p>
+        <p>Por eso empezamos por lo básico: primero <strong>qué es un gráfico</strong> y luego cómo se lee <em>una</em> vela. Si entiendes una vela, entiendes el gráfico entero, porque un gráfico solo son muchas velas una detrás de otra.</p>
+
+        <h2 id="s0">¿Qué es un gráfico?</h2>
+        <p>Antes de mirar una sola vela, entendamos el lienzo donde viven. Un <strong>gráfico</strong> no es más que el <strong>precio de un activo dibujado a lo largo del tiempo</strong>: una foto de cómo se ha ido moviendo. Todo gráfico, en cualquier plataforma, tiene las mismas tres referencias:</p>
+        <ul>
+          <li><strong>El activo</strong>, casi siempre <strong>arriba a la izquierda</strong>: qué estás mirando (por ejemplo BTC/USDT, el precio de Bitcoin en dólares).</li>
+          <li><strong>El precio</strong>, en el <strong>eje vertical</strong> (normalmente a la derecha): cuánto vale el activo. Arriba, más caro; abajo, más barato.</li>
+          <li><strong>El tiempo</strong>, en el <strong>eje horizontal</strong> (abajo): avanza de izquierda (antes) a derecha (ahora).</li>
+        </ul>
+        <p>Un gráfico tiene además una <strong>temporalidad</strong> (o marco temporal): cuánto tiempo representa cada vela. Puede ser de 1 minuto, 1 hora, 1 día… El mismo activo se ve muy distinto según la temporalidad que elijas, y a eso le dedicamos una lección entera más adelante (<a href="m2-leccion-4.html">Marcos temporales</a>).</p>
+        <p>¿Y de qué está hecho el dibujo? De muchas <strong>velas japonesas</strong>, una detrás de otra. Cada vela resume un periodo y, juntas, forman la historia del precio. Por eso, si aprendes a leer <em>una</em> vela, sabes leer el gráfico entero — y es justo lo que haremos ahora.</p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anatomía de un gráfico de velas: el activo arriba a la izquierda, el precio en el eje vertical derecho y el tiempo en el eje horizontal inferior">
+            <g font-family="Inter,system-ui,sans-serif">
+              <rect x="64" y="52" width="558" height="252" fill="#15151b" stroke="#26262f" stroke-width="1" rx="8"/>
+              <line x1="622" y1="52" x2="622" y2="304" stroke="#33333f" stroke-width="1"/>
+              <line x1="64" y1="304" x2="622" y2="304" stroke="#33333f" stroke-width="1"/>
+              <line x1="110" y1="224" x2="110" y2="268" stroke="#1d9e75" stroke-width="1.6"/>
+              <rect x="99" y="232" width="22" height="28" fill="#1d9e75" opacity="0.9" rx="2"/>
+              <line x1="164" y1="226" x2="164" y2="252" stroke="#e24b4a" stroke-width="1.6"/>
+              <rect x="153" y="232" width="22" height="14" fill="#e24b4a" opacity="0.9" rx="2"/>
+              <line x1="218" y1="200" x2="218" y2="250" stroke="#1d9e75" stroke-width="1.6"/>
+              <rect x="207" y="206" width="22" height="40" fill="#1d9e75" opacity="0.9" rx="2"/>
+              <line x1="272" y1="198" x2="272" y2="224" stroke="#e24b4a" stroke-width="1.6"/>
+              <rect x="261" y="206" width="22" height="10" fill="#e24b4a" opacity="0.9" rx="2"/>
+              <line x1="326" y1="170" x2="326" y2="222" stroke="#1d9e75" stroke-width="1.6"/>
+              <rect x="315" y="176" width="22" height="40" fill="#1d9e75" opacity="0.9" rx="2"/>
+              <line x1="380" y1="168" x2="380" y2="198" stroke="#e24b4a" stroke-width="1.6"/>
+              <rect x="369" y="176" width="22" height="14" fill="#e24b4a" opacity="0.9" rx="2"/>
+              <line x1="434" y1="144" x2="434" y2="196" stroke="#1d9e75" stroke-width="1.6"/>
+              <rect x="423" y="150" width="22" height="40" fill="#1d9e75" opacity="0.9" rx="2"/>
+              <line x1="488" y1="142" x2="488" y2="172" stroke="#e24b4a" stroke-width="1.6"/>
+              <rect x="477" y="150" width="22" height="14" fill="#e24b4a" opacity="0.9" rx="2"/>
+              <line x1="542" y1="120" x2="542" y2="170" stroke="#1d9e75" stroke-width="1.6"/>
+              <rect x="531" y="126" width="22" height="38" fill="#1d9e75" opacity="0.9" rx="2"/>
+              <text x="632" y="70" fill="#76746c" font-size="11" text-anchor="start">64.400</text>
+              <text x="632" y="130" fill="#76746c" font-size="11" text-anchor="start">64.200</text>
+              <text x="632" y="190" fill="#76746c" font-size="11" text-anchor="start">64.000</text>
+              <text x="632" y="250" fill="#76746c" font-size="11" text-anchor="start">63.800</text>
+              <text x="632" y="300" fill="#76746c" font-size="11" text-anchor="start">63.650</text>
+              <text x="110" y="322" fill="#76746c" font-size="11" text-anchor="middle">09:00</text>
+              <text x="218" y="322" fill="#76746c" font-size="11" text-anchor="middle">11:00</text>
+              <text x="326" y="322" fill="#76746c" font-size="11" text-anchor="middle">13:00</text>
+              <text x="434" y="322" fill="#76746c" font-size="11" text-anchor="middle">15:00</text>
+              <text x="542" y="322" fill="#76746c" font-size="11" text-anchor="middle">17:00</text>
+              <!-- (1) activo arriba a la izquierda -->
+              <rect x="76" y="64" width="132" height="30" fill="#1b1b22" stroke="#e5c45a" stroke-width="1.3" rx="6"/>
+              <text x="88" y="83" fill="#ece9e1" font-size="13" font-weight="600">BTC/USDT · 1H</text>
+              <text x="76" y="112" fill="#e5c45a" font-size="11.5" font-weight="600">① el activo y su temporalidad</text>
+              <!-- (2) precio -->
+              <text x="700" y="175" fill="#e5c45a" font-size="11.5" font-weight="600" text-anchor="middle" transform="rotate(90 700 175)">② el precio (vertical)</text>
+              <!-- (3) tiempo -->
+              <text x="343" y="344" fill="#e5c45a" font-size="11.5" font-weight="600" text-anchor="middle">③ el tiempo (horizontal) — de izquierda (antes) a derecha (ahora)</text>
+            </g>
+          </svg>
+          <figcaption>La anatomía de cualquier gráfico de velas: ① el activo y su temporalidad (arriba a la izquierda), ② el precio (eje vertical, a la derecha) y ③ el tiempo (eje horizontal, abajo). El dibujo lo forman muchas velas seguidas.</figcaption>
+        </figure>
+
+        <div class="plain"><div class="lab">🟢 Al grano</div>
+          <p style="margin-bottom:6px"><strong>Gráfico</strong>: el precio de un activo dibujado a lo largo del tiempo.</p>
+          <p style="margin-bottom:6px"><strong>Activo</strong> arriba-izquierda · <strong>precio</strong> en vertical · <strong>tiempo</strong> en horizontal.</p>
+          <p><strong>Temporalidad</strong>: cuánto dura cada vela (1 min, 1 hora, 1 día…). El gráfico es el conjunto de todas esas velas.</p>
+        </div>
 
         <h2 id="s1">Los cuatro datos de una vela</h2>
         <p>Cada vela resume un periodo con <strong>cuatro precios</strong>:</p>
@@ -138,8 +202,8 @@
           <li><strong>Vela bajista (normalmente roja):</strong> el precio <strong>cerró por debajo</strong> de donde abrió. Ganaron los vendedores.</li>
         </ul>
         <div class="plain"><div class="lab">🟢 Al grano</div>
-          <p style="margin-bottom:6px"><strong>Vela verde</strong> = cerró más arriba de donde abrió (mandaron los compradores).</p>
-          <p style="margin-bottom:6px"><strong>Vela roja</strong> = cerró más abajo (mandaron los vendedores).</p>
+          <p style="margin-bottom:6px"><strong>Vela verde</strong>: cerró más arriba de donde abrió (mandaron los compradores).</p>
+          <p style="margin-bottom:6px"><strong>Vela roja</strong>: cerró más abajo (mandaron los vendedores).</p>
           <p>El cuerpo te dice por cuánto: cuanto más largo, más clara fue la victoria.</p>
         </div>
 
@@ -152,8 +216,8 @@
           <li><strong>Mecha larga arriba:</strong> el precio subió pero los vendedores lo tiraron abajo — rechazo a los precios altos.</li>
         </ul>
         <div class="plain"><div class="lab">🟢 Al grano</div>
-          <p style="margin-bottom:6px"><strong>El cuerpo</strong> = quién ganó y por cuánto.</p>
-          <p style="margin-bottom:6px"><strong>Las mechas</strong> = hasta dónde llegó el precio antes de que lo rechazaran.</p>
+          <p style="margin-bottom:6px"><strong>El cuerpo</strong>: quién ganó y por cuánto.</p>
+          <p style="margin-bottom:6px"><strong>Las mechas</strong>: hasta dónde llegó el precio antes de que lo rechazaran.</p>
           <p>Una mecha larga es el mercado diciendo "por aquí no paso".</p>
         </div>
 
@@ -176,7 +240,7 @@
         <div class="block-label">Resumen</div>
         <ul>
           <li>Cada vela resume un periodo con cuatro datos: <strong>apertura, cierre, máximo y mínimo</strong>.</li>
-          <li><strong>Verde</strong> = cerró por encima de la apertura; <strong>roja</strong> = cerró por debajo.</li>
+          <li><strong>Verde</strong>: cerró por encima de la apertura; <strong>roja</strong>: cerró por debajo.</li>
           <li>El <strong>cuerpo</strong> dice quién ganó y por cuánto; las <strong>mechas</strong>, hasta dónde llegó el precio antes del rechazo.</li>
           <li>Una vela describe el pasado; <strong>no predice</strong> el futuro.</li>
           <li>Nunca leas una vela <strong>suelta</strong>: el significado está en el contexto.</li>
@@ -225,6 +289,7 @@
 
       <nav class="toc">
         <div class="h">En esta lección</div>
+        <a href="#s0">Qué es un gráfico</a>
         <a href="#s1">Los cuatro datos</a>
         <a href="#s2">Alcista o bajista</a>
         <a href="#s3">Cuerpo y mechas</a>
