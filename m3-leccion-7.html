@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Academia JaviTrader · M3 L7 Un ejemplo de estrategia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/theme.js"></script>
+<script src="assets/gate.js"></script>
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <div class="mark">J</div>
+      <div>
+        <div class="name">JaviTrader</div>
+        <div class="sub">Academia</div>
+      </div>
+    </a>
+
+    <div class="nav-label">Rutas</div>
+    <div class="route"><span class="dot" style="background:#63a922"></span> Principiante</div>
+    <div class="route"><span class="dot" style="background:#378add"></span> Trading</div>
+    <div class="route"><span class="dot" style="background:var(--gold)"></span> Inversión / Cripto</div>
+
+    <div class="nav-label">Estás viendo</div>
+    <div class="module">
+      <h4><a href="modulo-3.html">Análisis técnico aplicado</a></h4>
+      <div class="msub">MÓDULO 3 · 7 LECCIONES</div>
+      <a class="lesson" href="m3-leccion-1.html"><span class="num">1</span> Tendencias, rangos y transiciones</a>
+      <a class="lesson" href="m3-leccion-2.html"><span class="num">2</span> Confluencias</a>
+      <a class="lesson" href="m3-leccion-3.html"><span class="num">3</span> Indicadores sin humo</a>
+      <a class="lesson" href="m3-leccion-4.html"><span class="num">4</span> Perfil de volumen (FRVP)</a>
+      <a class="lesson" href="m3-leccion-5.html"><span class="num">5</span> Patrones útiles vs de manual</a>
+      <a class="lesson" href="m3-leccion-6.html"><span class="num">6</span> Construir un setup propio</a>
+      <a class="lesson active" href="m3-leccion-7.html"><span class="num">7</span> Un ejemplo de estrategia</a>
+    </div>
+
+    <div class="nav-label">Otros módulos</div>
+    <a class="tool-link" href="modulo-0.html">📚 Módulo 0 · Fundamentos</a>
+    <a class="tool-link" href="modulo-1.html">📈 Módulo 1 · Gestión de riesgo</a>
+    <a class="tool-link" href="modulo-2.html">📊 Módulo 2 · Leer un gráfico</a>
+    <a class="tool-link" href="modulo-4.html">💼 Módulo 4 · Análisis fundamental</a>
+    <a class="tool-link" href="modulo-5.html">⛓️ Módulo 5 · On-chain ⭐</a>
+    <a class="tool-link" href="modulo-6.html">📋 Módulo 6 · Tu plan de trading</a>
+    <a class="tool-link" href="modulo-7.html">🧠 Módulo 7 · Psicología</a>
+    <a class="tool-link" href="modulo-8.html">🏁 Módulo 8 · Operativa real y seguridad</a>
+
+    <div class="nav-label">Herramientas</div>
+    <a class="tool-link" href="herramientas.html">🧮 Calculadoras del curso</a>
+    <a class="tool-link" href="glosario.html">📖 Glosario</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumb">Módulo 3 · Análisis técnico &nbsp;›&nbsp; <b>Lección 7</b></div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:100%"></span></div> 7/7</div>
+    </div>
+
+    <div class="wrap">
+      <article>
+        <div class="eyebrow">Lección 7</div>
+        <h1 class="title">Un ejemplo de estrategia: juntándolo todo</h1>
+        <div class="meta">
+          <div class="it">⏱ <b>~14 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>intermedio</b></div>
+          <div class="it">↳ Requisito: <b>Todo el Módulo 3</b></div>
+        </div>
+
+        <div class="card obj">
+          <h3>Lo que sabrás hacer al terminar</h3>
+          <ol>
+            <li>Ver cómo encajan en una sola operación todas las piezas del módulo.</li>
+            <li>Marcar zonas de soporte/resistencia con <strong>dos herramientas que se apoyan</strong>: nodos de volumen y Fibonacci.</li>
+            <li>Esperar un <strong>gatillo de entrada</strong> con confluencia en lugar de entrar a la primera.</li>
+            <li>Entender que una estrategia es un ejemplo a adaptar y probar, no una fórmula mágica.</li>
+          </ol>
+        </div>
+
+        <p class="lead">Hasta aquí has visto las piezas por separado: estructura, confluencias, indicadores, perfil de volumen, patrones y cómo montar un setup. Esta lección las junta en <strong>un ejemplo concreto de estrategia</strong>, para que veas cómo se apoyan unas en otras en una operación real.</p>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>Léelo como lo que es:</b> un <strong>ejemplo</strong> para enseñarte a pensar en confluencias, no "el método secreto que siempre gana". No hay estrategia infalible. Cógelo, adáptalo a tu estilo, escríbelo y pruébalo (journal y backtesting, Módulo 6) antes de arriesgar dinero.</div></div>
+
+        <h2 id="s1">La idea: operar donde varias señales coinciden</h2>
+        <p>La columna vertebral de la estrategia es la <strong>confluencia</strong> (Lección 2): en vez de entrar porque <em>una</em> cosa apunta arriba, esperas a que <strong>varias señales independientes apunten al mismo nivel</strong>. Cada una por su cuenta vale poco; juntas, inclinan la probabilidad a tu favor.</p>
+        <p>El plan tiene dos fases muy simples: <strong>(1)</strong> marcar de antemano las zonas de soporte/resistencia donde <em>podría</em> pasar algo, y <strong>(2)</strong> esperar en esas zonas un <strong>gatillo</strong> que confirme que el precio está reaccionando. Ni entramos en cualquier sitio, ni entramos sin confirmación.</p>
+
+        <h2 id="s2">Fase 1 — marcar los soportes y resistencias</h2>
+        <p>Usamos <strong>dos herramientas que se apoyan</strong>. Cuando las dos señalan la misma zona, tenemos un soporte o una resistencia de peso.</p>
+        <p><strong>Herramienta A · Nodos de volumen (FRVP).</strong> Como viste en la Lección 4, las <strong>zonas de alto volumen</strong> del perfil (el POC y los HVN) son soportes y resistencias reales: es donde de verdad se cruzó dinero, así que el precio tiende a frenarse y rebotar ahí. Ese es nuestro primer soporte/resistencia.</p>
+        <p><strong>Herramienta B · Fibonacci.</strong> Aquí entra algo nuevo. Los <strong>retrocesos de Fibonacci</strong> son unos niveles (los más vigilados: <strong>38,2 %</strong>, <strong>50 %</strong> y <strong>61,8 %</strong>) que marcan hasta dónde suele "respirar" un precio antes de continuar su tendencia. En una tendencia alcista, trazas la herramienta <strong>desde el mínimo donde arranca el impulso hasta el máximo</strong>, y esos porcentajes te dibujan posibles soportes en el retroceso. El <strong>61,8 %</strong> (con la franja hasta ~65 %, la llamada <em>zona áurea</em>) es el nivel estrella.</p>
+        <div class="callout idea"><div class="ic">💡</div><div><b>La confluencia que buscamos:</b> cuando el <strong>61,8 % de Fibonacci cae justo encima de un nodo de alto volumen</strong>, tienes dos motivos independientes para esperar un rebote en el mismo sitio. Eso ya no es una línea suelta: es una <strong>zona de soporte con peso</strong>. Ahí es donde vamos a vigilar.</div></div>
+
+        <h2 id="s3">Fase 2 — esperar el gatillo de entrada</h2>
+        <p>Tener una buena zona <strong>no es una entrada</strong>: es un sitio donde <em>vigilar</em>. Un soporte se puede romper. Por eso, una vez el precio llega a nuestra zona de confluencia, esperamos una <strong>señal de que está reaccionando</strong> antes de entrar. Nos vale <strong>al menos uno</strong> de estos gatillos (mejor si se combinan):</p>
+        <ul>
+          <li><strong>RSI en divergencia alcista o debilitándose</strong> (Lección 3): el precio hace un mínimo más bajo pero el RSI hace un mínimo más alto — la presión vendedora se agota. Medido con el <strong>cierre</strong>, no con la mecha.</li>
+          <li><strong>Un patrón de doble suelo</strong> (Lección 5): el precio prueba el soporte dos veces y no lo rompe.</li>
+          <li><strong>Una vela de rechazo</strong>: un <strong>doji</strong> o un martillo en la zona, señal de que los compradores están defendiendo el nivel.</li>
+          <li><strong>Rechazo en una temporalidad mayor</strong>: si en un marco más alto (4h, diario) el precio también está rechazando feo esa zona, la señal pesa mucho más.</li>
+        </ul>
+        <p>Cuantos más gatillos coincidan con la zona, más sólida es la entrada. Uno solo, en una zona floja, es poco; dos o tres sobre una confluencia fuerte, es una operación con sentido.</p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 390" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estrategia de ejemplo: tras un impulso alcista, el precio retrocede a una zona donde coinciden un nodo de volumen y el Fibonacci 61,8; ahí forma un doble suelo con divergencia alcista de RSI, y se marca entrada, stop y objetivo.">
+            <g font-family="Inter,system-ui,sans-serif">
+              <!-- ===== PANEL PRECIO ===== -->
+              <rect x="56" y="24" width="624" height="196" fill="#15151b" stroke="#26262f" stroke-width="1" rx="4"/>
+              <text x="68" y="44" fill="#9b988f" font-size="12" font-weight="500">PRECIO</text>
+              <!-- objetivo -->
+              <line x1="56" y1="66" x2="680" y2="66" stroke="#63a922" stroke-width="1" stroke-dasharray="5 4" opacity="0.8"/>
+              <text x="688" y="70" fill="#8fd14f" font-size="10.5">Objetivo</text>
+              <!-- zona de confluencia (soporte) -->
+              <rect x="56" y="150" width="624" height="26" fill="#d4af37" opacity="0.09"/>
+              <line x1="56" y1="152" x2="680" y2="152" stroke="#e5c45a" stroke-width="1.3" stroke-dasharray="2 3" opacity="0.8"/>
+              <text x="688" y="150" fill="#c98a2e" font-size="10">Fib 61,8 %</text>
+              <line x1="56" y1="174" x2="680" y2="174" stroke="#378add" stroke-width="1.3" stroke-dasharray="2 3" opacity="0.7"/>
+              <text x="688" y="180" fill="#378add" font-size="10">Nodo vol.</text>
+              <text x="150" y="140" fill="#e5c45a" font-size="10.5" text-anchor="middle">zona de confluencia</text>
+              <!-- stop -->
+              <line x1="56" y1="192" x2="680" y2="192" stroke="#e24b4a" stroke-width="1" stroke-dasharray="5 4" opacity="0.75"/>
+              <text x="688" y="196" fill="#f0a0a0" font-size="10.5">Stop</text>
+              <!-- precio: impulso, retroceso a la zona, doble suelo, rebote -->
+              <polyline fill="none" stroke="#c9bfb4" stroke-width="2.4" stroke-linejoin="round" points="68,196 110,176 150,120 196,150 236,96 276,120 316,150 356,163 392,150 420,138 452,150 492,162 528,150 520,150 560,120 604,92 648,72"/>
+              <!-- doble suelo -->
+              <circle cx="392" cy="163" r="4.5" fill="none" stroke="#e5c45a" stroke-width="2"/>
+              <circle cx="492" cy="164" r="4.5" fill="none" stroke="#e5c45a" stroke-width="2"/>
+              <text x="442" y="200" fill="#9b988f" font-size="10.5" text-anchor="middle">doble suelo en la zona</text>
+              <!-- entrada -->
+              <circle cx="528" cy="150" r="4.5" fill="#1d9e75"/>
+              <text x="556" y="140" fill="#9fe1cb" font-size="10.5">Entrada</text>
+              <!-- ===== PANEL RSI ===== -->
+              <rect x="56" y="244" width="624" height="124" fill="#15151b" stroke="#26262f" stroke-width="1" rx="4"/>
+              <text x="68" y="264" fill="#9b988f" font-size="12" font-weight="500">RSI · divergencia alcista</text>
+              <line x1="56" y1="336" x2="680" y2="336" stroke="#1d9e75" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+              <text x="688" y="340" fill="#76746c" font-size="10.5">30</text>
+              <!-- RSI: primer mínimo bajo, segundo mínimo MÁS ALTO -->
+              <polyline fill="none" stroke="#e5c45a" stroke-width="2.3" stroke-linejoin="round" points="68,300 150,292 236,300 316,318 392,332 440,312 492,320 528,300 604,286 648,278"/>
+              <circle cx="392" cy="332" r="4" fill="#1d9e75"/>
+              <circle cx="492" cy="320" r="4" fill="#1d9e75"/>
+              <line x1="392" y1="332" x2="492" y2="320" stroke="#1d9e75" stroke-width="2" stroke-dasharray="5 4"/>
+              <text x="300" y="356" fill="#76746c" font-size="10.5">precio: mínimo ≈ mínimo &nbsp;·&nbsp; RSI: mínimo 2 &gt; mínimo 1 → se agota la venta</text>
+            </g>
+          </svg>
+          <figcaption>El precio retrocede a la zona donde el Fib 61,8 % coincide con un nodo de volumen. Ahí forma un doble suelo y el RSI marca divergencia alcista (segundo mínimo más alto). Con esa confluencia se entra, con el stop bajo la zona y el objetivo arriba.</figcaption>
+        </figure>
+
+        <h2 id="s4">Fase 3 — montar la operación (el setup)</h2>
+        <p>La entrada sin gestión no vale nada (Lección 6 y Módulo 1). Una vez tienes zona + gatillo, defines las tres piezas <strong>antes</strong> de entrar:</p>
+        <ul>
+          <li><strong>Entrada:</strong> en la reacción confirmada dentro de la zona (por ejemplo, al cerrar la vela de rechazo o al confirmarse el segundo suelo).</li>
+          <li><strong>Invalidación (stop loss):</strong> <strong>por debajo de la zona de soporte</strong> / del mínimo del doble suelo. Si el precio cierra ahí abajo, la idea se rompió: fuera.</li>
+          <li><strong>Objetivo:</strong> el <strong>siguiente nodo de volumen o resistencia</strong> por encima. Y lo mides en <strong>R</strong>: si el objetivo está a 3 veces tu riesgo, es una operación de 3R.</li>
+        </ul>
+        <p>El tamaño de la posición sale de la distancia al stop (Módulo 1), nunca al revés. Con eso, una operación fallida cuesta 1R y una buena paga varias: así el sistema tiene sentido aunque no aciertes siempre.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Zona (nodo de volumen + Fib 61,8 %) → gatillo (RSI en divergencia / doble suelo / doji / rechazo en marco mayor) → operación (entrada en la reacción, stop bajo la zona, objetivo al siguiente nodo, todo medido en R).</p></div>
+
+        <h2 id="s5">Por qué funciona (y por qué no es magia)</h2>
+        <p>No funciona porque los números de Fibonacci tengan poderes ni porque el volumen "adivine" nada. Funciona porque <strong>reúne, en un mismo punto, motivos independientes por los que muchos participantes miran ese nivel</strong>: ahí se negoció mucho (volumen), ahí espera medio mundo un rebote (Fibonacci), ahí el precio ya demostró que aguanta (doble suelo) y ahí la venta pierde fuerza (RSI). Cuando tantas cosas coinciden, la probabilidad de reacción sube.</p>
+        <p>Pero <strong>probabilidad no es certeza</strong>. A veces la zona se rompe, y por eso existe el stop. La confluencia no elimina las pérdidas: hace que, a la larga, ganes más de lo que pierdes. Esa es toda la ventaja, y es suficiente.</p>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>Sin humo:</b> esta estrategia <u>no</u> gana siempre, y no es "la mía secreta": es un ejemplo para que entiendas cómo se piensa por confluencias. Tu trabajo ahora es convertirla en TU setup escrito (Lección 6), probarla con datos (Módulo 6) y quedarte solo con lo que a ti te funcione.</div></div>
+
+        <div class="block-label">Errores comunes</div>
+        <ul>
+          <li><strong>Entrar en la zona sin gatillo.</strong> Una buena zona es un sitio para vigilar, no una orden de compra. Sin confirmación, estás adivinando que el soporte aguantará.</li>
+          <li><strong>Forzar la confluencia.</strong> Si tienes que estirar el Fibonacci o mover el nodo para que "coincidan", no coinciden. La confluencia es la que ves, no la que te inventas.</li>
+          <li><strong>Copiarla tal cual sin probarla.</strong> Es un ejemplo. Sin pasarla por tu journal y tu backtesting, no sabes si encaja con tu activo, tu marco y tu forma de operar.</li>
+          <li><strong>Olvidar el stop porque "hay mucha confluencia".</strong> Cuanta más confianza da un setup, más fácil es saltarse la gestión. La zona más bonita del mundo también se rompe.</li>
+        </ul>
+
+        <div class="block-label">Resumen</div>
+        <ul>
+          <li>La estrategia es <strong>confluencia</strong>: no entras por una señal, sino donde varias apuntan al mismo nivel.</li>
+          <li><strong>Fase 1</strong> — marcas soportes/resistencias con dos herramientas que se apoyan: <strong>nodos de volumen (FRVP)</strong> y <strong>Fibonacci</strong> (el 61,8 % es el clave). Su coincidencia es una zona con peso.</li>
+          <li><strong>Fase 2</strong> — esperas un <strong>gatillo</strong> en la zona: RSI en divergencia, doble suelo, vela de rechazo (doji) o rechazo en marco mayor. Mejor si se combinan.</li>
+          <li><strong>Fase 3</strong> — montas el setup: entrada en la reacción, stop bajo la zona, objetivo al siguiente nodo, todo en <strong>R</strong>.</li>
+          <li>Es un <strong>ejemplo</strong>, no una fórmula mágica: sube la probabilidad, no la garantiza. Adáptala, escríbela y pruébala.</li>
+        </ul>
+
+        <div class="block-label">Ejercicio práctico</div>
+        <ol>
+          <li>Busca en un gráfico una tendencia alcista con un retroceso. Traza el <strong>Fibonacci</strong> del mínimo al máximo del impulso y, aparte, un <strong>FRVP</strong> sobre ese tramo. ¿El 61,8 % cae cerca de algún nodo de alto volumen?</li>
+          <li>En esa zona de confluencia, ¿ves algún <strong>gatillo</strong>? Marca si hubo divergencia de RSI (a cierres), doble suelo o una vela de rechazo.</li>
+          <li>Sobre ese ejemplo, escribe la operación completa: entrada, stop (bajo la zona), objetivo (siguiente nodo) y cuántas <strong>R</strong> habría dado. Anótalo en tu journal como si fuera real.</li>
+        </ol>
+
+        <div class="block-label">Autoevaluación</div>
+        <div class="quiz" data-quiz>
+        <script type="application/json">
+        [
+        {"q": "¿Cuál es la idea central de esta estrategia?", "opts": ["Operar donde varias señales independientes coinciden en la misma zona (confluencia)", "Entrar en cuanto una señal apunta arriba", "Usar solo Fibonacci y nada más", "Comprar siempre en el 61,8 %"], "correct": 0, "why": "La columna vertebral es la confluencia: varias señales independientes sobre el mismo nivel inclinan la probabilidad a tu favor, frente a entrar por una sola cosa."},
+        {"q": "¿Qué dos herramientas usamos para marcar los soportes y resistencias?", "opts": ["Medias móviles y MACD", "Noticias y sentimiento", "Nodos de volumen (FRVP) y retrocesos de Fibonacci", "Solo el RSI"], "correct": 2, "why": "Marcamos las zonas con nodos de volumen (donde de verdad se negoció) y con Fibonacci; cuando coinciden, la zona tiene peso."},
+        {"q": "En una tendencia alcista, ¿cómo se traza el Fibonacci de retroceso?", "opts": ["Del máximo al mínimo del día", "En horizontal sobre el precio actual", "Desde el mínimo donde arranca el impulso hasta el máximo", "Desde el cierre de ayer al de hoy"], "correct": 2, "why": "En alcista se traza del mínimo (inicio del impulso) al máximo; los niveles marcan posibles soportes en el retroceso, siendo el 61,8 % el más vigilado."},
+        {"q": "¿Qué hace especialmente fuerte a una zona de soporte en esta estrategia?", "opts": ["Que sea un número redondo", "Que el 61,8 % de Fibonacci coincida con un nodo de alto volumen", "Que esté muy lejos del precio", "Que la marque un indicador automático"], "correct": 1, "why": "Cuando el Fib 61,8 % cae sobre un nodo de alto volumen, hay dos motivos independientes para esperar reacción en el mismo sitio: una zona con peso."},
+        {"q": "Has marcado una buena zona de confluencia. ¿Qué haces cuando el precio llega?", "opts": ["Entrar de inmediato, la zona es suficiente", "Doblar la posición sin más", "Quitar el stop porque hay mucha confluencia", "Esperar un gatillo que confirme que el precio reacciona"], "correct": 3, "why": "La zona es un sitio para vigilar, no una orden de compra: un soporte se puede romper. Esperas un gatillo (RSI, doble suelo, doji, rechazo en marco mayor)."},
+        {"q": "¿Cuál de estos NO es uno de los gatillos de entrada de la lección?", "opts": ["RSI en divergencia alcista (a cierres)", "Un patrón de doble suelo", "Una vela de rechazo (doji) en la zona", "Que un influencer diga que va a subir"], "correct": 3, "why": "Los gatillos son objetivos y observables en el gráfico: divergencia de RSI, doble suelo, vela de rechazo o rechazo en marco mayor. La opinión de un tercero no lo es."},
+        {"q": "¿Dónde va la invalidación (stop loss) en esta operación?", "opts": ["Por debajo de la zona de soporte / del mínimo del doble suelo", "En el objetivo", "Donde no duela perder", "En el 61,8 % exacto"], "correct": 0, "why": "El stop va donde la idea se demuestra falsa: por debajo de la zona. Si el precio cierra ahí, el soporte se rompió y la operación deja de tener sentido."},
+        {"q": "¿Por qué esta estrategia sube la probabilidad, sin ser magia?", "opts": ["Porque los números de Fibonacci tienen poderes", "Porque reúne en un punto varios motivos por los que muchos miran ese nivel; pero probabilidad no es certeza", "Porque nunca falla si hay confluencia", "Porque elimina las pérdidas"], "correct": 1, "why": "Funciona porque junta motivos independientes (volumen, Fibonacci, doble suelo, RSI) sobre el mismo nivel. Sube la probabilidad de reacción, pero puede fallar: por eso existe el stop."}
+        ]
+        </script>
+        </div>
+
+        <div class="block-label">Glosario</div>
+        <div class="card">
+          <p><strong>Confluencia:</strong> coincidencia de varias señales independientes en el mismo nivel; el núcleo de la estrategia.</p>
+          <p><strong>Retrocesos de Fibonacci:</strong> niveles (38,2 %, 50 %, 61,8 %…) que marcan hasta dónde suele retroceder el precio antes de continuar la tendencia. Se trazan del mínimo al máximo del impulso (en alcista).</p>
+          <p><strong>Zona áurea (golden pocket):</strong> la franja del 61,8 % al ~65 % de Fibonacci, la más vigilada para buscar rebotes.</p>
+          <p><strong>Gatillo (trigger):</strong> la señal objetiva que confirma la reacción del precio en la zona y activa la entrada.</p>
+          <p><strong>Doble suelo:</strong> patrón en el que el precio prueba un soporte dos veces sin romperlo; pista de que el nivel aguanta.</p>
+          <p><strong>Doji:</strong> vela de cierre casi igual a su apertura; indica indecisión y, en un soporte, posible rechazo de los vendedores.</p>
+        </div>
+
+        <div class="pager">
+          <a href="m3-leccion-6.html"><div class="k">← Anterior</div><div class="t">L6 · Construir un setup propio</div></a>
+          <a class="next disabled" href="#"><div class="k">Fin del módulo</div><div class="t">Módulo 3 completado ✓</div></a>
+        </div>
+      </article>
+
+      <nav class="toc">
+        <div class="h">En esta lección</div>
+        <a href="#s1">La idea: confluencia</a>
+        <a href="#s2">Fase 1 · soportes y resistencias</a>
+        <a href="#s3">Fase 2 · el gatillo de entrada</a>
+        <a href="#s4">Fase 3 · montar la operación</a>
+        <a href="#s5">Por qué funciona (y no es magia)</a>
+      </nav>
+    </div>
+  </main>
+</div>
+<script src="assets/quiz.js" defer></script>
+<script src="assets/glosario.js" defer></script>
+<script src="assets/progreso.js" defer></script>
+</body>
+</html>
