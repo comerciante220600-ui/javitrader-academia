@@ -11,7 +11,9 @@
 //
 // Una lección se marca como completada cuando:
 //   - se termina su autoevaluación (evento 'jt:leccion-completa' que emite quiz.js), o
-//   - se pulsa "Siguiente" en el pager (leerla entera y avanzar).
+//   - se pulsa "Siguiente" en el pager (leerla entera y avanzar), o
+//   - se pulsa el botón explícito "Marcar como completada" (se inyecta al final
+//     de cada lección; se puede volver a pulsar para desmarcar).
 (function () {
   "use strict";
 
@@ -59,21 +61,37 @@
       guardar(s);
       pintar();
     }
-    subir(file); // además, a la cuenta (no-op fuera de la plataforma)
+    sincronizarCuenta(file, "POST"); // además, a la cuenta (no-op fuera de la plataforma)
   }
 
-  // Sube una lección completada a la cuenta (fire-and-forget; si falla, da igual:
-  // localStorage ya la tiene).
-  function subir(file) {
+  // Desmarca una lección (por si se pulsó sin querer el botón de completar).
+  function desmarcar(file) {
+    if (!file) return;
+    var s = leer();
+    var i = s.indexOf(file);
+    if (i !== -1) {
+      s.splice(i, 1);
+      guardar(s);
+      pintar();
+    }
+    sincronizarCuenta(file, "DELETE"); // borra también en la cuenta (no-op fuera de la plataforma)
+  }
+
+  // Sube/borra una lección en la cuenta (fire-and-forget; si falla, da igual:
+  // localStorage ya manda). Fuera de la plataforma no hace nada.
+  function sincronizarCuenta(file, metodo) {
     if (!EN_PLATAFORMA || !window.fetch) return;
     try {
-      fetch(API, {
-        method: "POST",
-        credentials: "same-origin",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ leccion: file }),
-        keepalive: true,
-      }).catch(function () {});
+      var url = API;
+      var opts = { method: metodo, credentials: "same-origin", keepalive: true };
+      if (metodo === "POST") {
+        opts.headers = { "Content-Type": "application/json" };
+        opts.body = JSON.stringify({ leccion: file });
+      } else {
+        // DELETE: la lección va en query para no depender de body en DELETE.
+        url = API + "?leccion=" + encodeURIComponent(file);
+      }
+      fetch(url, opts).catch(function () {});
     } catch (e) {}
   }
 
@@ -91,20 +109,23 @@
         guardar(union);
         pintar();
         // lo que estaba en local pero no en la cuenta, subirlo
-        local.forEach(function (f) { if (d.lecciones.indexOf(f) === -1) subir(f); });
+        local.forEach(function (f) { if (d.lecciones.indexOf(f) === -1) sincronizarCuenta(f, "POST"); });
       })
       .catch(function () {});
   }
 
+  function completadasDe(mid, hechas) {
+    return hechas.filter(function (f) { return moduloDe(f) === mid; }).length;
+  }
+
   function moduloCompleto(mid, hechas) {
-    var n = hechas.filter(function (f) { return moduloDe(f) === mid; }).length;
-    return LECCIONES[mid] && n >= LECCIONES[mid];
+    return LECCIONES[mid] && completadasDe(mid, hechas) >= LECCIONES[mid];
   }
 
   function pintar() {
     var hechas = leer();
 
-    // 1) Sidebar "Estás viendo": número dorado en las lecciones completadas.
+    // 1) Sidebar "Estás viendo": tick dorado en las lecciones completadas.
     document.querySelectorAll(".lesson[href]").forEach(function (a) {
       var num = a.querySelector(".num");
       if (!num) return;
@@ -118,6 +139,69 @@
       var done = mod ? moduloCompleto("m" + mod[1], hechas) : hechas.indexOf(file) !== -1;
       a.classList.toggle("done", !!done);
     });
+
+    // 3) Barra del topbar: refleja lecciones REALES completadas del módulo actual.
+    pintarBarra(hechas);
+
+    // 4) Botón explícito de completar al final de la lección.
+    pintarBoton(hechas);
+  }
+
+  // Actualiza la barra "Progreso del módulo N/T" del topbar con las completadas.
+  function pintarBarra(hechas) {
+    var prog = document.querySelector(".topbar .prog");
+    if (!prog) return;
+    var mid = moduloDe(fileActual());
+    if (!mid) return;
+    var total = LECCIONES[mid] || 0;
+    var n = completadasDe(mid, hechas);
+    var pct = total ? Math.round((n / total) * 100) : 0;
+
+    var span = prog.querySelector(".bar span");
+    if (span) span.style.width = pct + "%";
+
+    // Reescribe el texto "N/T" (último nodo de texto del .prog) sin tocar el resto.
+    for (var i = prog.childNodes.length - 1; i >= 0; i--) {
+      var nd = prog.childNodes[i];
+      if (nd.nodeType === 3 && /\d+\s*\/\s*\d+/.test(nd.nodeValue)) {
+        nd.nodeValue = " " + n + "/" + total;
+        break;
+      }
+    }
+  }
+
+  var boton = null; // referencia al botón inyectado
+
+  // Crea el botón "Marcar como completada" justo encima del pager de la lección.
+  function crearBoton() {
+    var file = fileActual();
+    if (!moduloDe(file)) return;          // solo en páginas de lección
+    var pager = document.querySelector(".pager");
+    if (!pager || boton) return;
+
+    var wrap = document.createElement("div");
+    wrap.className = "lesson-done";
+    boton = document.createElement("button");
+    boton.type = "button";
+    boton.addEventListener("click", function () {
+      var hechas = leer();
+      if (hechas.indexOf(file) === -1) marcar(file);
+      else desmarcar(file);
+    });
+    wrap.appendChild(boton);
+    pager.parentNode.insertBefore(wrap, pager);
+    pintarBoton(leer());
+  }
+
+  function pintarBoton(hechas) {
+    if (!boton) return;
+    var file = fileActual();
+    var hecha = hechas.indexOf(file) !== -1;
+    boton.parentNode.classList.toggle("is-done", hecha);
+    boton.innerHTML = hecha
+      ? '<span class="ic">✓</span> Lección completada'
+      : '<span class="ic">✓</span> Marcar como completada';
+    boton.title = hecha ? "Pulsa para desmarcar" : "Marca esta lección como leída";
   }
 
   function fileActual() {
@@ -125,6 +209,7 @@
   }
 
   function init() {
+    crearBoton();
     pintar();
     sincronizar(); // en la plataforma, fusiona con el progreso de la cuenta
 
