@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Academia JaviTrader · M3 L4 Patrones útiles vs de manual</title>
+<title>Academia JaviTrader · M3 L4 Perfil de volumen (FRVP)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -33,12 +33,13 @@
     <div class="nav-label">Estás viendo</div>
     <div class="module">
       <h4><a href="modulo-3.html">Análisis técnico aplicado</a></h4>
-      <div class="msub">MÓDULO 3 · 5 LECCIONES</div>
+      <div class="msub">MÓDULO 3 · 6 LECCIONES</div>
       <a class="lesson" href="m3-leccion-1.html"><span class="num">1</span> Tendencias, rangos y transiciones</a>
       <a class="lesson" href="m3-leccion-2.html"><span class="num">2</span> Confluencias</a>
       <a class="lesson" href="m3-leccion-3.html"><span class="num">3</span> Indicadores sin humo</a>
-      <a class="lesson active" href="m3-leccion-4.html"><span class="num">4</span> Patrones útiles vs de manual</a>
-      <a class="lesson" href="m3-leccion-5.html"><span class="num">5</span> Construir un setup propio</a>
+      <a class="lesson active" href="m3-leccion-4.html"><span class="num">4</span> Perfil de volumen (FRVP)</a>
+      <a class="lesson" href="m3-leccion-5.html"><span class="num">5</span> Patrones útiles vs de manual</a>
+      <a class="lesson" href="m3-leccion-6.html"><span class="num">6</span> Construir un setup propio</a>
     </div>
 
     <div class="nav-label">Otros módulos</div>
@@ -60,182 +61,200 @@
   <main class="main">
     <div class="topbar">
       <div class="crumb">Módulo 3 · Análisis técnico &nbsp;›&nbsp; <b>Lección 4</b></div>
-      <div class="prog">Progreso del módulo <div class="bar"><span style="width:80%"></span></div> 4/5</div>
+      <div class="prog">Progreso del módulo <div class="bar"><span style="width:67%"></span></div> 4/6</div>
     </div>
 
     <div class="wrap">
       <article>
         <div class="eyebrow">Lección 4</div>
-        <h1 class="title">Patrones: útiles vs de manual</h1>
+        <h1 class="title">Perfil de volumen (FRVP): dónde se negoció de verdad el precio</h1>
         <div class="meta">
-          <div class="it">⏱ <b>~11 min</b> de lectura</div>
-          <div class="it">◆ Nivel <b>principiante–intermedio</b></div>
-          <div class="it">↳ Requisito: <b>Módulo 2</b></div>
+          <div class="it">⏱ <b>~14 min</b> de lectura</div>
+          <div class="it">◆ Nivel <b>intermedio</b></div>
+          <div class="it">↳ Requisito: <b>Módulo 2 (volumen)</b></div>
         </div>
 
         <div class="card obj">
           <h3>Lo que sabrás hacer al terminar</h3>
           <ol>
-            <li>Explicar qué es un patrón y por qué tanta gente los mira.</li>
-            <li>Distinguir los patrones que aportan algo real de los que solo tienen nombre bonito.</li>
-            <li>Entender por qué un patrón "de libro" falla en un sitio y funciona en otro.</li>
-            <li>Validar cualquier patrón con la estructura, el nivel y el volumen antes de hacerle caso.</li>
+            <li>Entender la diferencia entre volumen por tiempo y volumen por precio.</li>
+            <li>Trazar un <strong>Perfil de Volumen de Rango Fijo (FRVP)</strong> con criterio según el movimiento que quieras analizar.</li>
+            <li>Leer sus partes: <strong>POC</strong>, <strong>área de valor</strong> y sus límites <strong>VAH</strong> y <strong>VAL</strong>.</li>
+            <li>Identificar <strong>nodos de alto y bajo volumen</strong> y usarlos como soporte/resistencia real.</li>
           </ol>
         </div>
 
-        <p class="lead">Hay vídeos y cursos que te prometen "los 40 patrones que todo trader debe saber", como si memorizarlos fuera la llave del mercado. La realidad es más sobria: <strong>un patrón es una pista, no una señal</strong>. Algunos cuentan algo real; muchos otros son solo dibujos con nombre exótico.</p>
-        <p>En esta lección separamos lo que de verdad aporta de lo que es decorado. La idea clave que vas a repetir hasta el final: <strong>el contexto pesa más que el patrón</strong>.</p>
+        <p class="lead">En el Módulo 2 viste el volumen “de toda la vida”: una barra debajo de cada vela que te dice <strong>cuánto se negoció en ese rato</strong>. Útil, pero reparte el volumen <strong>por tiempo</strong>. El <strong>perfil de volumen</strong> le da la vuelta a la pregunta: en vez de “cuánto se negoció en cada vela”, mide <strong>cuánto se negoció en cada precio</strong>.</p>
+        <p>Ese cambio de eje lo cambia todo. Porque los niveles donde más dinero se cruzó no son casualidad: son precios que el mercado considera importantes, y a los que <strong>tiende a volver</strong>.</p>
 
-        <h2 id="s1">Qué es un patrón</h2>
-        <p>Un <strong>patrón</strong> es simplemente <strong>una forma que se repite en el gráfico</strong> y que mucha gente reconoce: un doble suelo, un triángulo, una bandera, un martillo... Le ponemos nombre porque aparece una y otra vez y es cómodo tener una etiqueta para hablar de ella.</p>
-        <p>Que mucha gente mire el mismo dibujo tiene un efecto curioso: a veces el patrón "funciona" en parte porque suficientes personas reaccionan a él a la vez. Pero ojo, ese efecto es limitado y no convierte ningún dibujo en una garantía.</p>
-        <div class="plain"><div class="lab">🟢 Al grano</div><p>Patrón = una forma repetida en el gráfico con nombre propio. Tenerla etiquetada es útil para comunicarte, pero la etiqueta por sí sola no predice nada.</p></div>
+        <h2 id="s1">Volumen por tiempo vs. volumen por precio</h2>
+        <p>El volumen normal se dibuja en <strong>vertical bajo cada vela</strong>: es el eje del <strong>tiempo</strong>. Te dice en qué momentos hubo más actividad, pero no <em>a qué precio</em>.</p>
+        <p>El perfil de volumen se dibuja en <strong>horizontal, a lo largo del eje de precios</strong>: es un histograma tumbado. Cada barra representa <strong>cuánto volumen se negoció en ese nivel de precio</strong> durante el tramo que estás mirando. Cuanto más larga la barra, más se cruzó dinero a ese precio.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Volumen normal = cuánto se negoció <strong>en cada vela</strong> (por tiempo). Perfil de volumen = cuánto se negoció <strong>en cada precio</strong> (por nivel). Lo segundo te dice <em>dónde</em> está el interés real.</p></div>
 
-        <h2 id="s2">Patrones que SÍ aportan</h2>
-        <p>Los patrones útiles tienen algo en común: <strong>reflejan algo real de la estructura</strong> del mercado que ya estudiaste en el Módulo 2. No aportan por su nombre, sino porque cuentan una <strong>historia de oferta y demanda</strong>.</p>
+        <h2 id="s2">Por qué “de rango fijo” y cómo trazarlo</h2>
+        <p>El apellido lo dice todo: en el <strong>FRVP</strong> (Fixed Range Volume Profile, perfil de volumen de <strong>rango fijo</strong>) <strong>tú eliges el tramo</strong> sobre el que se calcula el perfil, en vez de dejar que se calcule sobre todo el histórico. Y ahí está la clave: <strong>el perfil hereda el significado del tramo que seleccionas</strong>. Elige mal el tramo y el perfil no te dice nada; elígelo con criterio y te dibuja el mapa exacto de ese movimiento.</p>
+        <p>La regla es sencilla: <strong>selecciona el movimiento que quieras estudiar, de principio a fin</strong>. Según lo que quieras leer:</p>
+        <table class="tbl data">
+          <thead><tr><th>Qué quieres analizar</th><th>Dónde trazas el FRVP</th><th>Qué te da</th></tr></thead>
+          <tbody>
+            <tr><td>Una <strong>lateralización</strong> / rango</td><td>De un extremo al otro del rango</td><td>El centro de gravedad del rango (su POC) y sus límites de valor</td></tr>
+            <tr class="hl"><td>Una <strong>tendencia alcista</strong></td><td>Desde el mínimo donde arranca hasta el máximo actual</td><td>Dónde se acumuló volumen en la subida → posibles soportes en los retrocesos</td></tr>
+            <tr><td>Una <strong>tendencia bajista</strong></td><td>Desde el máximo donde arranca hasta el mínimo actual</td><td>Dónde se acumuló volumen en la caída → posibles resistencias en los rebotes</td></tr>
+            <tr><td>Un <strong>impulso concreto</strong> (una subida o una bajada)</td><td>Solo esa pata del movimiento</td><td>El mapa de volumen de ese impulso aislado, sin mezclar con lo anterior</td></tr>
+          </tbody>
+        </table>
+        <div class="callout idea"><div class="ic">💡</div><div><b>La clave que casi nadie explica:</b> el FRVP no es “ponerlo y ya”. Lo que le da valor es <strong>qué tramo seleccionas</strong>. El mismo activo, con dos rangos distintos, te da dos perfiles distintos. Piensa primero qué movimiento quieres leer y traza el perfil <em>exactamente</em> sobre él.</div></div>
+
+        <h2 id="s3">Las partes del perfil: POC, área de valor, VAH y VAL</h2>
+        <p>Una vez trazado, el perfil tiene tres referencias que debes saber leer:</p>
         <ul>
-          <li><strong>La ruptura de un nivel claro:</strong> el precio lleva tiempo frenándose en una resistencia y por fin la atraviesa con decisión. Eso dice algo real: la oferta de esa zona se agotó.</li>
-          <li><strong>Un doble suelo / doble techo en su contexto:</strong> el precio prueba dos veces el mismo nivel y no consigue pasarlo. Cuenta que ahí hay compradores (o vendedores) defendiendo la zona.</li>
-          <li><strong>Una compresión hacia un nivel:</strong> el rango se estrecha contra un soporte o resistencia, señal de que una de las dos fuerzas está cediendo.</li>
+          <li><strong>POC (Punto de Control):</strong> el nivel de precio con <strong>más volumen de todo el tramo</strong> — la barra más larga del histograma. Es el precio donde más se negoció, el “precio justo” de ese tramo. Suele actuar como <strong>imán</strong> (el precio tiende a volver a él) y como soporte/resistencia fuerte.</li>
+          <li><strong>Área de valor (Value Area):</strong> la franja de precios donde se concentró aproximadamente el <strong>70% del volumen</strong>. Es la zona donde el mercado consideró que el precio era “justo” y pasó la mayor parte del tiempo.</li>
+          <li><strong>VAH y VAL:</strong> los límites del área de valor. <strong>VAH</strong> (Value Area High) es su techo y <strong>VAL</strong> (Value Area Low) su suelo. Por encima del VAH o por debajo del VAL, el mercado negoció poco: son los extremos, precios que se consideraron “caros” o “baratos”.</li>
         </ul>
-        <p>Fíjate en que en todos los casos lo que importa <strong>no es el dibujo, sino lo que el dibujo dice sobre quién manda</strong>: compradores o vendedores. Un doble suelo es interesante porque señala que la caída se frenó dos veces en el mismo sitio, no porque se llame "doble suelo".</p>
-
-        <h2 id="s3">Patrones sobrevalorados</h2>
-        <p>En el otro extremo está la obsesión por <strong>memorizar 40 patrones de velas con nombres exóticos</strong> — "hombre colgado", "estrella vespertina", "tres cuervos negros" — sin entender qué pasa por debajo. Saberse el nombre no te da ninguna ventaja.</p>
-        <p>El problema no es que esos patrones sean "falsos": muchos describen situaciones reales de indecisión o de presión. El problema es <strong>tratarlos como un catálogo de señales mágicas</strong> que disparan sin pensar. Una "estrella" en mitad de la nada no significa nada; la misma vela en un nivel importante quizá sí.</p>
-        <div class="callout warn"><div class="ic">⚠️</div><div><b>Anti-humo:</b> "patrones infalibles", "el patrón secreto que usan los profesionales", "esta figura acierta el 90% de las veces"… eso es <b>marketing</b>, no análisis. Ningún patrón es infalible. Si alguien te lo vende así, te está vendiendo humo.</div></div>
-        <div class="plain"><div class="lab">🟢 Al grano</div><p>Memorizar nombres no es entender. Da igual cuántos patrones de velas te sepas: si no entiendes la oferta y la demanda que hay detrás, el nombre no te aporta ventaja.</p></div>
-
-        <h2 id="s4">Por qué fallan los "de libro"</h2>
-        <p>Los patrones perfectos de los manuales fallan en la práctica por razones muy concretas:</p>
-        <ul>
-          <li><strong>Sin contexto no significan nada.</strong> El mismo dibujo en un soporte clave o en mitad de la nada son cosas distintas.</li>
-          <li><strong>Todo el mundo los ve.</strong> No tienes ninguna ventaja por reconocer algo que reconocen otros millones de personas a la vez.</li>
-          <li><strong>No son una garantía.</strong> Describen una tendencia de comportamiento, no una certeza; fallan con frecuencia.</li>
-          <li><strong>El autocumplimiento es limitado.</strong> Sí, mucha gente reaccionando al mismo patrón puede empujarlo un poco, pero ese efecto no aguanta contra el contexto real del mercado.</li>
-        </ul>
-        <p>La conclusión incómoda: <strong>un mismo patrón funciona en un sitio y falla en otro según DÓNDE aparece</strong>. Por eso no puedes operar "el patrón" a secas; tienes que operar el patrón <em>en su contexto</em>.</p>
 
         <figure class="done">
-          <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="El mismo doble suelo en buen contexto, sobre un soporte relevante, funciona; y en mal contexto, en mitad de una caída fuerte, falla">
+          <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Histograma horizontal de un perfil de volumen de rango fijo. La barra más larga es el POC. Una banda sombreada marca el área de valor entre VAH (arriba) y VAL (abajo). Se señalan un nodo de alto volumen y un nodo de bajo volumen.">
             <g font-family="Inter,system-ui,sans-serif">
-              <!-- titulo general -->
-              <text x="360" y="26" fill="#ddd9d0" font-size="13" font-weight="600" text-anchor="middle">El MISMO patrón (doble suelo) en dos contextos distintos</text>
+              <!-- marco -->
+              <rect x="56" y="24" width="624" height="352" fill="#15151b" stroke="#26262f" stroke-width="1" rx="4"/>
+              <text x="68" y="44" fill="#9b988f" font-size="12" font-weight="500">PERFIL DE VOLUMEN DE RANGO FIJO (FRVP)</text>
 
-              <!-- ===== PANEL IZQUIERDA: BUEN CONTEXTO ===== -->
-              <rect x="30" y="44" width="312" height="278" rx="8" fill="#15151b" stroke="#26262f" stroke-width="1"/>
-              <text x="186" y="68" fill="#63a922" font-size="12.5" font-weight="600" text-anchor="middle">BUEN CONTEXTO · funciona</text>
-              <text x="186" y="86" fill="#9b988f" font-size="11" text-anchor="middle">sobre un soporte relevante</text>
-              <!-- rejilla -->
-              <line x1="52" y1="120" x2="320" y2="120" stroke="#1c1c23" stroke-width="1"/>
-              <line x1="52" y1="170" x2="320" y2="170" stroke="#1c1c23" stroke-width="1"/>
-              <line x1="52" y1="220" x2="320" y2="220" stroke="#1c1c23" stroke-width="1"/>
-              <!-- soporte relevante -->
-              <line x1="52" y1="262" x2="320" y2="262" stroke="#d4af37" stroke-width="2" stroke-dasharray="5 4"/>
-              <text x="56" y="256" fill="#e5c45a" font-size="10.5" text-anchor="start">soporte importante</text>
-              <!-- precio: baja, doble suelo sobre el soporte, rebota -->
-              <polyline fill="none" stroke="#1d9e75" stroke-width="2.5" stroke-linejoin="round" points="56,108 84,140 110,166 140,200 168,258 196,222 224,258 252,210 284,158 314,118"/>
-              <!-- marcas de los dos suelos -->
-              <circle cx="168" cy="258" r="4" fill="#15151b" stroke="#63a922" stroke-width="2"/>
-              <circle cx="224" cy="258" r="4" fill="#15151b" stroke="#63a922" stroke-width="2"/>
-              <text x="196" y="298" fill="#9fe1cb" font-size="10.5" text-anchor="middle">2 suelos en el soporte → rebote</text>
+              <!-- área de valor (~70%) entre VAH y VAL -->
+              <rect x="150" y="88" width="512" height="170" fill="#d4af37" opacity="0.07"/>
+              <text x="656" y="102" fill="#c98a2e" font-size="10.5" text-anchor="end">Área de valor (~70% del volumen)</text>
 
-              <!-- ===== PANEL DERECHA: MAL CONTEXTO ===== -->
-              <rect x="378" y="44" width="312" height="278" rx="8" fill="#15151b" stroke="#26262f" stroke-width="1"/>
-              <text x="534" y="68" fill="#e24b4a" font-size="12.5" font-weight="600" text-anchor="middle">MAL CONTEXTO · falla</text>
-              <text x="534" y="86" fill="#9b988f" font-size="11" text-anchor="middle">en mitad de una caída fuerte</text>
-              <!-- rejilla -->
-              <line x1="400" y1="120" x2="668" y2="120" stroke="#1c1c23" stroke-width="1"/>
-              <line x1="400" y1="170" x2="668" y2="170" stroke="#1c1c23" stroke-width="1"/>
-              <line x1="400" y1="220" x2="668" y2="220" stroke="#1c1c23" stroke-width="1"/>
-              <!-- sin nivel: aire -->
-              <text x="404" y="114" fill="#76746c" font-size="10.5" text-anchor="start">sin nivel debajo (aire)</text>
-              <!-- precio: caida fuerte, doble suelo en el aire, sigue cayendo -->
-              <polyline fill="none" stroke="#e24b4a" stroke-width="2.5" stroke-linejoin="round" points="404,96 430,118 456,138 486,150 514,168 542,150 570,168 598,196 628,236 664,290"/>
-              <!-- marcas de los dos suelos -->
-              <circle cx="514" cy="168" r="4" fill="#15151b" stroke="#f0a0a0" stroke-width="2"/>
-              <circle cx="570" cy="168" r="4" fill="#15151b" stroke="#f0a0a0" stroke-width="2"/>
-              <text x="540" y="312" fill="#f0a0a0" font-size="10.5" text-anchor="middle">mismo dibujo, pero sigue cayendo</text>
+              <!-- eje vertical (precio) -->
+              <line x1="150" y1="40" x2="150" y2="352" stroke="#3a3a44" stroke-width="1"/>
+              <text x="92" y="204" fill="#76746c" font-size="11" transform="rotate(-90 92 204)" text-anchor="middle">PRECIO →</text>
+
+              <!-- barras del histograma (crecen hacia la derecha desde x=150) -->
+              <g fill="#3a3a44">
+                <rect x="150" y="50" width="60"  height="12" rx="2"/>
+                <rect x="150" y="70" width="110" height="12" rx="2"/>
+                <rect x="150" y="110" width="250" height="12" rx="2"/>
+                <rect x="150" y="150" width="300" height="12" rx="2"/>
+                <rect x="150" y="190" width="330" height="12" rx="2"/>
+                <rect x="150" y="230" width="380" height="12" rx="2"/>
+                <rect x="150" y="270" width="150" height="12" rx="2"/>
+                <rect x="150" y="290" width="150" height="12" rx="2"/>
+                <rect x="150" y="310" width="90"  height="12" rx="2"/>
+                <rect x="150" y="330" width="50"  height="12" rx="2"/>
+              </g>
+              <!-- HVN (nodo de alto volumen, no-POC): barra ancha arriba del POC -->
+              <rect x="150" y="130" width="430" height="12" rx="2" fill="#63a922" opacity="0.85"/>
+              <!-- POC: la barra más larga, dorada -->
+              <rect x="150" y="210" width="470" height="12" rx="2" fill="#d4af37"/>
+
+              <!-- línea POC cruzando -->
+              <line x1="56" y1="216" x2="662" y2="216" stroke="#d4af37" stroke-width="1.4" opacity="0.55"/>
+              <text x="628" y="230" fill="#e5c45a" font-size="11" font-weight="600">POC · máx. volumen</text>
+
+              <!-- VAH -->
+              <line x1="56" y1="88" x2="662" y2="88" stroke="#76746c" stroke-width="1" stroke-dasharray="5 4"/>
+              <text x="144" y="85" fill="#9b988f" font-size="11" text-anchor="end">VAH</text>
+              <!-- VAL -->
+              <line x1="56" y1="258" x2="662" y2="258" stroke="#76746c" stroke-width="1" stroke-dasharray="5 4"/>
+              <text x="144" y="270" fill="#9b988f" font-size="11" text-anchor="end">VAL</text>
+
+              <!-- etiqueta HVN -->
+              <text x="590" y="140" fill="#8fd14f" font-size="10.5">◄ HVN (alto volumen)</text>
+              <!-- etiqueta LVN: hueco entre barras cortas -->
+              <text x="312" y="280" fill="#76746c" font-size="10.5">◄ LVN (bajo volumen): el precio pasa rápido</text>
+
+              <text x="400" y="368" fill="#76746c" font-size="10.5" text-anchor="middle">← más volumen negociado en ese precio →</text>
             </g>
           </svg>
-          <figcaption>El mismo doble suelo. A la izquierda aparece sobre un soporte importante y el rebote tiene sentido; a la derecha aparece en mitad de una caída sin nada debajo, y el precio sigue cayendo. El dibujo es idéntico: lo que cambia es el contexto.</figcaption>
+          <figcaption>El perfil tumbado sobre el eje de precios. La barra dorada es el POC (donde más se negoció). La banda sombreada es el área de valor (~70% del volumen), entre VAH y VAL. En verde, un nodo de alto volumen (HVN); abajo, un hueco de bajo volumen (LVN) por el que el precio suele pasar deprisa.</figcaption>
         </figure>
 
-        <h2 id="s5">Contexto &gt; patrón</h2>
-        <p>Aquí está la idea que resume toda la lección: <strong>un patrón es una PISTA, no una señal</strong>. Te hace mirar con atención, pero no te dice qué hacer. Antes de darle valor, lo validas siempre con tres cosas que ya conoces del Módulo 2:</p>
+        <h2 id="s4">Nodos: dónde el precio se frena y dónde vuela</h2>
+        <p>Si miras el histograma, no es uniforme: tiene <strong>zonas anchas</strong> (mucho volumen) y <strong>huecos</strong> (poco). A esas zonas las llamamos <strong>nodos</strong>, y son la parte más operativa del perfil.</p>
         <ul>
-          <li><strong>La estructura:</strong> ¿estamos en tendencia o en rango? ¿El patrón va a favor o en contra?</li>
-          <li><strong>El nivel:</strong> ¿aparece en un soporte/resistencia que importa, o en mitad de la nada?</li>
-          <li><strong>El volumen:</strong> ¿hay participación detrás del movimiento o es un dibujo sin fuerza?</li>
+          <li><strong>Nodo de alto volumen (HVN):</strong> una zona donde el histograma se ensancha, donde se cruzó mucho dinero. Ahí el precio <strong>se apelmaza, oscila alrededor y tiende a rebotar</strong>: funciona como <strong>soporte o resistencia</strong>. El POC es, simplemente, el HVN más importante de todo el tramo.</li>
+          <li><strong>Nodo de bajo volumen (LVN):</strong> un hueco del histograma, un precio donde apenas se negoció. El precio los <strong>cruza rápido, casi sin frenar</strong>, porque no hay interés que lo detenga.</li>
         </ul>
-        <p>El mismo patrón <strong>en un soporte importante y a favor de la tendencia vale mucho más</strong> que ese mismo patrón en mitad de la nada. No es que el dibujo sea distinto: es que el contexto le da (o le quita) sentido.</p>
-        <div class="callout idea"><div class="ic">💡</div><div>Deja de preguntarte "¿qué patrón es esto?" y empieza a preguntarte "<b>¿qué está diciendo este dibujo sobre quién manda, y dónde aparece?</b>". Esa segunda pregunta es la que de verdad aporta.</div></div>
+        <p>La idea operativa que lo une todo: <strong>el precio tiende a viajar de nodo a nodo</strong>. Se frena y rebota en los HVN, y acelera por los LVN hasta el siguiente nodo de alto volumen. Por eso las zonas de máximo volumen sirven tan bien de soporte y resistencia: es donde de verdad hay gente con posiciones defendiendo el nivel.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div>
+          <p style="margin-bottom:6px"><strong>HVN</strong> (alto volumen): el precio se frena, oscila y rebota → soporte/resistencia. El POC es el HVN rey.</p>
+          <p><strong>LVN</strong> (bajo volumen): hueco, el precio pasa deprisa. El precio viaja de un HVN al siguiente cruzando los LVN.</p>
+        </div>
+
+        <h2 id="s5">Cómo usarlo (apoyo, no bola de cristal)</h2>
+        <p>El FRVP <strong>no predice</strong> nada: te dice <strong>dónde hubo negociación real</strong>. Eso te da niveles con <em>memoria</em> — precios donde mucha gente entró o salió y que, por eso, importan. Como todo en este módulo, se usa <strong>en confluencia</strong> con lo que ya sabes leer, no como señal aislada.</p>
+        <ul>
+          <li>Espera <strong>reacción en el POC y en los HVN</strong>: son candidatos naturales a soporte/resistencia para tus entradas y salidas.</li>
+          <li>Usa <strong>VAH y VAL como límites</strong>: dentro del área el precio está “en valor”; fuera, en un extremo. Una salida del área con volumen puede anticipar continuación.</li>
+          <li>Combínalo con la <strong>estructura</strong> (Módulo 2) y el <strong>marco temporal</strong>: un POC que coincide con un soporte estructural vale mucho más que uno suelto.</li>
+        </ul>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>Anti-humo:</b> el perfil de volumen no es una bola de cristal, es un <strong>mapa de dónde se cruzó el dinero</strong>. Un nivel, por sí solo, no opera nada: sin contexto ni confluencia, el POC es solo una línea bonita. Lo potente es cuando coincide con lo que ya veías en el gráfico.</div></div>
 
         <div class="block-label">Errores comunes</div>
         <ul>
-          <li><strong>"He visto un doble suelo, compro."</strong> Sin mirar dónde aparece, es operar un dibujo a ciegas. Primero el contexto: ¿hay un nivel? ¿a favor de qué tendencia?</li>
-          <li><strong>"Me sé 40 patrones de velas, llevo ventaja."</strong> Saberse nombres no es entender el mercado. La ventaja viene de leer la oferta y la demanda, no de recitar etiquetas.</li>
-          <li><strong>"Este patrón acierta casi siempre."</strong> Ninguno es infalible. Esa frase es publicidad; en el gráfico real, el mismo patrón falla a menudo según dónde salga.</li>
-          <li><strong>"El patrón es la señal."</strong> Es una pista, no una orden. Una pista sin validar no se opera.</li>
+          <li><strong>Trazar el FRVP sobre un tramo cualquiera.</strong> El perfil hereda el significado del rango que seleccionas. Sin criterio en el tramo, los niveles no significan nada.</li>
+          <li><strong>Tratar el POC como una orden de entrada.</strong> Es un nivel de referencia con memoria, no una señal de “compra aquí”. Necesita confirmación y contexto.</li>
+          <li><strong>Operar solo el perfil, ignorando la estructura.</strong> El FRVP es un apoyo más; brilla en confluencia, no en solitario.</li>
+          <li><strong>Confundir volumen por tiempo con volumen por precio.</strong> Son dos lecturas distintas: una es cuándo, la otra es a qué precio.</li>
         </ul>
 
         <div class="block-label">Resumen</div>
         <ul>
-          <li>Un <strong>patrón</strong> es una forma repetida que mucha gente mira; la etiqueta no predice nada por sí sola.</li>
-          <li>Los patrones <strong>útiles</strong> aportan porque reflejan algo real de la <strong>estructura</strong> (una historia de oferta/demanda), no por su nombre.</li>
-          <li>Memorizar <strong>40 patrones de velas</strong> sin entender qué hay detrás no da ventaja.</li>
-          <li>Los "de libro" <strong>fallan</strong> sin contexto: todos los ven, no garantizan nada y el autocumplimiento es limitado.</li>
-          <li><strong>Contexto &gt; patrón.</strong> El mismo patrón en un buen nivel y a favor de la tendencia vale mucho más que en mitad de la nada.</li>
+          <li>El <strong>perfil de volumen</strong> mide cuánto se negoció <strong>en cada precio</strong> (no en cada vela): un histograma tumbado sobre el eje de precios.</li>
+          <li>El <strong>FRVP</strong> se calcula sobre <strong>el tramo que tú eliges</strong>; el perfil hereda el significado de ese tramo, así que selecciónalo con criterio (rango, tendencia alcista/bajista, un impulso concreto).</li>
+          <li><strong>POC</strong> = precio con más volumen (imán, soporte/resistencia fuerte). <strong>Área de valor</strong> = ~70% del volumen, entre <strong>VAH</strong> (techo) y <strong>VAL</strong> (suelo).</li>
+          <li>Los <strong>nodos de alto volumen (HVN)</strong> frenan el precio y hacen de soporte/resistencia; los <strong>de bajo volumen (LVN)</strong> son huecos por los que el precio pasa rápido. El precio viaja de nodo a nodo.</li>
+          <li>Es un <strong>apoyo</strong> que da niveles con memoria; se usa en confluencia con la estructura, nunca como señal mágica.</li>
         </ul>
 
         <div class="block-label">Ejercicio práctico</div>
         <ol>
-          <li>Busca en un gráfico un doble suelo (o doble techo) y anota DÓNDE aparece: ¿sobre un soporte/resistencia claro o en el aire?</li>
-          <li>Para ese mismo patrón, marca la tendencia de fondo: ¿va a favor o en contra de ella?</li>
-          <li>Compara dos casos del mismo patrón en sitios distintos y describe, con tus palabras, por qué uno tenía más sentido que el otro. Sin entrar en ninguna operación: solo el análisis.</li>
+          <li>En TradingView, coge la herramienta <strong>“Fixed Range Volume Profile”</strong> y trázala sobre una <strong>lateralización</strong> clara, de extremo a extremo. Identifica el <strong>POC</strong>, el <strong>VAH</strong> y el <strong>VAL</strong>. ¿El precio oscila en torno al POC?</li>
+          <li>Traza otro FRVP sobre una <strong>tendencia alcista</strong>, desde el mínimo donde arranca el impulso. Marca el <strong>HVN</strong> más gordo por debajo del precio actual: ¿ha actuado de soporte en algún retroceso?</li>
+          <li>Busca un <strong>LVN</strong> (un hueco del histograma) y comprueba con tus propios ojos si el precio lo cruzó rápido, casi sin frenar.</li>
         </ol>
 
         <div class="block-label">Autoevaluación</div>
         <div class="quiz" data-quiz>
         <script type="application/json">
         [
-        {"q": "¿Qué es, en esencia, un patrón en el gráfico?", "opts": ["Una forma que se repite y que mucha gente mira", "Una orden de compra automática", "Un indicador con fórmula secreta", "Una garantía de que el precio subirá"], "correct": 0, "why": "Un patrón es solo una forma repetida con nombre propio; tener la etiqueta es cómodo, pero no predice nada por sí sola."},
-        {"q": "¿Por qué aporta de verdad un buen patrón, como un doble suelo en su contexto?", "opts": ["Porque tiene un nombre reconocible", "Porque refleja algo real de la estructura: una historia de oferta y demanda", "Porque lo usan los profesionales en secreto", "Porque acierta casi siempre"], "correct": 1, "why": "Los patrones útiles aportan porque cuentan quién manda (compradores o vendedores), no por su nombre."},
-        {"q": "Memorizar 40 patrones de velas con nombres exóticos…", "opts": ["Garantiza ganar dinero", "Es imprescindible antes de operar", "No da ventaja si no entiendes qué pasa por debajo", "Sustituye al análisis de estructura"], "correct": 2, "why": "Saberse los nombres no es entender el mercado; sin la oferta y la demanda detrás, el nombre no aporta ventaja."},
-        {"q": "Alguien te promete un “patrón infalible que acierta el 90%”. ¿Qué es eso?", "opts": ["Una técnica avanzada", "Un análisis riguroso", "Un secreto profesional", "Marketing: ningún patrón es infalible"], "correct": 3, "why": "“Patrones infalibles” es publicidad, no análisis. Ningún patrón garantiza nada; si te lo venden así, es humo."},
-        {"q": "¿Por qué fallan en la práctica los patrones “de libro”?", "opts": ["Sin contexto no significan nada y todo el mundo los ve", "Porque son demasiado nuevos", "Porque solo funcionan en acciones", "Porque nadie los conoce"], "correct": 0, "why": "Sin contexto un patrón no dice nada, todos lo ven (cero ventaja), no garantiza nada y su autocumplimiento es limitado."},
-        {"q": "El mismo patrón aparece en dos gráficos distintos. ¿Qué decide si tiene sentido?", "opts": ["El color de las velas", "DÓNDE aparece: el contexto en el que sale", "El nombre que le pongas", "La hora del día"], "correct": 1, "why": "Un mismo patrón funciona en un sitio y falla en otro según dónde aparece. El contexto manda sobre el dibujo."},
-        {"q": "¿Qué es el “autocumplimiento” de un patrón y qué alcance tiene?", "opts": ["Que el patrón se dibuja solo", "Que garantiza el resultado", "Que mucha gente reacciona al mismo dibujo, pero su efecto es limitado", "Que elimina el riesgo"], "correct": 2, "why": "Que muchos miren el mismo patrón puede empujarlo un poco, pero ese efecto no aguanta contra el contexto real."},
-        {"q": "Según la lección, un patrón es…", "opts": ["Una señal que se opera tal cual", "Una garantía si está bien dibujado", "Un indicador adelantado infalible", "Una pista que hay que validar con estructura, nivel y volumen"], "correct": 3, "why": "Un patrón es una pista, no una señal. Antes de darle valor se valida con la estructura, el nivel y el volumen."},
-        {"q": "¿Cuándo vale más un doble suelo?", "opts": ["Sobre un soporte importante y a favor de la tendencia", "En mitad de una caída fuerte sin nada debajo", "Cuando nadie más lo ve", "Cuando tiene el nombre más raro"], "correct": 0, "why": "El mismo patrón en un buen nivel y a favor de la tendencia vale mucho más que en mitad de la nada."},
-        {"q": "¿Qué pregunta es más útil ante un dibujo en el gráfico?", "opts": ["¿Cuántos patrones me sé?", "¿Qué dice sobre quién manda y dónde aparece?", "¿Qué nombre exótico tiene?", "¿Es verde o rojo?"], "correct": 1, "why": "Lo valioso no es etiquetar el patrón, sino leer qué cuenta sobre la oferta/demanda y en qué contexto sale."}
+        {"q": "¿Qué diferencia al perfil de volumen del volumen “normal”?", "opts": ["El perfil mide cuánto se negoció en cada precio, no en cada vela", "El perfil solo funciona en cripto", "El perfil predice la próxima vela", "No hay ninguna diferencia real"], "correct": 0, "why": "El volumen normal reparte la actividad por tiempo (una barra por vela); el perfil la reparte por nivel de precio. Por eso te dice dónde está el interés real."},
+        {"q": "¿Qué significa que el FRVP sea “de rango fijo”?", "opts": ["Que solo se puede usar en rangos laterales", "Que tú eliges el tramo sobre el que se calcula el perfil", "Que el rango de precios nunca cambia", "Que se calcula siempre sobre todo el histórico"], "correct": 1, "why": "En el FRVP seleccionas manualmente el tramo. El perfil hereda el significado de ese tramo, así que elegirlo bien es lo que le da valor."},
+        {"q": "¿Qué es el POC (Punto de Control)?", "opts": ["El precio más alto del tramo", "El punto donde empieza la tendencia", "El nivel de precio con más volumen negociado de todo el tramo", "El centro geométrico del gráfico"], "correct": 2, "why": "El POC es la barra más larga del perfil: el precio donde más se cruzó dinero. Suele actuar como imán y como soporte/resistencia fuerte."},
+        {"q": "El área de valor está delimitada por…", "opts": ["El máximo y el mínimo absolutos del histórico", "El VAH (techo) y el VAL (suelo), que encierran ~70% del volumen", "Dos medias móviles", "El POC y el precio actual"], "correct": 1, "why": "El área de valor es la franja donde se concentró ~70% del volumen; sus límites son el VAH (Value Area High) y el VAL (Value Area Low)."},
+        {"q": "¿Cómo se comporta el precio en un nodo de alto volumen (HVN)?", "opts": ["Lo cruza rápido sin frenar", "Se apelmaza, oscila alrededor y tiende a rebotar (soporte/resistencia)", "Siempre lo rompe al alza", "Desaparece del gráfico"], "correct": 1, "why": "En un HVN hay mucho interés acumulado, así que el precio se frena y tiende a rebotar: funciona como soporte o resistencia."},
+        {"q": "¿Y en un nodo de bajo volumen (LVN)?", "opts": ["El precio pasa rápido, casi sin frenar", "El precio se queda atrapado mucho tiempo", "Es donde está siempre el POC", "Marca el fin de la tendencia"], "correct": 0, "why": "Un LVN es un hueco donde apenas se negoció; al no haber interés que lo detenga, el precio lo cruza deprisa hasta el siguiente HVN."},
+        {"q": "¿Cuál es la forma correcta de usar el FRVP?", "opts": ["Como una señal mágica que decide las entradas por ti", "Como apoyo, en confluencia con la estructura y el contexto", "Sustituyendo por completo la lectura del gráfico", "Solo para predecir el precio exacto de mañana"], "correct": 1, "why": "El perfil da niveles con memoria (dónde se negoció de verdad), pero se usa como apoyo en confluencia con lo demás, no como señal aislada."},
+        {"q": "Quieres estudiar dónde puede apoyarse una tendencia alcista en sus retrocesos. ¿Dónde trazas el FRVP?", "opts": ["Sobre una lateralización cualquiera de hace meses", "Desde el mínimo donde arranca el impulso hasta el máximo actual", "Sobre todo el histórico del activo", "Sobre una sola vela"], "correct": 1, "why": "Para leer una tendencia, trazas el perfil sobre ese impulso completo (del mínimo de arranque al máximo actual); ahí ves dónde se acumuló volumen que puede hacer de soporte."},
+        {"q": "¿Por qué las zonas de máximo volumen sirven bien como soporte/resistencia?", "opts": ["Porque son las más recientes", "Porque las marca automáticamente el broker", "Porque es donde de verdad hay gente con posiciones defendiendo el nivel", "Porque coinciden con números redondos"], "correct": 2, "why": "En un HVN se cruzó mucho dinero: hay muchas posiciones abiertas en ese precio, y eso hace que el nivel tenga memoria y el precio reaccione al volver."}
         ]
         </script>
         </div>
 
         <div class="block-label">Glosario</div>
         <div class="card">
-          <p><strong>Patrón:</strong> forma que se repite en el gráfico y que mucha gente reconoce (doble suelo, triángulo, bandera…).</p>
-          <p><strong>Doble suelo / doble techo:</strong> el precio prueba dos veces el mismo nivel sin lograr pasarlo; señala compradores (suelo) o vendedores (techo) defendiendo la zona.</p>
-          <p><strong>Ruptura:</strong> cuando el precio atraviesa con decisión un nivel que llevaba tiempo frenándolo.</p>
-          <p><strong>Contexto:</strong> la situación que rodea al patrón: estructura (tendencia/rango), nivel donde aparece y volumen.</p>
-          <p><strong>Autocumplimiento:</strong> que un patrón funcione en parte porque mucha gente reacciona a él a la vez; un efecto real pero limitado.</p>
-          <p><strong>Pista vs señal:</strong> una pista te hace mirar con atención; una señal sería una orden. Un patrón es lo primero, no lo segundo.</p>
+          <p><strong>Perfil de volumen:</strong> histograma que mide el volumen negociado en cada nivel de precio (por precio), en vez de en cada vela (por tiempo).</p>
+          <p><strong>FRVP (perfil de volumen de rango fijo):</strong> perfil calculado sobre un tramo que eliges tú; hereda el significado de ese tramo.</p>
+          <p><strong>POC (Punto de Control):</strong> el nivel de precio con más volumen de todo el tramo; la barra más larga del perfil.</p>
+          <p><strong>Área de valor (Value Area):</strong> la franja de precios donde se concentró ~70% del volumen.</p>
+          <p><strong>VAH / VAL:</strong> los límites del área de valor — techo (Value Area High) y suelo (Value Area Low).</p>
+          <p><strong>Nodo de alto volumen (HVN):</strong> zona ancha del perfil; el precio se frena y rebota (soporte/resistencia).</p>
+          <p><strong>Nodo de bajo volumen (LVN):</strong> hueco del perfil; el precio lo cruza rápido, casi sin frenar.</p>
         </div>
 
         <div class="pager">
           <a href="m3-leccion-3.html"><div class="k">← Anterior</div><div class="t">L3 · Indicadores sin humo</div></a>
-          <a class="next" href="m3-leccion-5.html"><div class="k">Siguiente →</div><div class="t">L5 · Construir un setup propio</div></a>
+          <a class="next" href="m3-leccion-5.html"><div class="k">Siguiente →</div><div class="t">L5 · Patrones útiles vs de manual</div></a>
         </div>
       </article>
 
       <nav class="toc">
         <div class="h">En esta lección</div>
-        <a href="#s1">Qué es un patrón</a>
-        <a href="#s2">Patrones que SÍ aportan</a>
-        <a href="#s3">Patrones sobrevalorados</a>
-        <a href="#s4">Por qué fallan los de libro</a>
-        <a href="#s5">Contexto &gt; patrón</a>
+        <a href="#s1">Volumen por tiempo vs por precio</a>
+        <a href="#s2">Qué es el FRVP y cómo trazarlo</a>
+        <a href="#s3">POC, área de valor, VAH y VAL</a>
+        <a href="#s4">Nodos de alto y bajo volumen</a>
+        <a href="#s5">Cómo usarlo (apoyo)</a>
       </nav>
     </div>
   </main>

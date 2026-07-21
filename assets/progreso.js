@@ -19,7 +19,7 @@
 
   var KEY = "jt_progreso";
   // Nº de lecciones por módulo (para saber cuándo un módulo está completo).
-  var LECCIONES = { m0: 5, m1: 6, m2: 5, m3: 5, m4: 5, m5: 5, m6: 5, m7: 5, m8: 3 };
+  var LECCIONES = { m0: 5, m1: 6, m2: 5, m3: 6, m4: 5, m5: 5, m6: 5, m7: 5, m8: 3 };
 
   // Sincronización con la cuenta: solo en la plataforma (lecciones bajo /curso/).
   var API = "/api/curso/progreso";
