@@ -129,7 +129,9 @@
     document.querySelectorAll(".lesson[href]").forEach(function (a) {
       var num = a.querySelector(".num");
       if (!num) return;
-      num.classList.toggle("done", hechas.indexOf(basename(a.getAttribute("href"))) !== -1);
+      var done = hechas.indexOf(basename(a.getAttribute("href"))) !== -1;
+      num.classList.toggle("done", done);
+      num.title = done ? "Marcar como no vista" : "Marcar como vista";
     });
 
     // 2) Tarjetas .lcard: lecciones (portada de módulo) y módulos (portada del curso).
@@ -221,6 +223,22 @@
 
     // Trigger B: terminar la autoevaluación.
     document.addEventListener("jt:leccion-completa", function () { marcar(fileActual()); });
+
+    // Trigger C: clic en el CÍRCULO numerado del sidebar → marca/desmarca esa
+    // lección al instante, sin abrirla (feedback David). El resto del enlace
+    // sigue navegando a la lección; solo el círculo hace toggle.
+    document.querySelectorAll(".sidebar .lesson[href] .num").forEach(function (num) {
+      num.addEventListener("click", function (e) {
+        var a = num.closest ? num.closest(".lesson[href]") : num.parentNode;
+        if (!a) return;
+        var file = basename(a.getAttribute("href"));
+        if (!moduloDe(file)) return;
+        e.preventDefault();   // no navegar
+        e.stopPropagation();
+        if (leer().indexOf(file) === -1) marcar(file);
+        else desmarcar(file);
+      });
+    });
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
