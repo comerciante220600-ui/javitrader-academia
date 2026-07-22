@@ -19,7 +19,7 @@ a{color:inherit;text-decoration:none}
 @media(min-width:981px){
   .app{height:100vh;overflow:hidden}
   .sidebar{position:static}          /* ya tiene height:100vh + overflow-y:auto */
-  .main{height:100vh;overflow-y:auto}
+  main.main{height:100vh;overflow-y:auto}
 }
 
 /* sidebar */
@@ -46,7 +46,7 @@ a{color:inherit;text-decoration:none}
 .lesson .num.done::after{content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#1a1407;font-size:12.5px;font-weight:700}
 
 /* main */
-.main{min-width:0}
+main.main{min-width:0}
 .topbar{position:sticky;top:0;z-index:5;background:rgba(10,10,12,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:13px 40px;display:flex;align-items:center;gap:16px}
 .crumb{font-size:13px;color:var(--muted)}
 .crumb b{color:var(--gold-soft);font-weight:500}
