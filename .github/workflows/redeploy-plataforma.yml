@@ -1,0 +1,26 @@
+name: Redesplegar la plataforma
+
+# Cuando el curso cambia (push a main de la academia), avisa a Vercel para que
+# la plataforma (javitrader.net) se reconstruya y reimporte el curso al día.
+# El aviso se hace llamando a un Deploy Hook de Vercel, cuya URL vive como
+# secreto del repo (VERCEL_DEPLOY_HOOK) — nunca en el código.
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  avisar-vercel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Llamar al Deploy Hook de Vercel
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "No hay secret VERCEL_DEPLOY_HOOK configurado; no hago nada."
+            exit 0
+          fi
+          echo "Avisando a Vercel para que reconstruya la plataforma…"
+          curl -fsSL -X POST "$HOOK" > /dev/null
+          echo "Aviso enviado. Vercel reconstruirá la plataforma con el curso al día."
