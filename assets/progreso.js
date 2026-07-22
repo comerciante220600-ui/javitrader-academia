@@ -142,6 +142,15 @@
       a.classList.toggle("done", !!done);
     });
 
+    // 2b) "Otros módulos" del sidebar: check dorado en los módulos completados
+    // (feedback David). En la plataforma, los módulos bloqueados llevan otro href
+    // (a comprar), así que no hacen match y NO reciben check.
+    document.querySelectorAll(".sidebar a.tool-link[href]").forEach(function (a) {
+      var mod = /^modulo-([0-8])\.html$/.exec(basename(a.getAttribute("href")));
+      if (!mod) return;
+      a.classList.toggle("mod-done", moduloCompleto("m" + mod[1], hechas));
+    });
+
     // 3) Barra del topbar: refleja lecciones REALES completadas del módulo actual.
     pintarBarra(hechas);
 

@@ -147,6 +147,8 @@ details.qa .ans{padding:14px 20px 16px 56px;font-family:var(--serif);font-size:1
 .tool-link{display:flex;align-items:center;gap:9px;padding:8px 9px;border-radius:8px;font-size:13.5px;color:var(--muted);transition:.15s}
 .tool-link:hover{background:var(--surface-2);color:var(--gold-soft)}
 .tool-link.active{background:rgba(212,175,55,.10);color:var(--gold-soft)}
+/* Módulo completado (todas sus lecciones vistas): check dorado al final. */
+.tool-link.mod-done::after{content:"✓";margin-left:auto;color:var(--gold);font-weight:700;font-size:12.5px}
 .module h4 a{color:inherit}.module h4 a:hover{color:var(--gold-soft)}
 
 /* ===== Portada del módulo ===== */
