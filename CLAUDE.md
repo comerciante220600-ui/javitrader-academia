@@ -18,7 +18,7 @@ Era la subcarpeta `web-demo/` del curso y hoy es repo independiente
 
 - Un **curso evergreen** (compra única, sin membresía ni vídeo): se vende
   conocimiento, NO señales ni promesas de rentabilidad. Tono factual, sin hype.
-- Estructura: **9 módulos (M0–M8), 41 lecciones** en 3 rutas (Principiante,
+- Estructura: **9 módulos (M0–M8), 46 lecciones** en 3 rutas (Principiante,
   Trading, Inversión/Cripto). El diferenciador de marca es el M5 (lectura
   on-chain).
 - Estado: los 9 módulos están maquetados, con visuales y tests, y auditados.
