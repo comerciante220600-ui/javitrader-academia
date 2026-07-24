@@ -78,23 +78,90 @@
         <div class="card obj">
           <h3>Lo que sabrás hacer al terminar</h3>
           <ol>
-            <li>Decir, mirando un gráfico, si el mercado está en tendencia o en rango.</li>
-            <li>Identificar una tendencia por sus máximos y mínimos.</li>
-            <li>Reconocer un rango y sus límites (soporte y resistencia).</li>
-            <li>Detectar las transiciones: cuando una situación se agota y empieza otra.</li>
+            <li>Explicar por qué el precio se mueve en <strong>ondas</strong> (impulso y corrección) y no en línea recta.</li>
+            <li>Distinguir una <strong>corrección normal</strong> dentro de una tendencia de un <strong>cambio de tendencia</strong> real.</li>
+            <li>Entender de dónde salen los rangos: fases de <strong>acumulación</strong> y <strong>distribución</strong>.</li>
+            <li>Leer las <strong>transiciones</strong> como cambios de fase, no como sorpresas.</li>
           </ol>
         </div>
 
-        <p class="lead">Antes de cualquier estrategia, indicador o patrón, hay una pregunta que decide casi todo: <strong>¿el mercado tiene tendencia o está en rango?</strong> Equivocarse aquí es el error que más dinero cuesta: aplicar tácticas de tendencia en un rango (o al revés) es remar en contra.</p>
-        <p>En esta lección aprendes a responder esa pregunta de un vistazo. Es la base de todo lo que viene en el módulo.</p>
+        <p class="lead">En el Módulo 2 aprendiste a <em>marcar</em> la estructura: máximos, mínimos, tendencias y rangos. Esta lección va un paso más allá: <strong>por qué</strong> el precio se comporta así. Entender el motor —ondas de impulso y corrección, y fases de acumulación y distribución— es lo que te deja anticipar en vez de ir por detrás.</p>
 
-        <h2 id="s1">Las dos situaciones del mercado</h2>
-        <p>El precio, en realidad, solo hace dos cosas:</p>
+        <div class="callout idea"><div class="ic">📌</div><div><b>Repaso exprés (Módulo 2):</b> una <b>tendencia</b> son máximos y mínimos progresivos; un <b>rango</b> es el precio rebotando entre soporte y resistencia. Si necesitas refrescar el <em>cómo se marca</em>, vuelve a <a href="m2-leccion-2.html">M2 · L2 · Estructura de mercado</a>. Aquí no lo repetimos: vamos al <strong>porqué</strong>.</div></div>
+
+        <h2 id="s1">El precio se mueve en ondas</h2>
+        <p>El precio nunca avanza en línea recta. Se mueve en <strong>ondas</strong>: tramos de <strong>impulso</strong> a favor de la dirección, seguidos de <strong>correcciones</strong> (retrocesos parciales) en contra. Esa alternancia es la que dibuja los escalones que ya sabes marcar.</p>
         <ul>
-          <li><strong>Tendencia:</strong> el precio avanza de forma sostenida en una dirección, arriba (alcista) o abajo (bajista).</li>
-          <li><strong>Rango:</strong> el precio se mueve de lado, rebotando entre un techo y un suelo, sin avanzar a ninguna parte.</li>
+          <li>En una <strong>tendencia alcista</strong>: impulsos al alza + correcciones a la baja que <strong>no borran todo el avance</strong>. Por eso cada mínimo queda más arriba que el anterior.</li>
+          <li>En una <strong>tendencia bajista</strong>: impulsos a la baja + correcciones al alza que se quedan cortas. Por eso cada máximo queda más abajo.</li>
         </ul>
-        <p>Se dice que los mercados pasan la mayor parte del tiempo <strong>en rango</strong> y solo de vez en cuando arrancan tendencias claras. Saber en cuál de las dos estás cambia por completo qué tiene sentido hacer.</p>
+        <p>La clave está en la <strong>corrección</strong>: no es "lo contrario" de la tendencia ni su final, es <strong>parte de ella</strong>. Una tendencia sana respira: empuja, descansa, empuja. El error caro es confundir ese descanso normal con un cambio de dirección.</p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Una tendencia alcista formada por impulsos al alza y correcciones parciales a la baja">
+            <g font-family="Inter,system-ui,sans-serif">
+              <line x1="60" y1="280" x2="680" y2="280" stroke="#26262f" stroke-width="1"/>
+              <!-- higher-low guides -->
+              <line x1="200" y1="190" x2="680" y2="190" stroke="#33333f" stroke-width="1" stroke-dasharray="3 5" opacity="0.5"/>
+              <!-- wave path -->
+              <polyline fill="none" stroke="#1d9e75" stroke-width="2.5" stroke-linejoin="round" points="60,268 150,150 200,190 320,120 375,158 520,80 575,118 680,58"/>
+              <!-- rising lows -->
+              <circle cx="200" cy="190" r="3.5" fill="#1d9e75"/>
+              <circle cx="375" cy="158" r="3.5" fill="#1d9e75"/>
+              <circle cx="575" cy="118" r="3.5" fill="#1d9e75"/>
+              <!-- labels -->
+              <text x="95" y="120" fill="#9fe1cb" font-size="12" font-weight="500" text-anchor="middle">impulso</text>
+              <text x="235" y="182" fill="#f0a0a0" font-size="11.5" text-anchor="start">corrección</text>
+              <text x="452" y="96" fill="#9fe1cb" font-size="12" font-weight="500" text-anchor="middle">impulso</text>
+              <text x="360" y="304" fill="#9b988f" font-size="12" text-anchor="middle">Cada corrección frena más arriba que la anterior → mínimos crecientes → la tendencia sigue viva.</text>
+            </g>
+          </svg>
+          <figcaption>Una tendencia no es una recta: son impulsos y correcciones. Mientras las correcciones no borren el avance previo, la estructura aguanta.</figcaption>
+        </figure>
+
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>Impulso + corrección, en ritmo. La corrección es la pausa, no el final. Mientras cada corrección frene por encima (alcista) o por debajo (bajista) de la anterior, la tendencia sigue de tu lado.</p></div>
+
+        <div class="callout idea"><div class="ic">💡</div><div><b>Sin humo:</b> esto <em>no</em> es "contar ondas de Elliott" ni buscar la onda 5 mágica. La idea útil es simple y verificable: el precio empuja y descansa. No necesitas etiquetar cada tramo con un número para operar bien.</div></div>
+
+        <h2 id="s2">Acumulación y distribución: de dónde salen los rangos</h2>
+        <p>Si las tendencias respiran, los <strong>rangos</strong> son el momento en que el precio se para del todo a coger aire. Pero un rango no es "ruido": es donde las <strong>posiciones cambian de manos</strong>. Los que quieren entrar y los que quieren salir se cruzan durante un tiempo en la misma zona de precio, hasta que uno de los dos lados gana.</p>
+        <p>Hay dos lecturas clásicas de esa pausa:</p>
+        <ul>
+          <li><strong>Acumulación:</strong> un rango que aparece <strong>tras una caída</strong>. Poco a poco entran compradores (se "acumula" posición) antes de un posible tramo al alza.</li>
+          <li><strong>Distribución:</strong> un rango que aparece <strong>tras una subida</strong>. Los que ya habían comprado van saliendo (se "distribuye" la posición) antes de un posible tramo a la baja.</li>
+        </ul>
+        <p>No es magia ni una certeza: es una forma de leer que un rango <strong>puede</strong> ser una pausa antes de continuar o una zona de giro. Quién ganó no se sabe hasta la <strong>ruptura</strong> —y el volumen (Módulo 2) ayuda a juzgar si esa ruptura es de fiar.</p>
+
+        <figure class="done">
+          <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ciclo de precio: caída, acumulación, subida, distribución y nueva caída">
+            <g font-family="Inter,system-ui,sans-serif">
+              <line x1="50" y1="290" x2="690" y2="290" stroke="#26262f" stroke-width="1"/>
+              <!-- accumulation bounds -->
+              <line x1="165" y1="200" x2="330" y2="200" stroke="#33333f" stroke-width="1" stroke-dasharray="4 4"/>
+              <line x1="165" y1="230" x2="330" y2="230" stroke="#33333f" stroke-width="1" stroke-dasharray="4 4"/>
+              <!-- distribution bounds -->
+              <line x1="470" y1="70" x2="635" y2="70" stroke="#33333f" stroke-width="1" stroke-dasharray="4 4"/>
+              <line x1="470" y1="100" x2="635" y2="100" stroke="#33333f" stroke-width="1" stroke-dasharray="4 4"/>
+              <!-- price path -->
+              <polyline fill="none" stroke="#1d9e75" stroke-width="2.5" stroke-linejoin="round" points="60,90 165,212 200,224 245,205 290,224 330,208 470,80 510,96 550,74 590,96 635,78 690,168"/>
+              <!-- labels -->
+              <text x="247" y="256" fill="#9fe1cb" font-size="12" font-weight="500" text-anchor="middle">acumulación</text>
+              <text x="247" y="272" fill="#76746c" font-size="10.5" text-anchor="middle">(rango tras caída)</text>
+              <text x="552" y="52" fill="#e5c45a" font-size="12" font-weight="500" text-anchor="middle">distribución</text>
+              <text x="552" y="38" fill="#76746c" font-size="10.5" text-anchor="middle">(rango tras subida)</text>
+            </g>
+          </svg>
+          <figcaption>El mismo activo a lo largo del tiempo: cae, hace una pausa (acumulación), sube, hace otra pausa arriba (distribución) y gira. Los rangos son las bisagras del ciclo.</figcaption>
+        </figure>
+
+        <div class="callout idea"><div class="ic">💡</div><div><b>Sin humo:</b> no todo rango es acumulación o distribución. A veces es pura <em>indecisión</em> sin más. No etiquetes el rango a priori ("esto es acumulación seguro"): espera a la <strong>ruptura</strong>, que es lo que confirma quién ganó.</div></div>
+
+        <h2 id="s3">Las transiciones: cuando cambia el juego</h2>
+        <p>Junta las dos ideas y tienes el ciclo completo: <strong>impulso → corrección → … → el impulso se agota → rango (acumulación o distribución) → ruptura → nuevo impulso</strong>. Las <strong>transiciones</strong> son esos puntos de bisagra, y lo difícil es que el mercado <strong>no avisa</strong>. Las dos típicas:</p>
+        <ul>
+          <li><strong>De tendencia a rango:</strong> los impulsos dejan de hacer máximos/mínimos nuevos y el precio empieza a moverse de lado. La fuerza se ha frenado y arranca una fase de acumulación o distribución.</li>
+          <li><strong>De rango a tendencia:</strong> el precio <strong>rompe</strong> con decisión uno de los límites del rango (techo o suelo) y arranca una dirección. El volumen ayuda a juzgar si la ruptura es de fiar o una trampa.</li>
+        </ul>
 
         <figure class="done">
           <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Una tendencia alcista que transiciona a un rango lateral">
@@ -114,95 +181,71 @@
               <polyline fill="none" stroke="#1d9e75" stroke-width="2.5" stroke-linejoin="round" points="60,250 100,205 122,222 165,168 192,186 236,138 262,152 312,104 342,120 368,112"/>
               <!-- range -->
               <polyline fill="none" stroke="#e5c45a" stroke-width="2.5" stroke-linejoin="round" points="368,112 410,172 452,122 496,176 540,120 584,176 626,122 668,170"/>
-              <text x="370" y="308" fill="#9b988f" font-size="12" text-anchor="middle">En tendencia el precio hace máximos y mínimos cada vez más altos; en rango, rebota entre dos niveles sin avanzar.</text>
+              <text x="370" y="308" fill="#9b988f" font-size="12" text-anchor="middle">La tendencia se agota, deja de hacer máximos nuevos y el precio pasa a moverse de lado.</text>
             </g>
           </svg>
-          <figcaption>La misma gráfica: primero una tendencia (sube haciendo escalones) y luego un rango (rebota entre soporte y resistencia).</figcaption>
+          <figcaption>La misma gráfica: primero una tendencia (sube haciendo escalones) y luego la transición a un rango (rebota entre soporte y resistencia).</figcaption>
         </figure>
 
-        <h2 id="s2">Cómo identificar una tendencia</h2>
-        <p>Recuerda la estructura del Módulo 2: una tendencia se reconoce por la <strong>secuencia de máximos y mínimos</strong>:</p>
-        <ul>
-          <li><strong>Tendencia alcista:</strong> cada máximo es más alto que el anterior y cada mínimo también (máximos y mínimos crecientes).</li>
-          <li><strong>Tendencia bajista:</strong> cada máximo y cada mínimo son más bajos que los anteriores (máximos y mínimos decrecientes).</li>
-        </ul>
-        <div class="plain"><div class="lab">🟢 Al grano</div>
-          <p style="margin-bottom:6px"><strong>Tendencia alcista</strong>: escalones que suben (cada vez más alto).</p>
-          <p style="margin-bottom:6px"><strong>Tendencia bajista</strong>: escalones que bajan.</p>
-          <p>Mientras la secuencia se mantiene, la tendencia sigue viva.</p>
-        </div>
+        <div class="callout warn"><div class="ic">⚠️</div><div><b>El error caro:</b> tratar un rango como si fuera tendencia (esperando que "siga subiendo" cuando solo está rebotando) o tratar una tendencia como rango (vendiendo en cada corrección de una tendencia alcista fuerte). Primero identifica la fase; luego elige la táctica.</div></div>
 
-        <h2 id="s3">Cómo identificar un rango</h2>
-        <p>Un <strong>rango</strong> es lo contrario: el precio no hace máximos ni mínimos progresivos, sino que <strong>rebota una y otra vez entre dos niveles</strong> — un <strong>soporte</strong> (suelo) abajo y una <strong>resistencia</strong> (techo) arriba. Visualmente se ve plano, "de lado".</p>
-        <p>En un rango, los movimientos parecen fuertes pero no llevan a ninguna parte: el precio sube hasta el techo, baja hasta el suelo, y vuelta a empezar. Confundir esos rebotes con el inicio de una tendencia es un clásico que cuesta caro.</p>
-        <div class="plain"><div class="lab">🟢 Al grano</div><p>Rango = el precio atrapado entre un suelo y un techo, yendo y viniendo sin avanzar. Si trazas dos líneas horizontales y el precio rebota entre ellas, estás en rango.</p></div>
-
-        <h2 id="s4">Las transiciones: cuando cambia el juego</h2>
-        <p>Aquí está lo difícil y lo valioso: el mercado <strong>no avisa</strong> cuando pasa de una situación a otra. Las dos transiciones típicas son:</p>
+        <h2 id="s4">Por qué esto decide tu estrategia</h2>
+        <p>No se trata de que una fase sea "buena" y otra "mala": cada una pide herramientas distintas, y entender el motor te dice <em>por qué</em>.</p>
         <ul>
-          <li><strong>De tendencia a rango:</strong> la tendencia se agota, deja de hacer máximos/mínimos nuevos y el precio empieza a moverse de lado. La fuerza se ha frenado.</li>
-          <li><strong>De rango a tendencia:</strong> el precio <strong>rompe</strong> con decisión uno de los límites del rango (el techo o el suelo) y arranca una dirección. Aquí el volumen (Módulo 2) ayuda a juzgar si la ruptura es de fiar.</li>
+          <li>En <strong>tendencia</strong>, las tácticas de <strong>seguimiento</strong> tienen sentido: entras a favor del impulso y usas las <strong>correcciones</strong> como oportunidad de entrada, no como señal de huida.</li>
+          <li>En <strong>rango</strong>, encajan mejor las tácticas de <strong>reversión</strong>: operar los rebotes en los extremos (cerca del suelo o del techo), sabiendo que puede ser acumulación o distribución.</li>
         </ul>
-        <div class="callout warn"><div class="ic">⚠️</div><div><b>El error caro:</b> tratar un rango como si fuera tendencia (esperando que "siga subiendo" cuando solo está rebotando) o tratar una tendencia como rango (vendiendo en cada subida de una tendencia alcista fuerte). Primero identifica la situación; luego elige la táctica.</div></div>
-
-        <h2 id="s5">Por qué esto decide tu estrategia</h2>
-        <p>No se trata de que una situación sea "buena" y otra "mala": cada una pide herramientas distintas.</p>
-        <ul>
-          <li>En <strong>tendencia</strong>, las tácticas de <strong>seguimiento</strong> (entrar a favor del movimiento, aguantar mientras dura) tienen sentido.</li>
-          <li>En <strong>rango</strong>, encajan mejor las tácticas de <strong>reversión</strong> (operar los rebotes en los extremos: cerca del suelo o del techo).</li>
-        </ul>
-        <p>Esto no es una regla de "compra aquí, vende allá": es entender que el contexto cambia qué tiene probabilidades a tu favor. Tu estilo (incluido el scalping, donde operas en ambas direcciones) decide el resto. Lo único innegociable es <strong>saber en qué situación estás antes de actuar</strong>.</p>
-        <div class="plain"><div class="lab">🟢 Al grano</div><p>Identifica primero: ¿tendencia o rango? En tendencia, seguir el movimiento; en rango, jugar los extremos. No es una orden de comprar o vender, es elegir la táctica que encaja con el contexto.</p></div>
+        <p>Esto no es una regla de "compra aquí, vende allá": es entender que el contexto cambia qué tiene probabilidades a tu favor. Tu estilo (incluido el scalping, donde operas en ambas direcciones) decide el resto. Lo innegociable es <strong>saber en qué fase estás antes de actuar</strong>.</p>
+        <div class="plain"><div class="lab">🟢 Al grano</div><p>En tendencia, la corrección es tu entrada; en rango, los extremos son tu entrada. No es una orden de comprar o vender: es elegir la táctica que encaja con la fase del ciclo.</p></div>
 
         <div class="block-label">Errores comunes</div>
         <ul>
-          <li><strong>"El precio sube fuerte, esto es tendencia."</strong> Un rebote dentro de un rango también sube fuerte… hasta que choca con el techo. Mira la estructura (máximos/mínimos), no una sola vela.</li>
-          <li><strong>"La tendencia no se va a acabar nunca."</strong> Todas se agotan. Cuando dejan de hacer máximos/mínimos nuevos, presta atención: puede estar empezando una transición.</li>
-          <li><strong>"Opero igual en tendencia que en rango."</strong> Es la receta para que las tácticas se peleen entre sí. El contexto manda sobre la táctica.</li>
+          <li><strong>"Cada corrección es un cambio de tendencia."</strong> No: en una tendencia sana la corrección retrocede solo una parte y la estructura sigue intacta. Confundirla con el final te saca de buenas operaciones.</li>
+          <li><strong>"Todo rango es acumulación o distribución."</strong> No siempre; a veces es pura indecisión. No etiquetes a priori: la ruptura, con volumen, es la que confirma.</li>
+          <li><strong>"La tendencia es una línea recta."</strong> Nunca lo es. Avanza a tramos, con pausas. Esperar que suba sin descanso es pedirle al mercado algo que no hace.</li>
         </ul>
 
         <div class="block-label">Resumen</div>
         <ul>
-          <li>El mercado solo hace dos cosas: <strong>tendencia</strong> (avanza) o <strong>rango</strong> (va de lado).</li>
-          <li><strong>Tendencia</strong>: máximos y mínimos progresivos (crecientes si es alcista, decrecientes si es bajista).</li>
-          <li><strong>Rango</strong>: el precio rebota entre un soporte y una resistencia, sin avanzar.</li>
-          <li>Las <strong>transiciones</strong> (de una a otra) no se avisan; la ruptura de un rango y el agotamiento de una tendencia son las señales.</li>
-          <li>Identifica la situación <strong>antes</strong> de elegir la táctica.</li>
+          <li>El precio avanza en <strong>ondas</strong>: impulsos a favor + correcciones en contra. La corrección es parte de la tendencia, no su final.</li>
+          <li>Una corrección normal <strong>no rompe</strong> la estructura; un cambio de tendencia sí.</li>
+          <li>Los <strong>rangos</strong> son fases donde las posiciones cambian de manos: <strong>acumulación</strong> (tras caídas) o <strong>distribución</strong> (tras subidas).</li>
+          <li>Las <strong>transiciones</strong> son cambios de fase; la <strong>ruptura</strong> del rango, con volumen, es la señal —no antes.</li>
+          <li>Marcar la estructura (M2) te deja <em>verlo</em>; entender el porqué te deja <em>anticiparlo</em>.</li>
         </ul>
 
         <div class="block-label">Ejercicio práctico</div>
         <ol>
-          <li>Abre tres gráficos distintos y clasifica cada uno: ¿tendencia (alcista/bajista) o rango?</li>
-          <li>En uno que esté en tendencia, marca tres máximos y tres mínimos seguidos y comprueba que son progresivos.</li>
-          <li>En uno en rango, traza las dos líneas (soporte y resistencia) y cuenta cuántas veces ha rebotado entre ellas.</li>
+          <li>En un gráfico en tendencia, marca dos impulsos seguidos y la corrección entre ellos. Mide cuánto retrocede esa corrección: ¿la mitad del impulso? ¿menos?</li>
+          <li>Busca un rango tras una subida fuerte (posible distribución) y otro tras una caída (posible acumulación). Anota cómo terminó cada uno: ruptura arriba o abajo.</li>
+          <li>En uno de ellos, marca el momento exacto de la ruptura y comprueba si el volumen acompañó o no.</li>
         </ol>
 
         <div class="block-label">Autoevaluación</div>
         <div class="quiz" data-quiz>
         <script type="application/json">
         [
-        {"q": "Antes de aplicar cualquier estrategia, ¿cuál es la primera pregunta clave?", "opts": ["¿El mercado está en tendencia o en rango?", "¿Qué indicador uso?", "¿Cuánto apalancamiento pongo?", "¿Qué patrón de velas veo?"], "correct": 0, "why": "Saber si hay tendencia o rango decide qué tácticas tienen sentido; equivocarse aquí es el error que más cuesta."},
-        {"q": "¿Cómo se reconoce una tendencia alcista?", "opts": ["El precio rebota entre dos niveles fijos", "El volumen siempre baja", "Cada máximo y cada mínimo es más alto que el anterior", "Las velas son todas del mismo tamaño"], "correct": 2, "why": "Una tendencia alcista hace máximos y mínimos crecientes: escalones que suben. Mientras esa secuencia dure, la tendencia sigue viva."},
-        {"q": "¿Qué es un rango?", "opts": ["Una tendencia muy rápida", "El precio moviéndose de lado, rebotando entre un soporte y una resistencia", "Un tipo de indicador", "El máximo histórico de un activo"], "correct": 1, "why": "En un rango el precio queda atrapado entre un suelo (soporte) y un techo (resistencia), yendo y viniendo sin avanzar."},
-        {"q": "Se dice que los mercados, la mayor parte del tiempo, están…", "opts": ["En tendencia alcista", "Cerrados", "En tendencia bajista", "En rango (moviéndose de lado)"], "correct": 3, "why": "Los mercados pasan la mayoría del tiempo en rango; las tendencias claras aparecen solo de vez en cuando."},
-        {"q": "¿Qué suele indicar el paso de rango a tendencia?", "opts": ["Que el precio rompe con decisión uno de los límites del rango", "Que el volumen desaparece para siempre", "Que las velas se vuelven verdes", "Que el gráfico se cierra"], "correct": 0, "why": "Cuando el precio rompe el techo o el suelo del rango con fuerza, suele arrancar una tendencia; el volumen ayuda a juzgar si la ruptura es fiable."},
-        {"q": "En una tendencia, ¿qué tipo de táctica encaja mejor?", "opts": ["Operar los rebotes en los extremos", "No operar nunca", "Tácticas de seguimiento, a favor del movimiento", "Cerrar la cuenta"], "correct": 2, "why": "En tendencia tiene sentido seguir el movimiento (entrar a su favor y aguantar mientras dura)."},
-        {"q": "En un rango, ¿qué táctica suele encajar mejor?", "opts": ["Seguir el movimiento porque va a romper seguro", "Operar los rebotes en los extremos (cerca del suelo o del techo)", "Comprar siempre en mitad del rango", "Aumentar el apalancamiento al máximo"], "correct": 1, "why": "En rango encajan las tácticas de reversión: operar los rebotes en los extremos, donde el precio tiende a darse la vuelta."},
-        {"q": "‘El precio sube fuerte, así que esto es una tendencia.’ ¿Es fiable esa conclusión?", "opts": ["Sí, siempre", "Sí, si la vela es verde", "Solo en acciones", "No: un rebote dentro de un rango también sube fuerte hasta chocar con el techo"], "correct": 3, "why": "Una subida fuerte puede ser solo un rebote dentro de un rango. Hay que mirar la estructura (máximos y mínimos), no una sola vela."},
-        {"q": "¿Por qué importa distinguir tendencia de rango antes de operar?", "opts": ["Porque en rango el bróker cobra más", "Porque la tendencia no se puede operar", "Porque cada situación pide tácticas distintas y mezclarlas rema en contra", "Porque el rango no existe en cripto"], "correct": 2, "why": "Aplicar tácticas de tendencia en un rango (o al revés) hace que tus herramientas se peleen entre sí. Primero el contexto, luego la táctica."},
-        {"q": "¿Qué señala que una tendencia podría estar agotándose?", "opts": ["Que deja de hacer máximos/mínimos nuevos y empieza a moverse de lado", "Que sigue haciendo máximos y mínimos nuevos", "Que el precio sube más rápido que nunca", "Que aparecen más velas verdes"], "correct": 0, "why": "Cuando la secuencia de máximos y mínimos progresivos se frena y el precio se mueve de lado, puede estar empezando una transición a rango."}
+        {"q": "¿Por qué se dice que el precio se mueve ‘en ondas’?", "opts": ["Porque siempre repite el mismo patrón exacto", "Porque avanza en tramos de impulso seguidos de correcciones, no en línea recta", "Porque las velas cambian de color", "Porque el volumen sube y baja"], "correct": 1, "why": "Una tendencia empuja (impulso) y descansa (corrección) de forma alterna. Esa respiración es la que dibuja los escalones de la estructura."},
+        {"q": "En una tendencia alcista sana, una corrección…", "opts": ["Borra todo el avance previo", "Confirma que la tendencia ha terminado", "Retrocede solo una parte del impulso y la estructura sigue intacta", "Siempre dura más que el impulso"], "correct": 2, "why": "La corrección es parte de la tendencia: retrocede una porción del último impulso pero deja el mínimo por encima del anterior. Mientras eso pase, la tendencia sigue viva."},
+        {"q": "¿Qué es una fase de acumulación?", "opts": ["Un rango, normalmente tras una caída, donde van entrando compradores antes de un posible tramo al alza", "Una tendencia alcista muy rápida", "El máximo histórico de un activo", "Un indicador de volumen"], "correct": 0, "why": "La acumulación es un rango tras una caída donde las posiciones cambian de manos hacia los compradores, antes de una posible subida."},
+        {"q": "¿Y una fase de distribución?", "opts": ["Un tipo de vela japonesa", "Una corrección dentro de una tendencia bajista", "Cuando el volumen desaparece del todo", "Un rango tras una subida donde los compradores previos van saliendo antes de un posible tramo a la baja"], "correct": 3, "why": "La distribución es la contraria: un rango tras una subida donde quien compró antes va soltando posición, antes de una posible caída."},
+        {"q": "¿Qué confirma si un rango era acumulación o distribución?", "opts": ["El color de las velas dentro del rango", "La ruptura del rango en una dirección (mejor si el volumen acompaña)", "Que el rango dure muchos días", "Nada, se sabe desde el principio"], "correct": 1, "why": "No se sabe a priori: la ruptura es la que revela quién ganó. El volumen ayuda a juzgar si esa ruptura es de fiar o una trampa."},
+        {"q": "Confundir una corrección con un cambio de tendencia normalmente lleva a…", "opts": ["Ganar más", "Que el bróker cobre menos", "Salir de buenas operaciones antes de tiempo", "Que la tendencia se acelere"], "correct": 2, "why": "Si tratas cada descanso normal como el final, cierras operaciones que aún tenían recorrido. La corrección es la pausa, no la salida."},
+        {"q": "‘Toda pausa lateral es acumulación o distribución.’ ¿Es correcto?", "opts": ["Sí, siempre", "Sí, solo en cripto", "Sí, si dura poco", "No: a veces es pura indecisión; no se etiqueta a priori, la ruptura lo confirma"], "correct": 3, "why": "No todo rango tiene detrás una acumulación o distribución clara; a veces es solo indecisión. Etiquetarlo antes de la ruptura es adivinar."},
+        {"q": "En una tendencia, ¿cómo se aprovechan las correcciones?", "opts": ["Como oportunidad de entrada a favor de la tendencia", "Como señal para cerrar la cuenta", "Ignorándolas por completo", "Vendiendo en contra de la tendencia"], "correct": 0, "why": "En tendencia, la corrección ofrece un mejor precio para entrar a favor del movimiento, en lugar de perseguir el impulso."},
+        {"q": "¿Cómo se reconoce una transición de tendencia a rango?", "opts": ["El gráfico se cierra", "El precio deja de hacer máximos/mínimos nuevos y empieza a moverse de lado", "El volumen se dispara para siempre", "Las velas se vuelven todas del mismo tamaño"], "correct": 1, "why": "Cuando los impulsos ya no consiguen máximos/mínimos nuevos y el precio se lateraliza, la tendencia se está agotando y arranca una fase de rango."}
         ]
         </script>
         </div>
 
         <div class="block-label">Glosario</div>
         <div class="card">
-          <p><strong>Tendencia:</strong> avance sostenido del precio en una dirección (alcista o bajista).</p>
-          <p><strong>Rango (lateral):</strong> el precio moviéndose de lado entre un soporte y una resistencia, sin avanzar.</p>
-          <p><strong>Soporte:</strong> nivel por debajo del precio donde tiende a frenarse la caída.</p>
-          <p><strong>Resistencia:</strong> nivel por encima del precio donde tiende a frenarse la subida.</p>
-          <p><strong>Transición:</strong> el cambio de una situación a otra (de tendencia a rango o de rango a tendencia).</p>
-          <p><strong>Ruptura:</strong> cuando el precio atraviesa con decisión un límite del rango y suele arrancar una tendencia.</p>
+          <p><strong>Onda:</strong> tramo del movimiento del precio; puede ser de impulso (a favor de la dirección) o de corrección (en contra).</p>
+          <p><strong>Corrección:</strong> retroceso parcial dentro de una tendencia; parte de ella, no su final.</p>
+          <p><strong>Acumulación:</strong> rango, normalmente tras una caída, donde entran compradores antes de un posible tramo al alza.</p>
+          <p><strong>Distribución:</strong> rango, normalmente tras una subida, donde los compradores previos van saliendo antes de un posible tramo a la baja.</p>
+          <p><strong>Transición:</strong> el cambio de una fase a otra (de tendencia a rango o de rango a tendencia).</p>
+          <p><strong>Ruptura:</strong> cuando el precio atraviesa con decisión un límite del rango y suele arrancar una tendencia; el volumen ayuda a juzgar si es fiable.</p>
         </div>
 
         <div class="pager">
@@ -213,11 +256,10 @@
 
       <nav class="toc">
         <div class="h">En esta lección</div>
-        <a href="#s1">Las dos situaciones</a>
-        <a href="#s2">Identificar una tendencia</a>
-        <a href="#s3">Identificar un rango</a>
-        <a href="#s4">Las transiciones</a>
-        <a href="#s5">Por qué decide tu estrategia</a>
+        <a href="#s1">El precio se mueve en ondas</a>
+        <a href="#s2">Acumulación y distribución</a>
+        <a href="#s3">Las transiciones</a>
+        <a href="#s4">Por qué decide tu estrategia</a>
       </nav>
     </div>
   </main>
